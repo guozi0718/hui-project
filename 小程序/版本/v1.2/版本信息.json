@@ -1,0 +1,12 @@
+{
+  "project": "智小徽小程序",
+  "version": "v1.2",
+  "date": "2026-11-25",
+  "status": "完整候选，业务规则已确认，页面待验收",
+  "roles": [
+    "parent",
+    "teacher"
+  ],
+  "repository": "guozi0718/hui-project",
+  "tag": "miniapp-v1.2-rc.1"
+}

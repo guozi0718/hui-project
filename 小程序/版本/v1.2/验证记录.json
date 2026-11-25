@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-25",
+  "version": "v1.2",
+  "independentBusinessEntries": 142,
+  "fileFallbacks": 2,
+  "runtimeErrors": 0,
+  "notificationDetailAndStatsRestore": true,
+  "feedbackDetailRestore": true,
+  "missingRecordGuard": true,
+  "confirmOnceAndImmediateState": true,
+  "history50CyclesNoGrowth": true,
+  "serviceAndFeedbackBusinessResourcesUnchanged": true,
+  "documents": 3,
+  "documentImages": 0,
+  "limits": [
+    "仍复用共享运行时，后续逐步拆业务源码。",
+    "未接通生产后端、真实微信推送，原生小程序栈需另验。"
+  ]
+}

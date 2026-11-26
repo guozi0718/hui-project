@@ -1,12 +1,12 @@
 {
-    "release":  "v0.83",
-    "releaseId":  "v0.83-2d84e4b508",
+    "release":  "v0.84",
+    "releaseId":  "v0.84-2b7a841f1c",
     "endpoint":  "agent",
     "repository":  "guozi0718/hui-project",
     "branch":  "main",
-    "folder":  "代理商端/版本/v0.83",
+    "folder":  "代理商端/版本/v0.84",
     "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
-    "task":  "T-20261125-05-原型评审九项精细优化与全局无数据规范",
+    "task":  "T-20261125-06-通知发布时间筛选跨列排版与全量缓存哈希刷新",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "publicURLUpdated":  true,
     "changes":  [
@@ -29,7 +29,9 @@
                     "全局各列表无数据/无匹配统一保持原框架与表头，仅首行居中显示“暂无对应数据”，不显示分页栏且不额外弹出提示框。",
                     "客服管理新增平台客服示例（李强），仅支持关联学校，不可查看、编辑、删除。",
                     "家校通知编辑与预览支持通知标题、素材说明、链接标题居中完整显示并自动换行；附件提示拉宽单行完整显示；定时发送升级为年月日时分秒一体化浮窗插件。",
-                    "家校通知列表补齐三类查收方式与多种进度示例；阅读统计摘要卡片改为单行互斥分类（学生/教师 Tab 一致），班级阅读明细改为独立弹窗。"
+                    "家校通知列表补齐三类查收方式与多种进度示例；阅读统计摘要卡片改为单行互斥分类（学生/教师 Tab 一致），班级阅读明细改为独立弹窗。",
+                    "家校通知筛选区“发布时间（开始时间 至 结束时间）”跨两列展示并禁止占位文字折行，解决拥挤与日历图标重叠问题。",
+                    "刷新 index.html 与 notice/index.html 全量静态资源 ?v= 哈希，确保浏览器立即加载最新脚本与样式（包括全局无数据表头留存样式）。"
                 ],
     "menuRoutes":  {
                        "familyNotice":  "family-notice",
@@ -38,7 +40,7 @@
                        "agentFeedback":  "agent-feedback",
                        "firstSecondary":  "family-notice"
                    },
-    "indexSHA256":  "65790d609fb0725118e24ed2c7b38faf2f32bdcf048fdfbac519652da3b42cc2",
+    "indexSHA256":  "272f49c5c4f9a213e775db480566d0ee580cc3a274f997156212381a737dd71d",
     "routeSHA256":  "bfe9a7d32d4f6ee66ed64be3ac82d2ac3c0ee6dfc5df03b7c14587d5c7f5bf60",
     "dependency":  null,
     "files":  [
@@ -264,8 +266,8 @@
                   },
                   {
                       "path":  "index.html",
-                      "size":  5738,
-                      "sha256":  "65790d609fb0725118e24ed2c7b38faf2f32bdcf048fdfbac519652da3b42cc2"
+                      "size":  4697,
+                      "sha256":  "272f49c5c4f9a213e775db480566d0ee580cc3a274f997156212381a737dd71d"
                   },
                   {
                       "path":  "notice/app.js",
@@ -329,13 +331,13 @@
                   },
                   {
                       "path":  "notice/index.html",
-                      "size":  760,
-                      "sha256":  "64097b086a021e9e8dd32f027f30fa6278c37a42d31216e0706916dbfc67bb28"
+                      "size":  646,
+                      "sha256":  "77da426a11619f4c6b92a4d4d74c5ccb4adabe260a80e1541ba6b3dab8675c6b"
                   },
                   {
                       "path":  "notice/styles.css",
-                      "size":  80626,
-                      "sha256":  "0b67fefc90244b31bdbb752aed22092fe8000b751e05a49560da412ef85b75b4"
+                      "size":  81218,
+                      "sha256":  "924811d6119994ac4cfa33ba5929f042f0491dae34a536dc76698c429e0ca922"
                   },
                   {
                       "path":  "README.md",
@@ -345,7 +347,7 @@
                   {
                       "path":  "定版信息.md",
                       "size":  3959,
-                      "sha256":  "fa85d3902039c673afb0ab6b23568f42d4272a5e943875a80a49d4e634c85c62"
+                      "sha256":  "4ca695ca17fc35422389d729fa44b9f13d65768e32936b3823a6c353cdc6448f"
                   },
                   {
                       "path":  "定版字段清单.md",
@@ -368,5 +370,5 @@
                       "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
                   }
               ],
-    "bundleSHA256":  "2d84e4b508f6ee98f612e98469ba4d8fcc61c6d3e086b9961e84603065341cb9"
+    "bundleSHA256":  "2b7a841f1c0209d194aa6e08d62ba400c26dfebbf96ed7bcc15b83c1f2574eca"
 }

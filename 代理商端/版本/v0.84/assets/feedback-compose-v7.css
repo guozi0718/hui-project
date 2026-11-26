@@ -1,0 +1,49 @@
+body .v7-compose-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px}
+body .v7-compose-context{border-right:1px solid #e7e9ee;padding-right:24px;max-height:62vh;overflow:auto}
+body .v7-compose-context h4,body .v7-compose-editor h4{font-size:14px;margin:0 0 14px}
+body .v7-compose-context .kv{grid-template-columns:76px minmax(0,1fr);gap:8px 12px;margin-bottom:22px}
+body .v7-context-message{border-top:1px solid #e7e9ee;padding:14px 0}
+body .v7-context-message header{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}
+body .v7-context-message header span,body .v7-context-message time{color:#86909c;font-size:11px}
+body .v7-context-message time{margin-left:auto}
+body .v7-context-message p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:22px;margin:8px 0 0}
+body .v7-context-pics{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+body .v7-context-pics img{width:54px;height:54px;object-fit:cover;border-radius:4px}
+body .v7-compose-editor .frm.narrow{max-width:none}
+body .v7-compose-editor .fr{display:block}
+body .v7-compose-editor .fr>label{display:block;text-align:left;margin-bottom:8px;width:auto}
+body .v7-compose-editor .fr>.ctl{width:100%;max-width:none}
+body .v7-compose-editor textarea{min-height:180px;width:100%}
+body .v7-quick{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+body .v7-quick .btn{padding:0 9px;font-size:12px}
+body .v7-context-source{font-size:12px;margin-bottom:18px;line-height:22px}
+body .v7-context-source summary{color:var(--brand,#01a239);cursor:pointer}
+.phone .v7-mini-context{margin:12px 0;font-size:12px;color:var(--ink-2)}
+.phone .v7-mini-context summary{cursor:pointer;font-weight:600;margin-bottom:8px}
+.phone .v7-mini-context>div{max-height:190px;overflow:auto;padding:0 8px;background:#f6f8fb;border-radius:8px}
+.phone .v7-mini-context .v7-context-message{padding:10px 0}
+@media(max-width:850px){body .v7-compose-grid{grid-template-columns:1fr}body .v7-compose-context{max-height:30vh;border-right:0;border-bottom:1px solid #e7e9ee;padding-right:0}}
+
+body .v5-mask .v7-compose-grid{display:block}body .v5-mask .v7-compose-context{border-right:0;border-bottom:1px solid #e7e9ee;padding:0 0 20px;margin-bottom:20px;max-height:none;overflow:visible}body .v5-mask .v7-compose-editor{padding:0;max-width:none}body .v5-mask .v7-compose-editor .frm{width:100%;max-width:none}body .v5-mask .v7-compose-editor textarea.ipt{width:100%;max-width:none}
+
+body .v5-mask .v7-reply-form .fr{display:block;margin-left:0;padding-left:0}body .v5-mask .v7-reply-form .fr>label{display:block;width:auto;text-align:left;max-width:none;margin:0 0 8px;padding:0;float:none}body .v5-mask .v7-reply-form .fr>.ctl{display:block;width:100%;margin:0;padding:0}body .v5-mask .v7-quick{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 0;padding:0}body .v5-mask .v7-quick>span{font-size:12px;color:#86909c}
+
+body.restore-original .v5-mask .v7-compose-editor .v7-reply-form .fr>.ctl>textarea.ipt,body .v5-mask .v7-compose-editor .v7-reply-form .fr>.ctl>textarea.ipt{width:100%;max-width:none;min-width:0}
+
+/* 本聊天：无分块外框、共同左边线、倒序沟通时间轴。 */
+body .v5-mask .sec.v7-identity,body .v5-mask .sec.v7-conversation,body .v5-mask .sec.v7-compose-editor,body .v5-mask .sec.v8-collaboration{border:0;border-radius:0;box-shadow:none;padding:0 16px;margin:0 0 28px;background:transparent}body .v5-mask .v7-compose-single>.sec:last-child{margin-bottom:0}body .v5-mask .v7-compose-editor .frm{margin:0;padding:0;width:100%;max-width:none}body .v5-mask .v7-compose-editor textarea{display:block;width:100%;min-height:150px}body .v7-context-history{position:relative;margin:14px 0 0 5px;padding-left:18px;border-left:1px solid #e3e9ee}body .v7-context-message{position:relative;border:0;padding:0 0 22px}body .v7-context-message:before{content:'';position:absolute;left:-23px;top:5px;width:8px;height:8px;background:#b7c6d8;border:1px solid white;border-radius:50%}body .v7-context-message:last-child{padding-bottom:0}body .v8-collaboration .v7-context-message:before{background:#01a239}body .v8-collaboration .v7-context-message p{background:#f6f8fa;padding:10px 12px;border-radius:3px}body .v7-compose-editor .v7-quick{margin:12px 0 0}body .v7-context-title{margin:8px 0;font-size:13px}
+
+body .v5-mask .v7-compose-editor .v7-reply-form{width:100%;max-width:640px!important;margin-left:0}body .v8-textarea-wrap{position:relative;width:100%}body .v5-mask .v8-textarea-wrap textarea.ipt{width:100%;max-width:640px;min-height:144px;padding-bottom:27px;box-sizing:border-box;resize:vertical}body .v8-input-count{position:absolute;bottom:8px;right:10px;color:#86909c;font-size:12px;pointer-events:none}body .v5-mask .v7-compose-editor .v7-quick{max-width:640px}
+
+body .v9-required{color:#f56c6c;margin-right:4px}body .v5-mask .v7-compose-editor .v7-reply-form{max-width:640px!important}body .v5-mask .v7-compose-editor .tip{display:block;margin-top:8px}
+
+body .v10-message-actions{display:flex;justify-content:flex-end;margin-top:8px}body .v10-message-actions .v7-action:disabled{pointer-events:auto;cursor:not-allowed}
+
+body .v5-log-table{width:100%;table-layout:fixed}body .v5-log-table th:first-child,body .v5-log-table td:first-child{width:180px}body .v5-log-table th:nth-child(2),body .v5-log-table td:nth-child(2){width:110px}body .v5-log-table td:nth-child(3){width:auto;text-align:left;white-space:pre-wrap;overflow-wrap:anywhere}
+
+body .v5-mask .v7-compose-editor .v7-reply-form{max-width:none!important;width:100%}body .v5-mask .v8-textarea-wrap textarea.ipt{max-width:none;width:100%;height:120px;min-height:120px}body .v5-mask .v7-compose-editor .v7-quick{max-width:none}
+
+/* 本轮：反馈类型纯文本同行、上传统一、消息操作可见按钮。 */
+body .v5-mask .v7-reply-form .fr.v13-readonly-line{display:flex!important;align-items:center;gap:12px;flex-wrap:nowrap}body .v5-mask .v7-reply-form .fr.v13-readonly-line>label{display:block;flex:none;width:auto;margin:0!important;white-space:nowrap}body .v5-mask .v7-reply-form .fr.v13-readonly-line>.ctl{display:flex;width:auto;min-width:0;align-items:center}body .v13-readonly-value{border:0;background:transparent;line-height:24px;overflow-wrap:anywhere}body .v5-mask #v5-pics:not(:empty){margin-bottom:16px}body .v5-mask .btn.v13-upload{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;padding:0 16px;border:1px solid #01a239;border-radius:4px;background:#fff;color:#01a239;font:inherit;font-size:14px;line-height:30px;cursor:pointer;box-sizing:border-box;margin:0}body .v5-mask .btn.v13-upload:hover{background:#f0fbf4}body .v5-mask .btn.v13-upload:disabled{border-color:#dcdfe6;color:#c0c4cc;background:#f5f7fa;cursor:not-allowed}body .v5-mask .v10-message-actions .v7-action{display:inline-flex;align-items:center;justify-content:center;min-width:60px;height:30px;padding:0 12px;border:1px solid #01a239;border-radius:4px;background:#fff;color:#01a239;font-size:13px;line-height:28px;box-sizing:border-box;cursor:pointer}body .v5-mask .v10-message-actions .v7-action:disabled{border-color:#dcdfe6;color:#c0c4cc;background:#f5f7fa;cursor:not-allowed;pointer-events:auto}
+
+body .v5-mask .v7-compose-editor .v7-reply-form .ctl>.v7-quick{margin:0 0 12px}

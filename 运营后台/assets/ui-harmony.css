@@ -1,0 +1,255 @@
+/* ============================================================================
+   临时副本 · 视觉统一美化层（严格对标已上线《客户管理》设计语言）
+   基准色板：主色 #01a239 / 深绿 #008a2e / 浅绿 #f2fbf3 / 背景 #f2f5fa / 线 #e7e9ee
+   ============================================================================ */
+
+/* 1. 客服管理（汇总页 + 机构详情子页 + 弹窗）对齐客户管理 */
+.cs-root {
+  color: #1f2329;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+.cs-root h2,
+.cs-subpage-head h2 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+  letter-spacing: 0;
+}
+.cs-subpage-head {
+  padding-bottom: 14px !important;
+  margin-bottom: 18px !important;
+  border-bottom: 1px solid #e7e9ee !important;
+}
+.cs-filter {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 0 16px 0 !important;
+  gap: 14px 20px !important;
+  align-items: center !important;
+}
+.cs-filter label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #4e5969 !important;
+  font-size: 13px !important;
+}
+.cs-filter input,
+.cs-filter select,
+.cs-dialog input[type="text"],
+.cs-dialog select,
+.cs-school-query-row input,
+.cs-agent-search input {
+  height: 32px !important;
+  border: 1px solid #dcdfe6 !important;
+  border-radius: 4px !important;
+  padding: 0 10px !important;
+  font-size: 13px !important;
+  color: #1f2329 !important;
+  background: #fff !important;
+  transition: border-color .15s, box-shadow .15s;
+}
+.cs-filter input:focus,
+.cs-filter select:focus,
+.cs-dialog input:focus,
+.cs-dialog select:focus {
+  border-color: #01a239 !important;
+  box-shadow: 0 0 0 2px #e2fbdc !important;
+  outline: none !important;
+}
+.cs-btn {
+  height: 32px !important;
+  padding: 0 14px !important;
+  border-radius: 4px !important;
+  border: 1px solid #e7e9ee !important;
+  background: #fff !important;
+  color: #1f2329 !important;
+  font-size: 13px !important;
+  transition: all .15s;
+}
+.cs-btn:hover:not(:disabled) {
+  border-color: #01a239 !important;
+  color: #01a239 !important;
+}
+.cs-btn.pri {
+  background: #01a239 !important;
+  border-color: #01a239 !important;
+  color: #fff !important;
+}
+.cs-btn.pri:hover:not(:disabled) {
+  background: #008a2e !important;
+  border-color: #008a2e !important;
+  color: #fff !important;
+}
+.cs-btn.link {
+  height: auto !important;
+  padding: 2px 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #01a239 !important;
+}
+.cs-btn.link:hover:not(:disabled) {
+  color: #008a2e !important;
+  text-decoration: underline;
+}
+.cs-btn.link.danger {
+  color: #e34d59 !important;
+}
+.cs-btn.link.danger:disabled {
+  color: #c0c6cf !important;
+  text-decoration: none !important;
+}
+.cs-table-wrap {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  overflow: auto !important;
+  background: #fff !important;
+}
+.cs-table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+}
+.cs-table thead th {
+  background: #f2f5fa !important;
+  color: #4e5969 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  padding: 11px 14px !important;
+  border-bottom: 1px solid #e7e9ee !important;
+  border-right: 1px solid #e7e9ee !important;
+  text-align: center !important;
+}
+.cs-table thead th:last-child {
+  border-right: 0 !important;
+}
+.cs-table tbody td {
+  padding: 11px 14px !important;
+  font-size: 13px !important;
+  color: #1f2329 !important;
+  border-bottom: 1px solid #e7e9ee !important;
+  border-right: 1px solid #f0f1f4 !important;
+  text-align: center !important;
+}
+.cs-table tbody td:last-child {
+  border-right: 0 !important;
+}
+.cs-table tbody tr:nth-child(even) td {
+  background: #fafbfd !important;
+}
+.cs-table tbody tr:hover td {
+  background: #f2fbf3 !important;
+}
+.cs-table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+.cs-temp-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #00873c;
+  background: #e8f8ec;
+  border: 1px solid #b6e6c3;
+  border-radius: 3px;
+  font-weight: 400;
+}
+.cs-default-switch.is-on {
+  background: #01a239 !important;
+}
+.cs-pager {
+  margin-top: 16px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+  color: #4e5969 !important;
+  font-size: 13px !important;
+}
+.cs-dialog {
+  border-radius: 8px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .18) !important;
+}
+.cs-dh {
+  padding: 16px 24px 12px !important;
+  border-bottom: 1px solid #f0f2f5 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+}
+.cs-df {
+  padding: 12px 24px 18px !important;
+  border-top: 1px solid #f0f2f5 !important;
+}
+
+/* 2. 用户反馈（反馈回复 + 详情弹窗 + 用户数据查询）对齐客户管理 */
+.v7-identity,
+.v7-conversation,
+.v7-compose-editor {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  padding: 16px 18px !important;
+  background: #fff !important;
+}
+.v7-identity h4,
+.v7-conversation h4,
+.v7-compose-editor h4 {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+  padding-left: 8px;
+  border-left: 3px solid #01a239;
+  line-height: 1.2;
+}
+.v7-identity .kv {
+  grid-template-columns: 96px 1fr 96px 1fr !important;
+  gap: 10px 16px !important;
+  margin-top: 12px;
+}
+.v7-identity .kv dt {
+  color: #86909c !important;
+  text-align: right;
+}
+.v7-identity .kv dd {
+  color: #1f2329 !important;
+}
+.v7-entry,
+.v7-context-message {
+  border: 1px solid #eef0f4 !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+  background: #fafbfd !important;
+  margin-bottom: 10px !important;
+}
+.v7-entry.v7-answer {
+  background: #f2fbf3 !important;
+  border-color: #d0f0d6 !important;
+}
+
+/* 3. 校徽账号审核配置分组与操作日志对齐 */
+.grp-t {
+  color: #1f2329 !important;
+  border-left: 3px solid #01a239 !important;
+}
+.sr-log-filters {
+  flex-wrap: wrap;
+  gap: 10px !important;
+  margin-bottom: 16px !important;
+}
+.sr-log-filters input,
+.sr-log-filters select {
+  height: 32px !important;
+  border-radius: 4px !important;
+}
+
+/* 4. 操作日志严格单行展示不换行（超长省略，悬停查看完整文本） */
+.sr-log-table td,
+.sr-log-table td > span,
+.sr-log-table td > a {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  vertical-align: middle !important;
+}
+.sr-log-table td:nth-child(4) { max-width: 260px !important; }
+.sr-log-table td:nth-child(5) { max-width: 420px !important; text-align: left !important; }
+.sr-log-table td:nth-child(5) > span { display: block !important; max-width: 420px !important; }

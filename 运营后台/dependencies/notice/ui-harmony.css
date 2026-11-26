@@ -1,0 +1,258 @@
+/* ============================================================================
+   临时副本 · 家校通知视觉统一美化层（严格对标已上线《客户管理》设计语言）
+   基准色板：主色 #01a239 / 深绿 #008a2e / 浅绿 #f2fbf3 / 背景 #f2f5fa / 线 #e7e9ee
+   ============================================================================ */
+
+:root {
+  --primary: #01a239 !important;
+  --primary-dark: #008a2e !important;
+  --bg: #ffffff !important;
+  --text: #1f2329 !important;
+  --muted: #86909c !important;
+  --line: #e7e9ee !important;
+}
+
+body {
+  font: 13px/1.55 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif !important;
+  color: #1f2329 !important;
+  background: #fff !important;
+}
+
+/* 1. 统一控件尺寸（32px 高、4px 圆角、品牌绿聚焦） */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+.btn {
+  height: 32px !important;
+  min-height: 32px !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  border: 1px solid #dcdfe6 !important;
+  color: #1f2329 !important;
+  background: #fff !important;
+}
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+  border-color: #01a239 !important;
+  box-shadow: 0 0 0 2px #e2fbdc !important;
+  outline: none !important;
+}
+.btn {
+  padding: 0 14px !important;
+  border: 1px solid #e7e9ee !important;
+  background: #fff !important;
+  color: #1f2329 !important;
+}
+.btn:hover:not(:disabled) {
+  border-color: #01a239 !important;
+  color: #01a239 !important;
+}
+.btn.primary {
+  background: #01a239 !important;
+  border-color: #01a239 !important;
+  color: #fff !important;
+}
+.btn.primary:hover:not(:disabled) {
+  background: #008a2e !important;
+  border-color: #008a2e !important;
+  color: #fff !important;
+}
+.btn.tiny {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+}
+.link {
+  color: #01a239 !important;
+  font-size: 13px !important;
+}
+.link:hover:not(:disabled) {
+  color: #008a2e !important;
+}
+.link.danger {
+  color: #e34d59 !important;
+}
+
+/* 2. 列表页表格：对齐客户管理（浅灰表头 #f2f5fa、斑马纹 #fafbfd、悬停 #f2fbf3） */
+.table-wrap,
+.stats-table-wrap,
+.school-choice-wrap {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+}
+.school-notice-table thead th,
+.stats-table thead th,
+.school-choice-table thead th,
+.receipt-detail-table thead th {
+  height: 42px !important;
+  padding: 10px 12px !important;
+  background: #f2f5fa !important;
+  color: #4e5969 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  border-bottom: 1px solid #e7e9ee !important;
+  border-right: 1px solid #e7e9ee !important;
+}
+.school-notice-table thead th:last-child,
+.stats-table thead th:last-child,
+.school-choice-table thead th:last-child,
+.receipt-detail-table thead th:last-child {
+  border-right: 0 !important;
+}
+.school-notice-table tbody td,
+.stats-table tbody td,
+.school-choice-table tbody td,
+.receipt-detail-table tbody td {
+  height: 44px !important;
+  padding: 9px 12px !important;
+  font-size: 13px !important;
+  color: #1f2329 !important;
+  border-bottom: 1px solid #e7e9ee !important;
+  border-right: 1px solid #f0f1f4 !important;
+}
+.school-notice-table tbody td:last-child,
+.stats-table tbody td:last-child,
+.school-choice-table tbody td:last-child,
+.receipt-detail-table tbody td:last-child {
+  border-right: 0 !important;
+}
+.school-notice-table tbody tr:nth-child(even) td,
+.stats-table tbody tr:nth-child(even) td,
+.school-choice-table tbody tr:nth-child(even) td {
+  background: #fafbfd !important;
+}
+.school-notice-table tbody tr:hover td,
+.stats-table tbody tr:hover td,
+.school-choice-table tbody tr:hover td {
+  background: #f2fbf3 !important;
+}
+.school-choice-table tbody tr.selected td {
+  background: #e8f8ec !important;
+}
+
+/* 3. 去除“框套框”：筛选栏扁平化，对齐客户管理 */
+.stats-filterbar {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 0 14px 0 !important;
+  margin: 0 !important;
+  gap: 12px 18px !important;
+  align-items: center !important;
+}
+.stats-filterbar .stats-filter-field {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: auto !important;
+  color: #4e5969 !important;
+  font-size: 13px !important;
+}
+.stats-filterbar .stats-filter-field > span {
+  white-space: nowrap !important;
+}
+.stats-filterbar .stats-filter-field select,
+.stats-filterbar .stats-filter-field input {
+  min-width: 148px !important;
+  width: 148px !important;
+}
+
+/* 4. 三步代发向导：清爽步骤条 + 清晰卡片层级 */
+.notice-wizard-head {
+  padding: 8px 0 14px !important;
+  border-bottom: 1px solid #e7e9ee !important;
+  margin-bottom: 16px !important;
+}
+.notice-wizard-steps span.active {
+  color: #01a239 !important;
+  font-weight: 600 !important;
+}
+.notice-wizard-steps span.active b {
+  background: #01a239 !important;
+  border-color: #01a239 !important;
+  color: #fff !important;
+}
+.notice-wizard-steps span.done b {
+  background: #e8f8ec !important;
+  border-color: #01a239 !important;
+  color: #01a239 !important;
+}
+.notice-wizard-card {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  padding: 20px 24px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+.notice-wizard-card h3 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+  padding-left: 10px;
+  border-left: 3px solid #01a239;
+  line-height: 1.2;
+  margin-bottom: 16px !important;
+}
+
+/* 5. 阅读统计指标卡：轻量化、贴合运营后台客户管理风格 */
+.stats-metric-grid {
+  gap: 12px !important;
+  margin: 12px 0 16px !important;
+}
+.stats-metric-card {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  min-height: 68px !important;
+  padding: 10px 16px !important;
+}
+.stats-metric-card:before {
+  height: 3px !important;
+}
+.stats-metric-card.tone-read:before,
+.stats-metric-card.tone-done:before {
+  background: #01a239 !important;
+}
+.stats-metric-card.tone-read strong,
+.stats-metric-card.tone-done strong {
+  color: #01a239 !important;
+}
+.radio-tabs {
+  border-bottom: 1px solid #e7e9ee !important;
+  gap: 24px !important;
+  margin-bottom: 14px !important;
+}
+.radio-tabs button.active {
+  color: #01a239 !important;
+  border-bottom: 2px solid #01a239 !important;
+  font-weight: 600 !important;
+}
+
+/* 6. 开关与弹窗：统一品牌绿与客户管理阴影 */
+input.switch:checked {
+  background: #01a239 !important;
+  border-color: #01a239 !important;
+}
+.dialog {
+  border-radius: 8px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .18) !important;
+}
+.dialog-head {
+  padding: 16px 24px 12px !important;
+  border-bottom: 1px solid #f0f2f5 !important;
+}
+.dialog-head h2 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+}
+.dialog-foot {
+  padding: 12px 24px 18px !important;
+  border-top: 1px solid #f0f2f5 !important;
+}

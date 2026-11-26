@@ -1,12 +1,12 @@
 {
-    "release":  "v0.86",
-    "releaseId":  "v0.86-2a54f36cec",
+    "release":  "v0.87",
+    "releaseId":  "v0.87-14ef6f6b4e",
     "endpoint":  "agent",
     "repository":  "guozi0718/hui-project",
     "branch":  "main",
-    "folder":  "代理商端/版本/v0.86",
+    "folder":  "代理商端/版本/v0.87",
     "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
-    "task":  "T-20261125-08-全局紧凑确认弹窗、学校端v0.69阅读统计与客服/通知细节打磨",
+    "task":  "T-20261126-01-操作日志6列原型重绘与导出Excel及通知配图提示更新",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "publicURLUpdated":  true,
     "changes":  [
@@ -35,7 +35,10 @@
                     "彻底修复演示说明面板中“预览 · 无数据 / 预览 · 无匹配”交互：保持页面筛选与表格表头框架不变，仅在表格第一行居中显示“暂无对应数据”，隐藏分页栏且不弹出额外提示框。",
                     "客服管理置顶展示平台客服示例行（可设默认、仅关联学校可用、查看/编辑/删除置灰），操作列单行显示不折行。",
                     "全局确认弹窗按参考图统一改为紧凑432px居中黄色感叹号样式，仅保留“取消”“确认”两按钮且文案不变。",
-                    "家校通知去掉向导左侧重复步骤文案、移除自定义时间浮窗改用原生简洁时间控件、列表发布/创建时间单行显示并优化列宽、阅读统计全行可点开并同步学校端v0.69两行卡片与居中表格样式、Web及小程序预览标题/素材说明/链接标题强制居中完整换行。"
+                    "家校通知去掉向导左侧重复步骤文案、移除自定义时间浮窗改用原生简洁时间控件、列表发布/创建时间单行显示并优化列宽、阅读统计全行可点开并同步学校端v0.69两行卡片与居中表格样式、Web及小程序预览标题/素材说明/链接标题强制居中完整换行。",
+                    "按参考图重绘“系统管理 → 操作日志”原型页面：单行筛选栏（关键词/操作类型/操作人/近30天/重置/导出）、6列表格（操作时间/操作人/操作类型/操作对象[非编号]/操作详情/来源IP）、无数据保留表头且首行显示暂无对应数据、支持按当前筛选结果导出带大标题行的Excel表格。",
+                    "新增操作日志标准导出 Excel 模板文件（代理商端-操作日志导出模板.xlsx）。",
+                    "家校通知编辑页及PRD同步更新：封面提示改为“封面建议900×383px，图片等比缩略、居中显示”，正文图片块本地选择按钮下新增提示“正文配图建议宽1080px；图片等比缩略、居中显示”。"
                 ],
     "menuRoutes":  {
                        "familyNotice":  "family-notice",
@@ -44,7 +47,7 @@
                        "agentFeedback":  "agent-feedback",
                        "firstSecondary":  "family-notice"
                    },
-    "indexSHA256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf",
+    "indexSHA256":  "e1bad91d88d589ea50c74340b6988386d4973e4bf98a16476e5534373b26351e",
     "routeSHA256":  "bfe9a7d32d4f6ee66ed64be3ac82d2ac3c0ee6dfc5df03b7c14587d5c7f5bf60",
     "dependency":  null,
     "files":  [
@@ -190,8 +193,8 @@
                   },
                   {
                       "path":  "assets/legacy-operation-log.js",
-                      "size":  151396,
-                      "sha256":  "12630ef062c308db8fb0f9250fe631220f9789bc5d43162a4be193bd30067d5c"
+                      "size":  18675,
+                      "sha256":  "eeb5e6c405f3fdc03f03a444a2fff1c45846c2a19f2e79f3742f60c50f62756c"
                   },
                   {
                       "path":  "assets/legacy-query-bridge.js",
@@ -271,12 +274,12 @@
                   {
                       "path":  "index.html",
                       "size":  5738,
-                      "sha256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf"
+                      "sha256":  "e1bad91d88d589ea50c74340b6988386d4973e4bf98a16476e5534373b26351e"
                   },
                   {
                       "path":  "notice/app.js",
-                      "size":  196108,
-                      "sha256":  "eff296b08f5566d66799772a056106d0601cb2ada6e6ca036902dab14263601e"
+                      "size":  196193,
+                      "sha256":  "7c4adb13cfe493c7150ce9aaaba90f239335c16a17044d5946c79679f786a4a2"
                   },
                   {
                       "path":  "notice/assets/campus.png",
@@ -336,12 +339,12 @@
                   {
                       "path":  "notice/index.html",
                       "size":  760,
-                      "sha256":  "ab6a2b98fd1ce4120150fed9cf3bf575a903333c9978262cc2df4641be0f5039"
+                      "sha256":  "6dc8dba775e141c960c4864f7eff5a760b9adca1ebb57625fee8164af868df3a"
                   },
                   {
                       "path":  "notice/styles.css",
-                      "size":  84741,
-                      "sha256":  "5d1dc5286689d4a2f36a540c99a886d84723a98ad8891b56e9aed18e3bf46f40"
+                      "size":  84902,
+                      "sha256":  "8c0f5e40c7292cd6fbb19c814a54040ae903952afb919cba0e1a765f63f4bda3"
                   },
                   {
                       "path":  "README.md",
@@ -351,7 +354,7 @@
                   {
                       "path":  "定版信息.md",
                       "size":  3959,
-                      "sha256":  "08de46c2ca42967ee52a3129be4aa8d38faf4e0ac8807b476a96b3130038f6da"
+                      "sha256":  "4c2bd57d4ebdcf7452b6d7978813304755124d5b2f0ad29395408f71cf6ac738"
                   },
                   {
                       "path":  "定版字段清单.md",
@@ -374,5 +377,5 @@
                       "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
                   }
               ],
-    "bundleSHA256":  "2a54f36cecc8c6cc5d82967c458f0d6bd1cf3e926761e958b896b12d9cf83578"
+    "bundleSHA256":  "14ef6f6b4ed392dda78bdffb2c6c3145547dced35dca381ac7530e304c368596"
 }

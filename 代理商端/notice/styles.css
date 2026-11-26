@@ -428,4 +428,6 @@ body.notice-embedded-web-print .school-notice-print-actions{flex:0 0 auto;positi
 .dialog.school-notice-delete-dialog .delete-alert-icon{width:68px;height:68px;line-height:68px;border-radius:50%;background:#f5a623;color:#fff;font-size:44px;font-weight:700;margin:0 auto 18px;font-family:Arial,sans-serif}
 .dialog.school-notice-delete-dialog .customer-delete-body p{color:#667085;font-size:14px;line-height:1.7;margin:0;text-align:center}
 .dialog.school-notice-delete-dialog .dialog-foot{border-top:0!important;padding:8px 22px 20px!important;justify-content:flex-end;gap:10px}
+.block-image-hint{margin-top:6px;color:#7b8796;font-size:11px;line-height:1.5;white-space:nowrap}
+@media(max-width:760px){.block-image-hint{white-space:normal}}
 .dialog.school-notice-delete-dialog .dialog-foot .btn{min-width:72px;height:36px;border-radius:4px;font-size:14px}

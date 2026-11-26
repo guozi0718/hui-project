@@ -1,32 +1,33 @@
 {
-  "release": "v0.67",
-  "releaseId": "v0.67-46832e3625",
+  "release": "v0.68",
+  "releaseId": "v0.68-282b9ac9c0",
   "endpoint": "school",
   "repository": "guozi0718/hui-project",
   "branch": "main",
-  "folder": "学校端/版本/v0.67",
+  "folder": "学校端/版本/v0.68",
   "status": "最终版本",
   "maintenance": "学校端文件夹为唯一维护源，不关联功能项目",
   "previewURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/index.html?page=school-feedback",
-  "versionURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/版本/v0.67/index.html?page=school-feedback",
-  "indexSHA256": "0f1ed2b207971c0924f8bfefb9b4956612fda468813d731fb7ab5b66380d10c0",
-  "bundleManifest": "版本/v0.67/资料/版本文件SHA256.json",
-  "bundleSHA256": "46832e3625e61a7e448f5f984171c076097e64288c9efff78238d2e352b80c30",
+  "versionURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/版本/v0.68/index.html?page=school-feedback",
+  "indexSHA256": "7d87d94ad0d6eb19cbc5c6303d282798a6d4b447a9c2208a36e0296225d02f12",
+  "bundleManifest": "版本/v0.68/资料/版本文件SHA256.json",
+  "bundleSHA256": "282b9ac9c0ba5b376b669699ec450031909b8a8197c9e3d0938d2adddd683d2c",
   "routes": [
     "school-feedback",
     "family-notice"
   ],
   "functionalDocuments": [
-    "版本/v0.67/资料/功能说明/学校反馈-学校Web功能说明.md",
-    "版本/v0.67/资料/功能说明/家校通知-学校Web功能说明.md",
-    "版本/v0.67/资料/功能说明/学校操作日志-学校Web功能说明.md"
+    "版本/v0.68/资料/功能说明/学校反馈-学校Web功能说明.md",
+    "版本/v0.68/资料/功能说明/家校通知-学校Web功能说明.md",
+    "版本/v0.68/资料/功能说明/学校操作日志-学校Web功能说明.md"
   ],
   "verification": {
     "prePublishStatic": "passed",
     "localBrowser": "passed",
-    "githubPages": "pending"
+    "githubPages": "pending live browser verification"
   },
   "limitations": [
-    "原型数据为浏览器本地示例数据，不接入生产服务。"
+    "原型数据为浏览器本地示例数据，不接入生产服务。",
+    "“查看线索”指向运营后台公开固定入口。"
   ]
 }

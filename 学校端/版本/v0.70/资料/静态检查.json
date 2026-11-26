@@ -1,0 +1,69 @@
+{
+  "task": "T-20261125-02-学校反馈与通知回执完善",
+  "version": "v0.68",
+  "checkedAt": "2026-11-25T14:48:09.946Z",
+  "javascript": {
+    "files": 42,
+    "errors": [],
+    "syntax": "passed"
+  },
+  "json": {
+    "files": 5,
+    "errors": [],
+    "syntax": "passed"
+  },
+  "resourceReferences": {
+    "htmlFiles": 3,
+    "missingLocalFiles": [],
+    "parentDirectoryReferences": []
+  },
+  "functionalDocuments": {
+    "crossDocumentReferences": false,
+    "issues": [],
+    "screenshotsEmbedded": false,
+    "files": [
+      "学校反馈-学校Web功能说明.md",
+      "学校操作日志-学校Web功能说明.md",
+      "家校通知-学校Web功能说明.md"
+    ],
+    "historicalInformation": false,
+    "count": 3
+  },
+  "menuBadges": {
+    "count": 0,
+    "matchedCode": []
+  },
+  "routes": {
+    "method": "统一链接宿主",
+    "issues": []
+  },
+  "sourceManifestIssues": [],
+  "schoolFeedbackFields": {
+    "filter": [
+      "反馈来源",
+      "反馈人",
+      "联系电话",
+      "反馈类型",
+      "状态"
+    ],
+    "list": [
+      "反馈来源",
+      "反馈人",
+      "联系电话",
+      "关联学生",
+      "反馈类型",
+      "反馈内容",
+      "反馈时间",
+      "状态",
+      "操作"
+    ],
+    "detail": [
+      "反馈来源",
+      "反馈人",
+      "联系电话",
+      "关联学生"
+    ],
+    "organizationFieldsVisible": false
+  },
+  "status": "passed"
+}

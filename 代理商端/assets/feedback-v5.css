@@ -43,3 +43,13 @@ body .v7-context-attachment{display:flex;align-items:flex-start;gap:10px;margin-
 body .v7-context-pics{display:flex;gap:8px;flex-wrap:wrap;margin:0}
 body .v7-context-thumb img{width:54px;height:54px;object-fit:cover;border-radius:4px}
 body .v10-relay-card{border:1px solid #e5e9f0;border-radius:6px;padding:16px;margin:12px 0;background:#fff}body .v10-relay-select{display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:13px}body .v10-relay-select input{margin:3px 0 0;accent-color:var(--brand,#01a239)}body .v10-relay-select b{font-weight:600}body .v10-relay-source{margin:10px 0 14px 22px;color:#4e5969;white-space:pre-wrap;overflow-wrap:anywhere;line-height:22px}body .v10-relay-card .fr{margin:12px 0}body .v10-relay-card .v10-relay-body{width:100%;max-width:640px;min-height:100px}body .v10-relay-card [data-relay-pics]{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px}body .v10-relay-card .tip{display:block;margin-top:8px}@media(max-width:850px){body .v10-relay-card{padding:12px}body .v10-relay-card .v10-relay-body{max-width:100%}}
+
+/* v0.86 global confirm dialog matching reference */
+.v5-mask .dlg.global-confirm-dlg{width:432px!important;max-width:calc(100vw - 32px)!important;border-radius:8px!important}
+.v5-mask .dlg.global-confirm-dlg .dh{border-bottom:0!important;padding:18px 22px 6px!important;font-size:17px!important;font-weight:700!important;color:#1b2838!important}
+.v5-mask .dlg.global-confirm-dlg .db{padding:16px 28px 22px!important;text-align:center}
+.global-confirm-body{text-align:center}
+.global-confirm-icon{width:68px;height:68px;line-height:68px;border-radius:50%;background:#f5a623;color:#fff;font-size:44px;font-weight:700;margin:0 auto 18px;font-family:Arial,sans-serif}
+.global-confirm-body p{color:#667085;font-size:14px;line-height:1.7;margin:0;text-align:center}
+.v5-mask .dlg.global-confirm-dlg .df{border-top:0!important;padding:8px 22px 20px!important;justify-content:flex-end;gap:10px}
+.v5-mask .dlg.global-confirm-dlg .df .btn{min-width:72px;height:36px;border-radius:4px;font-size:14px}

@@ -1,12 +1,12 @@
 {
-    "release":  "v0.85",
-    "releaseId":  "v0.85-37635eebaf",
+    "release":  "v0.86",
+    "releaseId":  "v0.86-2a54f36cec",
     "endpoint":  "agent",
     "repository":  "guozi0718/hui-project",
     "branch":  "main",
-    "folder":  "代理商端/版本/v0.85",
+    "folder":  "代理商端/版本/v0.86",
     "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
-    "task":  "T-20261125-07-修复演示说明无数据按钮保持表头框架与单行提示",
+    "task":  "T-20261125-08-全局紧凑确认弹窗、学校端v0.69阅读统计与客服/通知细节打磨",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "publicURLUpdated":  true,
     "changes":  [
@@ -32,7 +32,10 @@
                     "家校通知列表补齐三类查收方式与多种进度示例；阅读统计摘要卡片改为单行互斥分类（学生/教师 Tab 一致），班级阅读明细改为独立弹窗。",
                     "家校通知筛选区“发布时间（开始时间 至 结束时间）”跨两列展示并禁止占位文字折行，解决拥挤与日历图标重叠问题。",
                     "刷新 index.html 与 notice/index.html 全量静态资源 ?v= 哈希，确保浏览器立即加载最新脚本与样式（包括全局无数据表头留存样式）。",
-                    "彻底修复演示说明面板中“预览 · 无数据 / 预览 · 无匹配”交互：保持页面筛选与表格表头框架不变，仅在表格第一行居中显示“暂无对应数据”，隐藏分页栏且不弹出额外提示框。"
+                    "彻底修复演示说明面板中“预览 · 无数据 / 预览 · 无匹配”交互：保持页面筛选与表格表头框架不变，仅在表格第一行居中显示“暂无对应数据”，隐藏分页栏且不弹出额外提示框。",
+                    "客服管理置顶展示平台客服示例行（可设默认、仅关联学校可用、查看/编辑/删除置灰），操作列单行显示不折行。",
+                    "全局确认弹窗按参考图统一改为紧凑432px居中黄色感叹号样式，仅保留“取消”“确认”两按钮且文案不变。",
+                    "家校通知去掉向导左侧重复步骤文案、移除自定义时间浮窗改用原生简洁时间控件、列表发布/创建时间单行显示并优化列宽、阅读统计全行可点开并同步学校端v0.69两行卡片与居中表格样式、Web及小程序预览标题/素材说明/链接标题强制居中完整换行。"
                 ],
     "menuRoutes":  {
                        "familyNotice":  "family-notice",
@@ -41,7 +44,7 @@
                        "agentFeedback":  "agent-feedback",
                        "firstSecondary":  "family-notice"
                    },
-    "indexSHA256":  "272f49c5c4f9a213e775db480566d0ee580cc3a274f997156212381a737dd71d",
+    "indexSHA256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf",
     "routeSHA256":  "bfe9a7d32d4f6ee66ed64be3ac82d2ac3c0ee6dfc5df03b7c14587d5c7f5bf60",
     "dependency":  null,
     "files":  [
@@ -82,18 +85,18 @@
                   },
                   {
                       "path":  "assets/customer-model.js",
-                      "size":  18252,
-                      "sha256":  "4f6009df61fbe8536e1145967071cb7ea266a96c44693db5128931acd5c7fdb3"
+                      "size":  18696,
+                      "sha256":  "f1a563c9acd7f0c363d342148e5ceabd4e935a946e2092889b880c518adf7728"
                   },
                   {
                       "path":  "assets/customer-ui.css",
-                      "size":  19946,
-                      "sha256":  "41385030e6527448335cdcc0ce0c42ab92e6bde15a63e8b72248905c77ad6362"
+                      "size":  21470,
+                      "sha256":  "b32af1dd3c99ea1164e2307a8975b957c5d584f5823c385890ffdd08847e6fbc"
                   },
                   {
                       "path":  "assets/customer-ui.js",
-                      "size":  23273,
-                      "sha256":  "3b9ff94902af942b13192a5311e807d62b93d63344998517d7fdddac02ce851e"
+                      "size":  23447,
+                      "sha256":  "1f023e97902d0402f6994c9ac6e5683fbcbac51b228a3c8186e82448c4798bbc"
                   },
                   {
                       "path":  "assets/demo-panel.css",
@@ -162,13 +165,13 @@
                   },
                   {
                       "path":  "assets/feedback-v5.css",
-                      "size":  7339,
-                      "sha256":  "91296efa6dd4b5098b518478c61498746862c06c07a045d92a76bce83227d613"
+                      "size":  8330,
+                      "sha256":  "4f51ea127cdd8c838bb072987d21cccdf9e90e3468282b54395f61440bb69e35"
                   },
                   {
                       "path":  "assets/feedback-web-v5.js",
-                      "size":  24181,
-                      "sha256":  "6e4c91bd09046502723e3fbfa4be850e585b6c2a3fc4f42b25fea2d3a4856afd"
+                      "size":  24368,
+                      "sha256":  "76994af0fd32a51d3230633a886257d4a1ea5bcb72e6e1b46c3139a22175fb3e"
                   },
                   {
                       "path":  "assets/filter-layout.css",
@@ -267,13 +270,13 @@
                   },
                   {
                       "path":  "index.html",
-                      "size":  4697,
-                      "sha256":  "272f49c5c4f9a213e775db480566d0ee580cc3a274f997156212381a737dd71d"
+                      "size":  5738,
+                      "sha256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf"
                   },
                   {
                       "path":  "notice/app.js",
-                      "size":  196387,
-                      "sha256":  "10f7544a8fd2313ea08e3d36c7c79ec88de32b695f3cf7de0c28d6953727bf49"
+                      "size":  196108,
+                      "sha256":  "eff296b08f5566d66799772a056106d0601cb2ada6e6ca036902dab14263601e"
                   },
                   {
                       "path":  "notice/assets/campus.png",
@@ -332,13 +335,13 @@
                   },
                   {
                       "path":  "notice/index.html",
-                      "size":  646,
-                      "sha256":  "77da426a11619f4c6b92a4d4d74c5ccb4adabe260a80e1541ba6b3dab8675c6b"
+                      "size":  760,
+                      "sha256":  "ab6a2b98fd1ce4120150fed9cf3bf575a903333c9978262cc2df4641be0f5039"
                   },
                   {
                       "path":  "notice/styles.css",
-                      "size":  81218,
-                      "sha256":  "924811d6119994ac4cfa33ba5929f042f0491dae34a536dc76698c429e0ca922"
+                      "size":  84741,
+                      "sha256":  "5d1dc5286689d4a2f36a540c99a886d84723a98ad8891b56e9aed18e3bf46f40"
                   },
                   {
                       "path":  "README.md",
@@ -348,7 +351,7 @@
                   {
                       "path":  "定版信息.md",
                       "size":  3959,
-                      "sha256":  "8ec095f1166942411aaa3eb43cc82d13e6c97c57f2a640869c7346b327001765"
+                      "sha256":  "08de46c2ca42967ee52a3129be4aa8d38faf4e0ac8807b476a96b3130038f6da"
                   },
                   {
                       "path":  "定版字段清单.md",
@@ -371,5 +374,5 @@
                       "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
                   }
               ],
-    "bundleSHA256":  "37635eebaf9112d56e79c6890b4d399e8125c30f9a89daa93f94a72d0ca568a9"
+    "bundleSHA256":  "2a54f36cecc8c6cc5d82967c458f0d6bd1cf3e926761e958b896b12d9cf83578"
 }

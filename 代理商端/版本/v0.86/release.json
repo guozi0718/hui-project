@@ -1,0 +1,378 @@
+{
+    "release":  "v0.86",
+    "releaseId":  "v0.86-2a54f36cec",
+    "endpoint":  "agent",
+    "repository":  "guozi0718/hui-project",
+    "branch":  "main",
+    "folder":  "代理商端/版本/v0.86",
+    "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
+    "task":  "T-20261125-08-全局紧凑确认弹窗、学校端v0.69阅读统计与客服/通知细节打磨",
+    "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
+    "publicURLUpdated":  true,
+    "changes":  [
+                    "家校通知挂入校务管理；客服管理调整为校务管理之后的独立一级菜单；用户反馈下设学校反馈、代理商反馈。",
+                    "四个已接入业务路由统一通过 UnifiedPages、UnifiedShell 和页签生命周期加载。",
+                    "清理反馈未读小红点、计数徽标及其宿主消息桥接。",
+                    "补齐家校通知、客服管理、用户反馈三份完整且独立的无截图演示说明。",
+                    "统一弹窗标题行和底部操作行固定、中间正文独立滚动。",
+                    "学校反馈列表及详情在联系电话后显示关联学生姓名；按来源显示提交快照，教师/学校来源或快照缺失为“--”。",
+                    "代理商反馈筛选、列表与详情移除所在地区和所属机构；反馈人信息块不显示编号。",
+                    "客服代理商首次新增自建客服自动成为该代理商默认；后续新增不自动替换，仍由现有切换入口管理唯一默认。",
+                    "家校通知发布设置移除新建代发的截止时间字段，状态筛选无截止项，时间不再使通知进入截止状态。",
+                    "封面控件帮助提示改为单行，并与封面选择/预览区域左对齐。",
+                    "封面高清素材建议900×383px；详情及模板预览以320×136px为最大尺寸等比居中显示，不裁切。",
+                    "正文配图建议上传宽1080px清晰原图，详情及模板预览最大320×180px等比居中、不裁切；移除固定大画框和多余留白。",
+                    "家校通知列表全部四个操作按钮（预览、编辑、删除、阅读统计）统一受运营后台“合同管理”菜单代理商权限管辖控制。",
+                    "家校通知删除按钮在代理商合同管辖权限范围内随时可用（不限发送状态与查收状态），执行前需二次确认。",
+                    "家校通知阅读统计参考学校端升级为卡片指标网格、圆角筛选栏、舒展行距表格、班级内联明细与表格式回执明细弹窗。",
+                    "新增代理商端一期三模块独立 PRD 文档（客服管理、用户反馈、家校通知）至 代理商端/docs/。",
+                    "全局各列表无数据/无匹配统一保持原框架与表头，仅首行居中显示“暂无对应数据”，不显示分页栏且不额外弹出提示框。",
+                    "客服管理新增平台客服示例（李强），仅支持关联学校，不可查看、编辑、删除。",
+                    "家校通知编辑与预览支持通知标题、素材说明、链接标题居中完整显示并自动换行；附件提示拉宽单行完整显示；定时发送升级为年月日时分秒一体化浮窗插件。",
+                    "家校通知列表补齐三类查收方式与多种进度示例；阅读统计摘要卡片改为单行互斥分类（学生/教师 Tab 一致），班级阅读明细改为独立弹窗。",
+                    "家校通知筛选区“发布时间（开始时间 至 结束时间）”跨两列展示并禁止占位文字折行，解决拥挤与日历图标重叠问题。",
+                    "刷新 index.html 与 notice/index.html 全量静态资源 ?v= 哈希，确保浏览器立即加载最新脚本与样式（包括全局无数据表头留存样式）。",
+                    "彻底修复演示说明面板中“预览 · 无数据 / 预览 · 无匹配”交互：保持页面筛选与表格表头框架不变，仅在表格第一行居中显示“暂无对应数据”，隐藏分页栏且不弹出额外提示框。",
+                    "客服管理置顶展示平台客服示例行（可设默认、仅关联学校可用、查看/编辑/删除置灰），操作列单行显示不折行。",
+                    "全局确认弹窗按参考图统一改为紧凑432px居中黄色感叹号样式，仅保留“取消”“确认”两按钮且文案不变。",
+                    "家校通知去掉向导左侧重复步骤文案、移除自定义时间浮窗改用原生简洁时间控件、列表发布/创建时间单行显示并优化列宽、阅读统计全行可点开并同步学校端v0.69两行卡片与居中表格样式、Web及小程序预览标题/素材说明/链接标题强制居中完整换行。"
+                ],
+    "menuRoutes":  {
+                       "familyNotice":  "family-notice",
+                       "customerService":  "cs",
+                       "schoolFeedback":  "school-feedback",
+                       "agentFeedback":  "agent-feedback",
+                       "firstSecondary":  "family-notice"
+                   },
+    "indexSHA256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf",
+    "routeSHA256":  "bfe9a7d32d4f6ee66ed64be3ac82d2ac3c0ee6dfc5df03b7c14587d5c7f5bf60",
+    "dependency":  null,
+    "files":  [
+                  {
+                      "path":  "assets/action-buttons.css",
+                      "size":  959,
+                      "sha256":  "d78613a713b56aecd15c12a464b30f5ab293d0ee3bcecab65d071c90adb9373a"
+                  },
+                  {
+                      "path":  "assets/action-buttons.js",
+                      "size":  1693,
+                      "sha256":  "471cef5539f32ba15cdec812a5009d082ec85dcc39039d34ff9cfe936e91d000"
+                  },
+                  {
+                      "path":  "assets/cs-log-date.css",
+                      "size":  1779,
+                      "sha256":  "71605034cce1d868070e5f1a0cff0eac56539bb25b7b24431f0a91915953ba54"
+                  },
+                  {
+                      "path":  "assets/cs-log-date.js",
+                      "size":  4799,
+                      "sha256":  "4e61b647d89cd8d482596251e4a0001c8a5f388218860039034ef44f14b86daf"
+                  },
+                  {
+                      "path":  "assets/customer-integration.js",
+                      "size":  133,
+                      "sha256":  "60ec1738409c6002e748160e752474fecc3761a8d2f98351bbc21e5d77311794"
+                  },
+                  {
+                      "path":  "assets/customer-logs.css",
+                      "size":  3567,
+                      "sha256":  "15ae14849de993eb362bf01c6885dda136b0f1fe02fc01da469b867b2f5eb411"
+                  },
+                  {
+                      "path":  "assets/customer-logs.js",
+                      "size":  6024,
+                      "sha256":  "0a0e4d54abfc810769b0128e6fa1a799c515fd964f3b6c9f051d3a60a10df589"
+                  },
+                  {
+                      "path":  "assets/customer-model.js",
+                      "size":  18696,
+                      "sha256":  "f1a563c9acd7f0c363d342148e5ceabd4e935a946e2092889b880c518adf7728"
+                  },
+                  {
+                      "path":  "assets/customer-ui.css",
+                      "size":  21470,
+                      "sha256":  "b32af1dd3c99ea1164e2307a8975b957c5d584f5823c385890ffdd08847e6fbc"
+                  },
+                  {
+                      "path":  "assets/customer-ui.js",
+                      "size":  23447,
+                      "sha256":  "1f023e97902d0402f6994c9ac6e5683fbcbac51b228a3c8186e82448c4798bbc"
+                  },
+                  {
+                      "path":  "assets/demo-panel.css",
+                      "size":  8237,
+                      "sha256":  "18ca66ddb7e97b46466010cebc6a00f970564885024f7054a799f191ffbb956d"
+                  },
+                  {
+                      "path":  "assets/demo-panel.js",
+                      "size":  17679,
+                      "sha256":  "7d86b954c85dab468bd4527998fa434b4260e31d5186fdd32193e784d76930f6"
+                  },
+                  {
+                      "path":  "assets/dialog-layout.css",
+                      "size":  1780,
+                      "sha256":  "3a4ac773f2d150c54c8ce409a9df3786e1a22f273c405b570b20ee5ecddd8eaf"
+                  },
+                  {
+                      "path":  "assets/dialog-layout.js",
+                      "size":  320,
+                      "sha256":  "b6d409273db367672253d8ebddc0973895ce997e35a41fcbaf888625e68fd143"
+                  },
+                  {
+                      "path":  "assets/feedback-collaboration.js",
+                      "size":  4436,
+                      "sha256":  "f7ff78915826f41918aa292f1c7ac32d4e2d1ee6557c034e0ad5fe7f98676261"
+                  },
+                  {
+                      "path":  "assets/feedback-compose-v7.css",
+                      "size":  7292,
+                      "sha256":  "34626f3d2006ab0dda3f5af75f4b41a4467425b301694abc3c52b7c692208bf3"
+                  },
+                  {
+                      "path":  "assets/feedback-compose-v7.js",
+                      "size":  4344,
+                      "sha256":  "74dae326db42d49c224f283ca8baaab67eccbb3c5602b4a2e6c9670f11843b46"
+                  },
+                  {
+                      "path":  "assets/feedback-engine-v5.js",
+                      "size":  20970,
+                      "sha256":  "78ce00741854707969101a0b5336d1537c5232c8215eb21965bb66bc3664987a"
+                  },
+                  {
+                      "path":  "assets/feedback-family-data.js",
+                      "size":  19129,
+                      "sha256":  "2d78c5d5c8b6a2b9bba1c5ca057a6fdc7bd7a30ece7b94b0595b98b15a141e0b"
+                  },
+                  {
+                      "path":  "assets/feedback-list-contract.css",
+                      "size":  4394,
+                      "sha256":  "5887ae26b48fc1806b9cd16b00f79bf5d29de18330df053e0193aafbe5523f9a"
+                  },
+                  {
+                      "path":  "assets/feedback-navigation.js",
+                      "size":  3945,
+                      "sha256":  "05b7711966d7407f0f13d837d03df84bf3896e623156c9a5eb3c197c1e982deb"
+                  },
+                  {
+                      "path":  "assets/feedback-quick-replies.js",
+                      "size":  657,
+                      "sha256":  "ea7d685351d499d9f34138d2cc6a85a50f597274d1590f47469ac9e576dda28c"
+                  },
+                  {
+                      "path":  "assets/feedback-region.js",
+                      "size":  2658,
+                      "sha256":  "e5d6a18c01ae56b3e0325e563c8526f392e79942cf043f487034f77c60264ad8"
+                  },
+                  {
+                      "path":  "assets/feedback-v5.css",
+                      "size":  8330,
+                      "sha256":  "4f51ea127cdd8c838bb072987d21cccdf9e90e3468282b54395f61440bb69e35"
+                  },
+                  {
+                      "path":  "assets/feedback-web-v5.js",
+                      "size":  24368,
+                      "sha256":  "76994af0fd32a51d3230633a886257d4a1ea5bcb72e6e1b46c3139a22175fb3e"
+                  },
+                  {
+                      "path":  "assets/filter-layout.css",
+                      "size":  1593,
+                      "sha256":  "1aa0c41724f33bed5839e0b03985e8a6042d9d2f6b1dafde95eb0aa38b6f6468"
+                  },
+                  {
+                      "path":  "assets/fixed-ui.css",
+                      "size":  15522,
+                      "sha256":  "c8bb887923b5b8abe04e32893900a9be4ce2706f875e36df6b685e95bc7bddf2"
+                  },
+                  {
+                      "path":  "assets/form-focus.css",
+                      "size":  409,
+                      "sha256":  "062e4fb09b314151ad9af0d7895a2b6389100e4fc0136ba79cdb99b4bd9ab7a5"
+                  },
+                  {
+                      "path":  "assets/legacy-operation-log.js",
+                      "size":  151396,
+                      "sha256":  "12630ef062c308db8fb0f9250fe631220f9789bc5d43162a4be193bd30067d5c"
+                  },
+                  {
+                      "path":  "assets/legacy-query-bridge.js",
+                      "size":  3419,
+                      "sha256":  "84b13ce87cb159761801b88404f66180e06d1e91f8d269b988f64ef37f77b8c9"
+                  },
+                  {
+                      "path":  "assets/module-demo.js",
+                      "size":  24665,
+                      "sha256":  "0351da1262852be24395533914a4531ea611671d8005b176f8cbd6fdf7191826"
+                  },
+                  {
+                      "path":  "assets/notice-host-bridge.js",
+                      "size":  1289,
+                      "sha256":  "e1b19ddaaddec8fe4d44ff75c0eb0112a892c627eff04f0e5aa1c9fb01a0798c"
+                  },
+                  {
+                      "path":  "assets/page-links-unified.js",
+                      "size":  3953,
+                      "sha256":  "bfe9a7d32d4f6ee66ed64be3ac82d2ac3c0ee6dfc5df03b7c14587d5c7f5bf60"
+                  },
+                  {
+                      "path":  "assets/page-registry.js",
+                      "size":  4106,
+                      "sha256":  "53c44918f1e5cf58554759fe465d33b810bad3600f9cb748e406dc66354600d4"
+                  },
+                  {
+                      "path":  "assets/presentation-cleanup.js",
+                      "size":  1109,
+                      "sha256":  "8d6ff64bc867cb70a91c1aa483184709e346b02540986a51e7a65f1c1841a45a"
+                  },
+                  {
+                      "path":  "assets/query-router.js",
+                      "size":  3030,
+                      "sha256":  "356b489d27fd2d4f895ffad0b1e18cebb2799d5aa0053cf6fee7c4ce5fb3bd61"
+                  },
+                  {
+                      "path":  "assets/regions-data.js",
+                      "size":  146469,
+                      "sha256":  "071af994fc356827275bb90f1114304691dddad5c0f172803a0bb3f7e7119265"
+                  },
+                  {
+                      "path":  "assets/runtime-theme.css",
+                      "size":  874,
+                      "sha256":  "976e36b7abd98fc34d64b37296fcb0d5035a4d84b257871d26bd505beb9eb5f2"
+                  },
+                  {
+                      "path":  "assets/shell.css",
+                      "size":  4623,
+                      "sha256":  "426a1624d9edb05a0451a847e9538d20d9de43a2dcf74e428213c198c2cfbd14"
+                  },
+                  {
+                      "path":  "assets/shell.js",
+                      "size":  11899,
+                      "sha256":  "3076f1401514305b8097e68e4074928bfdb81945dd8c8e1eee019f9366dcc99d"
+                  },
+                  {
+                      "path":  "assets/time-picker.js",
+                      "size":  3029,
+                      "sha256":  "032bef8614391905e4fb352e1a60dba1231aa87652ade5cd141dbebc407f8700"
+                  },
+                  {
+                      "path":  "assets/unified-shell.css",
+                      "size":  3113,
+                      "sha256":  "732fe1960ba8eb659d84ce60fd16e4573a1bff623ee473b7153d1bd15df94d40"
+                  },
+                  {
+                      "path":  "assets/unified-shell.js",
+                      "size":  7187,
+                      "sha256":  "1745a543770cdd893acb269bcf0797ef741553ef02dfaa9a2eb081938e99a157"
+                  },
+                  {
+                      "path":  "assets/worktime.js",
+                      "size":  2175,
+                      "sha256":  "9c179b1e2eedc380df0392e1948bb3d22003d4bdfdf61d300ecec0e0f48ed041"
+                  },
+                  {
+                      "path":  "index.html",
+                      "size":  5738,
+                      "sha256":  "dc5b5004474da7ec7e30df889031941f6a3d2d474c4bb3bfadcc7fc2fc55ffbf"
+                  },
+                  {
+                      "path":  "notice/app.js",
+                      "size":  196108,
+                      "sha256":  "eff296b08f5566d66799772a056106d0601cb2ada6e6ca036902dab14263601e"
+                  },
+                  {
+                      "path":  "notice/assets/campus.png",
+                      "size":  33215,
+                      "sha256":  "b3f7d1b871b20c19bd9563ab695112fadc07a2c848fe33022654b7599e1d3e70"
+                  },
+                  {
+                      "path":  "notice/assets/campus.svg",
+                      "size":  2077,
+                      "sha256":  "10b883b0fd834d7abcb8f5665888cf12b0540c827b050245f1e65541772f5665"
+                  },
+                  {
+                      "path":  "notice/assets/demo-panel.css",
+                      "size":  8159,
+                      "sha256":  "6e3c5b81b7e138c39dafacf59cc5171d319acfd975829a85c1f31f735424fd0e"
+                  },
+                  {
+                      "path":  "notice/assets/demo-panel.js",
+                      "size":  17419,
+                      "sha256":  "52f34ff3171c684b27753bc0d985394101fdc2eae334d2846dee1ca46f119acc"
+                  },
+                  {
+                      "path":  "notice/assets/logo.svg",
+                      "size":  298,
+                      "sha256":  "bf62695555b7cbdcde4991e63e12e3bfc10b7ba4abf72410f759b7126b764505"
+                  },
+                  {
+                      "path":  "notice/assets/module-demo.js",
+                      "size":  21155,
+                      "sha256":  "2abad3fd4c6b119a3fc843dbb02ee771ad8e17b4f7f3e7ebc1600c54b2031e36"
+                  },
+                  {
+                      "path":  "notice/assets/signature.svg",
+                      "size":  314,
+                      "sha256":  "9f8324a3a2588b9d12e6ee7b96161f1e45942778a52a7c89b24051973bcb6271"
+                  },
+                  {
+                      "path":  "notice/assets/安全课堂.mp4",
+                      "size":  123962,
+                      "sha256":  "cd73c4ad98250fe2c232b859a057a590e2277fc0e4acccb003a24141da63ee4d"
+                  },
+                  {
+                      "path":  "notice/assets/活动安排.pdf",
+                      "size":  746,
+                      "sha256":  "0b9b5695ad24976965df0f691f405c0c7cf5fa41014a96272b69301af5a9c40f"
+                  },
+                  {
+                      "path":  "notice/assets/轻柔提示音.wav",
+                      "size":  88244,
+                      "sha256":  "b57e5cf7dcb965e49ac8763303e4aeb5e4197c4cfb820ce1e20f959a226502c0"
+                  },
+                  {
+                      "path":  "notice/core.js",
+                      "size":  23604,
+                      "sha256":  "097f08d0d176cf47b560a278ffe2a04b23b19d56878fce08c19ea4f773782fa1"
+                  },
+                  {
+                      "path":  "notice/index.html",
+                      "size":  760,
+                      "sha256":  "ab6a2b98fd1ce4120150fed9cf3bf575a903333c9978262cc2df4641be0f5039"
+                  },
+                  {
+                      "path":  "notice/styles.css",
+                      "size":  84741,
+                      "sha256":  "5d1dc5286689d4a2f36a540c99a886d84723a98ad8891b56e9aed18e3bf46f40"
+                  },
+                  {
+                      "path":  "README.md",
+                      "size":  2287,
+                      "sha256":  "78053e4b7ee1302cf3def15f49f85ffed854a93915e2a600250a7fd2fbca920f"
+                  },
+                  {
+                      "path":  "定版信息.md",
+                      "size":  3959,
+                      "sha256":  "08de46c2ca42967ee52a3129be4aa8d38faf4e0ac8807b476a96b3130038f6da"
+                  },
+                  {
+                      "path":  "定版字段清单.md",
+                      "size":  2549,
+                      "sha256":  "0a6e34b97e79467d5b6dd19ebdc661374eb79cc5299ae4e16734350ca2784bea"
+                  },
+                  {
+                      "path":  "资料/客服管理-演示说明.md",
+                      "size":  7622,
+                      "sha256":  "0ed301e07cd7b7eac4e33a42a4dcb790601fde6aec5692b60fd9a965470d0da7"
+                  },
+                  {
+                      "path":  "资料/家校通知-演示说明.md",
+                      "size":  9654,
+                      "sha256":  "cceffc5d7d2a8d3ee221de60590b0635c649782fda33f0205b41b226c45dc698"
+                  },
+                  {
+                      "path":  "资料/用户反馈-演示说明.md",
+                      "size":  10868,
+                      "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
+                  }
+              ],
+    "bundleSHA256":  "2a54f36cecc8c6cc5d82967c458f0d6bd1cf3e926761e958b896b12d9cf83578"
+}

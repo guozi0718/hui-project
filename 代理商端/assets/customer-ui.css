@@ -95,3 +95,15 @@ body .cs-root .cs-customer-wrap,
 body .cs-root .cs-org-wrap{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important}
 body .cs-root .cs-customer-wrap .cs-table.cs-customer-list,
 body .cs-root .cs-org-wrap .cs-table.cs-org-table{width:100%!important;min-width:100%!important;max-width:none!important;table-layout:auto!important}
+
+/* v0.86 CS single-line ops & compact global confirm dialog matching reference */
+body .cs-root .cs-table.cs-customer-list th.cs-ops,
+body .cs-root .cs-table.cs-customer-list td.cs-ops{white-space:nowrap!important;width:244px!important;min-width:244px!important}
+body .cs-root .cs-table.cs-customer-list td.cs-ops .cs-btn.link{display:inline-flex;align-items:center;white-space:nowrap;margin:0 5px!important;padding:2px 2px}
+body .cs-mask .cs-dialog.customer-delete-dialog{width:432px!important;max-width:calc(100vw - 32px)!important;border-radius:8px!important;overflow:hidden}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-dh{border-bottom:0!important;padding:18px 22px 6px!important;font-size:17px!important;font-weight:700!important;color:#1b2838!important}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-db{padding:16px 28px 22px!important;text-align:center}
+body .cs-mask .cs-dialog.customer-delete-dialog .delete-alert-icon{width:68px;height:68px;line-height:68px;border-radius:50%;background:#f5a623;color:#fff;font-size:44px;font-weight:700;margin:0 auto 18px;font-family:Arial,sans-serif}
+body .cs-mask .cs-dialog.customer-delete-dialog .customer-delete-body p{color:#667085;font-size:14px;line-height:1.7;margin:0;text-align:center}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-df{border-top:0!important;padding:8px 22px 20px!important;justify-content:flex-end;gap:10px}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-df .cs-btn{min-width:72px;height:36px;border-radius:4px;font-size:14px}

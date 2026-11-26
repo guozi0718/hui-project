@@ -1,8 +1,8 @@
 {
-    "release":  "v0.85",
-    "releaseId":  "v0.85-37635eebaf",
-    "bundleSHA256":  "37635eebaf9112d56e79c6890b4d399e8125c30f9a89daa93f94a72d0ca568a9",
-    "path":  "版本/v0.85",
+    "release":  "v0.86",
+    "releaseId":  "v0.86-2a54f36cec",
+    "bundleSHA256":  "2a54f36cecc8c6cc5d82967c458f0d6bd1cf3e926761e958b896b12d9cf83578",
+    "path":  "版本/v0.86",
     "entry":  "index.html?page=family-notice",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "status":  "最终版本"

@@ -431,3 +431,26 @@ body.notice-embedded-web-print .school-notice-print-actions{flex:0 0 auto;positi
 .block-image-hint{margin-top:6px;color:#7b8796;font-size:11px;line-height:1.5;white-space:nowrap}
 @media(max-width:760px){.block-image-hint{white-space:normal}}
 .dialog.school-notice-delete-dialog .dialog-foot .btn{min-width:72px;height:36px;border-radius:4px;font-size:14px}
+/* v0.88 mini-program phone preview (aligned with Ops portal) & proportional centered image scaling */
+.cover-row img{object-fit:contain!important;object-position:center!important;background:#f8fafc}
+.block img{width:auto!important;max-width:100%!important;max-height:220px;object-fit:contain!important;object-position:center!important;margin:0 auto!important;background:#f8fafc}
+.phone-preview-dialog{width:min(510px,100%)!important}
+.phone-preview-dialog .dialog-body{display:flex;justify-content:center;align-items:center;padding:14px;background:#f1f4f8;overflow:auto;min-height:0}
+.web-phone-preview.phone{width:390px;height:min(68vh,680px);min-height:380px;max-height:680px;display:flex;flex-direction:column;flex-shrink:0;border-radius:30px}
+.web-phone-preview>.statusbar,.web-phone-preview>.mobile-nav{flex-shrink:0}
+.web-phone-preview>.statusbar{display:flex;align-items:center;justify-content:space-between;padding:10px 18px 6px;font-size:13px;font-weight:600;color:#111}
+.web-phone-preview>.statusbar .right{display:inline-flex;align-items:center}
+.web-phone-preview>.mobile-inner{flex:1;min-height:0;overflow-y:auto;background:#f1f4f8;scrollbar-width:thin}
+.web-phone-preview .mobile-card{margin:3px 0;box-shadow:none}
+.web-phone-preview .article h1{text-align:center!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+.web-phone-preview .article .content-block .caption,.web-phone-preview .article .link-card strong{text-align:center!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important}
+.school-notice-preview-stage{flex:1 1 auto;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;overscroll-behavior:contain;padding:14px 18px;background:#f2f5f9}
+.school-notice-preview-stage>.web-phone-preview.phone{height:100%;min-height:0;max-height:720px}
+.phone-preview-back{display:inline-flex;align-items:center;justify-content:flex-start;width:24px;flex:none;pointer-events:none}
+.school-notice-print-sheet.print-only{display:none}
+@media(max-height:560px){.web-phone-preview.phone{height:calc(100vh - 220px);min-height:260px}}
+@media(max-width:540px){.phone-preview-dialog{width:min(440px,100%)!important}.phone-preview-dialog .dialog-body{padding:10px}.web-phone-preview.phone{width:100%;max-width:390px}}
+@media print{
+ body.printing-notice .school-notice-preview-stage{display:none!important}
+ body.printing-notice .school-notice-print-sheet.print-only{display:block!important}
+}

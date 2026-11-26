@@ -1,12 +1,12 @@
 {
-    "release":  "v0.87",
-    "releaseId":  "v0.87-14ef6f6b4e",
+    "release":  "v0.88",
+    "releaseId":  "v0.88-755733fc09",
     "endpoint":  "agent",
     "repository":  "guozi0718/hui-project",
     "branch":  "main",
-    "folder":  "代理商端/版本/v0.87",
+    "folder":  "代理商端/版本/v0.88",
     "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
-    "task":  "T-20261126-01-操作日志6列原型重绘与导出Excel及通知配图提示更新",
+    "task":  "T-20261126-02-通知首行缩进、等比居中图片与小程序样式预览",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "publicURLUpdated":  true,
     "changes":  [
@@ -38,7 +38,9 @@
                     "家校通知去掉向导左侧重复步骤文案、移除自定义时间浮窗改用原生简洁时间控件、列表发布/创建时间单行显示并优化列宽、阅读统计全行可点开并同步学校端v0.69两行卡片与居中表格样式、Web及小程序预览标题/素材说明/链接标题强制居中完整换行。",
                     "按参考图重绘“系统管理 → 操作日志”原型页面：单行筛选栏（关键词/操作类型/操作人/近30天/重置/导出）、6列表格（操作时间/操作人/操作类型/操作对象[非编号]/操作详情/来源IP）、无数据保留表头且首行显示暂无对应数据、支持按当前筛选结果导出带大标题行的Excel表格。",
                     "新增操作日志标准导出 Excel 模板文件（代理商端-操作日志导出模板.xlsx）。",
-                    "家校通知编辑页及PRD同步更新：封面提示改为“封面建议900×383px，图片等比缩略、居中显示”，正文图片块本地选择按钮下新增提示“正文配图建议宽1080px；图片等比缩略、居中显示”。"
+                    "家校通知编辑页及PRD同步更新：封面提示改为“封面建议900×383px，图片等比缩略、居中显示”，正文图片块本地选择按钮下新增提示“正文配图建议宽1080px；图片等比缩略、居中显示”。",
+                    "家校通知文本块新建/新增时首行默认缩进两个中文字符（可编辑删除）；封面与正文图片块编辑及预览均按等比缩略居中显示不裁切。",
+                    "家校通知编辑预览与列表预览统一升级为运营后台同款小程序手机框样式，标题、素材说明、链接标题均居中完整显示并自动多行换行；PRD同步更新。"
                 ],
     "menuRoutes":  {
                        "familyNotice":  "family-notice",
@@ -278,8 +280,8 @@
                   },
                   {
                       "path":  "notice/app.js",
-                      "size":  196193,
-                      "sha256":  "7c4adb13cfe493c7150ce9aaaba90f239335c16a17044d5946c79679f786a4a2"
+                      "size":  198388,
+                      "sha256":  "571f517c3ab2f2d08a0be05e81facad380a25795dc125aa8e00287638c447a28"
                   },
                   {
                       "path":  "notice/assets/campus.png",
@@ -333,18 +335,18 @@
                   },
                   {
                       "path":  "notice/core.js",
-                      "size":  23604,
-                      "sha256":  "097f08d0d176cf47b560a278ffe2a04b23b19d56878fce08c19ea4f773782fa1"
+                      "size":  23616,
+                      "sha256":  "34c68696ae059265c43c8c8a622d3b2d265c68d0b92c923fe023c674f09f0fea"
                   },
                   {
                       "path":  "notice/index.html",
                       "size":  760,
-                      "sha256":  "6dc8dba775e141c960c4864f7eff5a760b9adca1ebb57625fee8164af868df3a"
+                      "sha256":  "eaa0acea249df445375af2301b97e0aba6644de3487eb301da50a020e83b2cdb"
                   },
                   {
                       "path":  "notice/styles.css",
-                      "size":  84902,
-                      "sha256":  "8c0f5e40c7292cd6fbb19c814a54040ae903952afb919cba0e1a765f63f4bda3"
+                      "size":  87427,
+                      "sha256":  "ef8e3313da8c4e690e60957d598f37e7c7ede07254081447de4c219eafe55c92"
                   },
                   {
                       "path":  "README.md",
@@ -354,7 +356,7 @@
                   {
                       "path":  "定版信息.md",
                       "size":  3959,
-                      "sha256":  "4c2bd57d4ebdcf7452b6d7978813304755124d5b2f0ad29395408f71cf6ac738"
+                      "sha256":  "5e07a60bdd86e288f9887b9879c4c4820a446ffce43ebba8a6a38db0ecbf38f6"
                   },
                   {
                       "path":  "定版字段清单.md",
@@ -377,5 +379,5 @@
                       "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
                   }
               ],
-    "bundleSHA256":  "14ef6f6b4ed392dda78bdffb2c6c3145547dced35dca381ac7530e304c368596"
+    "bundleSHA256":  "755733fc096521e3345572e802dbb1023550303777ad968ad4781b2f14aecc45"
 }

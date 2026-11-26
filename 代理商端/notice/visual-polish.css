@@ -543,3 +543,142 @@ textarea:focus {
   padding: 36px 16px !important;
   color: #86909c !important;
 }
+
+/* 10. 代理商端发布通知单页 70% / 30% 左右分栏布局 */
+.agent-single-editor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(300px, 3fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.agent-editor-left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.agent-editor-right {
+  position: sticky;
+  top: 16px;
+  min-width: 0;
+}
+
+.agent-school-card,
+.agent-content-card,
+.agent-settings-card {
+  border: 1px solid #e7e9ee !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  padding: 20px 22px !important;
+  box-shadow: 0 1px 3px rgba(31, 35, 41, 0.03);
+}
+
+.agent-school-card > h3,
+.agent-content-card > h3,
+.agent-settings-card .publish-settings > h3 {
+  position: relative;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1f2329 !important;
+  padding: 0 0 12px 12px !important;
+  margin: 0 0 16px !important;
+  border-bottom: 1px solid #f0f1f4 !important;
+}
+
+.agent-school-card > h3::before,
+.agent-content-card > h3::before,
+.agent-settings-card .publish-settings > h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 3px;
+  height: 15px;
+  border-radius: 2px;
+  background: #01a239;
+}
+
+.agent-school-card .required {
+  color: #e34d59;
+  margin-left: 2px;
+}
+
+.agent-school-selected-bar {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4e5969;
+}
+
+/* 右侧 30% 发布设置栏：竖向堆叠字段，确保在 30% 宽度内清晰无溢出 */
+.agent-settings-card .publish-settings .field {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  margin-bottom: 18px !important;
+}
+
+.agent-settings-card .publish-settings .field:last-child {
+  margin-bottom: 0 !important;
+}
+
+.agent-settings-card .publish-settings .field > label {
+  width: auto !important;
+  text-align: left !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  font-weight: 500;
+  color: #4e5969 !important;
+}
+
+.agent-settings-card .publish-settings .publish-control,
+.agent-settings-card .publish-settings .schedule-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.agent-settings-card .publish-settings .object-pick,
+.agent-settings-card .publish-settings select,
+.agent-settings-card .publish-settings .datetime-native {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.agent-settings-card .agent-audience-control {
+  width: 100%;
+}
+
+.agent-settings-card .agent-audience-dropdown-menu {
+  width: 100%;
+}
+
+/* 底部吸底操作栏 */
+.agent-single-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e7e9ee;
+  border-radius: 8px;
+  box-shadow: 0 -4px 16px rgba(31, 35, 41, 0.05);
+}
+
+@media (max-width: 960px) {
+  .agent-single-editor-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .agent-editor-right {
+    position: static;
+  }
+}

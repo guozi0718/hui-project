@@ -282,31 +282,46 @@ input,select,textarea{border-color:#d4dce6;border-radius:6px;padding:8px 11px;li
 
 .required{color:#d64f4f!important}.datetime-text{width:100%;font-variant-numeric:tabular-nums}.publish-settings .object-pick>span,.settings .object-pick>span{flex:1;text-align:left;white-space:nowrap}
 
-/* Web reading statistics: remove the unused tall panel and tighten vertical rhythm. */
-.notice-embedded-web-stats .workspace{padding-top:4px;padding-bottom:12px}
-.notice-embedded-web-stats .panel{min-height:0;padding:16px 20px}
-.notice-embedded-web-stats .stats-page{gap:10px;min-height:0}
-.notice-embedded-web-stats .stats-page-head{padding-bottom:8px}
-.notice-embedded-web-stats .stats-page .radio-tabs,
-.notice-embedded-web-stats .stats-page .stat-summary,
-.notice-embedded-web-stats .stats-page .filterbar{margin:0}
-.notice-embedded-web-stats .stats-pager{margin-top:0;padding-top:8px}
-@media(max-width:760px){.notice-embedded-web-stats .panel{padding:12px 10px}.notice-embedded-web-stats .stats-page{gap:8px}}
-
-
-/* V19 Web 统计页压缩纵向间距；仅作用于 Web 端嵌入统计页。 */
-.notice-embedded-web-stats .workspace{padding:2px 12px 8px}
-.notice-embedded-web-stats .panel{min-height:0;padding:10px 14px}
-.notice-embedded-web-stats .stats-page{gap:4px;min-height:0}
-.notice-embedded-web-stats .stats-page-head{padding-bottom:4px}
-.notice-embedded-web-stats .stats-page .stat-summary{padding:2px 0 4px;gap:18px}
-.notice-embedded-web-stats .stats-page .radio-tabs{gap:16px}
-.notice-embedded-web-stats .stats-page .radio-tabs button{padding:4px 2px 6px}
-.notice-embedded-web-stats .stats-page .filterbar{gap:8px}
-.notice-embedded-web-stats .stats-page .stats-table th,
-.notice-embedded-web-stats .stats-page .stats-table td{padding:7px 9px}
-.notice-embedded-web-stats .stats-pager{padding-top:5px}
-@media(max-width:760px){.notice-embedded-web-stats .panel{padding:8px 8px}.notice-embedded-web-stats .stats-page{gap:3px}}
+/* Reading statistics refresh: matches school portal spacious card & table rhythm. */
+.notice-embedded-web-stats .workspace{padding:10px 18px 20px}
+.notice-embedded-web-stats .panel{min-height:0;padding:0;border:0;background:transparent;box-shadow:none}
+.stats-page{padding:26px 30px 36px;background:#fff;border:1px solid #edf1f4;border-radius:12px;min-height:520px;line-height:1.6}
+.stats-page-head{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid #e9edf2;margin-bottom:20px}
+.stats-page-head h2{font-size:18px;letter-spacing:.2px;line-height:1.45}
+.stats-page-head .back{width:34px;height:34px;border:1px solid #e5eaf0;border-radius:8px;background:#fff;color:#6e8197;display:grid;place-items:center}
+.stats-page .radio-tabs{display:flex;gap:24px;border-bottom:1px solid #e9edf3;margin-bottom:20px}
+.stats-page .radio-tabs button{padding:8px 4px 12px;font-size:14px;font-weight:500;line-height:1.5}
+.stats-metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:16px;margin:20px 0 24px}
+.stats-metric-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:122px;padding:18px 20px 16px;border:1px solid #e7ecf1;border-radius:12px;background:linear-gradient(145deg,#fff,#fbfcfe);box-shadow:0 3px 12px #263e5a08;overflow:hidden}
+.stats-metric-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#9bb4d4}
+.stats-metric-card strong{order:2;margin-top:8px;color:#243b57;font-size:32px;font-weight:650;line-height:1.15;letter-spacing:-.5px;font-family:Arial,"Microsoft YaHei",sans-serif}
+.stats-metric-label{order:1;color:#687b91;font-size:13px;font-weight:500;line-height:1.5}
+.stats-metric-card small{order:3;margin-top:6px;color:#9aa6b4;font-size:11px;line-height:1.4}
+.stats-metric-card.tone-total{background:linear-gradient(145deg,#f7faff,#fff)}.stats-metric-card.tone-total:before{background:#618bd1}.stats-metric-card.tone-total strong{color:#3969b2}
+.stats-metric-card.tone-read,.stats-metric-card.tone-done{background:linear-gradient(145deg,#f5fbf7,#fff)}.stats-metric-card.tone-read:before,.stats-metric-card.tone-done:before{background:#5bac7d}.stats-metric-card.tone-read strong,.stats-metric-card.tone-done strong{color:#318353}
+.stats-metric-card.tone-unread,.stats-metric-card.tone-pending{background:linear-gradient(145deg,#fff9f2,#fff)}.stats-metric-card.tone-unread:before,.stats-metric-card.tone-pending:before{background:#e4a24f}.stats-metric-card.tone-unread strong,.stats-metric-card.tone-pending strong{color:#c17a24}
+.stats-filterbar{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin:0 0 22px;padding:17px 20px;border:1px solid #e2e8ef;border-radius:10px;background:#f8fafc}
+.stats-filterbar .stats-filter-field{display:flex;flex-direction:column;align-items:stretch;gap:7px;min-width:160px;color:#728196;font-size:12px;line-height:1.5}
+.stats-filterbar .stats-filter-field select,.stats-filterbar .stats-filter-field input{width:100%;height:36px;min-width:160px;border-color:#d9e1e9;border-radius:6px;background:#fff}
+.stats-filterbar .btn{height:36px;min-width:76px;border-radius:6px}
+.stats-table-wrap{width:100%;overflow:auto;border:1px solid #e5eaf0;border-radius:10px;background:#fff}
+.stats-table{width:100%;min-width:680px;border-collapse:separate;border-spacing:0;font-size:13px;line-height:1.6}
+.stats-table thead th{height:48px;padding:12px 18px;background:#f5f7fa;color:#75869a;font-weight:500;text-align:left;border:0;border-bottom:1px solid #e6ebf0;white-space:nowrap}
+.stats-table tbody td{height:56px;padding:14px 18px;color:#44566c;border:0;border-bottom:1px solid #eef1f4;vertical-align:middle;line-height:1.6}
+.stats-table tbody tr:last-child td{border-bottom:0}.stats-table tbody tr:hover td{background:#fbfcfd}
+.stats-class-summary-table th:first-child,.stats-class-summary-table td:first-child{padding-left:22px}
+.stats-progress-count{color:#294665;font-weight:600;font-variant-numeric:tabular-nums}.stats-progress-count i{margin:0 5px;color:#9aa7b5;font-style:normal;font-weight:400}.stats-progress-label{display:inline-block;margin-left:8px;color:#9aa5b2;font-size:11px}
+.stats-class-expanded{margin:24px 0 8px;padding:22px 24px;border:1px solid #dce9e1;border-radius:12px;background:linear-gradient(145deg,#f8fcf9,#fff 70%)}
+.stats-expanded-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.stats-expanded-head h3{margin-top:4px;font-size:16px;color:#29455f;line-height:1.45}.stats-expanded-head p{margin-top:6px;color:#8291a1;font-size:12px;line-height:1.6}.stats-section-eyebrow{color:#55916c;font-size:11px;letter-spacing:.3px}.stats-collapse{margin-top:8px}
+.stats-class-expanded .stats-filterbar{margin-bottom:16px;background:#fff}
+.stats-state{display:inline-flex;align-items:center;padding:4px 10px;border-radius:20px;background:#f2f4f7;color:#768596;font-size:12px;line-height:1.4;white-space:nowrap}.stats-state.is-read,.stats-state.is-signed{background:#edf8f0;color:#28834a}.stats-state.is-unread{background:#fff5e8;color:#bb7d2c}
+.stats-empty{padding:36px 20px!important;text-align:center!important;color:#98a5b3!important}
+.stats-pager{margin-top:18px;padding-top:12px}
+.receipt-table-wrap{max-height:min(60vh,520px);overflow:auto;border:1px solid #e5eaf0;border-radius:9px}
+.receipt-detail-table{min-width:620px}.receipt-detail-table thead{position:sticky;top:0;z-index:1}.receipt-detail-table th,.receipt-detail-table td{text-align:left;padding:12px 16px;line-height:1.6}.receipt-detail-table tbody td{height:64px}.receipt-detail-table .signature-img{display:block;width:120px;height:48px;object-fit:contain;border:1px solid #edf0f3;border-radius:5px;background:#fff}.signature-photo-link{display:inline-block}.receipt-empty{padding:44px 20px!important}
+.receipt-table-wrap:not(.has-signature) .receipt-detail-table th:last-child,.receipt-table-wrap:not(.has-signature) .receipt-detail-table td:last-child{display:none}
+@media(max-width:760px){.stats-page{padding:18px 14px 28px;border-radius:8px}.stats-metric-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:17px 0}.stats-metric-card{min-height:104px;padding:14px}.stats-metric-card strong{font-size:27px}.stats-filterbar{gap:12px;padding:14px}.stats-filterbar .stats-filter-field{min-width:calc(50% - 8px);flex:1}.stats-filterbar .stats-filter-field select,.stats-filterbar .stats-filter-field input{min-width:0}.stats-class-expanded{padding:16px 12px}.stats-expanded-head{gap:8px}.stats-table thead th,.stats-table tbody td{padding-left:12px;padding-right:12px}}
 
 /* Web 封面字段与标题输入框共用左对齐基线，字段内容保持单行。 */
 body.notice-embedded-web-editor .notice-cover-field{display:grid;grid-template-columns:60px minmax(0,420px);align-items:center;column-gap:8px;margin-bottom:22px}

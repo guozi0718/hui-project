@@ -1,0 +1,39 @@
+{
+  "task": "T-20261125-02-学校反馈与通知回执完善",
+  "version": "学校 Web v0.67",
+  "javascript": {
+    "files": 42,
+    "syntax": "passed",
+    "errors": []
+  },
+  "json": {
+    "files": 4,
+    "syntax": "passed",
+    "errors": []
+  },
+  "htmlResources": {
+    "pages": 4,
+    "missingLocalFiles": [],
+    "parentDirectoryReferences": [],
+    "localhostReferences": []
+  },
+  "functionalDocuments": {
+    "count": 3,
+    "independent": true,
+    "screenshotsEmbedded": false,
+    "historicalInformation": false,
+    "crossDocumentVersionReferences": false,
+    "issues": []
+  },
+  "menuBadges": {
+    "count": 0,
+    "matchedCode": []
+  },
+  "routes": {
+    "method": "学校端统一链接宿主",
+    "schoolFeedback": "feedback/index.html",
+    "familyNotice": "notice/index.html",
+    "issues": []
+  },
+  "status": "passed"
+}

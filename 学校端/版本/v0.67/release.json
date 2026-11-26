@@ -1,0 +1,49 @@
+{
+  "version": "v0.67",
+  "endpoint": "school",
+  "repository": "guozi0718/hui-project",
+  "branch": "main",
+  "folder": "学校端/版本/v0.67",
+  "status": "最终版本；唯一维护源为 hui-project/学校端；运行包自包含，不关联功能项目",
+  "previewURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/index.html?page=school-feedback",
+  "versionURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/版本/v0.67/index.html?page=school-feedback",
+  "routes": [
+    {
+      "menu": "学校反馈",
+      "stableId": "school-feedback",
+      "contentLink": "feedback/index.html",
+      "loadMethod": "统一链接宿主",
+      "owner": "学校端"
+    },
+    {
+      "menu": "校务管理 → 家校通知",
+      "stableId": "family-notice",
+      "contentLink": "notice/index.html",
+      "loadMethod": "统一链接宿主",
+      "owner": "学校端"
+    }
+  ],
+  "menuRoutes": {
+    "firstSecondary": "attendance-board",
+    "schoolFeedback": "school-feedback",
+    "familyNotice": "family-notice"
+  },
+  "changes": [
+    "学校反馈移除学校端不需要展示的组织字段，关联学生跟随联系电话并按提交来源显示学生快照。",
+    "教师与家长示例的查看线索打开公开运营后台人员资料页面。",
+    "家校通知学生统计采用留白充足的卡片，班级明细在当前页内展开，回执展示快照姓名、操作时间、状态与签字照片。",
+    "每条通知的确认或签字只允许一次成功提交；发布设置、筛选和状态不包含截止时间或已截止。",
+    "学校操作日志仅记录成功提出反馈。",
+    "保持一级菜单默认折叠、统一链接宿主、统一页签关闭回退、通知筛选容器边框、弹窗标题和底部固定。",
+    "提供学校反馈、家校通知、学校操作日志三份独立功能说明，不含截图和跨文档版本引用。"
+  ],
+  "limitations": [
+    "原型数据使用浏览器本地示例数据，不连接生产权限、服务端持久化、真实通知或签收服务。",
+    "学校端其他未接入菜单按本版既有页面状态显示，不由本版本创建功能页面。"
+  ],
+  "verification": {
+    "prePublishStatic": "passed",
+    "localBrowser": "passed",
+    "githubPages": "pending"
+  }
+}

@@ -1,0 +1,6 @@
+.action-standard-cancel,.action-standard-confirm{font-family:inherit!important;font-size:13px!important;font-weight:400!important;border-style:solid!important;border-width:1px!important;border-radius:4px!important;height:32px!important;line-height:30px!important;padding:0 16px!important;box-sizing:border-box!important;min-width:56px!important;cursor:pointer}
+.action-standard-cancel{color:#1f2329!important;background:#fff!important;border-color:#e7e9ee!important}
+.action-standard-confirm{color:#fff!important;background:#01a239!important;border-color:#01a239!important}
+.action-standard-cancel:hover:not(:disabled){color:#01a239!important;border-color:#01a239!important}
+.action-standard-confirm:hover:not(:disabled){background:#008a2e!important;border-color:#008a2e!important}
+.action-standard-cancel:disabled,.action-standard-confirm:disabled{color:#c9cdd4!important;background:#f7f8fa!important;border-color:#e7e9ee!important;cursor:not-allowed}

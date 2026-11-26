@@ -1,12 +1,12 @@
 {
-    "release":  "v0.84",
-    "releaseId":  "v0.84-2b7a841f1c",
+    "release":  "v0.85",
+    "releaseId":  "v0.85-37635eebaf",
     "endpoint":  "agent",
     "repository":  "guozi0718/hui-project",
     "branch":  "main",
-    "folder":  "代理商端/版本/v0.84",
+    "folder":  "代理商端/版本/v0.85",
     "status":  "最终版本；代理商 Web 唯一维护源为 hui-project/代理商端",
-    "task":  "T-20261125-06-通知发布时间筛选跨列排版与全量缓存哈希刷新",
+    "task":  "T-20261125-07-修复演示说明无数据按钮保持表头框架与单行提示",
     "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
     "publicURLUpdated":  true,
     "changes":  [
@@ -31,7 +31,8 @@
                     "家校通知编辑与预览支持通知标题、素材说明、链接标题居中完整显示并自动换行；附件提示拉宽单行完整显示；定时发送升级为年月日时分秒一体化浮窗插件。",
                     "家校通知列表补齐三类查收方式与多种进度示例；阅读统计摘要卡片改为单行互斥分类（学生/教师 Tab 一致），班级阅读明细改为独立弹窗。",
                     "家校通知筛选区“发布时间（开始时间 至 结束时间）”跨两列展示并禁止占位文字折行，解决拥挤与日历图标重叠问题。",
-                    "刷新 index.html 与 notice/index.html 全量静态资源 ?v= 哈希，确保浏览器立即加载最新脚本与样式（包括全局无数据表头留存样式）。"
+                    "刷新 index.html 与 notice/index.html 全量静态资源 ?v= 哈希，确保浏览器立即加载最新脚本与样式（包括全局无数据表头留存样式）。",
+                    "彻底修复演示说明面板中“预览 · 无数据 / 预览 · 无匹配”交互：保持页面筛选与表格表头框架不变，仅在表格第一行居中显示“暂无对应数据”，隐藏分页栏且不弹出额外提示框。"
                 ],
     "menuRoutes":  {
                        "familyNotice":  "family-notice",
@@ -196,8 +197,8 @@
                   },
                   {
                       "path":  "assets/module-demo.js",
-                      "size":  23959,
-                      "sha256":  "001731acbd8649838c8078032ebc731779f15144e0f722a9a7327e39cdcf8293"
+                      "size":  24665,
+                      "sha256":  "0351da1262852be24395533914a4531ea611671d8005b176f8cbd6fdf7191826"
                   },
                   {
                       "path":  "assets/notice-host-bridge.js",
@@ -301,8 +302,8 @@
                   },
                   {
                       "path":  "notice/assets/module-demo.js",
-                      "size":  20449,
-                      "sha256":  "549bda20e7d4f8a2aca2b32534df497624b284011ad9d0c0695351df9f33e2e7"
+                      "size":  21155,
+                      "sha256":  "2abad3fd4c6b119a3fc843dbb02ee771ad8e17b4f7f3e7ebc1600c54b2031e36"
                   },
                   {
                       "path":  "notice/assets/signature.svg",
@@ -347,7 +348,7 @@
                   {
                       "path":  "定版信息.md",
                       "size":  3959,
-                      "sha256":  "4ca695ca17fc35422389d729fa44b9f13d65768e32936b3823a6c353cdc6448f"
+                      "sha256":  "8ec095f1166942411aaa3eb43cc82d13e6c97c57f2a640869c7346b327001765"
                   },
                   {
                       "path":  "定版字段清单.md",
@@ -370,5 +371,5 @@
                       "sha256":  "1fb94e4ec79f59e342d10c2ed6ae569ffbbcec0ad47cf3686533b192a9220b8f"
                   }
               ],
-    "bundleSHA256":  "2b7a841f1c0209d194aa6e08d62ba400c26dfebbf96ed7bcc15b83c1f2574eca"
+    "bundleSHA256":  "37635eebaf9112d56e79c6890b4d399e8125c30f9a89daa93f94a72d0ca568a9"
 }

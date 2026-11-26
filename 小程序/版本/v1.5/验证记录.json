@@ -1,0 +1,23 @@
+{
+  "version": "v1.5",
+  "date": "2026-11-26T02:11:51.841Z",
+  "pageReview": {
+    "date": "2026-11-26T02:10:53.187Z",
+    "normal": {
+      "hint": "封面建议900×383px，图片等比缩略、居中显示",
+      "textBlocks": 1,
+      "previewHeight": "87.987px",
+      "attachmentTools": "0/9\n最长10分钟\n添加链接\nPDF文件 0/5"
+    },
+    "beauty": {
+      "hint": "封面建议900×383px，正文配图建议宽1080px；图片等比缩略、居中显示",
+      "page": "beauty"
+    },
+    "runtimeErrors": []
+  },
+  "unrelatedAssetFilesUnchanged": 1609,
+  "customerServiceAndFeedbackDocsUnchanged": true,
+  "notificationCoreAndStylesUnchanged": true,
+  "inheritedValidation": "通知回执、快照、权限、分组等行为未变，完整继承v1.4已通过记录；本次仅核验普通/美文提示、单正文和附件入口。",
+  "screenshotsInDocuments": false
+}

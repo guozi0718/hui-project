@@ -1,0 +1,807 @@
+{
+  "at": "2026-11-26T02:11:51.841Z",
+  "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4",
+  "destination": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.5",
+  "files": [
+    {
+      "path": "index.html",
+      "before": "8b14e7b70ee79ddbdd3acbcc376ce836998a8e480a506310ab37be788edddea0",
+      "after": "502d4ae397bc295bc06e2c9e1dec5be7439c85e8797f47e6cabf398cf0267c88"
+    },
+    {
+      "path": "文档/通知功能产品需求文档.md",
+      "before": "a0903a3099b8c914b89b8ad3c4111283b7188696a76fb3e2dc95b378ef0f4166",
+      "after": "fc08ebda4c923aadc522e103135a1b7ba49dd66b282b2ca1d4337c7a536312f2"
+    },
+    {
+      "path": "版本信息.json",
+      "before": "e5616db4fc8d088aeb777aacd05be3059e749bc2700a6395ab0568f5f474a2a9",
+      "after": "c773ae253121c3ebda782654c75853ca0503de3741b4030816f072e37203a57f"
+    },
+    {
+      "path": "端-家长/addchild.html",
+      "before": "cc99b58a48f4f62484b9ce6efd5730ce066a6cfa7ed816eb9efe76bbc24a48e7",
+      "after": "4e28ba69e2fc10c15565be38736d62aae0b9c63fa0c8d9943eb4b3d2f20e6b91"
+    },
+    {
+      "path": "端-家长/apply.html",
+      "before": "b85b4a28088de73e4784801d68a26cc02e336feec089c8eeca167b47cbd8ce0e",
+      "after": "52b781fe15dfa68a794ab2fc712b7d21009b3b759f34680087f95629840e989d"
+    },
+    {
+      "path": "端-家长/assets/app-shell.js",
+      "before": "8ddaf721f92e9a295ec38d6ca16810c5afa519a1e632fd549237606a91fffa22",
+      "after": "01f3dd373c586b1a680ef2ee2056580a4526bd3611aa4b04c78c97ed35069ffb"
+    },
+    {
+      "path": "端-家长/assets/notification-mini/app.js",
+      "before": "228e0f66e9618c46f41a01e724af7db7ba21c4211885ed139d03f940f82c7e3c",
+      "after": "f54caf134b19fa6526ddbc70cac2b551830aaba87c0277a7b242925d1d7ae3f5"
+    },
+    {
+      "path": "端-家长/assets/notification-page.js",
+      "before": "e6354ddb82e9b4e805d8ab498050af48463935960d0b48a506788ac82ae25a63",
+      "after": "d4e2d685e2b8f93da9a5123abf3d406b68454b59937242741cae5237193a654c"
+    },
+    {
+      "path": "端-家长/atthist.html",
+      "before": "24f8b94a502f8c77fe6705b259d869e759623cb5f700ec8a126c9d6dc7cf9979",
+      "after": "14577ebeb6203bd4def7f8c4b62abdcf1ea4c05ac28fccdb1095f1f3ef5d27a8"
+    },
+    {
+      "path": "端-家长/auth.html",
+      "before": "f7e04941c37eac427d0cfb7e59bc0e5a18b9bf097f3162d564fd2d0c3ce5e24a",
+      "after": "10ab7053c358cc0fe765cfec8504f10f4a41ccfe5315937b2e94703ba18ad9a2"
+    },
+    {
+      "path": "端-家长/child.html",
+      "before": "81a9124115886fc8fc927f91cd770b75a6cf44e136bda87f2cc1a6f337991c19",
+      "after": "42b6a656bcf94674b5de685b4ade0474866b073fa3e751ce9a6bc3b782394eaa"
+    },
+    {
+      "path": "端-家长/classreg.html",
+      "before": "0baf42d7ffc03f07631bc7732e152085132309e5255cd49a3488e61ad24989b9",
+      "after": "be97cae8874fc1f0e5e5941927677add54a1b7b3e8e2dfa8c70f31fe04b36850"
+    },
+    {
+      "path": "端-家长/dismiss-old.html",
+      "before": "2053f291b242ca4e1119c80f067277dda50701f99943968810cc55a24a9f1bd1",
+      "after": "00bacc2108a1ba1cf1e5aa8d012e680cc16c388923cff9fff614af53ce67797c"
+    },
+    {
+      "path": "端-家长/dismiss.html",
+      "before": "66b9d53c0d38da63a8235c938b06a0c833561f9b9fff11b161dcd0f1d82a4973",
+      "after": "de62bf9236ce4d63d2ded702641bfe6b0b8b2833d2ad472a2bb1c7a1b6e210aa"
+    },
+    {
+      "path": "端-家长/eval.html",
+      "before": "36ebe33961f4a8b8da5dc981a8df20bd3cddc11b6d48514d2255cf35214e1d64",
+      "after": "6c5d202c3f84d6ed20b279032d4beb4f5040304e7e318bff18aaa42d2169a3a1"
+    },
+    {
+      "path": "端-家长/evaldl.html",
+      "before": "5035f22a0e4768be0ce56be39b9ce51a9962ee1178e77d538f85985f1d3e154f",
+      "after": "5cdbc9eee78d20b764b19e9d072ecb3bbb53dceb64275f0d78f24258009d3c64"
+    },
+    {
+      "path": "端-家长/evaldt.html",
+      "before": "e7360ba7e94ecbed42ba3a73b42f3e3e13e06a6beaa5c69383ba2abfb2a178c3",
+      "after": "f56d98fc706743b106b9b5a646fdb0fb595ff1ca8a3f2ee7b60160163ba1c093"
+    },
+    {
+      "path": "端-家长/evalrep.html",
+      "before": "18849a12273f77a1423c78e5787e0f4979a62fc3abc550b370d4f8578a736ce8",
+      "after": "7408efb92646e15f0293c1b548b34fc4f024a9891cb9b95f916947dac82c15c8"
+    },
+    {
+      "path": "端-家长/face.html",
+      "before": "68adda283092f63d602cb7b6750ad0ef609f3ed9b1cc036f9b3ade2c2db44d69",
+      "after": "46d84b8e73d464f6e8e7394685ebd0905cd69376b0b223cf9dc0d7acb4c5f210"
+    },
+    {
+      "path": "端-家长/famconfirm.html",
+      "before": "efe9887e3920801e9ac801c454152da464607aff434dda7af999c4a2412ff3ad",
+      "after": "f732567300e085d024a6064782efcec1f2e39bb926a4628598a856b25fb0a572"
+    },
+    {
+      "path": "端-家长/faminv-form.html",
+      "before": "6d42aca87a658be483649f542a765221070862147b59db6ce550117cf79098d8",
+      "after": "7ef6694a599c7fee1b73abb3cf32d5cb8073668b0bc50a431c34d00dce6d7f67"
+    },
+    {
+      "path": "端-家长/faminvalid.html",
+      "before": "a01d5fa1f743d410c2b359e62f56991c2c72ce49ccfd0ff87da3eed4d558928a",
+      "after": "279ec0a61115d8f4f3b5022ea8f191bcab297f763295d5f6ef32caa770738e72"
+    },
+    {
+      "path": "端-家长/faminvite.html",
+      "before": "34a364c35c87c2ec704cf7ce0dddc2ac08d7dfa0390f8837cbadfd6cba8fd85e",
+      "after": "c7c40f0201f94c2f865a2153f430b0eb5db0ce9b449611685945650b60034d9c"
+    },
+    {
+      "path": "端-家长/fbdetail.html",
+      "before": "39ece34db2f171a81f7babdc4abf6f5c487ea9bc723b6f8e136b42d2dfd535ad",
+      "after": "d5a031716974632537e874b31e186bbd45919437e1e8671044c8195ddc646886"
+    },
+    {
+      "path": "端-家长/fblist.html",
+      "before": "cc92321fc55993b2875109d58a6084ef829d1c4647306414bb0a5649c414ab3b",
+      "after": "c74b51271167bd3dab4273b1f74d13f2ca6b5e78e7a68b3da974487a3eac2680"
+    },
+    {
+      "path": "端-家长/guardians.html",
+      "before": "7ff6e5270dcbdbb14f687a415962c60fbcd8bda8ad7baf95ca03ff606e44b70d",
+      "after": "ac7e0f8946821f2cdf454a6125d426ce0d2f2e08daa3b2ad653ce071af01de8c"
+    },
+    {
+      "path": "端-家长/help.html",
+      "before": "a93df5c3b5f85cabb922d67c660e32250e2e329995cf0eacd7e9c00b338da296",
+      "after": "a10a2b655aaeeb9b697e3d860e3a2f09c9cccb87038b776cfc4371a67d56e904"
+    },
+    {
+      "path": "端-家长/home.html",
+      "before": "a6434d85e29bfe8f63ab083b14a26d7a98a19e74a9eebde068ba87f68dc1d337",
+      "after": "be2b69fda7592371ab18db4251e436755a16881f0c8589e2af5e8f3ff83641f1"
+    },
+    {
+      "path": "端-家长/index.html",
+      "before": "e0412e3df5119612d8f07548a46107bec2be5415ec4845d15dc869cb4dbaa34c",
+      "after": "2a10347775a16555044ae7090aa11f7fe1a5646474557687717bd07818219014"
+    },
+    {
+      "path": "端-家长/invite.html",
+      "before": "ac4a3bad9c6506b022dfff68c38f2ce8ee3256f3c06f7477b2c457a404b23ca4",
+      "after": "cd1013ad9767204b723406ccd24a49de7352d33f24b9086865785603dd5ee590"
+    },
+    {
+      "path": "端-家长/kids.html",
+      "before": "f16a6af7cd1fa6baa8605553e37c49e4d9bbcb89b0344a1b2df08a6930047074",
+      "after": "31ec4f2575ae7bbda294c86fad0b195afead9cc013a856479d5cd23cea41e586"
+    },
+    {
+      "path": "端-家长/leave-tab.html",
+      "before": "2de2bc591361f292f533489f7bfbfb8d913d333759b3fe25ca033130992b3e42",
+      "after": "0c614f0ba24b6c410b41f62e96934299b531745c9bb81960d2d52bfcdb606935"
+    },
+    {
+      "path": "端-家长/leavedetail.html",
+      "before": "0ff2576b7f811338c00a7d89e697a07e94a059c9a1cd1e15af3b12515f50519e",
+      "after": "14ad3d4070a615eb594e05eaa676667ce93f930ac743e050253e170a0d0fc7bd"
+    },
+    {
+      "path": "端-家长/legal.html",
+      "before": "a0a1bb689669c7714072ba46010f1e425b80e4a6f6701fa7dced11a800a8d8a4",
+      "after": "1c637206f1116b5d90456817d2cc2d927ce004ce66d00cb66f1e967b126d794a"
+    },
+    {
+      "path": "端-家长/login.html",
+      "before": "5b37679a7ab873a33c39a608f796147b734ea2e9bdac6f7c5c2cd6a951cb9afb",
+      "after": "ae69ab2f73a1ac7da275a334528b178ad5d2f5d0462556bd9cdaa9ee81864bed"
+    },
+    {
+      "path": "端-家长/me.html",
+      "before": "191a81a191500244bec4842b5c003cf03ef3b6231e62cd331e638a0f43b09bd3",
+      "after": "4245e801aa9bf5ce08b349b43489d5ed7c067f800f8d2983c73b2a651fb16060"
+    },
+    {
+      "path": "端-家长/mine-single.html",
+      "before": "cefcdef32be368c4b6741e23dc2428ddbe9739cf7827aaaab01b87f25766c3f4",
+      "after": "fef869a5e5aa8754a563af5178209dc61370b45f82685fa68397a285c4410222"
+    },
+    {
+      "path": "端-家长/msgguide.html",
+      "before": "da7512731a2ee1c04f375e06682ac5658fdd0986e75c1f7695ada8f97c70e8b3",
+      "after": "285f1bde5e24398141450e1017b7e34793b74f3b25eeb013db3ef1f7f88d818d"
+    },
+    {
+      "path": "端-家长/msgs.html",
+      "before": "b39d96acb221d8dd5426e382e898014e4a45db7c4c6581171046b3fad0ca2435",
+      "after": "11d89d7c1382d16880bc4bd27a3f12f36d31b5482482d69b8ed2ea1a24b9e994"
+    },
+    {
+      "path": "端-家长/msgset.html",
+      "before": "7e766ca8e6885880eb38255ee6a202d2c0ee17c7472a3a4197b2bae29bcaca0d",
+      "after": "534c26c0d62ada200218cc785c7908f43259bd6be82adeee550946b9d14c2ae1"
+    },
+    {
+      "path": "端-家长/newleave.html",
+      "before": "19f87f5c1ac57e681530e2368e815365b4647876767999743c6ae04e2cc5f5a4",
+      "after": "ce52d6297c08bbb0c9e79bc4cee4097cde53c72e16251d3d231083dd6cb3e052"
+    },
+    {
+      "path": "端-家长/nochild.html",
+      "before": "6c7dc7bc0bbe2127646fbddec918356dce388c51e79d33845fa180527c479005",
+      "after": "03c6805ff314a84e27f7d9af47b90c576094c4e0a1bcc14402ba255ff49d1a43"
+    },
+    {
+      "path": "端-家长/notification-beauty.html",
+      "before": "b7a3df2d223556a2015df3977f845fe53b6e17948cded3179f44c8347d3e1a8d",
+      "after": "e8982d68bc34da49a86441f16599b035e348e94d65b1cb2bbbc5fbc3407fa419"
+    },
+    {
+      "path": "端-家长/notification-detail.html",
+      "before": "f933ac750a5b7d7c35117771090bb018a93a95de1f09cc19639ea93c430dabc2",
+      "after": "96eb6e32b44cc8efeec4f460fcfa82c0e6e2b16045e2c292f80503254010fa08"
+    },
+    {
+      "path": "端-家长/notification-editor.html",
+      "before": "91f57197391c54bb8a2ba0e214e15b2190d93f0bbd6f855d7f7754d2053bf01b",
+      "after": "33c181d718a8a78c568a17a8c7f8d27d2878b84d01bfb00fc68e1947a8ca148f"
+    },
+    {
+      "path": "端-家长/notification-error.html",
+      "before": "013d27cf520a4c0c145cf6c34102fa24293e6fe2bd2507a85c1d86fcafcd2b5d",
+      "after": "9d5f5d60cf51d240b18c2a9c51f9a783e166bd70ff8a1abf82905ed37eab60a3"
+    },
+    {
+      "path": "端-家长/notification-mini/app.js",
+      "before": "228e0f66e9618c46f41a01e724af7db7ba21c4211885ed139d03f940f82c7e3c",
+      "after": "f54caf134b19fa6526ddbc70cac2b551830aaba87c0277a7b242925d1d7ae3f5"
+    },
+    {
+      "path": "端-家长/notification-preview.html",
+      "before": "4e3adf9317f117446e7713b7af2540ea4957748a2e94818c99f64bef27b582b2",
+      "after": "48581662c480f4648afdc416081927fe1756ea884b13ce30746d48d769c856c2"
+    },
+    {
+      "path": "端-家长/notification-settings.html",
+      "before": "2c63eb078faafe3068676c5bbef91067f62522cc22b4246669b6cb9a01428cc2",
+      "after": "c1986b22e5c746a27e14aeafce35fa27330da629c42ad13402bbbfcd74e35372"
+    },
+    {
+      "path": "端-家长/notification-share.html",
+      "before": "80aecdca0223b5057a6f87b8c1ce9ad7db328ee41fb5c2723c5ec247316ebd1f",
+      "after": "a25a0a81e09d0b3d3d1e727f7a4a1370b8a741d98f9cc72aac9d6950d71a1fce"
+    },
+    {
+      "path": "端-家长/notification-stats.html",
+      "before": "6ce11995c03e44d09787684eac8df2bdab6d6d4f5ee86602a580595ec34420bd",
+      "after": "0505fb8b6f6e7f23df387a8dd73da9f69de94573a44319391967cf23f10efff5"
+    },
+    {
+      "path": "端-家长/notification-template.html",
+      "before": "8ff81bf357f076b1b0bd9027cf58d4141c314c97be5802082791607b146d6fca",
+      "after": "21bd2d3a5eb9045d4c5adffb606fb90547e000ffb547039878430c349e4a7549"
+    },
+    {
+      "path": "端-家长/notification-templates.html",
+      "before": "9a080f12a1725ac7775d00c279b28080b13a1d742cfcae6d09a094cce7e8584c",
+      "after": "ee527d6f2df3821f33df63254e347878a5d3147ae48767966833b7515acbdd42"
+    },
+    {
+      "path": "端-家长/notification.html",
+      "before": "bdc28dd7a83b0fbd42ffd7ef2792bb256ba6374ac866b30f9d85e7f57cc63dcc",
+      "after": "1b2d38807be3fe21b4b1c1a48bd955efbb34a83c1ef9c88c0d7b192cc798884b"
+    },
+    {
+      "path": "端-家长/order.html",
+      "before": "daa5c1dfe8a01aea469c9ed68397ebff23b8896a5eba90cf4953866ac8571cd3",
+      "after": "5d268cefbe05a766975a09bbdd5276d8a42ccfbd2738fcfac6ba759afd29a94f"
+    },
+    {
+      "path": "端-家长/payok.html",
+      "before": "cda99aa9632e0ef7ea8adb66e4df723596c2b7f7cd9b4dcd23d09152c5aac848",
+      "after": "5d6d8251ff8da92a59000a5785c2ff63dabf3dd8a3ee5d5f1d39820ceaea0b9a"
+    },
+    {
+      "path": "端-家长/preview.html",
+      "before": "7085a62d536f0e7f6f6a7259633b9c4e485dcb5823ec6cd6e6470fae8725e3e6",
+      "after": "5782d8ca37638753a81c30a33ec3a6ee1a9295667415dcd9004e50e47bfab9c8"
+    },
+    {
+      "path": "端-家长/profile.html",
+      "before": "2f0feb3cb60fb7337eafedac67b24e4f0a442fa87821ab418357b89175387f3b",
+      "after": "70bef8fe7c103b8bc164f86cf231e8cfe2086eacf0c6112c2a3cdca0bfcf2531"
+    },
+    {
+      "path": "端-家长/regfollow.html",
+      "before": "9494ef2814d47efb09f92afd401199a1edec77859b55501284ca520ec4a172a2",
+      "after": "8e991bcd320cf53effd9846aea0871a7e0ed5f7ea27df0891591dd282cbe74fd"
+    },
+    {
+      "path": "端-家长/reginvite.html",
+      "before": "c4cdee8fbe9cc45c933d27ec2cd2434cbb52ac198729dbc542dd9a20cdfb6469",
+      "after": "8e9ab3cb054d833fbe396ca2b4687f7dc8c814b15edf61fa363d81b0032f4656"
+    },
+    {
+      "path": "端-家长/reginvite2.html",
+      "before": "767f736575a3a2cda24782a5c96a53f0ecdad5207779c7110829ae792a043f5f",
+      "after": "bf9deac15e93c3a7e6c6b06ea722ad170b67d539b19ec1cdc03198f08fa02781"
+    },
+    {
+      "path": "端-家长/reginvite3.html",
+      "before": "479fdd33cf6546770cb97a374b64946a19c8d3aa6d71a57b3f9e543001598032",
+      "after": "51c3882fd43e23918eecff07927c8f7b5d30fab521cdd4d1d76534ffb168b7d4"
+    },
+    {
+      "path": "端-家长/reglanding.html",
+      "before": "05388837c8f3b832802dac9e1d1d963d48dc7e01cc7522ec89be92470e921e7f",
+      "after": "9aed6344e153d6a68b083d79fd2f1b0d99ec2c15cf5fed8cc3c0b9cc460c6ee3"
+    },
+    {
+      "path": "端-家长/reglanding2.html",
+      "before": "57985767149033043b12dcbf68701d261f81ecaf6f0bb355ff8cb28d741d255a",
+      "after": "bb746c68d1547359224522d4c08bc1dae1f7a8f413ad83c280364f59593570e4"
+    },
+    {
+      "path": "端-家长/reglanding3.html",
+      "before": "b32a5d395503b130b05daea5f309759e9f880af8534ac7a25f1a61d4757e3245",
+      "after": "7be78fac126d07c86a8f2113b435022687f4d25fa03c9d9d51a7d73b253b0c08"
+    },
+    {
+      "path": "端-家长/regposter.html",
+      "before": "dacdf8c2f5910e4f0d26a231b68b368c607a14839fed876c50dc9d5406170674",
+      "after": "fd924862955c1add096f40cee767ff90d4d41b8179eaad04d7a9d9f29a133026"
+    },
+    {
+      "path": "端-家长/regposter2.html",
+      "before": "2695f6da5def234a25953f46077e276f3511fbbe2432c9d235640ac0d36f9f22",
+      "after": "5e77c96393c5c265d816ef233e721ec003bc0025aba9fa20e0a1b426d2850795"
+    },
+    {
+      "path": "端-家长/regwx.html",
+      "before": "828e7fba95126a2b4ddfe3041afe1f34d994335f81d4e1faa314bc0770d5812c",
+      "after": "999624ace69348c21062eec3c9357684b1d5f640226d0e03650373c2d12110f3"
+    },
+    {
+      "path": "端-家长/reissue.html",
+      "before": "54f2cf85416d1aadf76b835cb136fafb76d9f2c3f9bb0724de455d8c006de3fa",
+      "after": "bdd57e76ce54d21d8cf96cdbfa69947f05d69a21b6e79fc9eae9f944107e42cd"
+    },
+    {
+      "path": "端-家长/scan.html",
+      "before": "4877d45e1ce93f8b143ae582881a02b783bdcc7f4a3eb6a3d5f69a8e90113352",
+      "after": "dddb9555a32d1094fb0fe87e6a450e028b8fca41da1dec5152b60dcf13ddfcdc"
+    },
+    {
+      "path": "端-家长/sms.html",
+      "before": "80090a0e6ae7fcd6025ffde3b62ccc5d21e6b5e0b4375e24b7b60316ed9717e1",
+      "after": "c49a38eeebbe05d12c62991419dde6ce9420bc9f45e779a625c8be773075e6e9"
+    },
+    {
+      "path": "端-家长/switch.html",
+      "before": "88ca5378c6a3d6251900bbc9475530dc19a916e3c9b9d4bb9bb8d22a0ff052bc",
+      "after": "ecac34f579cc21f5ec696291e09d2d6527ddd988af2c5e1f876dc15f81721f95"
+    },
+    {
+      "path": "端-家长/visitor.html",
+      "before": "c7e96c3bc5cd9d3b908995877e18bbe7a60df3f7a8ac97898e9f67fd40d10578",
+      "after": "057832a71763d88d229ca299460d433dbbe9d35458d6b0c1504dfeb0b93a319d"
+    },
+    {
+      "path": "端-家长/wxphones.html",
+      "before": "066ee0ea6b1870514499e8c546156cd58523392ee7f9315f5ba5c1a5955a9a4e",
+      "after": "799d918a2043165a65253889e622ea1183f0f2161df3ef6d088e4c9e72fe4298"
+    },
+    {
+      "path": "端-家长/wxpush.html",
+      "before": "a1562aeabcc882a8fe1926f5797f8d95121da50ed717054458b76ff45465e44d",
+      "after": "50892c4a7001aa9fa734f84375512177de15c5e63ab306fe6ecfda8af6bb32af"
+    },
+    {
+      "path": "端-家长/定版信息.md",
+      "before": "b1a090b2b337ed8942fb5522661ce481b97525563851b5155f5c662bcfa09fb5",
+      "after": "77083485a30a9234e6795cfb87c7b95f4bbe5a10978e7e5362b6f188550aed24"
+    },
+    {
+      "path": "端-家长/资料/版本说明.md",
+      "before": "28866bf56647688c8510e9b0dee4d1a81fb8ca0d12df80640978912f1865b81b",
+      "after": "e2877b91d1938204dd69f51569a657f937e491c7de001323ee0b2a86c92b76b2"
+    },
+    {
+      "path": "端-家长/页面路由.json",
+      "before": "c631548b070471004dd869bdff2402487830fc763c9228416088580dc5c1711f",
+      "after": "55811d4f5cc646eaf8e69663f73feb13ccd61e4c7b56e7d5e14919a6e9763ada"
+    },
+    {
+      "path": "端-教师/addchild.html",
+      "before": "cc99b58a48f4f62484b9ce6efd5730ce066a6cfa7ed816eb9efe76bbc24a48e7",
+      "after": "4e28ba69e2fc10c15565be38736d62aae0b9c63fa0c8d9943eb4b3d2f20e6b91"
+    },
+    {
+      "path": "端-教师/addstu.html",
+      "before": "cde7477d513a080110165a4b22f22e65f188242d5741bdbbc53d9f7352bc19b7",
+      "after": "a3179719081fbb02c5f708728d63a0e9c0cd10fe59f1a860a04ea4dd0399c82c"
+    },
+    {
+      "path": "端-教师/addtch.html",
+      "before": "62d9aa4e202dea68c7e2c83a76bfb7862258f1eaf2cb6c30bac808c9ca1f89ff",
+      "after": "5c24a0ff653996fe22f9cecd1a0feb5f077bd4d11521873ffc9956aed96895b3"
+    },
+    {
+      "path": "端-教师/apply.html",
+      "before": "b85b4a28088de73e4784801d68a26cc02e336feec089c8eeca167b47cbd8ce0e",
+      "after": "52b781fe15dfa68a794ab2fc712b7d21009b3b759f34680087f95629840e989d"
+    },
+    {
+      "path": "端-教师/applydetail.html",
+      "before": "bcc303b2294038026f79e623175ccd48a58b73adb1dd013dd0be71f827301aca",
+      "after": "1aeec6dbdb5e26b40c16c95d138756998e699fe3ec27555b99c1e3ccd62492fb"
+    },
+    {
+      "path": "端-教师/assets/app-shell.js",
+      "before": "515504e6f82bd6d246514227f644278de4d4735875ff2a6ff2c65a6ef81bfa81",
+      "after": "6e80951f3d709423e5e823c3b2ef5f3ffc4e541e68e9fe7cb78e702085241845"
+    },
+    {
+      "path": "端-教师/assets/notification-mini/app.js",
+      "before": "e30786393597b315816775e9b1766496a0a01c606373d4e4ca345f4b2c3366c8",
+      "after": "3a1ceaffe6c5502bfa5a2387638a4a53b9bb2dcdf595da88a2d5a45c9d91a500"
+    },
+    {
+      "path": "端-教师/assets/notification-page.js",
+      "before": "e6354ddb82e9b4e805d8ab498050af48463935960d0b48a506788ac82ae25a63",
+      "after": "d4e2d685e2b8f93da9a5123abf3d406b68454b59937242741cae5237193a654c"
+    },
+    {
+      "path": "端-教师/att.html",
+      "before": "bb49101c17bd0acaaa3a2b43a7d9ef43e2679a93785cae50829eeceaecb6f7ad",
+      "after": "44ee468cdf39c76ca2ace0e2a0a60a32def559ba5c6a2ddd65dc3ce92545a16a"
+    },
+    {
+      "path": "端-教师/attclass.html",
+      "before": "d5e6ff9f8800c758fbb71f5cf8308d797f2579789c7fd5f62fdfe84513dda2e9",
+      "after": "92ab2d53394dbbe5d4790ce708565a60aa662c5730a13091c8497249d178271b"
+    },
+    {
+      "path": "端-教师/attcsign.html",
+      "before": "974c78e746e2483bef13ebc951e90ff2f77b2941b7fc68d7596193fd6253a567",
+      "after": "bb129b9f01c03c76d3d2ed6b01add243aa29aa810edf90c7105212ff6a1c4330"
+    },
+    {
+      "path": "端-教师/attsign.html",
+      "before": "3717939530dd1533f57c9bdfb472340f21332978ce701d433d498b7ac23932c2",
+      "after": "1d275389c7fbc50655a018f3f9bd3abe1c7063b8dbbcd3faadeee52952b1ad04"
+    },
+    {
+      "path": "端-教师/attstu.html",
+      "before": "62f5d95745561db3080ee4eca3e4231a344937d1bcb5538d2928fc98ae71a25a",
+      "after": "e5353004859b7315b68b57fa01558fceef332d53a38f776b9d825b079457b346"
+    },
+    {
+      "path": "端-教师/auth.html",
+      "before": "f7e04941c37eac427d0cfb7e59bc0e5a18b9bf097f3162d564fd2d0c3ce5e24a",
+      "after": "10ab7053c358cc0fe765cfec8504f10f4a41ccfe5315937b2e94703ba18ad9a2"
+    },
+    {
+      "path": "端-教师/cf-edit.html",
+      "before": "bf38885de79cd9ddd1a2de5149170d6315a099bcb631985dfec9f7ffaabef534",
+      "after": "7cdb9710636cd2d22418b6fdbca3e8ec294d41e7d3313e4303de53f655947603"
+    },
+    {
+      "path": "端-教师/cf-view.html",
+      "before": "7667b2a6e426f4dfb1c6e835fe087941dd360f84acceef054b604ad20db8cfe5",
+      "after": "09c91581df0f4aac25eadcfd6a85334caf6ff875a64cdfd543026b0718f2c774"
+    },
+    {
+      "path": "端-教师/claimparents.html",
+      "before": "bfb0d9292ff3daaec73b8293c511a04cb9fd146753dd229eab5abc04cb384ed9",
+      "after": "ac3f1a1083137995af2fb1b009cee52f952ca10f5ec9035386fe512b3a44c041"
+    },
+    {
+      "path": "端-教师/dismiss.html",
+      "before": "66b9d53c0d38da63a8235c938b06a0c833561f9b9fff11b161dcd0f1d82a4973",
+      "after": "de62bf9236ce4d63d2ded702641bfe6b0b8b2833d2ad472a2bb1c7a1b6e210aa"
+    },
+    {
+      "path": "端-教师/editstu.html",
+      "before": "c321b4a0bda294f96e18b9a9635c955f5280335fa6797a300c8e3e3a4f3621dc",
+      "after": "2577d62090f2ce45ca168ff58152cbc31334225358158ef5dd8085ff6cacfa0c"
+    },
+    {
+      "path": "端-教师/edittch.html",
+      "before": "391ce209c35722394d7c9e424100272908ef96d80b3323db0f3ad2724dc16c9f",
+      "after": "fb4f12b8b3504910285670dfe6a8e9abe744abdc022b8c13027e326a6f9afd57"
+    },
+    {
+      "path": "端-教师/eval.html",
+      "before": "36ebe33961f4a8b8da5dc981a8df20bd3cddc11b6d48514d2255cf35214e1d64",
+      "after": "6c5d202c3f84d6ed20b279032d4beb4f5040304e7e318bff18aaa42d2169a3a1"
+    },
+    {
+      "path": "端-教师/evaldl.html",
+      "before": "5035f22a0e4768be0ce56be39b9ce51a9962ee1178e77d538f85985f1d3e154f",
+      "after": "5cdbc9eee78d20b764b19e9d072ecb3bbb53dceb64275f0d78f24258009d3c64"
+    },
+    {
+      "path": "端-教师/evalpick.html",
+      "before": "81cb561fc62765796a40570ee0ad9bbe9361ab3eb8751b9420f12cbce68f6c52",
+      "after": "607edee8607e33208205382f41f7c051989948699309f2dc2371f3025e977858"
+    },
+    {
+      "path": "端-教师/evalpub.html",
+      "before": "8f427af72f8b2c3d8dee2280d7f12e26a3295b5df583a3c341a373d50c48df8f",
+      "after": "3cc57fc975d82ecbfc8e3d01b198cdb59ca82a319d0a4cb3b2e80dc5166a0709"
+    },
+    {
+      "path": "端-教师/evalrep.html",
+      "before": "18849a12273f77a1423c78e5787e0f4979a62fc3abc550b370d4f8578a736ce8",
+      "after": "7408efb92646e15f0293c1b548b34fc4f024a9891cb9b95f916947dac82c15c8"
+    },
+    {
+      "path": "端-教师/evalstu.html",
+      "before": "d315d78d2388c54389f4ee217014be9ade75e7e90718ef11f8604c11ea9e76ff",
+      "after": "449c1bb450ee8b7a4ef506b0dcff9d58c90f76c8635eccae73c54d3ed67176e8"
+    },
+    {
+      "path": "端-教师/expired.html",
+      "before": "df06f02a5dfb144ba35a8fa4b9a1c740114f77b65290c4432fc8a64b482bf709",
+      "after": "73d5202652e231b36d2acc9b9654a8f37e1d847f876d42c7c784a183834d065e"
+    },
+    {
+      "path": "端-教师/fbdetail.html",
+      "before": "39ece34db2f171a81f7babdc4abf6f5c487ea9bc723b6f8e136b42d2dfd535ad",
+      "after": "d5a031716974632537e874b31e186bbd45919437e1e8671044c8195ddc646886"
+    },
+    {
+      "path": "端-教师/fblist.html",
+      "before": "cc92321fc55993b2875109d58a6084ef829d1c4647306414bb0a5649c414ab3b",
+      "after": "c74b51271167bd3dab4273b1f74d13f2ca6b5e78e7a68b3da974487a3eac2680"
+    },
+    {
+      "path": "端-教师/grpinfo.html",
+      "before": "270ce74c8fac717deed69ae5ecc29ed5f08cfab0890c5b8d4580ed6087a69bcf",
+      "after": "d51bb26e7fc3e530dfc425e19ed122354da27f0bf9c4e55e79507b1a705103f7"
+    },
+    {
+      "path": "端-教师/grpmgr.html",
+      "before": "7f354597828941811d0ab052b88bc97f09d3a229785005b69aca63c451619a61",
+      "after": "fbaa4259143546ea73cc3bdfbb4ecb3659b957a66ff511429de1c4b528126b45"
+    },
+    {
+      "path": "端-教师/help.html",
+      "before": "a93df5c3b5f85cabb922d67c660e32250e2e329995cf0eacd7e9c00b338da296",
+      "after": "a10a2b655aaeeb9b697e3d860e3a2f09c9cccb87038b776cfc4371a67d56e904"
+    },
+    {
+      "path": "端-教师/home.html",
+      "before": "a6434d85e29bfe8f63ab083b14a26d7a98a19e74a9eebde068ba87f68dc1d337",
+      "after": "be2b69fda7592371ab18db4251e436755a16881f0c8589e2af5e8f3ff83641f1"
+    },
+    {
+      "path": "端-教师/index.html",
+      "before": "5848835b0c3921c0678d3e7e55331fce3775ef70bf6f981a366cb086ee30fb92",
+      "after": "0151f747cb9eebc26df6eaad29fa5209d1709bb523a1a4298a1af1400be89305"
+    },
+    {
+      "path": "端-教师/leave.html",
+      "before": "562eafb87324ee81296891efa7854d6ad22235fcead31a220ec43b71f99652d4",
+      "after": "d9afd745dddfdd013f07a0704838a13565847c063b05bfd2a86b130e850e6ab7"
+    },
+    {
+      "path": "端-教师/leavegen.html",
+      "before": "975de6d3e68e971780b251517f6593d8b05518b5516be9d7854c2a1c516260d6",
+      "after": "87e88ccc20c153496e0c8674b5fad51f2f333a32a58e0f5271c14cb0f06e1bdf"
+    },
+    {
+      "path": "端-教师/legal.html",
+      "before": "a0a1bb689669c7714072ba46010f1e425b80e4a6f6701fa7dced11a800a8d8a4",
+      "after": "1c637206f1116b5d90456817d2cc2d927ce004ce66d00cb66f1e967b126d794a"
+    },
+    {
+      "path": "端-教师/login.html",
+      "before": "5b37679a7ab873a33c39a608f796147b734ea2e9bdac6f7c5c2cd6a951cb9afb",
+      "after": "ae69ab2f73a1ac7da275a334528b178ad5d2f5d0462556bd9cdaa9ee81864bed"
+    },
+    {
+      "path": "端-教师/me.html",
+      "before": "191a81a191500244bec4842b5c003cf03ef3b6231e62cd331e638a0f43b09bd3",
+      "after": "4245e801aa9bf5ce08b349b43489d5ed7c067f800f8d2983c73b2a651fb16060"
+    },
+    {
+      "path": "端-教师/msgs.html",
+      "before": "b39d96acb221d8dd5426e382e898014e4a45db7c4c6581171046b3fad0ca2435",
+      "after": "11d89d7c1382d16880bc4bd27a3f12f36d31b5482482d69b8ed2ea1a24b9e994"
+    },
+    {
+      "path": "端-教师/noauth.html",
+      "before": "9808787bee79fd3374eee7b8c6b694be21b9d73cade2efbf9f4c0777512ad752",
+      "after": "1f12ad401d1de2fc89bdbaeee36756ac8cba96f4eb68d12abc5101c86938f4df"
+    },
+    {
+      "path": "端-教师/notification-beauty.html",
+      "before": "b7a3df2d223556a2015df3977f845fe53b6e17948cded3179f44c8347d3e1a8d",
+      "after": "e8982d68bc34da49a86441f16599b035e348e94d65b1cb2bbbc5fbc3407fa419"
+    },
+    {
+      "path": "端-教师/notification-detail.html",
+      "before": "f933ac750a5b7d7c35117771090bb018a93a95de1f09cc19639ea93c430dabc2",
+      "after": "96eb6e32b44cc8efeec4f460fcfa82c0e6e2b16045e2c292f80503254010fa08"
+    },
+    {
+      "path": "端-教师/notification-editor.html",
+      "before": "91f57197391c54bb8a2ba0e214e15b2190d93f0bbd6f855d7f7754d2053bf01b",
+      "after": "33c181d718a8a78c568a17a8c7f8d27d2878b84d01bfb00fc68e1947a8ca148f"
+    },
+    {
+      "path": "端-教师/notification-error.html",
+      "before": "013d27cf520a4c0c145cf6c34102fa24293e6fe2bd2507a85c1d86fcafcd2b5d",
+      "after": "9d5f5d60cf51d240b18c2a9c51f9a783e166bd70ff8a1abf82905ed37eab60a3"
+    },
+    {
+      "path": "端-教师/notification-preview.html",
+      "before": "4e3adf9317f117446e7713b7af2540ea4957748a2e94818c99f64bef27b582b2",
+      "after": "48581662c480f4648afdc416081927fe1756ea884b13ce30746d48d769c856c2"
+    },
+    {
+      "path": "端-教师/notification-settings.html",
+      "before": "2c63eb078faafe3068676c5bbef91067f62522cc22b4246669b6cb9a01428cc2",
+      "after": "c1986b22e5c746a27e14aeafce35fa27330da629c42ad13402bbbfcd74e35372"
+    },
+    {
+      "path": "端-教师/notification-share.html",
+      "before": "80aecdca0223b5057a6f87b8c1ce9ad7db328ee41fb5c2723c5ec247316ebd1f",
+      "after": "a25a0a81e09d0b3d3d1e727f7a4a1370b8a741d98f9cc72aac9d6950d71a1fce"
+    },
+    {
+      "path": "端-教师/notification-stats.html",
+      "before": "6ce11995c03e44d09787684eac8df2bdab6d6d4f5ee86602a580595ec34420bd",
+      "after": "0505fb8b6f6e7f23df387a8dd73da9f69de94573a44319391967cf23f10efff5"
+    },
+    {
+      "path": "端-教师/notification-template.html",
+      "before": "8ff81bf357f076b1b0bd9027cf58d4141c314c97be5802082791607b146d6fca",
+      "after": "21bd2d3a5eb9045d4c5adffb606fb90547e000ffb547039878430c349e4a7549"
+    },
+    {
+      "path": "端-教师/notification-templates.html",
+      "before": "9a080f12a1725ac7775d00c279b28080b13a1d742cfcae6d09a094cce7e8584c",
+      "after": "ee527d6f2df3821f33df63254e347878a5d3147ae48767966833b7515acbdd42"
+    },
+    {
+      "path": "端-教师/notification.html",
+      "before": "bdc28dd7a83b0fbd42ffd7ef2792bb256ba6374ac866b30f9d85e7f57cc63dcc",
+      "after": "1b2d38807be3fe21b4b1c1a48bd955efbb34a83c1ef9c88c0d7b192cc798884b"
+    },
+    {
+      "path": "端-教师/pending.html",
+      "before": "e70cb7c40d344ac77c66349f65ff40735d4f095f2d515ca8d67f316fc769d38d",
+      "after": "6ecb7438b6f1a593b246bb442167c882afcf61ef3832553ac0dd669352287cea"
+    },
+    {
+      "path": "端-教师/permission-denied.html",
+      "before": "46eb4cc52c5d0533474d3550028a5ccd22f92db1b7b7d8938fafa29a322d29a6",
+      "after": "42a766fc92a151a6c92b6b589aa370c73454f1510bd7e08f060d6a5025332a40"
+    },
+    {
+      "path": "端-教师/profile.html",
+      "before": "2f0feb3cb60fb7337eafedac67b24e4f0a442fa87821ab418357b89175387f3b",
+      "after": "70bef8fe7c103b8bc164f86cf231e8cfe2086eacf0c6112c2a3cdca0bfcf2531"
+    },
+    {
+      "path": "端-教师/proxyleave.html",
+      "before": "66f0f846a2586dceb40dbfb16324de65e43b7e3b925cb3ddde744325c893c9a5",
+      "after": "56e5fcc2560c5ffc0bb3aa7d7ecd2affd8db705446c4c9491236e8249d3e9203"
+    },
+    {
+      "path": "端-教师/rank.html",
+      "before": "78949e646de1eb81b3454562402ac8255e66cdbea5f187eff77e5daeef36f054",
+      "after": "53c642f243f4498414cbeb7badb9c74f2cd7b7bb6f745922678d14178474bb0b"
+    },
+    {
+      "path": "端-教师/reg.html",
+      "before": "69fa5c858335cae71cd64960cad9d1d7df9b2629f8bed9406bc73f7ff202111c",
+      "after": "17c7d4c735a478657a986c0d0ef7cface71f8b858d48e786f646ba9c2f4ba29a"
+    },
+    {
+      "path": "端-教师/scan.html",
+      "before": "4877d45e1ce93f8b143ae582881a02b783bdcc7f4a3eb6a3d5f69a8e90113352",
+      "after": "dddb9555a32d1094fb0fe87e6a450e028b8fca41da1dec5152b60dcf13ddfcdc"
+    },
+    {
+      "path": "端-教师/sms.html",
+      "before": "80090a0e6ae7fcd6025ffde3b62ccc5d21e6b5e0b4375e24b7b60316ed9717e1",
+      "after": "c49a38eeebbe05d12c62991419dde6ce9420bc9f45e779a625c8be773075e6e9"
+    },
+    {
+      "path": "端-教师/stuaudit.html",
+      "before": "7d9d99b268f09139708ab6b479ea5c2c170c1a937c8dd1e2f7cebaa3566beef6",
+      "after": "6b86ddf6bb641b99f23dd0c70ee4d048c0d38dfb7d4169b7fc562bde76f81f22"
+    },
+    {
+      "path": "端-教师/studetail.html",
+      "before": "bbf8b6dc56aaf919b5b44c34a1119a161d8787e5295a494f0e8dda32c882ceaf",
+      "after": "842c3c3d08f4cc67fa3a646d19161674cac562f6ffb19e0440c1a3ba18b5a3a3"
+    },
+    {
+      "path": "端-教师/stuev.html",
+      "before": "c369ad081a97f5edf467e793574f6c210166e30085b509a4ccfc8c860ce7db26",
+      "after": "0095576eab59723b531e4fa9b256a1848a1d7e337790ca88659eb9463147343e"
+    },
+    {
+      "path": "端-教师/stumgr.html",
+      "before": "0dd2d637dc6e98d9f9570dbf33b9a386bc0df516210265e7c47f914fdd3f91c8",
+      "after": "6eee1826ff3418f90003c4d4f941fa1aaf84c4cd6675180d779a9dca2199217e"
+    },
+    {
+      "path": "端-教师/stuPend.html",
+      "before": "5540e49b6637641e06305d812f83847ee301d81398106132ef1fbf45a42f0052",
+      "after": "af9e8e36c08226461d77eef66ae6a0b100ab19901f9b21dbcca9741e0a794445"
+    },
+    {
+      "path": "端-教师/switch.html",
+      "before": "88ca5378c6a3d6251900bbc9475530dc19a916e3c9b9d4bb9bb8d22a0ff052bc",
+      "after": "ecac34f579cc21f5ec696291e09d2d6527ddd988af2c5e1f876dc15f81721f95"
+    },
+    {
+      "path": "端-教师/tatt.html",
+      "before": "b504f02f30716b237d777e685a26119829c5740b9f5e5e06be7f2f249c17e0f4",
+      "after": "670f281736a54fac72e81074f420dac35fd43fe0e78c050e1a3b21a970dafd4c"
+    },
+    {
+      "path": "端-教师/tattadmin.html",
+      "before": "ddf98da4dfde528c1fa7137d5bbc2c0765890fc2c6f5dced58a837e5c4667664",
+      "after": "cef4d5d95f6625b31ca6d2a7e36ea7a6d9c5ae081786cdf64cc71927e27aca06"
+    },
+    {
+      "path": "端-教师/tattdetail.html",
+      "before": "49b8a534674dc48fc49739f31ac0934b9b01323fed136e7e4d14feb2886737e4",
+      "after": "10f1f94b79bd1eb5f8b49f560fe2c13eeecdc4258c14587da1bf95c8b23665e0"
+    },
+    {
+      "path": "端-教师/tattfix.html",
+      "before": "04c03a7648373d567d51e7c5eddc3d5c287b914f815aa6831404c75402f0bb16",
+      "after": "4c703ff7da185411cf7b1f8912b83db323bc196ad324d34eda903e6f095c645f"
+    },
+    {
+      "path": "端-教师/tchaudit.html",
+      "before": "37035acb16fe14983f4c72fba29e5b35bb84a53d31451611b231d5b69fb8a695",
+      "after": "8cc935d87da57c12b5b2bab159405ee77d7ec18fe36b401e31cf94818a7bb1f1"
+    },
+    {
+      "path": "端-教师/tchdetail.html",
+      "before": "57652ede5f52ed508ec9cd00baaee16a74761b5d3e5a0e906ab79d4049a3fc73",
+      "after": "4c65048a275c12f69e94f3a4f3f424b410f300c6b564bec07834c52344888649"
+    },
+    {
+      "path": "端-教师/tchduty.html",
+      "before": "a4bf5a09acf2d462cd87d89eb4ef3e053a7029b76a679c8aa8a4dc2aba385ce5",
+      "after": "e29227120815e0b9c8752ca62b5e5185b46c474dcfebf564417ef52209a35de0"
+    },
+    {
+      "path": "端-教师/tchmgr.html",
+      "before": "7386d073c7b9d601b0c7744964326bb6e0b0995a10633fcc813a4d6cd90e0394",
+      "after": "85a17ab49ad65bb47191af09e3061dd42fd31d8ea9bbeb94c76f42fbb7553106"
+    },
+    {
+      "path": "端-教师/tchpend.html",
+      "before": "5568f634de8a47a095806ee3c32cc9270ceff1e351eb104eba4b9a607a1bc570",
+      "after": "742d10f89f9ac277b67e7e4a29771207bb157b0087d8e32d223eef2feb3124e5"
+    },
+    {
+      "path": "端-教师/tevdt.html",
+      "before": "e313303d2b87ee4730a3820f726845312864981e6439aed3ee3e5ed5cc705077",
+      "after": "234ba49806c9e3b7186ce3d537a193b5cca9c7526e91d1551e2a688071c25aa4"
+    },
+    {
+      "path": "端-教师/tevedit.html",
+      "before": "1b1ac94614bb15b584b2f649916825f58f5565dcd3add07a554e5e8cd06e72d4",
+      "after": "af07ca5e5bcf3a8d729ef13766bf21ebd33be16b5c18b78de958d65f7de1ee76"
+    },
+    {
+      "path": "端-教师/visitor.html",
+      "before": "c7e96c3bc5cd9d3b908995877e18bbe7a60df3f7a8ac97898e9f67fd40d10578",
+      "after": "057832a71763d88d229ca299460d433dbbe9d35458d6b0c1504dfeb0b93a319d"
+    },
+    {
+      "path": "端-教师/wxpush.html",
+      "before": "a1562aeabcc882a8fe1926f5797f8d95121da50ed717054458b76ff45465e44d",
+      "after": "50892c4a7001aa9fa734f84375512177de15c5e63ab306fe6ecfda8af6bb32af"
+    },
+    {
+      "path": "端-教师/定版信息.md",
+      "before": "891f70409b599a15767e9afdb14dbfc09af8907a6f8512e8e2aee6e8716dec26",
+      "after": "7f05c9eb9d25c095f843deebb279352dd869cb101585ebf90d9f470bd6fcf8da"
+    },
+    {
+      "path": "端-教师/资料/版本说明.md",
+      "before": "ce232825108b6573918ba26357972f1f609a5e4b604e9650500c114ecee7e01b",
+      "after": "646772abf8534fcb86f5e7bbb340e6b6ed8317b046cab8c939c6dd5ff93f1daf"
+    },
+    {
+      "path": "端-教师/页面路由.json",
+      "before": "cb9fe01719237ea8c316333c4bf479766d322f07935b9ecc2954519de34f19c3",
+      "after": "c85433057945b213f26fd4ffd4e66b0f2ec4c448db50493f7c7d0554a49f5d32"
+    }
+  ]
+}

@@ -18,7 +18,8 @@ function preview(id){restore();const c=ctx();if(id==='restore'){renderDemo();ret
   if(tables.length){
    for(const tbl of tables){
     const tb=tbl.querySelector('tbody');if(!tb)continue;
-    const cols=Math.max(1,tbl.querySelectorAll('thead th').length||tbl.rows[0]?.cells?.length||1);
+    const visTh=[...tbl.querySelectorAll('thead th')].filter(visible).length;
+    const cols=Math.max(1,visTh||tbl.querySelectorAll('thead th').length||tbl.rows[0]?.cells?.length||1);
     const prev=tb.innerHTML;
     tb.innerHTML='<tr><td colspan="'+cols+'" class="empty stats-empty" style="text-align:center;padding:28px 12px;color:#86909c">暂无对应数据</td></tr>';
     undo.push(()=>{tb.innerHTML=prev});
@@ -82,7 +83,8 @@ function getConfig(c){if(!c.module)return null;
  }
  const fields=currentFields(c);if(fields)add('当前区域与字段','当前界面包含：'+fields+'。字段顺序、默认值和只读状态以实际页面为准；演示说明不会替换业务字段或更改其权限。');
  add('演示边界与恢复','本页场景只改变当前页面的本地演示显示，不调用真实通知、拨号或写入服务。互斥场景替换；“恢复默认”恢复原DOM及输入，离开当前上下文或刷新恢复正常。共享业务示例仍遵循各模块自身的存储规则。');
- if(c.module!=='help')actions=list?[A('empty','预览 · 无数据'),A('no-match','预览 · 无匹配'),A('loading','预览 · 加载中'),A('failed','预览 · 加载失败'),A('timeout','预览 · 加载超时'),A('permission','预览 · 无权限')]:[A('failed','预览 · 加载失败'),A('permission','预览 · 权限失效'),A('gone','预览 · 对象失效'),...(editor?[A('required','预览 · 必填校验')]:[]),...(editor||confirm?[A('conflict','预览 · 版本冲突'),A('submit','预览 · 提交失败'),A('unknown','预览 · 结果未知')]:[]),...((c.module==='feedback'&&/create|follow|report/.test(c.mode))||(c.module==='notice'&&c.n?.page==='edit')?[A('format','预览 · 附件校验')]:[])];
+ const hasTable=!!c.root.querySelector('table');
+ if(c.module!=='help')actions=list?[A('empty','预览 · 无数据'),A('no-match','预览 · 无匹配'),A('loading','预览 · 加载中'),A('failed','预览 · 加载失败'),A('timeout','预览 · 加载超时'),A('permission','预览 · 无权限')]:[...(hasTable?[A('empty','预览 · 无数据'),...(c.mode!=='receipt-detail'?[A('no-match','预览 · 无匹配')]:[])]:[]),A('failed','预览 · 加载失败'),A('permission','预览 · 权限失效'),A('gone','预览 · 对象失效'),...(editor?[A('required','预览 · 必填校验')]:[]),...(editor||confirm?[A('conflict','预览 · 版本冲突'),A('submit','预览 · 提交失败'),A('unknown','预览 · 结果未知')]:[]),...((c.module==='feedback'&&/create|follow|report/.test(c.mode))||(c.module==='notice'&&c.n?.page==='edit')?[A('format','预览 · 附件校验')]:[])];
  if(actions.length)actions.push(A('restore','恢复默认'));
  return {key:c.key+(scene?'/'+scene:''),title:c.title,intro,sections,actions};}
 window.getModuleDemo=()=>getConfig(ctx());window.demoAction=id=>{if(scene&&id==='restore'){restore();renderDemo();return}preview(id)};

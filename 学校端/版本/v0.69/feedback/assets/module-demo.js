@@ -18,7 +18,8 @@ function preview(id){restore();const c=ctx();if(id==='restore'){renderDemo();ret
   if(tables.length){
    for(const tbl of tables){
     const tb=tbl.querySelector('tbody');if(!tb)continue;
-    const cols=Math.max(1,tbl.querySelectorAll('thead th').length||tbl.rows[0]?.cells?.length||1);
+    const visTh=[...tbl.querySelectorAll('thead th')].filter(visible).length;
+    const cols=Math.max(1,visTh||tbl.querySelectorAll('thead th').length||tbl.rows[0]?.cells?.length||1);
     const prev=tb.innerHTML;
     tb.innerHTML='<tr><td colspan="'+cols+'" class="empty stats-empty" style="text-align:center;padding:28px 12px;color:#86909c">暂无对应数据</td></tr>';
     undo.push(()=>{tb.innerHTML=prev});

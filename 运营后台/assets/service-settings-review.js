@@ -18,34 +18,31 @@ const beforeQuery=queryHTML;queryHTML=function(){const box=document.createElemen
 // Parent filters are independent; only school choices are restricted to this parent's records.
 CUSTOM.userQuery=queryHTML;
 const beforeFilter=filterInput;filterInput=function(f,q){if(state.active==='userDataQuery'){if(f.l==='订单状态')return beforeFilter({...f,opts:S.payStates},q);if(f.l==='办理状态')return beforeFilter({...f,opts:S.states},q)}return beforeFilter(f,q)};
-const logTypes=['发起退款','取消办理','承运商启停','导出数据','提交开票申请','编辑开票申请','删除开票申请','开具发票','换开发票','重新发送发票','新增常见问题','编辑常见问题','删除常见问题','修改客服电话','修改节假日配置','重新获取节假日数据','修改运营人员姓名','提交反馈','回复反馈','追问反馈','代发通知','保存通知草稿','编辑通知','删除通知','取消定时通知','补充通知说明','发送通知提醒','新增监管账号','修改监管账号配置','删除监管账号','新增学校账号','修改学校账号配置','删除学校账号','重置账号密码','新增客户','编辑客户资料','删除客户','新增合同','编辑合同','删除合同','新增平台用户','编辑平台用户','删除平台用户','新增角色','编辑角色','删除角色','重置平台账号密码','新增平台客服','新增代理商客服','编辑客服信息','删除客服信息','关联代理商','关联学校','设置默认客服','修改学校负责机构','确认办理订单','录入物流信息','修改校徽活动配置','编辑分享配置','发布节假日','校徽文案适用范围调整'];
-const oldCompact=compactHTML;compactHTML=function(config,s){if(state.active!=='operationLog')return oldCompact(config,s);s.q['时间范围']??='近30天';const rows=dataFor('operationLog'),actors=[...new Set(rows.map(r=>plain(r[1])).filter(Boolean))];return '<div class="compact sr-log-filters">'+inp('关键词',s.q['关键词']||'','placeholder="操作对象单号 / 详情关键词"')+sel('全部操作类型',logTypes,s.q['全部操作类型']||'','全部操作类型')+sel('全部操作人',actors,s.q['全部操作人']||'','全部操作人')+sel('时间范围',['近30天','近7天','近90天','自定义'],s.q['时间范围']||'近30天',null)+B('查询','query',true)+B('重置','reset')+'</div>'+(s.q['时间范围']==='自定义'?'<div class="compact">'+inp('自定义起',s.q['自定义起']||'','type="date"')+' 至 '+inp('自定义止',s.q['自定义止']||'','type="date"')+'</div>':'')};
+const logTypes=['发起退款','取消办理','承运商启停','导出数据','提交开票申请','编辑开票申请','删除开票申请','开具发票','换开发票','重新发送发票','新增常见问题','编辑常见问题','删除常见问题','修改节假日配置','重新获取节假日数据','修改运营人员姓名','回复反馈','代发通知','定时发布通知','编辑通知','删除通知','取消定时通知','新增监管账号','修改监管账号配置','删除监管账号','新增学校账号','修改学校账号配置','删除学校账号','重置账号密码','新增客户','编辑客户资料','删除客户','新增合同','编辑合同','删除合同','新增平台用户','编辑平台用户','删除平台用户','新增角色','编辑角色','删除角色','重置平台账号密码','新增平台客服','新增代理商客服','编辑客服信息','删除客服信息','关联代理商','关联学校','设置默认客服','修改学校负责机构','确认办理订单','录入物流信息','修改校徽活动配置','编辑分享配置','发布节假日'];
+const oldCompact=compactHTML;compactHTML=function(config,s){if(state.active!=='operationLog')return oldCompact(config,s);s.q['时间范围']??='近30天';const rows=dataFor('operationLog'),actors=[...new Set(rows.map(r=>plain(r[1])).filter(Boolean))];return '<div class="compact sr-log-filters">'+inp('关键词',s.q['关键词']||'','placeholder="操作对象 / 详情关键词"')+sel('全部操作类型',logTypes,s.q['全部操作类型']||'','全部操作类型')+sel('全部操作人',actors,s.q['全部操作人']||'','全部操作人')+sel('时间范围',['近30天','近7天','近90天','自定义'],s.q['时间范围']||'近30天',null)+B('查询','query',true)+B('重置','reset')+'</div>'+(s.q['时间范围']==='自定义'?'<div class="compact">'+inp('自定义起',s.q['自定义起']||'','type="date"')+' 至 '+inp('自定义止',s.q['自定义止']||'','type="date"')+'</div>':'')};
 const beforeFiltered=filteredRows;filteredRows=function(config,rows,q){if(state.active!=='operationLog')return beforeFiltered(config,rows,q);q['时间范围']??='近30天';return rows.map((cells,i)=>({cells,i})).filter(({cells})=>Object.entries(q).every(([key,value])=>!value||(key==='关键词'?plain(cells[3]+' '+cells[4]).includes(value):key==='全部操作类型'?plain(cells[2])===value:key==='全部操作人'?plain(cells[1])===value:key==='自定义起'?plain(cells[0]).slice(0,10)>=value:key==='自定义止'?plain(cells[0]).slice(0,10)<=value:key==='时间范围'?value==='自定义'||Date.now()-new Date(plain(cells[0]).replace(' ','T')+'+08:00').valueOf()<({'近7天':7,'近30天':30,'近90天':90}[value]||30)*86400000:true)))};
 const billingTypes=['发起退款','取消办理','承运商启停','导出数据'],logRows=dataFor('operationLog'),refundLogs=R.records.filter(r=>String(r.type).startsWith('运管')),cancelLogs=orders.filter(o=>S.recordState(o)==='已取消'&&R.snapshot(o).every(b=>b.price===0));let refundCursor=0,cancelCursor=0;refundLogs.forEach(r=>r.note||='示例退款原因');logRows.forEach((row,i)=>{let type=billingTypes[i%4];if(type==='发起退款'&&refundCursor>=refundLogs.length)type='承运商启停';if(type==='取消办理'&&cancelCursor>=cancelLogs.length)type='导出数据';const operator=M.user[i%M.user.length];row[1]=esc(operator.name+'（'+operator.username+'）');row[2]=tag(type);if(type==='发起退款'){const r=refundLogs[refundCursor++],o=orders.find(o=>o.id===r.orderId);row[0]=r.created;row[1]=esc(r.operator||'演示运营');row[3]=A(S.displayRefundId(r),'d:refund:'+r.id);row[4]=esc((r.amount?r.type+' '+yuan(r.amount/100):'零元回收（免费枚）')+' · '+(o?.student||'—')+'：'+(r.note||'示例退款原因'))}else if(type==='取消办理'){const o=cancelLogs[cancelCursor++];row[0]=o.cancelTime||o.created;row[3]=A(o.id,'d:order:'+o.id);row[4]=esc('运管代取消 · '+o.student+'：示例取消说明')}else if(type==='承运商启停'){const x=dataFor('carrierManagement')[i%dataFor('carrierManagement').length];row[3]=A(plain(x[0])+'（'+plain(x[1])+'）','sr:carrier');row[4]=esc(plain(x[2])==='启用'?'启用':'停用 · 新建物流单不再可选，历史物流单与在途轨迹不受影响')}else{row[3]=esc('办理明细');row[4]=esc('办理明细 · 近30天 · CSV · 示例历史记录')}});
 logRows.sort((a,b)=>plain(b[0]).localeCompare(plain(a[0])));
 const operationExamples=[
- ['2026-11-25 16:40:00','王老师（教师端）','FB202611250018','提交学校端反馈成功。','提交反馈'],
- ['2026-11-25 16:32:00','演示运营（ops_demo）','FB202611250018','回复学校端反馈成功；后续通知按流程自动触发。','回复反馈'],
- ['2026-11-25 15:50:00','林晓雨（代理商端）','FB202611250007','提交代理商自有反馈成功。','提交反馈'],
- ['2026-11-25 15:20:00','林晓雨（代理商端）','FB202611250007','运营答复后继续提问成功。','追问反馈'],
- ['2026-11-25 14:30:00','演示运营（ops_demo）','NT202611250031','按已选学校和接收对象代发通知成功。','代发通知'],
- ['2026-11-25 14:10:00','演示运营（ops_demo）','NT202611250029','修改通知内容并保存成功。','编辑通知'],
- ['2026-11-25 13:55:00','演示运营（ops_demo）','NT202611250022','确认删除通知成功。','删除通知'],
- ['2026-11-25 12:40:00','演示运营（ops_demo）','JG202611250008','保存监管账号校徽替换与范围配置成功。','修改监管账号配置'],
- ['2026-11-25 12:15:00','演示运营（ops_demo）','XX202611250016','保存学校账号校徽替换与范围配置成功。','修改学校账号配置'],
- ['2026-11-25 11:35:00','演示运营（ops_demo）','CS-PLAT-03','新增平台客服成功。','新增平台客服'],
- ['2026-11-25 11:10:00','演示运营（ops_demo）','CS-AGENT-02','新增代理商客服成功。','新增代理商客服'],
- ['2026-11-25 10:42:00','演示运营（ops_demo）','CS-PLAT-03','更新客服联系电话和工作时间成功。','编辑客服信息'],
- ['2026-11-25 10:25:00','演示运营（ops_demo）','CS-AGENT-02','依赖校验通过后删除客服成功。','删除客服信息'],
- ['2026-11-25 10:05:00','演示运营（ops_demo）','CS-PLAT-03','平台客服关联示例代理商成功。','关联代理商'],
- ['2026-11-25 09:48:00','演示运营（ops_demo）','CS-PLAT-03','平台客服关联示例学校成功。','关联学校'],
- ['2026-11-25 09:20:00','演示运营（ops_demo）','KH202611250008','编辑客户资料成功。','编辑客户资料'],
- ['2026-11-25 09:02:00','演示运营（ops_demo）','HT202611250003','编辑合同配置成功。','编辑合同'],
- ['2026-11-25 08:45:00','演示运营（ops_demo）','办理明细','导出当前筛选结果成功。','导出数据'],
- ['2026-11-24 16:25:00','演示运营（ops_demo）','示例第一中学','保存校徽活动配置成功。','修改校徽活动配置'],
- ['2026-11-24 15:55:00','演示运营（ops_demo）','邀请家人','保存分享配置成功。','编辑分享配置'],
- ['2026-11-24 15:30:00','演示运营（ops_demo）','2027','发布节假日配置。','发布节假日'],
- ['2026-11-24 15:05:00','演示运营（ops_demo）','智能终端类文案','保存适用范围调整成功。','校徽文案适用范围调整']
+ ['2026-11-25 16:32:00','刘俊涛(15032334288)','学校端 - 王老师（阳光实验小学）','【运营后台端】回复问题反馈：已协助核实并修复，请刷新查看。','回复反馈'],
+ ['2026-11-25 15:20:00','刘俊涛(15032334288)','代理商端 - 林晓雨（启航教育代理）','【运营后台端】回复功能建议（第 2 轮）：已纳入排期计划。','回复反馈'],
+ ['2026-11-25 14:30:00','刘俊涛(15032334288)','启航小学 - 关于召开2026年秋季家长会的通知','【运营后台端】以“启航小学”名义代发美文通知；查收方式：签字；发布对象：学生 320 人、教师 18 人。','代发通知'],
+ ['2026-11-25 14:10:00','刘俊涛(15032334288)','青禾小学 - 校园开放日活动通知','【运营后台端】修改通知正文与附件并保存成功。','编辑通知'],
+ ['2026-11-25 13:55:00','刘俊涛(15032334288)','阳光实验小学 - 临时停电通知','【运营后台端】确认删除通知（删除前状态：待发送）。','删除通知'],
+ ['2026-11-25 12:40:00','刘俊涛(15032334288)','监管账号：示例市教育局','是否开启校徽文案替换：关闭 → 开启；替换类型：学生卡 → 学生终端；是否同步下级所有学校：开启。','修改监管账号配置'],
+ ['2026-11-25 12:15:00','刘俊涛(15032334288)','学校账号：阳光实验小学','是否开启校徽文案替换：关闭 → 开启；替换类型：学生卡 → 学生终端。','修改学校账号配置'],
+ ['2026-11-25 11:35:00','刘俊涛(15032334288)','运营平台 - 周磊','【运营后台端】新增平台客服，联系电话：13800138001，工作时间：每周一至周日 08:30—17:30。','新增平台客服'],
+ ['2026-11-25 11:10:00','刘俊涛(15032334288)','启航教育代理 - 陈敏','【运营后台端】新增代理商客服，联系电话：13900139002，工作时间：每周一至周日 08:30—17:30。','新增代理商客服'],
+ ['2026-11-25 10:42:00','刘俊涛(15032334288)','运营平台 - 周磊','【运营后台端】编辑客服工作时间：08:30—17:30 → 09:00—18:00。','编辑客服信息'],
+ ['2026-11-25 10:25:00','刘俊涛(15032334288)','启航教育代理 - 陈敏','【运营后台端】确认删除客服，同步解除 2 所关联学校。','删除客服信息'],
+ ['2026-11-25 10:05:00','刘俊涛(15032334288)','运营平台 - 李强','【运营后台端】新增关联代理商：启航教育代理。','关联代理商'],
+ ['2026-11-25 09:48:00','刘俊涛(15032334288)','运营平台 - 李强','【运营后台端】新增关联学校：启航小学、青禾小学（共 2 所）。','关联学校'],
+ ['2026-11-25 09:35:00','刘俊涛(15032334288)','运营平台 - 周磊','【运营后台端】运营平台默认客服由“李强”切换为“周磊”。','设置默认客服'],
+ ['2026-11-25 09:20:00','刘俊涛(15032334288)','示例市教育局','编辑客户资料成功。','编辑客户资料'],
+ ['2026-11-25 09:02:00','刘俊涛(15032334288)','智能校徽服务合同','编辑合同配置成功。','编辑合同'],
+ ['2026-11-24 16:25:00','刘俊涛(15032334288)','示例第一中学','保存校徽活动配置成功。','修改校徽活动配置'],
+ ['2026-11-24 15:55:00','刘俊涛(15032334288)','邀请家人','保存分享配置成功。','编辑分享配置'],
+ ['2026-11-24 15:30:00','刘俊涛(15032334288)','2027年节假日配置','发布节假日配置。','发布节假日']
 ].map(([time,actor,object,detail,type])=>[time,esc(actor),tag(type),esc(object),esc(detail),'127.0.0.1']);
 logRows.unshift(...operationExamples);P.operationLog.total=logRows.length;
 const priorAudit=logDemo;logDemo=function(type,obj,detail='',actor='演示运营（ops_demo）'){if(!logTypes.includes(type))return false;priorAudit(type,obj,detail,actor);const row=dataFor('operationLog')[0];row[1]=esc(actor);if(type==='承运商启停')row[3]=A(esc(obj),'sr:carrier');return true};

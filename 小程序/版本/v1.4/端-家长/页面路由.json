@@ -1,0 +1,285 @@
+{
+  "role": "parent",
+  "version": "v1.4",
+  "routes": [
+    {
+      "screen": "sc-home",
+      "file": "home.html"
+    },
+    {
+      "screen": "sc-msgset",
+      "file": "msgset.html"
+    },
+    {
+      "screen": "sc-msgguide",
+      "file": "msgguide.html"
+    },
+    {
+      "screen": "sc-apply",
+      "file": "apply.html"
+    },
+    {
+      "screen": "sc-mine-single",
+      "file": "mine-single.html"
+    },
+    {
+      "screen": "sc-leave-tab",
+      "file": "leave-tab.html"
+    },
+    {
+      "screen": "sc-dismiss",
+      "file": "dismiss.html"
+    },
+    {
+      "screen": "sc-dismiss-old",
+      "file": "dismiss-old.html"
+    },
+    {
+      "screen": "sc-eval",
+      "file": "eval.html"
+    },
+    {
+      "screen": "sc-evaldt",
+      "file": "evaldt.html"
+    },
+    {
+      "screen": "sc-evalrep",
+      "file": "evalrep.html"
+    },
+    {
+      "screen": "sc-evaldl",
+      "file": "evaldl.html"
+    },
+    {
+      "screen": "sc-me",
+      "file": "me.html"
+    },
+    {
+      "screen": "sc-kids",
+      "file": "kids.html"
+    },
+    {
+      "screen": "sc-switch",
+      "file": "switch.html"
+    },
+    {
+      "screen": "sc-scan",
+      "file": "scan.html"
+    },
+    {
+      "screen": "sc-atthist",
+      "file": "atthist.html"
+    },
+    {
+      "screen": "sc-msgs",
+      "file": "msgs.html"
+    },
+    {
+      "screen": "sc-wxpush",
+      "file": "wxpush.html"
+    },
+    {
+      "screen": "sc-reissue",
+      "file": "reissue.html"
+    },
+    {
+      "screen": "sc-preview",
+      "file": "preview.html"
+    },
+    {
+      "screen": "sc-order",
+      "file": "order.html"
+    },
+    {
+      "screen": "sc-payok",
+      "file": "payok.html"
+    },
+    {
+      "screen": "sc-face",
+      "file": "face.html"
+    },
+    {
+      "screen": "sc-newleave",
+      "file": "newleave.html"
+    },
+    {
+      "screen": "sc-leavedetail",
+      "file": "leavedetail.html"
+    },
+    {
+      "screen": "sc-help",
+      "file": "help.html"
+    },
+    {
+      "screen": "sc-fblist",
+      "file": "fblist.html"
+    },
+    {
+      "screen": "sc-fbdetail",
+      "file": "fbdetail.html"
+    },
+    {
+      "screen": "sc-addchild",
+      "file": "addchild.html"
+    },
+    {
+      "screen": "sc-visitor",
+      "file": "visitor.html"
+    },
+    {
+      "screen": "sc-login",
+      "file": "login.html"
+    },
+    {
+      "screen": "sc-sms",
+      "file": "sms.html"
+    },
+    {
+      "screen": "sc-legal",
+      "file": "legal.html"
+    },
+    {
+      "screen": "sc-auth",
+      "file": "auth.html"
+    },
+    {
+      "screen": "sc-nochild",
+      "file": "nochild.html"
+    },
+    {
+      "screen": "sc-classreg",
+      "file": "classreg.html"
+    },
+    {
+      "screen": "sc-regposter",
+      "file": "regposter.html"
+    },
+    {
+      "screen": "sc-regposter2",
+      "file": "regposter2.html"
+    },
+    {
+      "screen": "sc-regfollow",
+      "file": "regfollow.html"
+    },
+    {
+      "screen": "sc-regwx",
+      "file": "regwx.html"
+    },
+    {
+      "screen": "sc-reginvite",
+      "file": "reginvite.html"
+    },
+    {
+      "screen": "sc-reglanding",
+      "file": "reglanding.html"
+    },
+    {
+      "screen": "sc-reginvite2",
+      "file": "reginvite2.html"
+    },
+    {
+      "screen": "sc-reglanding2",
+      "file": "reglanding2.html"
+    },
+    {
+      "screen": "sc-reginvite3",
+      "file": "reginvite3.html"
+    },
+    {
+      "screen": "sc-reglanding3",
+      "file": "reglanding3.html"
+    },
+    {
+      "screen": "sc-wxphones",
+      "file": "wxphones.html"
+    },
+    {
+      "screen": "sc-guardians",
+      "file": "guardians.html"
+    },
+    {
+      "screen": "sc-faminv-form",
+      "file": "faminv-form.html"
+    },
+    {
+      "screen": "sc-child",
+      "file": "child.html"
+    },
+    {
+      "screen": "sc-profile",
+      "file": "profile.html"
+    },
+    {
+      "screen": "sc-invite",
+      "file": "invite.html"
+    },
+    {
+      "screen": "sc-faminvite",
+      "file": "faminvite.html"
+    },
+    {
+      "screen": "sc-famconfirm",
+      "file": "famconfirm.html"
+    },
+    {
+      "screen": "sc-faminvalid",
+      "file": "faminvalid.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "list",
+      "file": "notification.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "kind",
+      "file": "notification-templates.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "tpl",
+      "file": "notification-template.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "edit",
+      "file": "notification-editor.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "beauty",
+      "file": "notification-beauty.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "preview",
+      "file": "notification-preview.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "settings",
+      "file": "notification-settings.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "detail",
+      "file": "notification-detail.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "stats",
+      "file": "notification-stats.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "landing",
+      "file": "notification-share.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "route-error",
+      "file": "notification-error.html"
+    }
+  ]
+}

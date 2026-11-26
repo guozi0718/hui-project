@@ -1,0 +1,18 @@
+{
+  "project": "智小徽小程序",
+  "version": "v1.3",
+  "status": "查收回执及截止展示修复完整候选，页面待验收",
+  "date": "2026-11-25",
+  "directory": "版本/v1.3",
+  "tag": "miniapp-v1.3-rc.1",
+  "entries": {
+    "parent": "版本/v1.3/端-家长/home.html",
+    "teacher": "版本/v1.3/端-教师/home.html"
+  },
+  "documents": [
+    "版本/v1.3/文档/通知功能产品需求文档.md",
+    "版本/v1.3/文档/联系客服功能产品需求文档.md",
+    "版本/v1.3/文档/客户反馈功能产品需求文档.md"
+  ],
+  "automaticPush": true
+}

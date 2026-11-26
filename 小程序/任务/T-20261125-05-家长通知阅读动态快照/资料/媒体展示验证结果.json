@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-26T01:54:43.614Z",
+  "coverPreviewHeight": 88,
+  "coverSourceRecommendation": "900×383",
+  "bodySourceRecommendation": "1080px宽",
+  "coverDisplayMax": [
+    320,
+    136
+  ],
+  "bodyDisplayMax": [
+    320,
+    180
+  ],
+  "originalAspectPreserved": true,
+  "smallImagesNotUpscaled": true,
+  "noFixedLargeFrame": true,
+  "narrowViewportNoOverflow": true,
+  "imageCaptionAutoGrows": true,
+  "mediaTitlesCenteredAndFullyWrapped": true,
+  "detailCaptionsCenteredAndFullyWrapped": true,
+  "runtimeErrors": []
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-26T01:48:17.378Z",
+  "results": [
+    {
+      "role": "家长",
+      "threeGuardiansFiveActions": true,
+      "uniqueOperationIds": true,
+      "firstReadOnly": true,
+      "confirmImpliesTwoDistinctActions": true,
+      "signatureOnce": true,
+      "teacherOwnSnapshot": true,
+      "studentAndRelationshipSnapshotsImmutable": true,
+      "missingLegacySnapshotNotBackfilled": true,
+      "stableLegacyOperationIds": true,
+      "studentIsolation": true,
+      "permissionChecked": true
+    },
+    {
+      "role": "教师",
+      "threeGuardiansFiveActions": true,
+      "uniqueOperationIds": true,
+      "firstReadOnly": true,
+      "confirmImpliesTwoDistinctActions": true,
+      "signatureOnce": true,
+      "teacherOwnSnapshot": true,
+      "studentAndRelationshipSnapshotsImmutable": true,
+      "missingLegacySnapshotNotBackfilled": true,
+      "stableLegacyOperationIds": true,
+      "studentIsolation": true,
+      "permissionChecked": true
+    }
+  ]
+}

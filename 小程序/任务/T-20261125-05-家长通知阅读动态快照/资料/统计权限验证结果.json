@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-26T01:55:44.544Z",
+  "ownerOnlyFullStatistics": true,
+  "campusOutsideTeacherNoPersonalActivity": true,
+  "receiverTeacherOnlyOwnActivity": true,
+  "publisherManagementReadRecorded": true,
+  "managerReadLocksEdit": true,
+  "managerReadExcludedFromRecipientCounts": true,
+  "studentClassGroupingAndCollapse": true,
+  "singleKindSelectorHidden": true,
+  "unreadStudentFamilySheet": true,
+  "liveFamilyStatusRefresh": true,
+  "noFamilyEmptyState": true,
+  "noSubscriptionOrCallFeature": true,
+  "completedDetailsAndSignatureImageRetained": true,
+  "escClosesUnreadSheet": true,
+  "parentCannotAccessStats": true,
+  "runtimeErrors": []
+}

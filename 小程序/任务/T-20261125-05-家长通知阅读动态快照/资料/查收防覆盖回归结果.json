@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-26T01:48:46.437Z",
+  "actualListNotices": [
+    "s1-n1",
+    "s1-n2",
+    "s1-n3",
+    "s1-n6"
+  ],
+  "legacySchema10MigratedWithoutClearing": true,
+  "legacyOverwriteCount": 1526,
+  "oldChannelCannotRevertReceipt": true,
+  "confirmImmediateAndReload": true,
+  "realHandwrittenSignatureImmediateAndReload": true,
+  "blankSignatureBlocked": true,
+  "oneSubmissionImmutable": true,
+  "completedControlsGreyAndDisabled": true,
+  "readOnlyNoticeCompleted": true,
+  "teacherStatsSharesNewStorage": true,
+  "noDeadlineInBothRoles": true,
+  "networkFailureNotFakeSuccess": true,
+  "runtimeErrors": []
+}

@@ -1,0 +1,120 @@
+{
+  "version": "v1.4",
+  "date": "2026-11-26T01:56:30.134Z",
+  "checks": {
+    "动作模型验证结果.json": {
+      "date": "2026-11-26T01:48:17.378Z",
+      "results": [
+        {
+          "role": "家长",
+          "threeGuardiansFiveActions": true,
+          "uniqueOperationIds": true,
+          "firstReadOnly": true,
+          "confirmImpliesTwoDistinctActions": true,
+          "signatureOnce": true,
+          "teacherOwnSnapshot": true,
+          "studentAndRelationshipSnapshotsImmutable": true,
+          "missingLegacySnapshotNotBackfilled": true,
+          "stableLegacyOperationIds": true,
+          "studentIsolation": true,
+          "permissionChecked": true
+        },
+        {
+          "role": "教师",
+          "threeGuardiansFiveActions": true,
+          "uniqueOperationIds": true,
+          "firstReadOnly": true,
+          "confirmImpliesTwoDistinctActions": true,
+          "signatureOnce": true,
+          "teacherOwnSnapshot": true,
+          "studentAndRelationshipSnapshotsImmutable": true,
+          "missingLegacySnapshotNotBackfilled": true,
+          "stableLegacyOperationIds": true,
+          "studentIsolation": true,
+          "permissionChecked": true
+        }
+      ]
+    },
+    "阅读动态验证结果.json": {
+      "date": "2026-11-26T01:55:17.731Z",
+      "threeGuardiansFiveRows": true,
+      "latestFirst": true,
+      "minuteDateFormat": true,
+      "studentAndRelationshipSnapshotFrozen": true,
+      "operationIdsStoredNotDisplayed": true,
+      "noSignatureImagesInActivity": true,
+      "repeatReadAndRefreshNoDuplicates": true,
+      "legacyMissingRelationUsesRequestedPlaceholder": true,
+      "teacherActivityOnlySelf": true,
+      "directDetailHeaderRestored": true,
+      "runtimeErrors": []
+    },
+    "统计权限验证结果.json": {
+      "date": "2026-11-26T01:55:44.544Z",
+      "ownerOnlyFullStatistics": true,
+      "campusOutsideTeacherNoPersonalActivity": true,
+      "receiverTeacherOnlyOwnActivity": true,
+      "publisherManagementReadRecorded": true,
+      "managerReadLocksEdit": true,
+      "managerReadExcludedFromRecipientCounts": true,
+      "studentClassGroupingAndCollapse": true,
+      "singleKindSelectorHidden": true,
+      "unreadStudentFamilySheet": true,
+      "liveFamilyStatusRefresh": true,
+      "noFamilyEmptyState": true,
+      "noSubscriptionOrCallFeature": true,
+      "completedDetailsAndSignatureImageRetained": true,
+      "escClosesUnreadSheet": true,
+      "parentCannotAccessStats": true,
+      "runtimeErrors": []
+    },
+    "媒体展示验证结果.json": {
+      "date": "2026-11-26T01:54:43.614Z",
+      "coverPreviewHeight": 88,
+      "coverSourceRecommendation": "900×383",
+      "bodySourceRecommendation": "1080px宽",
+      "coverDisplayMax": [
+        320,
+        136
+      ],
+      "bodyDisplayMax": [
+        320,
+        180
+      ],
+      "originalAspectPreserved": true,
+      "smallImagesNotUpscaled": true,
+      "noFixedLargeFrame": true,
+      "narrowViewportNoOverflow": true,
+      "imageCaptionAutoGrows": true,
+      "mediaTitlesCenteredAndFullyWrapped": true,
+      "detailCaptionsCenteredAndFullyWrapped": true,
+      "runtimeErrors": []
+    },
+    "查收防覆盖回归结果.json": {
+      "date": "2026-11-26T01:48:46.437Z",
+      "actualListNotices": [
+        "s1-n1",
+        "s1-n2",
+        "s1-n3",
+        "s1-n6"
+      ],
+      "legacySchema10MigratedWithoutClearing": true,
+      "legacyOverwriteCount": 1526,
+      "oldChannelCannotRevertReceipt": true,
+      "confirmImmediateAndReload": true,
+      "realHandwrittenSignatureImmediateAndReload": true,
+      "blankSignatureBlocked": true,
+      "oneSubmissionImmutable": true,
+      "completedControlsGreyAndDisabled": true,
+      "readOnlyNoticeCompleted": true,
+      "teacherStatsSharesNewStorage": true,
+      "noDeadlineInBothRoles": true,
+      "networkFailureNotFakeSuccess": true,
+      "runtimeErrors": []
+    }
+  },
+  "unrelatedDocumentsUnchanged": true,
+  "screenshotsInDocuments": false,
+  "productionBackendAndNativeStack": "原型演示不代替真实服务端鉴权、微信投递及原生栈验收",
+  "preservedOriginalMediaFiles": 1858
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-26T01:55:17.731Z",
+  "threeGuardiansFiveRows": true,
+  "latestFirst": true,
+  "minuteDateFormat": true,
+  "studentAndRelationshipSnapshotFrozen": true,
+  "operationIdsStoredNotDisplayed": true,
+  "noSignatureImagesInActivity": true,
+  "repeatReadAndRefreshNoDuplicates": true,
+  "legacyMissingRelationUsesRequestedPlaceholder": true,
+  "teacherActivityOnlySelf": true,
+  "directDetailHeaderRestored": true,
+  "runtimeErrors": []
+}

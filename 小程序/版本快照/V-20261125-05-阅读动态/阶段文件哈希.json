@@ -1,0 +1,83 @@
+{
+  "at": "2026-11-26T01:51:09.769Z",
+  "status": "v1.4本地未完整发布，图片规格待确认",
+  "files": [
+    {
+      "path": "文档\\通知功能产品需求文档.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\文档\\通知功能产品需求文档.md",
+      "before": "a1bd2d968d10e9a556061bf7d6f1c1504cf95ec4201317c90e9ab111371e42fd",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\文档\\通知功能产品需求文档.md",
+      "after": "73b6480728d0cda0b257439d728ab42598690c97ade4d8db05d932fa8ef67248"
+    },
+    {
+      "path": "端-家长\\assets\\notification-mini\\app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini\\app.js",
+      "before": "47db511c51937ece032e19a341ce7b8349736f6d1d7f7ba29fe13b7e8c283ffe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini\\app.js",
+      "after": "c5818bddbdf293e6fd6fe582975ce9ac99e514f2faaa98a88761635c715c7b3e"
+    },
+    {
+      "path": "端-家长\\assets\\notification-mini\\core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini\\core.js",
+      "before": "867d2a1095384c9fda3810b63cd2e140f18e5e12505dcad7fb348f77a37f589d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini\\core.js",
+      "after": "c49b8577595c415e738ba5eb32e0f76d13d1217903a4b43864fdfb7096cd6a2d"
+    },
+    {
+      "path": "端-家长\\assets\\notification-mini.css",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini.css",
+      "before": "dc6c84005fcb619a567cf40cd1d7235a2f875ba13dc21cb546ccd340d3c06721",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini.css",
+      "after": "d40765dad5c11ea3df67a7325c762d3bf426f20421270ae65922cde567f02e30"
+    },
+    {
+      "path": "端-家长\\assets\\notification-page.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-page.js",
+      "before": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-page.js",
+      "after": "0cc89f480156732de50355eb516bb91020677bdc72e86bd213eeccbcd2a73aa7"
+    },
+    {
+      "path": "端-家长\\notification-mini\\app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-mini\\app.js",
+      "before": "47db511c51937ece032e19a341ce7b8349736f6d1d7f7ba29fe13b7e8c283ffe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-mini\\app.js",
+      "after": "c5818bddbdf293e6fd6fe582975ce9ac99e514f2faaa98a88761635c715c7b3e"
+    },
+    {
+      "path": "端-家长\\notification-mini\\core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-mini\\core.js",
+      "before": "867d2a1095384c9fda3810b63cd2e140f18e5e12505dcad7fb348f77a37f589d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-mini\\core.js",
+      "after": "c49b8577595c415e738ba5eb32e0f76d13d1217903a4b43864fdfb7096cd6a2d"
+    },
+    {
+      "path": "端-教师\\assets\\notification-mini\\app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini\\app.js",
+      "before": "fc3b93df63c1f09ce7b07c4c082810166802ff892fa6926df81bbcc21252ae3a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini\\app.js",
+      "after": "136d297302744d1530a869b729f5661ef8aa62c82b40cc2a3b19f89d07e9e194"
+    },
+    {
+      "path": "端-教师\\assets\\notification-mini\\core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini\\core.js",
+      "before": "b19b4aaf7eca12fe4f5fec3950a1b11af41641bbdfd25bd3c44771c1e67c6eaa",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini\\core.js",
+      "after": "eb9df1508b6e21bda7f2559c076b8f16608656f7bd905679e3a6b6a1cd45d444"
+    },
+    {
+      "path": "端-教师\\assets\\notification-mini.css",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini.css",
+      "before": "cf11d0967c8bbd3035bb85342d6ee49801dc2f05c8064a793c9695769e07c9f5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini.css",
+      "after": "99241950cf4d42dc04649031ac9eb5d26e09628d6ec9a6aa72ef02a364189b8c"
+    },
+    {
+      "path": "端-教师\\assets\\notification-page.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-page.js",
+      "before": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-page.js",
+      "after": "0cc89f480156732de50355eb516bb91020677bdc72e86bd213eeccbcd2a73aa7"
+    }
+  ]
+}

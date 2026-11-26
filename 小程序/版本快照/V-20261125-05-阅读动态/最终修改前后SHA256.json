@@ -1,0 +1,1176 @@
+{
+  "at": "2026-11-26T01:56:30.134Z",
+  "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3",
+  "destination": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4",
+  "files": [
+    {
+      "path": "index.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\index.html",
+      "before": "2f1665c1afcdd57b3dc7f33e06350b130a659a3ab29bc148892db7ed8dab456a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\index.html",
+      "after": "8b14e7b70ee79ddbdd3acbcc376ce836998a8e480a506310ab37be788edddea0"
+    },
+    {
+      "path": "文件清单.json",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\文件清单.json",
+      "before": "426ecba42af86b7f73c88e5db67c31530c2166d17b6e63f4668fe8d1f6dfa123",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\文件清单.json",
+      "after": "8625e9f502a3a70e2a11cd025dac36d619d91ac4693d5ffd75ab8d96f446441e"
+    },
+    {
+      "path": "文档/通知功能产品需求文档.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\文档\\通知功能产品需求文档.md",
+      "before": "a1bd2d968d10e9a556061bf7d6f1c1504cf95ec4201317c90e9ab111371e42fd",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\文档\\通知功能产品需求文档.md",
+      "after": "a0903a3099b8c914b89b8ad3c4111283b7188696a76fb3e2dc95b378ef0f4166"
+    },
+    {
+      "path": "版本信息.json",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\版本信息.json",
+      "before": "0dc9a02acfe90f0b0d9d2dd651588a6cea97d223a00ddaf42cec641759fcde4d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\版本信息.json",
+      "after": "e5616db4fc8d088aeb777aacd05be3059e749bc2700a6395ab0568f5f474a2a9"
+    },
+    {
+      "path": "端-家长/addchild.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\addchild.html",
+      "before": "c5fc5c66111d9b3a6ea0d2b704001c8597e1f434904b47b7616d73e2f42541fe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\addchild.html",
+      "after": "cc99b58a48f4f62484b9ce6efd5730ce066a6cfa7ed816eb9efe76bbc24a48e7"
+    },
+    {
+      "path": "端-家长/apply.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\apply.html",
+      "before": "91702341d745dd38fc3a1364f8c9dab2a094af097c505abf87a1dd8c3c2f7803",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\apply.html",
+      "after": "b85b4a28088de73e4784801d68a26cc02e336feec089c8eeca167b47cbd8ce0e"
+    },
+    {
+      "path": "端-家长/assets/app-shell.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\app-shell.js",
+      "before": "83ee8e11f75b2f155e9062abbb704640e6894ca2989b93123fd86b346cca3dc4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\app-shell.js",
+      "after": "8ddaf721f92e9a295ec38d6ca16810c5afa519a1e632fd549237606a91fffa22"
+    },
+    {
+      "path": "端-家长/assets/notification-mini/app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini\\app.js",
+      "before": "47db511c51937ece032e19a341ce7b8349736f6d1d7f7ba29fe13b7e8c283ffe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini\\app.js",
+      "after": "228e0f66e9618c46f41a01e724af7db7ba21c4211885ed139d03f940f82c7e3c"
+    },
+    {
+      "path": "端-家长/assets/notification-mini/core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini\\core.js",
+      "before": "867d2a1095384c9fda3810b63cd2e140f18e5e12505dcad7fb348f77a37f589d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini\\core.js",
+      "after": "c49b8577595c415e738ba5eb32e0f76d13d1217903a4b43864fdfb7096cd6a2d"
+    },
+    {
+      "path": "端-家长/assets/notification-mini.css",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-mini.css",
+      "before": "dc6c84005fcb619a567cf40cd1d7235a2f875ba13dc21cb546ccd340d3c06721",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-mini.css",
+      "after": "a5b805c1a5d09ddb9c81f144dc14a84ee0ab1741b5b64c3872be00d19893a597"
+    },
+    {
+      "path": "端-家长/assets/notification-page.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\assets\\notification-page.js",
+      "before": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\assets\\notification-page.js",
+      "after": "e6354ddb82e9b4e805d8ab498050af48463935960d0b48a506788ac82ae25a63"
+    },
+    {
+      "path": "端-家长/atthist.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\atthist.html",
+      "before": "2e9b70b3a6ef498de996678c58c0b42b2c449ac521e087d481753ba70f3f4384",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\atthist.html",
+      "after": "24f8b94a502f8c77fe6705b259d869e759623cb5f700ec8a126c9d6dc7cf9979"
+    },
+    {
+      "path": "端-家长/auth.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\auth.html",
+      "before": "18afd527f91a74c8a2f928247237e7beab5ce7f313a83ad81ea730bd79e61717",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\auth.html",
+      "after": "f7e04941c37eac427d0cfb7e59bc0e5a18b9bf097f3162d564fd2d0c3ce5e24a"
+    },
+    {
+      "path": "端-家长/child.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\child.html",
+      "before": "22a4326d7b20c7d7a86d4e676cb2c1a94f7d9dc9fe542dd1549242d596ae2838",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\child.html",
+      "after": "81a9124115886fc8fc927f91cd770b75a6cf44e136bda87f2cc1a6f337991c19"
+    },
+    {
+      "path": "端-家长/classreg.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\classreg.html",
+      "before": "dabe547558df3f9f40cef32e1161e41c7a3fe1a12e34faab78fc4896702539f8",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\classreg.html",
+      "after": "0baf42d7ffc03f07631bc7732e152085132309e5255cd49a3488e61ad24989b9"
+    },
+    {
+      "path": "端-家长/dismiss-old.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\dismiss-old.html",
+      "before": "9ea124e06767a2ec04ea78c6af29544d2e902727ce3fa427ea9dbda9cb0d8e5b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\dismiss-old.html",
+      "after": "2053f291b242ca4e1119c80f067277dda50701f99943968810cc55a24a9f1bd1"
+    },
+    {
+      "path": "端-家长/dismiss.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\dismiss.html",
+      "before": "54b821a9d83bbeb9411924ceaf9d473f66c60c5efaf42883e2b06d2d7e004f3a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\dismiss.html",
+      "after": "66b9d53c0d38da63a8235c938b06a0c833561f9b9fff11b161dcd0f1d82a4973"
+    },
+    {
+      "path": "端-家长/eval.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\eval.html",
+      "before": "e86b60b2e0133950243ea8dd239f03539682ea2410222746ad79fa3bc5eda2b9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\eval.html",
+      "after": "36ebe33961f4a8b8da5dc981a8df20bd3cddc11b6d48514d2255cf35214e1d64"
+    },
+    {
+      "path": "端-家长/evaldl.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\evaldl.html",
+      "before": "e6a4dbaf44219f4af39e62b5c4f80810f8a815045fb14368dddc081e9fd74c2d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\evaldl.html",
+      "after": "5035f22a0e4768be0ce56be39b9ce51a9962ee1178e77d538f85985f1d3e154f"
+    },
+    {
+      "path": "端-家长/evaldt.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\evaldt.html",
+      "before": "d28afbb5e283987f7b1e04e0554a9d96aa62769251549d6722cfa707dc458ba7",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\evaldt.html",
+      "after": "e7360ba7e94ecbed42ba3a73b42f3e3e13e06a6beaa5c69383ba2abfb2a178c3"
+    },
+    {
+      "path": "端-家长/evalrep.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\evalrep.html",
+      "before": "25322c6aed77de886c7cfe01a6fb874600630577f5c0a82be6017f58ad67f116",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\evalrep.html",
+      "after": "18849a12273f77a1423c78e5787e0f4979a62fc3abc550b370d4f8578a736ce8"
+    },
+    {
+      "path": "端-家长/face.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\face.html",
+      "before": "ccb578580b06de206bddde277f5f36c0c16c14112b10c838b13d94bd3c8fa4f4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\face.html",
+      "after": "68adda283092f63d602cb7b6750ad0ef609f3ed9b1cc036f9b3ade2c2db44d69"
+    },
+    {
+      "path": "端-家长/famconfirm.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\famconfirm.html",
+      "before": "6924e469008cf2f9f5409db74bc48043c5ecc3b42a2395cb9c4fc75ea991a981",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\famconfirm.html",
+      "after": "efe9887e3920801e9ac801c454152da464607aff434dda7af999c4a2412ff3ad"
+    },
+    {
+      "path": "端-家长/faminv-form.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\faminv-form.html",
+      "before": "7fdd04416ed9a4adc06d5b1a251ef849ab4797124bf068aea5e25f698cbf0e59",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\faminv-form.html",
+      "after": "6d42aca87a658be483649f542a765221070862147b59db6ce550117cf79098d8"
+    },
+    {
+      "path": "端-家长/faminvalid.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\faminvalid.html",
+      "before": "1b0ab4dd2d3f8860f450f8635b19782c924019d4a8da17d6e014a5d094dcc452",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\faminvalid.html",
+      "after": "a01d5fa1f743d410c2b359e62f56991c2c72ce49ccfd0ff87da3eed4d558928a"
+    },
+    {
+      "path": "端-家长/faminvite.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\faminvite.html",
+      "before": "36b5ed66c594ecb231bbe7e34395b05f1a55facf4dc2731bb6aeaabd2c2eba84",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\faminvite.html",
+      "after": "34a364c35c87c2ec704cf7ce0dddc2ac08d7dfa0390f8837cbadfd6cba8fd85e"
+    },
+    {
+      "path": "端-家长/fbdetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\fbdetail.html",
+      "before": "5dcd035b9781c3c61051864de646a2457445020a9826f63ffd9597b72c09eab4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\fbdetail.html",
+      "after": "39ece34db2f171a81f7babdc4abf6f5c487ea9bc723b6f8e136b42d2dfd535ad"
+    },
+    {
+      "path": "端-家长/fblist.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\fblist.html",
+      "before": "bcbdc8079fb797bb289447796c707de416d170e573b7ea05805b9b6f86763f2e",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\fblist.html",
+      "after": "cc92321fc55993b2875109d58a6084ef829d1c4647306414bb0a5649c414ab3b"
+    },
+    {
+      "path": "端-家长/guardians.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\guardians.html",
+      "before": "fcb9cfeb112da384862cd8b84f513c975b1b2aca29378358ef2cccf457d03487",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\guardians.html",
+      "after": "7ff6e5270dcbdbb14f687a415962c60fbcd8bda8ad7baf95ca03ff606e44b70d"
+    },
+    {
+      "path": "端-家长/help.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\help.html",
+      "before": "fad073064af9af455daf3822177e171f666b571ced1b6e2f36bab245490d0040",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\help.html",
+      "after": "a93df5c3b5f85cabb922d67c660e32250e2e329995cf0eacd7e9c00b338da296"
+    },
+    {
+      "path": "端-家长/home.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\home.html",
+      "before": "d7300f4e41e70abe78ff5243cb4ce65113a5b629cdf6e724448f64ac4dc125d9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\home.html",
+      "after": "a6434d85e29bfe8f63ab083b14a26d7a98a19e74a9eebde068ba87f68dc1d337"
+    },
+    {
+      "path": "端-家长/index.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\index.html",
+      "before": "181cee602d4396c0749f7d6c059f0457f84ed771d88765293a4c443c472eaff5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\index.html",
+      "after": "e0412e3df5119612d8f07548a46107bec2be5415ec4845d15dc869cb4dbaa34c"
+    },
+    {
+      "path": "端-家长/invite.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\invite.html",
+      "before": "bcfbd4d80b74a326f87ea1a8324d54203773cfe596488505236dc09474c496da",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\invite.html",
+      "after": "ac4a3bad9c6506b022dfff68c38f2ce8ee3256f3c06f7477b2c457a404b23ca4"
+    },
+    {
+      "path": "端-家长/kids.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\kids.html",
+      "before": "6e5200b93fa64b1c594a849fc46b0c9d33bd59baf75270160317e98a920ebd5f",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\kids.html",
+      "after": "f16a6af7cd1fa6baa8605553e37c49e4d9bbcb89b0344a1b2df08a6930047074"
+    },
+    {
+      "path": "端-家长/leave-tab.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\leave-tab.html",
+      "before": "815454b338e536d4f71284f782913b589aee1c65c187a1fc408a6eff74466a16",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\leave-tab.html",
+      "after": "2de2bc591361f292f533489f7bfbfb8d913d333759b3fe25ca033130992b3e42"
+    },
+    {
+      "path": "端-家长/leavedetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\leavedetail.html",
+      "before": "85ac729724648989f413fe493058ab498e8bf6a6b13fe2fcb96a7ce15d32c750",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\leavedetail.html",
+      "after": "0ff2576b7f811338c00a7d89e697a07e94a059c9a1cd1e15af3b12515f50519e"
+    },
+    {
+      "path": "端-家长/legal.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\legal.html",
+      "before": "38c284ba8dbd4a9643d524085fef48363ac8fa3212d2783bedd4d38ffc696444",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\legal.html",
+      "after": "a0a1bb689669c7714072ba46010f1e425b80e4a6f6701fa7dced11a800a8d8a4"
+    },
+    {
+      "path": "端-家长/login.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\login.html",
+      "before": "a966aa74ed493394a5010aad8538ac1d7fddc1a98b4092ae1026650954b9d010",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\login.html",
+      "after": "5b37679a7ab873a33c39a608f796147b734ea2e9bdac6f7c5c2cd6a951cb9afb"
+    },
+    {
+      "path": "端-家长/me.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\me.html",
+      "before": "ed91a46ae9b35fb4bdb37f90d73cfdea75f505ea37824a044c6e6d771ce8cdb2",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\me.html",
+      "after": "191a81a191500244bec4842b5c003cf03ef3b6231e62cd331e638a0f43b09bd3"
+    },
+    {
+      "path": "端-家长/mine-single.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\mine-single.html",
+      "before": "5f904152141abc1784f081db1764acc19f0ca9977f8b1db3f6294a3ef42b68da",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\mine-single.html",
+      "after": "cefcdef32be368c4b6741e23dc2428ddbe9739cf7827aaaab01b87f25766c3f4"
+    },
+    {
+      "path": "端-家长/msgguide.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\msgguide.html",
+      "before": "8f3b03eaeba88d894feb7e1712e4b2e7434ca3b1231cca63af045d2140b9a8cd",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\msgguide.html",
+      "after": "da7512731a2ee1c04f375e06682ac5658fdd0986e75c1f7695ada8f97c70e8b3"
+    },
+    {
+      "path": "端-家长/msgs.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\msgs.html",
+      "before": "3c1999c8459953dca396331e71fbfb0b48f9e205eb166f6d51f01d17a5d6cd5b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\msgs.html",
+      "after": "b39d96acb221d8dd5426e382e898014e4a45db7c4c6581171046b3fad0ca2435"
+    },
+    {
+      "path": "端-家长/msgset.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\msgset.html",
+      "before": "e3677150f5f9844a941f2a7119dc55ed7c3bf9bd8e34bb85d98054ed358eca5f",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\msgset.html",
+      "after": "7e766ca8e6885880eb38255ee6a202d2c0ee17c7472a3a4197b2bae29bcaca0d"
+    },
+    {
+      "path": "端-家长/newleave.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\newleave.html",
+      "before": "ed99ac43dd5632172b2acaa04d866b091f362013851d68e8994e77d377fb20da",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\newleave.html",
+      "after": "19f87f5c1ac57e681530e2368e815365b4647876767999743c6ae04e2cc5f5a4"
+    },
+    {
+      "path": "端-家长/nochild.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\nochild.html",
+      "before": "0cf8805b35dd7919cd79b91a2dea28ef8bf7e8479304487d384c60e574b5b247",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\nochild.html",
+      "after": "6c7dc7bc0bbe2127646fbddec918356dce388c51e79d33845fa180527c479005"
+    },
+    {
+      "path": "端-家长/notification-beauty.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-beauty.html",
+      "before": "e46885de50ebcd5391fe91566251b199819befe79a6beb75e83cf7f0f95651da",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-beauty.html",
+      "after": "b7a3df2d223556a2015df3977f845fe53b6e17948cded3179f44c8347d3e1a8d"
+    },
+    {
+      "path": "端-家长/notification-detail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-detail.html",
+      "before": "713bdac97c22ae0b84eb897ef4ea2db14de09994aa29d077dfd793f51f5c8421",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-detail.html",
+      "after": "f933ac750a5b7d7c35117771090bb018a93a95de1f09cc19639ea93c430dabc2"
+    },
+    {
+      "path": "端-家长/notification-editor.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-editor.html",
+      "before": "986a39e5894619bab7ea069883c4738fcfe9f1bba45abe0895b960796f3fb545",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-editor.html",
+      "after": "91f57197391c54bb8a2ba0e214e15b2190d93f0bbd6f855d7f7754d2053bf01b"
+    },
+    {
+      "path": "端-家长/notification-error.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-error.html",
+      "before": "d4b098cfe2452e62e3f0dc8ca862708b664eb10a3b127d3896401cb7183355cd",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-error.html",
+      "after": "013d27cf520a4c0c145cf6c34102fa24293e6fe2bd2507a85c1d86fcafcd2b5d"
+    },
+    {
+      "path": "端-家长/notification-mini/app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-mini\\app.js",
+      "before": "47db511c51937ece032e19a341ce7b8349736f6d1d7f7ba29fe13b7e8c283ffe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-mini\\app.js",
+      "after": "228e0f66e9618c46f41a01e724af7db7ba21c4211885ed139d03f940f82c7e3c"
+    },
+    {
+      "path": "端-家长/notification-mini/core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-mini\\core.js",
+      "before": "867d2a1095384c9fda3810b63cd2e140f18e5e12505dcad7fb348f77a37f589d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-mini\\core.js",
+      "after": "c49b8577595c415e738ba5eb32e0f76d13d1217903a4b43864fdfb7096cd6a2d"
+    },
+    {
+      "path": "端-家长/notification-preview.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-preview.html",
+      "before": "c21862d27e33a3cbf6dc47eb68093a9d2a9531f57576eec8450908f1043f6e98",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-preview.html",
+      "after": "4e3adf9317f117446e7713b7af2540ea4957748a2e94818c99f64bef27b582b2"
+    },
+    {
+      "path": "端-家长/notification-settings.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-settings.html",
+      "before": "87a11e3aa6f1b93344cc6537bdab4886eb1f1c1415cf7075029d3b3d3476f693",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-settings.html",
+      "after": "2c63eb078faafe3068676c5bbef91067f62522cc22b4246669b6cb9a01428cc2"
+    },
+    {
+      "path": "端-家长/notification-share.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-share.html",
+      "before": "827693faa9dcbb0d870ff7c4a00ad15598c4988bf33c4162c9ee276dd29ac809",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-share.html",
+      "after": "80aecdca0223b5057a6f87b8c1ce9ad7db328ee41fb5c2723c5ec247316ebd1f"
+    },
+    {
+      "path": "端-家长/notification-stats.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-stats.html",
+      "before": "8c2a0472ebcf7f5bd51899cf05671f9b87ffa057f3c1eb48f4418e1fbdefe1ff",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-stats.html",
+      "after": "6ce11995c03e44d09787684eac8df2bdab6d6d4f5ee86602a580595ec34420bd"
+    },
+    {
+      "path": "端-家长/notification-template.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-template.html",
+      "before": "8b95029dc02887bfef93ae9098ed48af74363743d84a41e293379b964064124c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-template.html",
+      "after": "8ff81bf357f076b1b0bd9027cf58d4141c314c97be5802082791607b146d6fca"
+    },
+    {
+      "path": "端-家长/notification-templates.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification-templates.html",
+      "before": "ea32c2465034970d8c23eaddb1e76df17093d49bb4403cd63167b20c32c344f9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification-templates.html",
+      "after": "9a080f12a1725ac7775d00c279b28080b13a1d742cfcae6d09a094cce7e8584c"
+    },
+    {
+      "path": "端-家长/notification.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\notification.html",
+      "before": "9f815ab23325f75bce8c5460b4e0a99dda2684bc5cbbaa98299f776eb2ef79e3",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\notification.html",
+      "after": "bdc28dd7a83b0fbd42ffd7ef2792bb256ba6374ac866b30f9d85e7f57cc63dcc"
+    },
+    {
+      "path": "端-家长/order.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\order.html",
+      "before": "316fad7c0f592cf0ec96cb27b0885ab1174ec99c055b33f4241cf49bf76c8349",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\order.html",
+      "after": "daa5c1dfe8a01aea469c9ed68397ebff23b8896a5eba90cf4953866ac8571cd3"
+    },
+    {
+      "path": "端-家长/payok.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\payok.html",
+      "before": "58c57d9a380e0e3188a6866783ad66c1ebd36dd96c68f2468f77803b920c64bb",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\payok.html",
+      "after": "cda99aa9632e0ef7ea8adb66e4df723596c2b7f7cd9b4dcd23d09152c5aac848"
+    },
+    {
+      "path": "端-家长/preview.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\preview.html",
+      "before": "e3d7e2a10e91f804055a6095aa38a6f25a796a876db4a7c841749cf1c141d716",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\preview.html",
+      "after": "7085a62d536f0e7f6f6a7259633b9c4e485dcb5823ec6cd6e6470fae8725e3e6"
+    },
+    {
+      "path": "端-家长/profile.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\profile.html",
+      "before": "6c2a48574252345cc915dd9abe0f2f4348e6b888cf3c622f90f9a0bc3e652f3b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\profile.html",
+      "after": "2f0feb3cb60fb7337eafedac67b24e4f0a442fa87821ab418357b89175387f3b"
+    },
+    {
+      "path": "端-家长/regfollow.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\regfollow.html",
+      "before": "1d1cc91ecb74bb17967acdd345af77b4a90c1e34455ea962f467925b8d007b67",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\regfollow.html",
+      "after": "9494ef2814d47efb09f92afd401199a1edec77859b55501284ca520ec4a172a2"
+    },
+    {
+      "path": "端-家长/reginvite.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reginvite.html",
+      "before": "398fd66aadb443375a6605cd80c055d1548d0b019607495b72232a257371d4d2",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reginvite.html",
+      "after": "c4cdee8fbe9cc45c933d27ec2cd2434cbb52ac198729dbc542dd9a20cdfb6469"
+    },
+    {
+      "path": "端-家长/reginvite2.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reginvite2.html",
+      "before": "43bf70fb8b48055899e6930aafe9cbfdc8c1280d1d1cb3902457e6653d2bda96",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reginvite2.html",
+      "after": "767f736575a3a2cda24782a5c96a53f0ecdad5207779c7110829ae792a043f5f"
+    },
+    {
+      "path": "端-家长/reginvite3.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reginvite3.html",
+      "before": "4fb33df127651608afafbbbb6b7f7482f39831f6d4f7e71d162d2b80eb350a05",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reginvite3.html",
+      "after": "479fdd33cf6546770cb97a374b64946a19c8d3aa6d71a57b3f9e543001598032"
+    },
+    {
+      "path": "端-家长/reglanding.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reglanding.html",
+      "before": "ff04bc9287ec3fd67ec8193a75f89dac5408d96efbaea3628d565c3d0456d277",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reglanding.html",
+      "after": "05388837c8f3b832802dac9e1d1d963d48dc7e01cc7522ec89be92470e921e7f"
+    },
+    {
+      "path": "端-家长/reglanding2.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reglanding2.html",
+      "before": "e6b0d61b48ef0a6f6b7eb59e5262c2f1e08aa7a5b5e6e83e7f43e09a4b9a1b7b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reglanding2.html",
+      "after": "57985767149033043b12dcbf68701d261f81ecaf6f0bb355ff8cb28d741d255a"
+    },
+    {
+      "path": "端-家长/reglanding3.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reglanding3.html",
+      "before": "986972d551fad8ff98c248e995ce85cb4eb06f90ad3496614c081c40c2074f4a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reglanding3.html",
+      "after": "b32a5d395503b130b05daea5f309759e9f880af8534ac7a25f1a61d4757e3245"
+    },
+    {
+      "path": "端-家长/regposter.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\regposter.html",
+      "before": "ddb8631fe0c8ff39c6a6ed4af9f0af3b17ca48dc39149517a0a6863e99e919f7",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\regposter.html",
+      "after": "dacdf8c2f5910e4f0d26a231b68b368c607a14839fed876c50dc9d5406170674"
+    },
+    {
+      "path": "端-家长/regposter2.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\regposter2.html",
+      "before": "4cd1eb14ecd07d49d7ada8863412a6ddff410c43c40955692ac489c255c618ee",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\regposter2.html",
+      "after": "2695f6da5def234a25953f46077e276f3511fbbe2432c9d235640ac0d36f9f22"
+    },
+    {
+      "path": "端-家长/regwx.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\regwx.html",
+      "before": "659cef7476a4cffd65f2a984730c6ab8342a4a712ea2086fd6c3d5e79a6ab139",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\regwx.html",
+      "after": "828e7fba95126a2b4ddfe3041afe1f34d994335f81d4e1faa314bc0770d5812c"
+    },
+    {
+      "path": "端-家长/reissue.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\reissue.html",
+      "before": "74d1bacd5febce40be5eea44901702ab1ae494cf6c0c6f2b62bb6b607ca6a2c8",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\reissue.html",
+      "after": "54f2cf85416d1aadf76b835cb136fafb76d9f2c3f9bb0724de455d8c006de3fa"
+    },
+    {
+      "path": "端-家长/scan.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\scan.html",
+      "before": "20b4da3fa109891f4f58f7dc71b1ecafac342a852fa99e29ea6871f1f93a089b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\scan.html",
+      "after": "4877d45e1ce93f8b143ae582881a02b783bdcc7f4a3eb6a3d5f69a8e90113352"
+    },
+    {
+      "path": "端-家长/sms.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\sms.html",
+      "before": "c70cfa615f6de6880822363fb06af9559ecf28fdb43a2b8aa2b26e24e9c5f38c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\sms.html",
+      "after": "80090a0e6ae7fcd6025ffde3b62ccc5d21e6b5e0b4375e24b7b60316ed9717e1"
+    },
+    {
+      "path": "端-家长/switch.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\switch.html",
+      "before": "5a9a8f5828f77c71d9cd1f5a470f9da59d533d21d0954cbca6a9710d26054559",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\switch.html",
+      "after": "88ca5378c6a3d6251900bbc9475530dc19a916e3c9b9d4bb9bb8d22a0ff052bc"
+    },
+    {
+      "path": "端-家长/visitor.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\visitor.html",
+      "before": "e0a5cc593029042e9b4cd85259f4853d0ab0c4413ce71ca9a12fdb6e3b0c239b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\visitor.html",
+      "after": "c7e96c3bc5cd9d3b908995877e18bbe7a60df3f7a8ac97898e9f67fd40d10578"
+    },
+    {
+      "path": "端-家长/wxphones.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\wxphones.html",
+      "before": "941d36f95d27c68b739010156818c43eb797ef745ee7c26e266e5270df23638e",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\wxphones.html",
+      "after": "066ee0ea6b1870514499e8c546156cd58523392ee7f9315f5ba5c1a5955a9a4e"
+    },
+    {
+      "path": "端-家长/wxpush.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\wxpush.html",
+      "before": "70d55bf7aebfaca844fe51f236604ac4eadfd58f9aea1ff59d30517ca766ffd4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\wxpush.html",
+      "after": "a1562aeabcc882a8fe1926f5797f8d95121da50ed717054458b76ff45465e44d"
+    },
+    {
+      "path": "端-家长/定版信息.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\定版信息.md",
+      "before": "80685843904a56f8e07efa5ff4c1804082ea9edf387359ab04485d09d775fc26",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\定版信息.md",
+      "after": "b1a090b2b337ed8942fb5522661ce481b97525563851b5155f5c662bcfa09fb5"
+    },
+    {
+      "path": "端-家长/资料/版本说明.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\资料\\版本说明.md",
+      "before": "9f8fe5394176c172ee95e830ef6e74482f3664e1286cd10e23cd0b81855b29a5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\资料\\版本说明.md",
+      "after": "28866bf56647688c8510e9b0dee4d1a81fb8ca0d12df80640978912f1865b81b"
+    },
+    {
+      "path": "端-家长/页面路由.json",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-家长\\页面路由.json",
+      "before": "01f58d7d31de083afc36f19c9e6b362c40b4bdf00e7b001689ad52a57afd8f8c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-家长\\页面路由.json",
+      "after": "c631548b070471004dd869bdff2402487830fc763c9228416088580dc5c1711f"
+    },
+    {
+      "path": "端-教师/addchild.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\addchild.html",
+      "before": "c5fc5c66111d9b3a6ea0d2b704001c8597e1f434904b47b7616d73e2f42541fe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\addchild.html",
+      "after": "cc99b58a48f4f62484b9ce6efd5730ce066a6cfa7ed816eb9efe76bbc24a48e7"
+    },
+    {
+      "path": "端-教师/addstu.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\addstu.html",
+      "before": "98dc4945158ac3e005f1a9ba835f36c4f858b7690a8eb2346e9f4525e1584927",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\addstu.html",
+      "after": "cde7477d513a080110165a4b22f22e65f188242d5741bdbbc53d9f7352bc19b7"
+    },
+    {
+      "path": "端-教师/addtch.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\addtch.html",
+      "before": "81aba060ffcd5aeaca07eb07db961ac3e9262626bf7eadd57306685218523bb3",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\addtch.html",
+      "after": "62d9aa4e202dea68c7e2c83a76bfb7862258f1eaf2cb6c30bac808c9ca1f89ff"
+    },
+    {
+      "path": "端-教师/apply.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\apply.html",
+      "before": "91702341d745dd38fc3a1364f8c9dab2a094af097c505abf87a1dd8c3c2f7803",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\apply.html",
+      "after": "b85b4a28088de73e4784801d68a26cc02e336feec089c8eeca167b47cbd8ce0e"
+    },
+    {
+      "path": "端-教师/applydetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\applydetail.html",
+      "before": "b7cb15eda95fdd1cd7e8a49eabf08c0bb4fb341939d82912a509ff6802ac8008",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\applydetail.html",
+      "after": "bcc303b2294038026f79e623175ccd48a58b73adb1dd013dd0be71f827301aca"
+    },
+    {
+      "path": "端-教师/assets/app-shell.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\app-shell.js",
+      "before": "845535bebd3fab1b16a91ecfb384a5bfc2b795b6dcb1474676d17451ba39f2a5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\app-shell.js",
+      "after": "515504e6f82bd6d246514227f644278de4d4735875ff2a6ff2c65a6ef81bfa81"
+    },
+    {
+      "path": "端-教师/assets/notification-mini/app.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini\\app.js",
+      "before": "fc3b93df63c1f09ce7b07c4c082810166802ff892fa6926df81bbcc21252ae3a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini\\app.js",
+      "after": "e30786393597b315816775e9b1766496a0a01c606373d4e4ca345f4b2c3366c8"
+    },
+    {
+      "path": "端-教师/assets/notification-mini/core.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini\\core.js",
+      "before": "b19b4aaf7eca12fe4f5fec3950a1b11af41641bbdfd25bd3c44771c1e67c6eaa",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini\\core.js",
+      "after": "eb9df1508b6e21bda7f2559c076b8f16608656f7bd905679e3a6b6a1cd45d444"
+    },
+    {
+      "path": "端-教师/assets/notification-mini.css",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-mini.css",
+      "before": "cf11d0967c8bbd3035bb85342d6ee49801dc2f05c8064a793c9695769e07c9f5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-mini.css",
+      "after": "42a90f962d304c0631a476fb7a73f2db64c86fc5286f3cf5652b77ed027d3598"
+    },
+    {
+      "path": "端-教师/assets/notification-page.js",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\assets\\notification-page.js",
+      "before": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\assets\\notification-page.js",
+      "after": "e6354ddb82e9b4e805d8ab498050af48463935960d0b48a506788ac82ae25a63"
+    },
+    {
+      "path": "端-教师/att.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\att.html",
+      "before": "bd57729f92eba02eaa32591715e85ed2689aeb91447c2b084d5676c25383b13b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\att.html",
+      "after": "bb49101c17bd0acaaa3a2b43a7d9ef43e2679a93785cae50829eeceaecb6f7ad"
+    },
+    {
+      "path": "端-教师/attclass.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\attclass.html",
+      "before": "30ec9d2aeb068f94e59c045b047285feadf761d86820b0ab59f09976dbd6c191",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\attclass.html",
+      "after": "d5e6ff9f8800c758fbb71f5cf8308d797f2579789c7fd5f62fdfe84513dda2e9"
+    },
+    {
+      "path": "端-教师/attcsign.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\attcsign.html",
+      "before": "3036ba58001bb5e1922fc12853584eef447fc658dad20b9602b19f78812c6fac",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\attcsign.html",
+      "after": "974c78e746e2483bef13ebc951e90ff2f77b2941b7fc68d7596193fd6253a567"
+    },
+    {
+      "path": "端-教师/attsign.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\attsign.html",
+      "before": "9e6d91bc7ebc6aee6a2d2c5b39712fa609e3bb7ec9574e6858dc23bbbf7c6516",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\attsign.html",
+      "after": "3717939530dd1533f57c9bdfb472340f21332978ce701d433d498b7ac23932c2"
+    },
+    {
+      "path": "端-教师/attstu.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\attstu.html",
+      "before": "9cc5a46203d8442a6989cb7e4167f6c36fdbad40d7de4ed0151501c1a2a6145e",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\attstu.html",
+      "after": "62f5d95745561db3080ee4eca3e4231a344937d1bcb5538d2928fc98ae71a25a"
+    },
+    {
+      "path": "端-教师/auth.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\auth.html",
+      "before": "18afd527f91a74c8a2f928247237e7beab5ce7f313a83ad81ea730bd79e61717",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\auth.html",
+      "after": "f7e04941c37eac427d0cfb7e59bc0e5a18b9bf097f3162d564fd2d0c3ce5e24a"
+    },
+    {
+      "path": "端-教师/cf-edit.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\cf-edit.html",
+      "before": "4cb1e79b169cff608aaaec3eeb14cd67a5888ffc7ef0ffa478b94eb3cbd08080",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\cf-edit.html",
+      "after": "bf38885de79cd9ddd1a2de5149170d6315a099bcb631985dfec9f7ffaabef534"
+    },
+    {
+      "path": "端-教师/cf-view.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\cf-view.html",
+      "before": "71413ec9b1779b6d02e93522beaa1786811092687c944b467d8637dbc9f5bce6",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\cf-view.html",
+      "after": "7667b2a6e426f4dfb1c6e835fe087941dd360f84acceef054b604ad20db8cfe5"
+    },
+    {
+      "path": "端-教师/claimparents.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\claimparents.html",
+      "before": "9a35e4da065e6a3ea43a5739ba19ece0b31bc9c4cd30614939b6dc9a5dcc48f7",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\claimparents.html",
+      "after": "bfb0d9292ff3daaec73b8293c511a04cb9fd146753dd229eab5abc04cb384ed9"
+    },
+    {
+      "path": "端-教师/dismiss.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\dismiss.html",
+      "before": "54b821a9d83bbeb9411924ceaf9d473f66c60c5efaf42883e2b06d2d7e004f3a",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\dismiss.html",
+      "after": "66b9d53c0d38da63a8235c938b06a0c833561f9b9fff11b161dcd0f1d82a4973"
+    },
+    {
+      "path": "端-教师/editstu.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\editstu.html",
+      "before": "68397ec5f74f9d6446ad1d6bcfbb7374e5565acc6133081c3b752fb4d96ad5f1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\editstu.html",
+      "after": "c321b4a0bda294f96e18b9a9635c955f5280335fa6797a300c8e3e3a4f3621dc"
+    },
+    {
+      "path": "端-教师/edittch.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\edittch.html",
+      "before": "6a1d76d7b90f6bc4ab8882da63e7407295a3fd8db4a0d52bbc2f45336806a916",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\edittch.html",
+      "after": "391ce209c35722394d7c9e424100272908ef96d80b3323db0f3ad2724dc16c9f"
+    },
+    {
+      "path": "端-教师/eval.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\eval.html",
+      "before": "e86b60b2e0133950243ea8dd239f03539682ea2410222746ad79fa3bc5eda2b9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\eval.html",
+      "after": "36ebe33961f4a8b8da5dc981a8df20bd3cddc11b6d48514d2255cf35214e1d64"
+    },
+    {
+      "path": "端-教师/evaldl.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\evaldl.html",
+      "before": "e6a4dbaf44219f4af39e62b5c4f80810f8a815045fb14368dddc081e9fd74c2d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\evaldl.html",
+      "after": "5035f22a0e4768be0ce56be39b9ce51a9962ee1178e77d538f85985f1d3e154f"
+    },
+    {
+      "path": "端-教师/evalpick.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\evalpick.html",
+      "before": "9039a062ef3f580a455ac6f02f2045fc6807e04fb6f2277be5fec10294e49fff",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\evalpick.html",
+      "after": "81cb561fc62765796a40570ee0ad9bbe9361ab3eb8751b9420f12cbce68f6c52"
+    },
+    {
+      "path": "端-教师/evalpub.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\evalpub.html",
+      "before": "8c177f00ba34cf2cce9f0af70d6f826af98273710f642134a4cc7edadc5a8b4b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\evalpub.html",
+      "after": "8f427af72f8b2c3d8dee2280d7f12e26a3295b5df583a3c341a373d50c48df8f"
+    },
+    {
+      "path": "端-教师/evalrep.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\evalrep.html",
+      "before": "25322c6aed77de886c7cfe01a6fb874600630577f5c0a82be6017f58ad67f116",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\evalrep.html",
+      "after": "18849a12273f77a1423c78e5787e0f4979a62fc3abc550b370d4f8578a736ce8"
+    },
+    {
+      "path": "端-教师/evalstu.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\evalstu.html",
+      "before": "06db735ba958c6bbb4b07c9bb3936492ef5b9e460aefbb1d5bd68cd316329f38",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\evalstu.html",
+      "after": "d315d78d2388c54389f4ee217014be9ade75e7e90718ef11f8604c11ea9e76ff"
+    },
+    {
+      "path": "端-教师/expired.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\expired.html",
+      "before": "20f4a5c1deea284b1973d9504306108f5e79b132f38eaf2fa41165fedf3095f1",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\expired.html",
+      "after": "df06f02a5dfb144ba35a8fa4b9a1c740114f77b65290c4432fc8a64b482bf709"
+    },
+    {
+      "path": "端-教师/fbdetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\fbdetail.html",
+      "before": "5dcd035b9781c3c61051864de646a2457445020a9826f63ffd9597b72c09eab4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\fbdetail.html",
+      "after": "39ece34db2f171a81f7babdc4abf6f5c487ea9bc723b6f8e136b42d2dfd535ad"
+    },
+    {
+      "path": "端-教师/fblist.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\fblist.html",
+      "before": "bcbdc8079fb797bb289447796c707de416d170e573b7ea05805b9b6f86763f2e",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\fblist.html",
+      "after": "cc92321fc55993b2875109d58a6084ef829d1c4647306414bb0a5649c414ab3b"
+    },
+    {
+      "path": "端-教师/grpinfo.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\grpinfo.html",
+      "before": "c8c10ed1994a65ee617c8689900deb229ad5e6b06885f142897c9d622a80878d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\grpinfo.html",
+      "after": "270ce74c8fac717deed69ae5ecc29ed5f08cfab0890c5b8d4580ed6087a69bcf"
+    },
+    {
+      "path": "端-教师/grpmgr.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\grpmgr.html",
+      "before": "214cc98874d4205c5e95813b2cea073c66e78d06357c7d257203a9b2c14d18af",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\grpmgr.html",
+      "after": "7f354597828941811d0ab052b88bc97f09d3a229785005b69aca63c451619a61"
+    },
+    {
+      "path": "端-教师/help.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\help.html",
+      "before": "fad073064af9af455daf3822177e171f666b571ced1b6e2f36bab245490d0040",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\help.html",
+      "after": "a93df5c3b5f85cabb922d67c660e32250e2e329995cf0eacd7e9c00b338da296"
+    },
+    {
+      "path": "端-教师/home.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\home.html",
+      "before": "d7300f4e41e70abe78ff5243cb4ce65113a5b629cdf6e724448f64ac4dc125d9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\home.html",
+      "after": "a6434d85e29bfe8f63ab083b14a26d7a98a19e74a9eebde068ba87f68dc1d337"
+    },
+    {
+      "path": "端-教师/index.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\index.html",
+      "before": "1442b359eb1b8900eb75d834f337a09f37769c1021d825c49be0ce6fb587a208",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\index.html",
+      "after": "5848835b0c3921c0678d3e7e55331fce3775ef70bf6f981a366cb086ee30fb92"
+    },
+    {
+      "path": "端-教师/leave.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\leave.html",
+      "before": "ae7795e17444e8b50b3ec43161089946adf041cbcd82481f973d05f6891dc740",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\leave.html",
+      "after": "562eafb87324ee81296891efa7854d6ad22235fcead31a220ec43b71f99652d4"
+    },
+    {
+      "path": "端-教师/leavegen.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\leavegen.html",
+      "before": "631eaf0dea1b806f7310b560441419c509540cf6da39f8dc85c7b2a356786dbe",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\leavegen.html",
+      "after": "975de6d3e68e971780b251517f6593d8b05518b5516be9d7854c2a1c516260d6"
+    },
+    {
+      "path": "端-教师/legal.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\legal.html",
+      "before": "38c284ba8dbd4a9643d524085fef48363ac8fa3212d2783bedd4d38ffc696444",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\legal.html",
+      "after": "a0a1bb689669c7714072ba46010f1e425b80e4a6f6701fa7dced11a800a8d8a4"
+    },
+    {
+      "path": "端-教师/login.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\login.html",
+      "before": "a966aa74ed493394a5010aad8538ac1d7fddc1a98b4092ae1026650954b9d010",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\login.html",
+      "after": "5b37679a7ab873a33c39a608f796147b734ea2e9bdac6f7c5c2cd6a951cb9afb"
+    },
+    {
+      "path": "端-教师/me.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\me.html",
+      "before": "ed91a46ae9b35fb4bdb37f90d73cfdea75f505ea37824a044c6e6d771ce8cdb2",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\me.html",
+      "after": "191a81a191500244bec4842b5c003cf03ef3b6231e62cd331e638a0f43b09bd3"
+    },
+    {
+      "path": "端-教师/msgs.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\msgs.html",
+      "before": "3c1999c8459953dca396331e71fbfb0b48f9e205eb166f6d51f01d17a5d6cd5b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\msgs.html",
+      "after": "b39d96acb221d8dd5426e382e898014e4a45db7c4c6581171046b3fad0ca2435"
+    },
+    {
+      "path": "端-教师/noauth.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\noauth.html",
+      "before": "e23206e79af7d873f70dbe14e67b55974d321148ee4049d9e78d00975844563d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\noauth.html",
+      "after": "9808787bee79fd3374eee7b8c6b694be21b9d73cade2efbf9f4c0777512ad752"
+    },
+    {
+      "path": "端-教师/notification-beauty.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-beauty.html",
+      "before": "e46885de50ebcd5391fe91566251b199819befe79a6beb75e83cf7f0f95651da",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-beauty.html",
+      "after": "b7a3df2d223556a2015df3977f845fe53b6e17948cded3179f44c8347d3e1a8d"
+    },
+    {
+      "path": "端-教师/notification-detail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-detail.html",
+      "before": "713bdac97c22ae0b84eb897ef4ea2db14de09994aa29d077dfd793f51f5c8421",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-detail.html",
+      "after": "f933ac750a5b7d7c35117771090bb018a93a95de1f09cc19639ea93c430dabc2"
+    },
+    {
+      "path": "端-教师/notification-editor.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-editor.html",
+      "before": "986a39e5894619bab7ea069883c4738fcfe9f1bba45abe0895b960796f3fb545",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-editor.html",
+      "after": "91f57197391c54bb8a2ba0e214e15b2190d93f0bbd6f855d7f7754d2053bf01b"
+    },
+    {
+      "path": "端-教师/notification-error.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-error.html",
+      "before": "d4b098cfe2452e62e3f0dc8ca862708b664eb10a3b127d3896401cb7183355cd",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-error.html",
+      "after": "013d27cf520a4c0c145cf6c34102fa24293e6fe2bd2507a85c1d86fcafcd2b5d"
+    },
+    {
+      "path": "端-教师/notification-preview.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-preview.html",
+      "before": "c21862d27e33a3cbf6dc47eb68093a9d2a9531f57576eec8450908f1043f6e98",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-preview.html",
+      "after": "4e3adf9317f117446e7713b7af2540ea4957748a2e94818c99f64bef27b582b2"
+    },
+    {
+      "path": "端-教师/notification-settings.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-settings.html",
+      "before": "87a11e3aa6f1b93344cc6537bdab4886eb1f1c1415cf7075029d3b3d3476f693",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-settings.html",
+      "after": "2c63eb078faafe3068676c5bbef91067f62522cc22b4246669b6cb9a01428cc2"
+    },
+    {
+      "path": "端-教师/notification-share.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-share.html",
+      "before": "827693faa9dcbb0d870ff7c4a00ad15598c4988bf33c4162c9ee276dd29ac809",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-share.html",
+      "after": "80aecdca0223b5057a6f87b8c1ce9ad7db328ee41fb5c2723c5ec247316ebd1f"
+    },
+    {
+      "path": "端-教师/notification-stats.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-stats.html",
+      "before": "8c2a0472ebcf7f5bd51899cf05671f9b87ffa057f3c1eb48f4418e1fbdefe1ff",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-stats.html",
+      "after": "6ce11995c03e44d09787684eac8df2bdab6d6d4f5ee86602a580595ec34420bd"
+    },
+    {
+      "path": "端-教师/notification-template.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-template.html",
+      "before": "8b95029dc02887bfef93ae9098ed48af74363743d84a41e293379b964064124c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-template.html",
+      "after": "8ff81bf357f076b1b0bd9027cf58d4141c314c97be5802082791607b146d6fca"
+    },
+    {
+      "path": "端-教师/notification-templates.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification-templates.html",
+      "before": "ea32c2465034970d8c23eaddb1e76df17093d49bb4403cd63167b20c32c344f9",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification-templates.html",
+      "after": "9a080f12a1725ac7775d00c279b28080b13a1d742cfcae6d09a094cce7e8584c"
+    },
+    {
+      "path": "端-教师/notification.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\notification.html",
+      "before": "9f815ab23325f75bce8c5460b4e0a99dda2684bc5cbbaa98299f776eb2ef79e3",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\notification.html",
+      "after": "bdc28dd7a83b0fbd42ffd7ef2792bb256ba6374ac866b30f9d85e7f57cc63dcc"
+    },
+    {
+      "path": "端-教师/pending.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\pending.html",
+      "before": "56e0040ab554d6b062885a87211b8a7728d828d4ae6bdd1192a973dbb276e70f",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\pending.html",
+      "after": "e70cb7c40d344ac77c66349f65ff40735d4f095f2d515ca8d67f316fc769d38d"
+    },
+    {
+      "path": "端-教师/permission-denied.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\permission-denied.html",
+      "before": "4a99b2920879143f9eb5ff4fdefdbf0eebc88d30cb119c52512e5da2385a5348",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\permission-denied.html",
+      "after": "46eb4cc52c5d0533474d3550028a5ccd22f92db1b7b7d8938fafa29a322d29a6"
+    },
+    {
+      "path": "端-教师/profile.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\profile.html",
+      "before": "6c2a48574252345cc915dd9abe0f2f4348e6b888cf3c622f90f9a0bc3e652f3b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\profile.html",
+      "after": "2f0feb3cb60fb7337eafedac67b24e4f0a442fa87821ab418357b89175387f3b"
+    },
+    {
+      "path": "端-教师/proxyleave.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\proxyleave.html",
+      "before": "a5a66929c6b3cdb37704c2fd1d1485252aa69fdc84c7a90a0d7f833e05b67b9c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\proxyleave.html",
+      "after": "66f0f846a2586dceb40dbfb16324de65e43b7e3b925cb3ddde744325c893c9a5"
+    },
+    {
+      "path": "端-教师/rank.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\rank.html",
+      "before": "9d0e1292f5d118385fad5d4e8df8d82b3762763e6b90bc10f38f6d14f3f9e659",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\rank.html",
+      "after": "78949e646de1eb81b3454562402ac8255e66cdbea5f187eff77e5daeef36f054"
+    },
+    {
+      "path": "端-教师/reg.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\reg.html",
+      "before": "3979ae6126124b6c5efc70cd5c3c2f04e689090f95b06696263dbbbd4cf1a1f0",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\reg.html",
+      "after": "69fa5c858335cae71cd64960cad9d1d7df9b2629f8bed9406bc73f7ff202111c"
+    },
+    {
+      "path": "端-教师/scan.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\scan.html",
+      "before": "20b4da3fa109891f4f58f7dc71b1ecafac342a852fa99e29ea6871f1f93a089b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\scan.html",
+      "after": "4877d45e1ce93f8b143ae582881a02b783bdcc7f4a3eb6a3d5f69a8e90113352"
+    },
+    {
+      "path": "端-教师/sms.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\sms.html",
+      "before": "c70cfa615f6de6880822363fb06af9559ecf28fdb43a2b8aa2b26e24e9c5f38c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\sms.html",
+      "after": "80090a0e6ae7fcd6025ffde3b62ccc5d21e6b5e0b4375e24b7b60316ed9717e1"
+    },
+    {
+      "path": "端-教师/stuaudit.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\stuaudit.html",
+      "before": "da3d7909ab189a20ca30e2d942b598b5ac5da0250190f917d6c244f034184b00",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\stuaudit.html",
+      "after": "7d9d99b268f09139708ab6b479ea5c2c170c1a937c8dd1e2f7cebaa3566beef6"
+    },
+    {
+      "path": "端-教师/studetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\studetail.html",
+      "before": "e62ef06fdf7943a53f277ca7b08dcc84c0f67c547384d9d17598f940cd6e9e23",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\studetail.html",
+      "after": "bbf8b6dc56aaf919b5b44c34a1119a161d8787e5295a494f0e8dda32c882ceaf"
+    },
+    {
+      "path": "端-教师/stuev.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\stuev.html",
+      "before": "de9123b602b467ae90bd0517d92d1f3ad6c4e3aa79e47dcb983ea19d35a5e92c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\stuev.html",
+      "after": "c369ad081a97f5edf467e793574f6c210166e30085b509a4ccfc8c860ce7db26"
+    },
+    {
+      "path": "端-教师/stumgr.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\stumgr.html",
+      "before": "b499fcc5bc5ac249a3424b512b5f08064c5326ac1ab45e1838fe1c29026164b5",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\stumgr.html",
+      "after": "0dd2d637dc6e98d9f9570dbf33b9a386bc0df516210265e7c47f914fdd3f91c8"
+    },
+    {
+      "path": "端-教师/stuPend.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\stuPend.html",
+      "before": "22407c95a428e3bd5dff81d132dd190193f9d30e8ff3fab404f81c1b854caa10",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\stuPend.html",
+      "after": "5540e49b6637641e06305d812f83847ee301d81398106132ef1fbf45a42f0052"
+    },
+    {
+      "path": "端-教师/switch.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\switch.html",
+      "before": "5a9a8f5828f77c71d9cd1f5a470f9da59d533d21d0954cbca6a9710d26054559",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\switch.html",
+      "after": "88ca5378c6a3d6251900bbc9475530dc19a916e3c9b9d4bb9bb8d22a0ff052bc"
+    },
+    {
+      "path": "端-教师/tatt.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tatt.html",
+      "before": "2644466916f1250f5391ed47cd70a1314ebff82f5cf8c5ed5d758a83eb5e1a9f",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tatt.html",
+      "after": "b504f02f30716b237d777e685a26119829c5740b9f5e5e06be7f2f249c17e0f4"
+    },
+    {
+      "path": "端-教师/tattadmin.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tattadmin.html",
+      "before": "4fb023576d501ac4ef05ef6ebbe9be723a03fdb41315e4237c8534ae263ab616",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tattadmin.html",
+      "after": "ddf98da4dfde528c1fa7137d5bbc2c0765890fc2c6f5dced58a837e5c4667664"
+    },
+    {
+      "path": "端-教师/tattdetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tattdetail.html",
+      "before": "b053842731db701c49d6743ac28abfd743fe08cf6e2f51961bc4bc91b1f0a15c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tattdetail.html",
+      "after": "49b8a534674dc48fc49739f31ac0934b9b01323fed136e7e4d14feb2886737e4"
+    },
+    {
+      "path": "端-教师/tattfix.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tattfix.html",
+      "before": "75411462366a8d34a0d22940ddb057f842abc95043402398bbe5b97df22f8c42",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tattfix.html",
+      "after": "04c03a7648373d567d51e7c5eddc3d5c287b914f815aa6831404c75402f0bb16"
+    },
+    {
+      "path": "端-教师/tchaudit.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tchaudit.html",
+      "before": "9913b3a7c7d8cc3fdb5f1b3123a8dba7fb842408f5a7f86acb4b613292089f08",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tchaudit.html",
+      "after": "37035acb16fe14983f4c72fba29e5b35bb84a53d31451611b231d5b69fb8a695"
+    },
+    {
+      "path": "端-教师/tchdetail.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tchdetail.html",
+      "before": "b22b31ddc631ef766c5cfadf75f5a08db9b1d6a2a38843bb04c20456d2d02138",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tchdetail.html",
+      "after": "57652ede5f52ed508ec9cd00baaee16a74761b5d3e5a0e906ab79d4049a3fc73"
+    },
+    {
+      "path": "端-教师/tchduty.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tchduty.html",
+      "before": "387ba1b074c9f9922d0f9aad3a0074ecccf429670aa57802cf79d6b066d1dd35",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tchduty.html",
+      "after": "a4bf5a09acf2d462cd87d89eb4ef3e053a7029b76a679c8aa8a4dc2aba385ce5"
+    },
+    {
+      "path": "端-教师/tchmgr.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tchmgr.html",
+      "before": "526b97e249ca33464ed68c38419452fc5b2e9afe7b4f33a94faaa1994dc51813",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tchmgr.html",
+      "after": "7386d073c7b9d601b0c7744964326bb6e0b0995a10633fcc813a4d6cd90e0394"
+    },
+    {
+      "path": "端-教师/tchpend.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tchpend.html",
+      "before": "f4126d0b10a5078538fadb33836cd844ba6f6ac81856598299dba8bce764185d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tchpend.html",
+      "after": "5568f634de8a47a095806ee3c32cc9270ceff1e351eb104eba4b9a607a1bc570"
+    },
+    {
+      "path": "端-教师/tevdt.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tevdt.html",
+      "before": "f5d3732fbdaa05aeabe1d0d5008b5ef766aa8a6e68bfa51fd6fb2ee974becb06",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tevdt.html",
+      "after": "e313303d2b87ee4730a3820f726845312864981e6439aed3ee3e5ed5cc705077"
+    },
+    {
+      "path": "端-教师/tevedit.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\tevedit.html",
+      "before": "6064a58106c4f633292beeafd44e3283d5b5a443da089c1da39d72f9d2dfced2",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\tevedit.html",
+      "after": "1b1ac94614bb15b584b2f649916825f58f5565dcd3add07a554e5e8cd06e72d4"
+    },
+    {
+      "path": "端-教师/visitor.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\visitor.html",
+      "before": "e0a5cc593029042e9b4cd85259f4853d0ab0c4413ce71ca9a12fdb6e3b0c239b",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\visitor.html",
+      "after": "c7e96c3bc5cd9d3b908995877e18bbe7a60df3f7a8ac97898e9f67fd40d10578"
+    },
+    {
+      "path": "端-教师/wxpush.html",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\wxpush.html",
+      "before": "70d55bf7aebfaca844fe51f236604ac4eadfd58f9aea1ff59d30517ca766ffd4",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\wxpush.html",
+      "after": "a1562aeabcc882a8fe1926f5797f8d95121da50ed717054458b76ff45465e44d"
+    },
+    {
+      "path": "端-教师/定版信息.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\定版信息.md",
+      "before": "f74741d334cc356d14518c9a0db85ad7d2e68f7fddc518c430bb8930a669a23c",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\定版信息.md",
+      "after": "891f70409b599a15767e9afdb14dbfc09af8907a6f8512e8e2aee6e8716dec26"
+    },
+    {
+      "path": "端-教师/资料/版本说明.md",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\资料\\版本说明.md",
+      "before": "c19e2666b4820b3036d19200ec52de5f1692e5ce18a8b59ebf59d99f673bb1ea",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\资料\\版本说明.md",
+      "after": "ce232825108b6573918ba26357972f1f609a5e4b604e9650500c114ecee7e01b"
+    },
+    {
+      "path": "端-教师/页面路由.json",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\端-教师\\页面路由.json",
+      "before": "53536db5dec87062ff2303cf4c54865a135eac3f9fd9710d41662b490082f4ce",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\端-教师\\页面路由.json",
+      "after": "cb9fe01719237ea8c316333c4bf479766d322f07935b9ecc2954519de34f19c3"
+    },
+    {
+      "path": "验证记录.json",
+      "source": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.3\\验证记录.json",
+      "before": "ff0e95222710fb871028bde5a59aefe9f432b5ae1a067bb67e9543fda9af4b0d",
+      "candidate": "E:\\codex\\小程序\\任务\\T-20261125-03-徽项目新库迁移与页面路由\\发布内容\\小程序\\版本\\v1.4\\验证记录.json",
+      "after": "4e800d4903346a88803766d1f0c4df62f84faf8feb4ba07c0ced0d11eea48354"
+    }
+  ]
+}

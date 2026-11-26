@@ -1,9 +1,5 @@
 {
-    "release":  "v0.88",
-    "releaseId":  "v0.88-755733fc09",
-    "bundleSHA256":  "755733fc096521e3345572e802dbb1023550303777ad968ad4781b2f14aecc45",
-    "path":  "版本/v0.88",
-    "entry":  "index.html?page=family-notice",
-    "previewURL":  "https://guozi0718.github.io/hui-project/%E4%BB%A3%E7%90%86%E5%95%86%E7%AB%AF/index.html?page=family-notice",
-    "status":  "最终版本"
+    "version":  "v0.89",
+    "updatedAt":  "2026-11-26 05:58:04",
+    "summary":  "全站视觉美化转正（对齐运营后台客户管理样式）、发布通知第1步选校对齐运营后台表格分页样式、操作日志单行完整展示不换行并同步更新PRD"
 }

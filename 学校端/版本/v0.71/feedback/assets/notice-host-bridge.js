@@ -1,0 +1,6 @@
+(()=>{'use strict';const keys=['noticeView','noticeId','noticeDialog','noticeDialogId'];
+function frames(){return [...document.querySelectorAll('iframe')].filter(f=>f.title==='家校通知');}
+function restore(f){const q=new URLSearchParams(location.search);const state={};keys.forEach(k=>{if(q.has(k))state[k]=q.get(k)});f.contentWindow.postMessage({channel:'family-notice-restore',state},location.origin);}
+new MutationObserver(()=>frames().forEach(f=>{if(f.dataset.noticeBridge)return;f.dataset.noticeBridge='1';f.addEventListener('load',()=>restore(f));})).observe(document.documentElement,{childList:true,subtree:true});
+addEventListener('message',e=>{if(e.origin!==location.origin||e.data?.channel!=='family-notice-route'||!frames().some(f=>f.contentWindow===e.source))return;const u=new URL(location.href);keys.forEach(k=>{const v=e.data.state?.[k];if(v)u.searchParams.set(k,v);else u.searchParams.delete(k)});if(u.href===location.href)return;const replace=!new URLSearchParams(location.search).has('noticeView');if(window.QueryRouter?.write)QueryRouter.write(Object.fromEntries(u.searchParams),replace);else history[replace?'replaceState':'pushState'](history.state,'',u);window.QueryRouter?.rememberURL?.();});
+addEventListener('popstate',()=>frames().forEach(restore));})();

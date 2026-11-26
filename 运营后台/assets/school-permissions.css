@@ -1,0 +1,16 @@
+/* 文本域顶对齐；白底标题和轻量返回按用户附图。 */
+.frm .fr:has(textarea){align-items:flex-start}
+.frm .fr:has(textarea)>label{padding-top:0;line-height:20px}
+.frm .fr:has(textarea)>.ctl{align-items:flex-start}
+.page-sticky-header,.contract-page-header{background:#fff;padding:12px 20px;border-bottom:1px solid var(--line);margin-bottom:0}
+.page-sticky-header .page-back,.contract-title>.btn,.page-sticky-header [aria-label="返回合同列表"]{border:0;background:transparent;box-shadow:none;color:var(--t2);padding:0 22px 0 0;border-right:1px solid var(--line);border-radius:0;font-size:14px;min-width:58px;line-height:20px;height:20px}
+.contract-title>.btn::after,.page-sticky-header [aria-label="返回合同列表"]::after{content:'返回';font-size:14px}
+.page-sticky-header h2,.page-sticky-header h3,.contract-title h2{font-size:16px;font-weight:500}
+.school-permission-tree{padding:20px 0 30px 10px;max-width:700px}
+.school-permission-tree .node{height:36px}
+.school-permission-tree .ar{padding:0;border:0;background:transparent;font-size:20px;height:20px;line-height:20px}
+.school-permission-tree .chk{display:flex;align-items:center;gap:8px}
+.school-permission-tree input{margin:0;width:16px;height:16px;accent-color:var(--brand)}
+.school-permission-tree .permission-disabled,.school-permission-tree .permission-disabled label{color:#b4b8bf}
+.school-permission-tree .permission-disabled input{accent-color:#c2c7cf;cursor:not-allowed}
+.school-permission-tree .kids{padding-left:24px}

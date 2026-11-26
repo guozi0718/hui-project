@@ -1,0 +1,19 @@
+/* 统一当前控件尺寸和垂直节奏；不改变菜单及卡片结构。 */
+body .card .filters,body .dlg .filters{margin:0 0 24px;padding:0}
+body .card .filters>.fgrid,body .dlg .filters>.fgrid{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;width:100%}
+body .card .filters .fgrid>.factions,body .dlg .filters .fgrid>.factions{display:flex;align-items:center;justify-content:flex-end;flex:0 0 auto;gap:10px;margin:0 0 0 auto;padding:0;min-height:32px;white-space:nowrap}
+body .card .filters .fi,body .dlg .filters .fi{margin:0;min-height:32px;align-items:center}
+body .card .frm>.fr,body .dlg .frm>.fr{margin-bottom:24px;min-height:32px}
+body .card .rtabs,body .dlg .rtabs{margin-bottom:24px}
+body .card .summary,body .dlg .summary{margin:0 0 24px}
+body .card .toolbar,body .dlg .toolbar{margin-top:0;margin-bottom:20px;min-height:32px}
+body .card .compact,body .dlg .compact{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:16px 0 24px}
+body .card .filters+.info,body .dlg .filters+.info{margin:0 0 24px}
+body .card .tw th,body .card .tw td,body .dlg .tw th,body .dlg .tw td{padding-top:12px;padding-bottom:12px;line-height:22px;vertical-align:middle}
+body .card .pager,body .dlg .pager{margin-top:20px}
+body .dlg .detail-context-bar{display:flex;align-items:center;gap:16px;margin:0 0 24px;min-height:32px;color:var(--t1);font-size:14px;line-height:24px;flex-wrap:wrap}
+body .dlg .detail-context-bar .subpage-back{display:inline-flex;align-items:center;gap:1px;border:0;background:transparent;color:#24476c;font:inherit;cursor:pointer;padding:0;flex:none}
+body .dlg .detail-context-bar .detail-context-sep{display:block;width:1px;height:16px;background:var(--line)}
+body .dlg .detail-context-bar strong{font-weight:600}
+body .batch-confirm-dialog{width:560px;max-width:calc(100vw - 48px)}.batch-confirm-notice{font-weight:600;margin:0 0 18px;font-size:14px}.batch-confirm-form>.fr>label{width:120px;flex:0 0 120px}.batch-confirm-form>.fr{align-items:flex-start;gap:12px;margin-bottom:20px!important}.batch-confirm-form>.fr>label{padding-top:7px}.batch-confirm-form>.fr>.ctl{display:block;min-width:0}.batch-confirm-form .ipt[readonly]{width:100%;max-width:none;box-sizing:border-box;cursor:default;background:#f5f7fa}.batch-confirm-form textarea.ipt{height:80px;resize:none}.batch-confirm-form .ipt.is-invalid{border-color:#ff4d4f;box-shadow:none}.batch-inline-error{color:#ff4d4f;font-size:12px;line-height:20px;margin-top:3px;min-height:0}.batch-inline-error:empty{display:none}.batch-address-count{text-align:right;color:#999;font-size:12px;line-height:20px}.batch-confirm-dialog .df{padding-top:8px}
+body .shipping-dialog{width:560px;max-width:calc(100vw - 48px)}.shipping-form>.fr>label{width:100px;flex:0 0 100px;text-align:right}.shipping-form>.fr>.ctl{display:flex;align-items:center;justify-content:flex-start;min-width:0;max-width:none}.shipping-form>.fr>.ctl>.combo-select{width:100%;min-width:0;max-width:100%;flex:1 1 auto}.shipping-form .tracking-with-query{display:flex!important;flex-wrap:nowrap;gap:10px}.shipping-form .tracking-with-query>.ipt{width:0;min-width:0;max-width:none;flex:1 1 auto}.shipping-form .tracking-with-query>[data-do=trackQuery]{flex:0 0 auto;margin:0}.shipping-dialog #tracking-result:empty{display:none}.shipping-dialog #tracking-result:not(:empty){margin:0 0 0 112px;padding:8px 0;line-height:22px}

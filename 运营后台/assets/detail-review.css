@@ -1,0 +1,29 @@
+/* 本轮用户办理/支付详情及退款弹窗对齐要求，沿用既有色彩和双栏。 */
+body.restore-original .s5-order-layout .s5-order-main,body.restore-original .s5-order-layout .s5-order-aside{min-width:0}
+body.restore-original .s5-order-layout .sec{margin:0 0 16px;padding:18px;border:1px solid var(--line);border-radius:6px;background:#fff}
+body.restore-original .s5-order-layout h4{margin:0 0 16px;font-size:14px;font-weight:600}
+body.restore-original .s5-order-layout .kv{grid-template-columns:120px minmax(0,1fr);gap:0 12px;margin:0}
+body.restore-original .s5-order-layout .kv>dt,body.restore-original .s5-order-layout .kv>dd{min-height:38px;padding:8px 0;border-bottom:1px dashed #edf0f5;line-height:22px;overflow-wrap:anywhere}
+body.restore-original .s5-order-layout .kv>dt{color:#8793a7}.s5-order-layout .kv>dd{margin:0;min-width:0}
+body.restore-original .s5-order-layout .kv>dt:last-of-type,body.restore-original .s5-order-layout .kv>dd:last-child{border-bottom:0}
+body.restore-original .s5-order-aside .s5-ledger-kv>div{grid-template-columns:96px minmax(0,1fr);gap:8px;padding:8px 0;min-height:38px}
+body.restore-original .s5-order-aside .s5-ledger-kv dt{white-space:normal;font-size:13px}
+body.restore-original .s5-fact-timeline .s5-node-line{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}.s5-fact-timeline .s5-node-line b{float:none;font-size:13px}.s5-fact-timeline time{font-size:12px;color:#8793a7;white-space:normal}
+body.restore-original .s5-fact-timeline .it{padding-bottom:22px;min-height:64px}.s5-fact-timeline .it:last-child{padding-bottom:0;min-height:0}
+body.restore-original .s5-fact-timeline .it p{margin:4px 0 0;font-size:13px;line-height:22px;color:#536176;overflow-wrap:anywhere}
+body.restore-original .s5-fact-timeline .it.is-red::before{border-color:var(--danger)}.s5-logistics-timeline{margin-top:18px}
+body.restore-original .s5-related-refund{padding:10px 0;border-bottom:1px dashed #edf0f5;line-height:24px}.s5-related-refund p{margin:4px 0;color:#536176}.s5-related-refund time{font-size:12px;color:#8793a7}
+body.restore-original .s5-callback-raw{display:block;margin:0;padding:16px;border-radius:5px;background:#1f2937;color:#e5e7eb;font:13px/1.65 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;max-height:420px}
+body.restore-original .s5-callback-empty{margin:0;padding:12px 0;color:#8793a7}
+body.restore-original .s5-operation-dialog .db{padding:18px 24px}.s5-operation-dialog .kv{grid-template-columns:112px minmax(0,1fr);gap:10px 12px;margin-bottom:22px}.s5-operation-dialog .kv dt{text-align:right;line-height:24px}.s5-operation-dialog .kv dd{margin:0;line-height:24px;overflow-wrap:anywhere}
+body.restore-original .s5-choice-heading{font-size:14px;margin:0 0 12px}.s5-operation-dialog .s5-badge-choices{gap:12px;margin:0 0 24px}
+body.restore-original .s5-operation-dialog .s5-badge-choice{display:grid;grid-template-columns:20px minmax(0,1fr) 96px;gap:12px;align-items:center;padding:14px 16px;min-height:56px;border:1px solid var(--line);border-radius:5px}
+body.restore-original .s5-operation-dialog .s5-badge-choice>input{margin:0;accent-color:var(--brand);width:16px;height:16px}
+body.restore-original .s5-operation-dialog .s5-badge-choice>span{margin:0;min-width:0}.s5-badge-main{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;line-height:24px}.s5-badge-main>span:first-child{overflow-wrap:anywhere}.s5-badge-main small{flex-basis:100%;color:#8793a7;line-height:20px}.s5-badge-price{text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+body.restore-original .s5-operation-dialog .frm .fr>label{width:112px;flex:0 0 112px}body .s5-operation-dialog .frm .fr>.ctl>.ipt{max-width:none;width:100%}.s5-operation-dialog .frm textarea{min-height:100px}.s5-operation-dialog .df{border-top:1px solid var(--line);padding:16px 24px}
+body.restore-original .s5-operation-dialog .kv{grid-template-columns:112px minmax(0,1fr);gap:10px 12px;margin-bottom:22px}
+
+/* 本轮单据编号黑色与状态语义配色，保留原点击/权限。 */
+body.restore-original .s5-ledger-list th:first-child,body.restore-original .s5-ledger-id,body.restore-original .s5-ledger-id [data-do]{color:#303133!important}
+body.restore-original .s5-state-tone.unstarted{color:#909399;background:#f4f4f5;border-color:#dcdfe6}body.restore-original .s5-state-tone.waiting{color:#e6a23c;background:#fdf6ec;border-color:#f5dab1}body.restore-original .s5-state-tone.success{color:#00a63c;background:#f0f9eb;border-color:#b3e4c5}body.restore-original .s5-state-tone.refunded{color:#7356cf;background:#f4f0ff;border-color:#d6c7f5}body.restore-original .s5-state-tone.cancelled{color:#606266;background:#f4f4f5;border-color:#d3d4d6}body.restore-original .s5-state-tone.processing{color:#409eff;background:#ecf5ff;border-color:#b3d8ff}body.restore-original .s5-state-tone.exception{color:#f56c6c;background:#fef0f0;border-color:#fbc4c4}
+body:has(.s5-ledger-list){min-width:900px}

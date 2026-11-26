@@ -1,0 +1,11 @@
+.config-form{max-width:none!important;font-size:14px}
+.config-form>.grp-t{border:0;font-size:14px;font-weight:400;margin:16px 0 26px;padding:0}
+.config-form>.fr{margin-bottom:24px;gap:12px}.config-form>.fr>label{width:108px;flex:0 0 108px;line-height:32px;padding:0}
+.config-form>.fr>.ctl{gap:12px}.config-form .tip{color:#a0a4aa}.config-form .ctl>select{width:72px;flex:none}.config-form .ctl>[data-field=start],.config-form .ctl>[data-field=end]{width:90px}
+.config-form .collect-information{align-items:flex-start}.config-form .collect-information>label{line-height:32px}.config-form .collect-information>.ctl{align-items:flex-start}
+.collect-blocks{max-width:800px;width:100%}.collect-simple,.collect-detail{border:1px solid #dedede;margin-bottom:16px;background:#f3f3f3}.collect-simple,.collect-detail>div:first-child{padding:6px 8px;line-height:20px}.collect-detail>div:first-child{border-bottom:1px solid #dedede}.collect-data{padding:0 24px 0 88px}.collect-data p{line-height:28px;margin:4px 0 12px}.collect-data .lk{margin-left:24px;color:#97a9ff}
+.config-form .toolbar,.config-form .tb-wrap{margin-left:108px;max-width:1102px}.config-form .rte{width:820px;max-width:100%}.config-form .rte .ed{min-height:280px;max-height:460px;overflow:auto}.config-form [data-no-combo][hidden]{display:none!important}
+@media(max-width:900px){.config-form>.fr>.ctl{flex-wrap:wrap}.collect-data{padding-left:16px}.config-form .toolbar,.config-form .tb-wrap{margin-left:0}}
+.frm.config-form .fr>.ctl>select.sel{width:70px;min-width:70px;max-width:70px;flex:0 0 70px}
+.frm.config-form .fr>.ctl>select.sel[data-field=start],.frm.config-form .fr>.ctl>select.sel[data-field=end]{width:90px;min-width:90px;max-width:90px;flex-basis:90px}
+.frm.config-form .fr>.ctl>.tip{width:auto;flex:0 1 auto;display:inline-block;margin:0}

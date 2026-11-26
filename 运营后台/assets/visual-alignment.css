@@ -1,0 +1,28 @@
+/* v0.16：仅统一对齐与防遮挡，保留既有布局、字段顺序、业务与原色彩。 */
+body,body.restore-original{min-width:1000px}
+body .main,body .content,body .card{min-width:0}
+body .content .card{max-width:100%}
+body .content .frm .fr,body .dlg .frm .fr{align-items:center;min-height:32px;margin-bottom:24px}
+body .content .frm .fr>label,body .dlg .frm .fr>label{padding-top:0;line-height:20px}
+body .content .frm .fr>.ctl,body .dlg .frm .fr>.ctl{min-height:32px;min-width:0;align-items:center}
+body .content .frm .fr>.ctl>.txt,body .dlg .frm .fr>.ctl>.txt{padding-top:0}
+body .content .frm .fr:has(>.ctl textarea,>.ctl .rte,>.ctl .product-video-upload,>.ctl .collect-blocks,>.ctl .school-logo-upload),body .dlg .frm .fr:has(>.ctl textarea,>.ctl .rte){align-items:flex-start}
+body .content .frm .fr:has(>.ctl textarea,>.ctl .rte,>.ctl .product-video-upload,>.ctl .collect-blocks,>.ctl .school-logo-upload)>label,body .dlg .frm .fr:has(>.ctl textarea,>.ctl .rte)>label{padding-top:6px}
+body .content .filters .fi>label,body .dlg .filters .fi>label{width:112px;min-width:112px;flex:0 0 112px;line-height:20px;white-space:nowrap;padding:0;margin:0;text-align:right}
+body .content .filters .fi,body .dlg .filters .fi{min-height:32px;align-items:center}
+body .content .filters .factions,body .dlg .filters .factions{align-self:center}
+body .content .frm .recipient .fr,body .dlg .frm .recipient .fr{margin-bottom:24px}
+body .content .frm .recipient .fr:last-child,body .dlg .frm .recipient .fr:last-child{margin-bottom:0}
+body .tabs .tab{flex-shrink:0}
+/* 演示目录放到侧栏底部，避免覆盖列表分页和右侧保存操作。 */
+body .fab{left:24px;right:auto;bottom:16px;max-width:184px;z-index:21}
+body .sd{bottom:64px;padding-bottom:8px}
+body::after{content:"";position:fixed;left:0;bottom:0;width:232px;height:64px;background:#fff;border-right:1px solid var(--line);z-index:19;pointer-events:none}
+body .mask~#app .fab,body:has(.mask) .fab{visibility:hidden}
+
+/* 长单据字段名称保持一行，避免名称折行拉高独立一行。 */
+body .s5-ledger-kv>div{grid-template-columns:168px minmax(0,1fr)}
+body .s5-ledger-kv dt{white-space:nowrap;line-height:22px}
+
+/* 单行输入框下方有计数时，标签对齐输入框，不跟计数一起居中。 */
+body .content .frm .fr:has(>.ctl>.count):not(:has(>.ctl textarea))>label,body .dlg .frm .fr:has(>.ctl>.count):not(:has(>.ctl textarea))>label{align-self:flex-start;line-height:32px;padding-top:0}

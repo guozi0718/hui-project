@@ -1,0 +1,14 @@
+/* 后部筛选下拉采用合同管理同一控件外观；覆盖原样式恢复的通配符重置。 */
+body.restore-original .filters .combo-select{height:32px;align-items:center;border:0;background:transparent;vertical-align:middle}
+body.restore-original .filters .combo-select .combo-input{height:32px;padding:0 30px 0 10px;border:1px solid #dcdfe6;border-radius:4px;background:#fff;color:var(--t1);font-size:14px;line-height:30px;box-sizing:border-box;text-overflow:ellipsis}
+body.restore-original .filters .combo-select .combo-input::placeholder{color:#a8abb2;opacity:1}
+body.restore-original .filters .combo-select .combo-input:disabled{background:#f5f7fa;color:#a8abb2;cursor:not-allowed}
+body.restore-original .filters .combo-select .combo-input:focus{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand-l)}
+body.restore-original .filters .combo-arrow{position:absolute;top:1px;right:1px;width:28px;height:30px;border:0;background:transparent;color:var(--t2);line-height:30px;text-align:center;padding:0;cursor:pointer}
+body.restore-original .filters .combo-arrow:disabled{color:#c0c4cc;cursor:not-allowed}
+body.restore-original .filters select.sel:not(.combo-native){height:32px;padding:0 10px;border:1px solid #dcdfe6;border-radius:4px;background:#fff;color:var(--t2)}
+body.restore-original .combo-popup{padding:5px 0;border:1px solid var(--line);border-radius:4px;background:#fff;box-shadow:0 4px 16px #0002;box-sizing:border-box}
+body.restore-original .combo-popup .combo-option{display:block;min-height:36px;padding:8px 12px;line-height:20px;cursor:pointer;box-sizing:border-box;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+body.restore-original .combo-popup .combo-option:hover,body.restore-original .combo-popup .combo-option.focused{background:#eaf8ed}
+body.restore-original .combo-popup .combo-option[aria-selected=true]{color:var(--brand);font-weight:500}
+body.restore-original .combo-popup .combo-empty{padding:14px;color:var(--t3);text-align:center}

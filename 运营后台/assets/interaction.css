@@ -1,0 +1,12 @@
+.form-error{color:var(--danger);font-size:13px;white-space:normal;margin-top:12px;min-height:0}.form-error:empty{display:none}
+.btn:disabled{opacity:.45;cursor:not-allowed}.btn:disabled:hover{border-color:var(--line);color:inherit}
+.dlg{max-width:calc(100vw - 48px);max-height:calc(100vh - 48px)}.dlg .db{max-height:calc(100vh - 190px);overflow:auto}
+.frm .ctl{flex-wrap:wrap}.frm .ctl>.tip{width:100%}.frm .ctl>.ipt,.frm .ctl>.sel{min-width:100px}.frm .ctl>.rte{width:100%}
+.context{color:var(--t2);margin-bottom:14px}.upload-label{position:relative;cursor:pointer;flex:none!important}
+.preview-thumb{width:80px;height:64px;object-fit:contain;border:1px solid var(--line);border-radius:4px;cursor:pointer}
+.student-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.student-cards .sec{margin:0}.student-cards .kv{grid-template-columns:90px 1fr}
+.student-cards dd,.student-cards dt{white-space:normal}.panel{min-width:0}.panel .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel .fi>label{width:70px}
+.share-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:24px}.share-card{padding:16px;background:#f7f9fc;border:1px solid var(--line);border-radius:6px;align-self:start}.share-cover{aspect-ratio:5/4;display:grid;place-items:center;background:#fff;margin:10px 0}.share-cover img{width:100%;height:100%;object-fit:contain}.share-card b{display:block;overflow-wrap:anywhere;margin-bottom:8px}
+.ellipsis{max-width:260px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:inline-block}.faq-sort[draggable],tr[draggable]{cursor:grab}.faq-sort[draggable]:active,tr[draggable]:active{cursor:grabbing}.a[hidden]{display:none!important}
+.sw{flex:none!important;padding:0;vertical-align:middle}.sw[role=switch]:focus-visible{outline:2px solid var(--brand);outline-offset:3px}.pager button{padding:0 10px}.pager .sel{width:76px}.fi>.ctl{flex-wrap:nowrap}.tw td{max-width:360px}.tw td .tip{white-space:normal}
+@media(max-width:1280px){.content{padding-left:16px;padding-right:16px}.card{padding:20px}.student-cards{grid-template-columns:1fr}.share-grid{grid-template-columns:1fr 220px}}

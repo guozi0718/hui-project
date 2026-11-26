@@ -1,0 +1,60 @@
+.badge-account-heading{margin-top:18px}
+.badge-account-block{margin:0 0 8px}
+.badge-account-block .badge-account-row{display:grid;grid-template-columns:140px minmax(0,1fr);align-items:center;gap:12px}.account-view-form .badge-account-display{display:grid;grid-template-columns:180px minmax(0,1fr);align-items:center;gap:12px}
+.badge-account-block .badge-account-row>label,.account-view-form .badge-account-display>label{width:auto;white-space:nowrap}
+.badge-account-block .badge-account-row .ctl,.account-view-form .badge-account-display .ctl{min-width:0}
+.badge-account-block .badge-settings-heading{margin:10px 0 12px;color:#687b98;font-size:13px}
+.badge-account-row .req:before{content:"*";color:#e34b4b;margin-right:4px}
+.badge-account-switch{display:inline-flex;align-items:center;gap:9px;min-height:32px;cursor:pointer;color:#21324b}
+.badge-account-switch input{position:absolute;width:1px;height:1px;opacity:0}
+.badge-switch-track{width:38px;height:22px;border-radius:12px;background:#c8d0dc;display:inline-flex;align-items:center;padding:3px;transition:background .15s ease}
+.badge-switch-track i{width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform .15s ease}
+.badge-account-switch input:checked+.badge-switch-track{background:#00a53c}
+.badge-account-switch input:checked+.badge-switch-track i{transform:translateX(16px)}
+.badge-account-switch input:focus-visible+.badge-switch-track{outline:2px solid #1686ff;outline-offset:2px}
+.badge-account-switch.is-disabled{cursor:not-allowed;color:#9aa6b6}
+.badge-account-switch input:disabled+.badge-switch-track{background:#d8dee8}
+.badge-switch-state{min-width:30px;font-size:13px}
+.badge-account-type{width:148px;min-width:148px;max-width:148px}
+.badge-account-source{margin:-3px 0 12px 150px;color:#8695a9;font-size:12px}
+.badge-account-note{margin:0 0 12px 202px;color:#8695a9;font-size:12px;line-height:1.5}
+.badge-school-scope{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.badge-school-chiplist{display:flex;gap:6px;flex-wrap:wrap;width:100%;padding-top:3px}
+.badge-school-chiplist span{background:#f0f7f2;border:1px solid #d8eadc;color:#456b52;padding:3px 8px;border-radius:4px;font-size:12px}
+.badge-account-display .ctl{display:flex;align-items:center;min-height:28px;line-height:1.5;color:#21324b}
+.badge-school-dialog{width:min(680px,calc(100vw - 32px));max-height:min(82vh,720px);padding:0;border:0;border-radius:9px;box-shadow:0 18px 55px #17253c45;color:#21324b}
+.badge-school-dialog::backdrop{background:#24344c66}
+.badge-school-dialog>header,.badge-school-dialog>footer{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;background:#fff}
+.badge-school-dialog>header{border-bottom:1px solid #e7ebf1}
+.badge-school-dialog>header h2{margin:0;font-size:16px;font-weight:600}
+.badge-school-dialog>footer{justify-content:flex-end;gap:8px;border-top:1px solid #e7ebf1}
+.badge-dialog-x{border:0;background:transparent;font-size:21px;color:#7d8ba0;cursor:pointer}
+.badge-school-dialog-body{padding:14px 20px;max-height:calc(82vh - 116px);overflow:auto}
+.badge-school-dialog-body p{margin:0 0 10px;color:#73839a;font-size:13px}
+.badge-school-options{border:1px solid #dce3ee;border-radius:4px}
+.badge-school-options label{display:grid;grid-template-columns:20px minmax(180px,1fr) minmax(100px,auto);align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #e7ebf1;cursor:pointer}
+.badge-school-options label:last-child{border-bottom:0}
+.badge-school-options input{accent-color:#00a53c;width:16px;height:16px}
+.badge-school-options small{color:#8795a8;text-align:right}
+.badge-school-empty{padding:40px;text-align:center;color:#8795a8}
+@media(max-width:720px){.badge-account-source,.badge-account-note{margin-left:0}.badge-account-block .badge-account-row,.account-view-form .badge-account-display{grid-template-columns:1fr;gap:5px}.badge-account-block .badge-account-row>label,.account-view-form .badge-account-display>label{white-space:normal}.badge-school-options label{grid-template-columns:20px 1fr}.badge-school-options small{grid-column:2;text-align:left}}
+.school-badge-account-block .badge-account-row>label,.account-view-form .school-badge-account-row>label{text-align:right}
+.badge-account-block .badge-account-row>label{text-align:right}
+.badge-primary-controls,.badge-regulatory-controls{display:flex;align-items:center;gap:12px;min-width:0;white-space:nowrap}
+.badge-primary-controls .badge-account-switch{flex:none}
+.badge-inline-label{color:#21324b;white-space:nowrap}
+.badge-primary-controls .badge-account-type{flex:0 0 148px}
+.badge-primary-controls>.combo-select{flex:0 0 148px!important;width:148px!important;min-width:148px!important;max-width:148px!important}
+.badge-account-block .badge-account-row.badge-regulatory-secondary-row{display:grid;margin-left:0}
+.badge-regulatory-secondary-row .badge-regulatory-controls{min-height:32px;overflow:hidden}
+.badge-regulatory-controls>.badge-account-switch{flex:none}
+.badge-applicable-label{margin-left:10px}
+.badge-school-scope{display:inline-flex;align-items:center;gap:8px;min-width:0}
+.badge-school-summary{display:block;min-width:0;max-width:430px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#687b98}
+.badge-school-count{color:#687b98;white-space:nowrap}
+.account-view-form .badge-account-display.badge-primary-row{grid-template-columns:180px minmax(0,1fr)}
+.account-view-form .badge-account-display.badge-primary-row>label{text-align:right;white-space:nowrap}
+.account-view-form .badge-account-display.badge-regulatory-secondary-row{display:grid;margin-left:0}
+.badge-readonly-type{white-space:nowrap}
+.badge-school-names{display:block;min-width:0;max-width:520px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#21324b}
+@media(max-width:720px){.badge-primary-controls,.badge-regulatory-controls{gap:7px}.badge-primary-controls>.combo-select{flex-basis:132px!important;width:132px!important;min-width:132px!important;max-width:132px!important}.badge-primary-controls .badge-account-type{flex-basis:132px;width:132px;min-width:132px;max-width:132px}.badge-school-names,.badge-school-summary{max-width:40vw}}

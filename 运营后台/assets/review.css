@@ -1,0 +1,61 @@
+/* 保留原色彩，仅修正批注涉及的对齐、区域框与合同页头。 */
+.frm .fr{align-items:center;min-height:32px}
+.frm .fr>label{padding-top:0;line-height:20px}
+.frm .ctl{align-items:center;min-height:32px;min-width:0}
+.frm .ctl .chk{display:inline-flex;align-items:center;gap:5px;min-height:32px;line-height:20px;margin:0}
+.frm .ctl .chk input{margin:0;flex:none}
+.region-fields{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:556px;width:100%}
+.frm .ctl .region-select,.region-multi{width:180px;min-width:180px;max-width:180px;flex:0 0 180px;height:32px;box-sizing:border-box}
+.region-multi{position:relative;line-height:30px}
+.region-multi summary{height:32px;border:1px solid var(--line);border-radius:4px;padding:0 26px 0 10px;cursor:pointer;list-style:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fff;box-sizing:border-box}
+.region-multi summary::after{content:'⌄';position:absolute;right:10px;top:0}
+.region-multi[inert] summary{background:#f3f4f7;color:#86909c;cursor:not-allowed}
+.region-multi-menu{position:absolute;z-index:20;top:36px;left:0;width:240px;max-height:260px;overflow:auto;border:1px solid var(--line);box-shadow:0 4px 16px #0002;border-radius:5px;padding:6px 10px;background:#fff}
+.frm .region-multi-menu .chk{display:flex;padding:2px 0}
+.contract-page-header{position:sticky;top:64px;z-index:8;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:12px 0;box-sizing:border-box}
+.contract-title,.contract-head-actions{display:flex;align-items:center;gap:10px}
+.contract-title h2{margin:0;font-size:18px;line-height:32px}
+.contract-title>.btn{height:32px;min-width:32px;padding:0 8px;font-size:18px}
+.contract-form-card>.frm{padding-top:4px}
+.frm input[type=number][data-field=amount]::-webkit-inner-spin-button{opacity:1}
+.customer-delete-dialog{width:432px!important;max-width:calc(100vw - 32px)}
+.customer-delete-dialog .db{padding-top:22px;padding-bottom:20px}
+.customer-delete-body{text-align:center}
+.delete-alert-icon{width:70px;height:70px;line-height:70px;border-radius:50%;background:#ffb02e;color:#fff;font-size:60px;font-weight:700;margin:0 auto 16px;font-family:Arial,sans-serif}
+.customer-delete-body p{color:var(--t3);margin:0;line-height:24px}
+.customer-delete-dialog .df{padding-top:10px}
+@media(max-width:760px){.region-fields{max-width:100%}.contract-page-header{gap:8px}.contract-title,.contract-head-actions{gap:6px}}
+.combo-native{display:none!important}
+.combo-select{position:relative;display:inline-flex;align-items:center;width:160px;max-width:100%;min-width:100px;height:32px;vertical-align:middle}
+.combo-select .combo-input{width:100%!important;min-width:0!important;max-width:100%;height:32px;padding-right:30px;box-sizing:border-box;text-overflow:ellipsis}
+.combo-arrow{position:absolute;right:1px;top:1px;width:28px;height:30px;border:0;background:transparent;color:var(--t2);cursor:pointer}
+.combo-arrow:disabled{cursor:not-allowed;color:#86909c}
+.frm .ctl>.combo-select{width:420px;flex:none}
+.region-fields>.combo-region,.filters .ctl>.combo-region{width:180px;min-width:180px;max-width:180px;flex:0 0 180px}
+.combo-popup{position:fixed;z-index:3000;overflow:auto;border:1px solid var(--line);border-radius:4px;background:#fff;box-shadow:0 4px 16px #0002;padding:5px 0;box-sizing:border-box}
+.combo-option{padding:8px 12px;line-height:20px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.combo-option:hover,.combo-option.focused{background:#eaf8ed}
+.combo-option[aria-selected=true]{color:var(--brand);font-weight:500}
+.combo-empty{padding:14px;color:var(--t3);text-align:center}
+.filters .fgrid{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.filters .fi,.filters .fi.span2{display:flex;align-items:center;gap:12px;flex:none;min-width:0}
+.filters .fi>label{width:84px;min-width:84px;margin:0;text-align:right;line-height:32px}
+.filters .fi>.ctl{display:flex;align-items:center;flex-wrap:nowrap;gap:8px;width:270px;min-width:270px;max-width:270px}
+.filters .fi>.ctl>.ipt,.filters .fi>.ctl>.sel,.filters .fi>.ctl>.combo-select{width:270px;min-width:270px;max-width:270px;height:32px;box-sizing:border-box}
+.filters .fi:has(.combo-region)>.ctl{width:376px;min-width:376px;max-width:376px}
+.filters .fi>.ctl>.combo-region{width:120px;min-width:120px;max-width:120px;flex:0 0 120px}
+.date-range-filter{display:flex;align-items:center;gap:4px;border:1px solid var(--line);border-radius:4px;background:#fff;width:270px;min-width:270px;max-width:270px;height:32px;box-sizing:border-box}
+.date-range-filter>.date-range-text{border:0!important;box-shadow:none!important;padding:0 8px!important;width:106px!important;min-width:0!important;max-width:106px!important;height:30px;font-size:13px;background:transparent}
+.date-range-filter>span{flex:none;color:var(--t3)}
+.date-range-open{border:0;background:transparent;width:24px;height:30px;color:var(--t3);cursor:pointer;padding:0}
+.date-range-popup{position:fixed;z-index:3200;width:290px;background:#fff;padding:14px;border:1px solid var(--line);box-shadow:0 4px 16px #0002;border-radius:4px;box-sizing:border-box}
+.date-range-popup label{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:10px}
+.date-range-popup input{height:30px;max-width:170px;border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.date-range-buttons{display:flex;justify-content:flex-end;gap:8px}
+.page-sticky-header{position:sticky;top:64px;z-index:8;display:flex;align-items:center;gap:10px;min-height:64px;padding:12px 0;background:var(--bg);box-sizing:border-box;margin:0}
+.page-sticky-header h2,.page-sticky-header h3{margin:0;font-size:18px;line-height:32px}
+.page-sticky-header .r{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-left:auto}
+.page-sticky-header .sep{display:none}
+.page-sticky-header .page-back{flex:none}
+.filters{display:block}
+.filters .factions{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:12px}

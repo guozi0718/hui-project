@@ -28,14 +28,14 @@ function applyLock(s,r){s.badgeLockSourceId=String(r.id);s.badgeReplaceEnabled=!
 function resetSchool(s){s.badgeLockSourceId="";s.badgeReplaceEnabled=false;s.badgeReplaceType="student-card"}
 function currentPageForm(){return document.querySelector(".content .card .frm")||document.querySelector(".card>.frm")}
 function field(label,control,required=false){return '<div class="fr badge-account-row"><label class="'+(required?'req':'')+'">'+label+'</label><div class="ctl">'+control+'</div></div>'}
-function switchControl(key,on,disabled){return '<label class="badge-account-switch '+(disabled?'is-disabled':'')+'"><input type="checkbox" role="switch" data-field="'+key+'" '+(on?'checked ':'')+(disabled?'disabled ':'')+'><span class="badge-switch-track" aria-hidden="true"><i></i></span><span class="badge-switch-state">'+(on?'开启':'关闭')+'</span></label>'}
-function typeControl(value,disabled){return '<select class="sel badge-account-type" data-field="badgeReplaceType" '+(disabled?'disabled':'')+'><option value="student-terminal" '+(value==='student-terminal'?'selected':'')+'>学生终端</option><option value="student-card" '+(value!=='student-terminal'?'selected':'')+'>学生卡</option></select>'}
-function primarySettingRow(setting,disabled){return '<div class="fr badge-account-row badge-primary-row"><label class="req">是否开启校徽文案替换</label><div class="ctl badge-primary-controls">'+switchControl('badgeReplaceEnabled',setting.enabled,disabled)+'<span class="badge-inline-label">替换类型</span>'+typeControl(setting.type,disabled||!setting.enabled)+'</div></div>'}
+function switchControl(key,on,disabled){return '<label class="badge-account-switch '+(disabled?'is-disabled':'')+'"><input type="checkbox" role="switch" data-field="'+key+'" '+(on?'checked ':'')+(disabled?'disabled aria-disabled="true" ':'')+'><span class="badge-switch-track" aria-hidden="true"><i></i></span><span class="badge-switch-state">'+(on?'开启':'关闭')+'</span></label>'}
+function typeControl(value,disabled){return '<select class="sel badge-account-type" data-field="badgeReplaceType" '+(disabled?'disabled aria-disabled="true"':'')+'><option value="student-terminal" '+(value==='student-terminal'?'selected':'')+'>学生终端</option><option value="student-card" '+(value!=='student-terminal'?'selected':'')+'>学生卡</option></select>'}
+function primarySettingRow(setting,disabled,extraClass=''){return '<div class="fr badge-account-row badge-primary-row '+extraClass+'"><label class="req">是否开启校徽文案替换</label><div class="ctl badge-primary-controls">'+switchControl('badgeReplaceEnabled',setting.enabled,disabled)+'<span class="badge-inline-label">替换类型</span>'+typeControl(setting.type,disabled||!setting.enabled)+'</div></div>'}
 function schoolSummary(rows){const names=rows.map(s=>String(s.name||'')).filter(Boolean),full=names.join('、');return '<span class="badge-school-summary" title="'+esc(full||'暂无学校')+'">已选 '+rows.length+' 所'+(full?'：'+esc(full):'：暂无学校')+'</span>'}
-function secondaryRegulatoryRow(d,masterEnabled){const on=!!d.badgeSyncAllSchools,selected=namesFor(d),disabled=!masterEnabled;return '<div class="fr badge-account-row badge-regulatory-secondary-row"><label>是否同步下级所有学校</label><div class="ctl badge-regulatory-controls">'+switchControl('badgeSyncAllSchools',on,disabled)+(!on?'<span class="badge-inline-label badge-applicable-label">适用学校</span><button type="button" class="btn" data-badge-action="pick" '+(disabled?'disabled':'')+'>选择学校</button>'+schoolSummary(selected):'')+'</div></div>'}
+function secondaryRegulatoryRow(d,masterEnabled,readOnly=false){const on=!!d.badgeSyncAllSchools,selected=namesFor(d),disabled=readOnly||!masterEnabled,rowClass=readOnly?'fr badge-account-row badge-account-display badge-regulatory-secondary-row':'fr badge-account-row badge-regulatory-secondary-row';return '<div class="'+rowClass+'"><label class="req">是否同步下级所有学校</label><div class="ctl badge-regulatory-controls">'+switchControl('badgeSyncAllSchools',on,disabled)+(!on?'<span class="badge-inline-label badge-applicable-label">适用学校</span><button type="button" class="btn" data-badge-action="pick" '+(disabled?'disabled aria-disabled="true"':'')+'>选择学校</button>'+schoolSummary(selected):'')+'</div></div>'}
 function formSection(kind,d,lock,reg){
  const setting=lock?{enabled:!!reg.badgeReplaceEnabled,type:reg.badgeReplaceType||"student-card"}:{enabled:!!d.badgeReplaceEnabled,type:d.badgeReplaceType||"student-card"};
- let html=kind==='school'?'':'<div class="grp-t badge-settings-heading">校徽文案管理</div>';
+ let html='';
  html+=primarySettingRow(setting,lock);
  if(kind==='regulatory')html+=secondaryRegulatoryRow(d,setting.enabled);
  return html;
@@ -74,19 +74,18 @@ function decorateSchoolForm(frm){
  const anchor=reviews.at(-1)||audit;if(anchor)anchor.after(block,hidden);else form.append(block,hidden);
 }
 function readonlyRow(label,value,extraClass=''){return '<div class="fr badge-account-display '+extraClass+'"><label>'+label+'：</label><div class="ctl">'+(value||'--')+'</div></div>'}
-function readonlyPrimaryRow(enabled,type,extraClass=''){return '<div class="fr badge-account-display badge-primary-row '+extraClass+'"><label>是否开启校徽文案替换：</label><div class="ctl badge-primary-controls"><span>'+enabled+'</span><span class="badge-inline-label">替换类型</span><span class="badge-readonly-type">'+esc(type)+'</span></div></div>'}
-function readonlyRegulatorySecondaryRow(x){const on=!!x.badgeSyncAllSchools,selected=namesFor(x),names=selected.map(s=>String(s.name||'')).filter(Boolean),summary=names.length?names.join('、'):'暂无学校';return '<div class="fr badge-account-display badge-regulatory-secondary-row"><label>是否同步下级所有学校：</label><div class="ctl badge-regulatory-controls"><span>'+ (on?'是':'否') +'</span>'+(!on?'<span class="badge-inline-label badge-applicable-label">适用学校：</span><span class="badge-school-summary" title="'+esc(summary)+'">已选 '+selected.length+' 所：'+esc(summary)+'</span>':'')+'</div></div>'}
+function readonlyPrimaryRow(setting,extraClass=''){return primarySettingRow(setting,true,'badge-account-display '+extraClass)}
 function decorateDetail(frm){
  if(frm.dataset.badgeDone==='1')return;
  const selected=window.ZxhAccountViewState?.selected,kind=selected?.kind,index=selected?.index,x=M[kind]?.[index];if(!x)return;
  if(kind==='regulatory'){
    const first=frm.firstElementChild;if(first){const h=document.createElement('div');h.className='grp-t';h.textContent='基础信息';frm.insertBefore(h,first)}
    const h=document.createElement('div');h.className='grp-t';h.textContent='审核配置';frm.append(h);
-   frm.insertAdjacentHTML('beforeend','<div class="grp-t badge-settings-heading">校徽文案管理</div>'+readonlyPrimaryRow(x.badgeReplaceEnabled?'开启':'关闭',kindLabel(x.badgeReplaceType))+readonlyRegulatorySecondaryRow(x));
+   frm.insertAdjacentHTML('beforeend',readonlyPrimaryRow({enabled:!!x.badgeReplaceEnabled,type:x.badgeReplaceType||'student-card'})+secondaryRegulatoryRow(x,!!x.badgeReplaceEnabled,true));
  }else{
    const setting=schoolSettings(x.regulatoryId||owner(x)?.id,x,false);
    const audit=[...frm.querySelectorAll(':scope>.grp-t')].find(h=>h.textContent.trim()==='审核配置');
-    const html=readonlyPrimaryRow(setting.enabled?'开启':'关闭',kindLabel(setting.type),'school-badge-account-row');
+    const html=readonlyPrimaryRow(setting,'school-badge-account-row');
    if(audit)audit.insertAdjacentHTML('afterend',html);else frm.insertAdjacentHTML('beforeend','<div class="grp-t">审核配置</div>'+html);
  }
  frm.dataset.badgeDone='1';

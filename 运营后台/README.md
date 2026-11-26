@@ -1,7 +1,7 @@
 # 智小徽运营后台
 
-- 当前版本：v0.85
-- 固定入口：[https://guozi0718.github.io/hui-project/%E8%BF%90%E8%90%A5%E5%90%8E%E5%8F%B0/index.html?page=family-notice](https://guozi0718.github.io/hui-project/%E8%BF%90%E8%90%A5%E5%90%8E%E5%8F%B0/index.html?page=family-notice)
-- 本目录包含运营后台单一入口、完整运行资源及独立功能说明。家校通知通过菜单和顶部页签访问。
-- 后续运营后台版本在本目录更新；其他项目目录与本目录分开管理。
+- 当前版本：v0.86
+- 固定入口：[运营后台主菜单](https://guozi0718.github.io/hui-project/%E8%BF%90%E8%90%A5%E5%90%8E%E5%8F%B0/index.html?page=family-notice)
+- 本目录是运营后台唯一在线维护目录，包含单一入口、完整运行资源及独立功能说明。菜单与顶部页签继续使用统一入口。
+- v0.86 更新开户管理中的学校账号校徽文案配置，使其与监管账号配置的对齐、开关联动及只读回显规则一致。
 - 本原型使用演示数据，不连接生产接口、权限、账号持久化、真实图片上传或通知发送服务。

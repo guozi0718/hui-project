@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/guozi0718/hui-project.git",
+  "repositoryDirectory": "小程序",
+  "branch": "main",
+  "pagesBase": "https://guozi0718.github.io/hui-project/小程序/",
+  "cloneDirectory": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容",
+  "projectDirectory": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序",
+  "release": {
+    "version": "v1.2",
+    "directory": "小程序/版本/v1.2",
+    "tag": "miniapp-v1.2-rc.1",
+    "status": "完整候选，业务规则已确认、页面待验收",
+    "published": true,
+    "commit": "019c298c312b45a3b886eeaef2a7e23be4aabd1c",
+    "pagesVerified": true,
+    "links": {
+      "repository": "https://github.com/guozi0718/hui-project",
+      "parent": "https://guozi0718.github.io/hui-project/小程序/版本/v1.2/端-家长/notification.html",
+      "teacher": "https://guozi0718.github.io/hui-project/小程序/版本/v1.2/端-教师/notification.html",
+      "documents": "https://github.com/guozi0718/hui-project/tree/main/小程序/版本/v1.2/文档"
+    }
+  },
+  "automaticPush": true,
+  "pushRequiresExplicitUserRequest": false,
+  "policyUpdatedAt": "2026-11-25",
+  "syncPolicy": "用户Q25明确授权：小程序修改和适用验证完成后自动普通推送本仓库小程序目录；不推旧库、不推其他端、不覆盖已发布版本。",
+  "publishTool": "小程序/工具/发布版本.cjs",
+  "legacyPublishToolRetired": true
+}

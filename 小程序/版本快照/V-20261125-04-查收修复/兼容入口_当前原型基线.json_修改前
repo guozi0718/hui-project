@@ -1,0 +1,41 @@
+{
+  "project": "智小徽小程序",
+  "version": "v1.2",
+  "status": "当前完整候选，业务规则已确认、页面待验收",
+  "date": "2026-11-25",
+  "repository": "guozi0718/hui-project",
+  "repositoryDirectory": "小程序",
+  "projectDirectory": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序",
+  "versionDirectory": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2",
+  "entries": [
+    {
+      "name": "教师",
+      "role": "teacher",
+      "entry": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/端-教师/home.html",
+      "notification": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/端-教师/notification.html"
+    },
+    {
+      "name": "家长",
+      "role": "parent",
+      "entry": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/端-家长/home.html",
+      "notification": "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/端-家长/notification.html"
+    }
+  ],
+  "documents": [
+    "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/文档/通知功能产品需求文档.md",
+    "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/文档/联系客服功能产品需求文档.md",
+    "任务/T-20261125-03-徽项目新库迁移与页面路由/发布内容/小程序/版本/v1.2/文档/客户反馈功能产品需求文档.md"
+  ],
+  "automaticPush": true,
+  "published": true,
+  "coordination": "单个完整小程序项目多个版本；从本记录版本接续，在同一新库小程序目录新建完整递增版本，原型与独立文档同步；不再建立基线项目/功能项目对应关系。",
+  "commit": "019c298c312b45a3b886eeaef2a7e23be4aabd1c",
+  "tag": "miniapp-v1.2-rc.1",
+  "links": {
+    "repository": "https://github.com/guozi0718/hui-project",
+    "parent": "https://guozi0718.github.io/hui-project/小程序/版本/v1.2/端-家长/notification.html",
+    "teacher": "https://guozi0718.github.io/hui-project/小程序/版本/v1.2/端-教师/notification.html",
+    "documents": "https://github.com/guozi0718/hui-project/tree/main/小程序/版本/v1.2/文档"
+  },
+  "validation": "142个独立入口＋双端file回退通过；线上关键资产哈希一致，详情恢复与三份文档200验证通过。"
+}

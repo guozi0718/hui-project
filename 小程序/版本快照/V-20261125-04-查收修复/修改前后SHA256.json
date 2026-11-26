@@ -1,0 +1,68 @@
+[
+  {
+    "role": "家长",
+    "file": "assets/notification-mini/app.js",
+    "before": "d66f297edf8461b6b0c483d560fba8300df52abb94489138ae5a0071a70fe791",
+    "after": "47db511c51937ece032e19a341ce7b8349736f6d1d7f7ba29fe13b7e8c283ffe"
+  },
+  {
+    "role": "家长",
+    "file": "assets/notification-mini/core.js",
+    "before": "6008d23942f5dd9f95480c93c0abdb9945da684bc9ac6d0e2146559c8df44951",
+    "after": "867d2a1095384c9fda3810b63cd2e140f18e5e12505dcad7fb348f77a37f589d"
+  },
+  {
+    "role": "家长",
+    "file": "assets/notification-mini.css",
+    "before": "4a2fdcaf1e5b465e9a234a5db03b12b53f3d11bc7a26e3d5eea3af45df0e259b",
+    "after": "dc6c84005fcb619a567cf40cd1d7235a2f875ba13dc21cb546ccd340d3c06721"
+  },
+  {
+    "role": "家长",
+    "file": "assets/notification-page.js",
+    "before": "5944f1927e18698f8b672fd3f49cd367196baf3841823ca66ef1e6866f218ee3",
+    "after": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1"
+  },
+  {
+    "role": "家长",
+    "file": "index.html",
+    "before": "11c27a006a10c73e58e41b71338f9cc2e8fe216f358f1f0b610c7627521ab777",
+    "after": "181cee602d4396c0749f7d6c059f0457f84ed771d88765293a4c443c472eaff5"
+  },
+  {
+    "role": "家长",
+    "file": "assets/app-shell.js",
+    "before": "6d85a918a6f5796a4cfb3a18c451b069f04003f94ee408400f4bd5b63e6c603c",
+    "after": "83ee8e11f75b2f155e9062abbb704640e6894ca2989b93123fd86b346cca3dc4"
+  },
+  {
+    "role": "教师",
+    "file": "assets/notification-mini/app.js",
+    "before": "92ba8bfa3e9d48b3070780d5c011ee4d33dcc757af54bc9a44a4d07e5c4cd6be",
+    "after": "fc3b93df63c1f09ce7b07c4c082810166802ff892fa6926df81bbcc21252ae3a"
+  },
+  {
+    "role": "教师",
+    "file": "assets/notification-mini/core.js",
+    "before": "b5aafb3b30c46b616ae82fa038f95f1d61219cdaf1da878f090215d26aabd3ac",
+    "after": "b19b4aaf7eca12fe4f5fec3950a1b11af41641bbdfd25bd3c44771c1e67c6eaa"
+  },
+  {
+    "role": "教师",
+    "file": "assets/notification-page.js",
+    "before": "5944f1927e18698f8b672fd3f49cd367196baf3841823ca66ef1e6866f218ee3",
+    "after": "d0d5753348ceae78f767e5577cd750e62ed87111eaaa35cfc935ebc0b1029dc1"
+  },
+  {
+    "role": "教师",
+    "file": "index.html",
+    "before": "4155f59cf957d049524465e76d05c7a02250857362d8d3cc52903491a2241937",
+    "after": "1442b359eb1b8900eb75d834f337a09f37769c1021d825c49be0ce6fb587a208"
+  },
+  {
+    "role": "教师",
+    "file": "assets/app-shell.js",
+    "before": "40a9f785d0c9c73563a24823e54b6bde62316185ea927575f121b6c60784856a",
+    "after": "845535bebd3fab1b16a91ecfb384a5bfc2b795b6dcb1474676d17451ba39f2a5"
+  }
+]

@@ -1,18 +1,18 @@
 {
   "project": "智小徽小程序",
-  "version": "v1.6",
-  "status": "分享落地页重构与三份标准PRD升级完整候选，页面待验收",
+  "version": "v1.7",
+  "status": "全屏大画板签字与详情提示精简完整候选，页面待验收",
   "date": "2026-11-25",
-  "directory": "版本/v1.6",
-  "tag": "miniapp-v1.6-rc.1",
+  "directory": "版本/v1.7",
+  "tag": "miniapp-v1.7-rc.1",
   "entries": {
-    "parent": "版本/v1.6/端-家长/home.html",
-    "teacher": "版本/v1.6/端-教师/home.html"
+    "parent": "版本/v1.7/端-家长/home.html",
+    "teacher": "版本/v1.7/端-教师/home.html"
   },
   "documents": [
-    "版本/v1.6/文档/通知功能产品需求文档.md",
-    "版本/v1.6/文档/联系客服功能产品需求文档.md",
-    "版本/v1.6/文档/客户反馈功能产品需求文档.md"
+    "版本/v1.7/文档/通知功能产品需求文档.md",
+    "版本/v1.7/文档/联系客服功能产品需求文档.md",
+    "版本/v1.7/文档/客户反馈功能产品需求文档.md"
   ],
   "automaticPush": true
 }

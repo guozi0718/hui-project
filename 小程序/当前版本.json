@@ -1,18 +1,18 @@
 {
   "project": "智小徽小程序",
-  "version": "v1.9",
-  "status": "签字全屏遮挡顶栏与弹层防穿透完整候选，页面待验收",
-  "date": "2026-11-25",
-  "directory": "版本/v1.9",
-  "tag": "miniapp-v1.9-rc.1",
+  "version": "v1.10",
+  "status": "三份PRD全面对齐最新原型并清理历史口径完整候选，页面待验收",
+  "date": "2026-11-26",
+  "directory": "版本/v1.10",
+  "tag": "miniapp-v1.10-rc.1",
   "entries": {
-    "parent": "版本/v1.9/端-家长/home.html",
-    "teacher": "版本/v1.9/端-教师/home.html"
+    "parent": "版本/v1.10/端-家长/home.html",
+    "teacher": "版本/v1.10/端-教师/home.html"
   },
   "documents": [
-    "版本/v1.9/文档/通知功能产品需求文档.md",
-    "版本/v1.9/文档/联系客服功能产品需求文档.md",
-    "版本/v1.9/文档/客户反馈功能产品需求文档.md"
+    "版本/v1.10/文档/通知功能产品需求文档.md",
+    "版本/v1.10/文档/联系客服功能产品需求文档.md",
+    "版本/v1.10/文档/客户反馈功能产品需求文档.md"
   ],
   "automaticPush": true
 }

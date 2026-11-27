@@ -1,0 +1,13 @@
+{
+  "version": "v1.23",
+  "date": "2026-11-27T05:13:00-08:00",
+  "changesVerified": {
+    "readRowsMatchUnreadCleanStyleAndOpenGuardianStatus": true,
+    "multiGuardianTwoThreeFiveSeedAndDemoAdded": true,
+    "noticePrdUpdatedForGuardianStatusRules": true
+  },
+  "screenshotsInDocuments": false,
+  "mdCrossLinksInDocuments": false,
+  "jsSyntaxChecked": true,
+  "versionManifestVerified": true
+}

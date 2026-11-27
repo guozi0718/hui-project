@@ -1,0 +1,23 @@
+{
+  "version": "v1.13",
+  "date": "2026-11-25T22:18:00-08:00",
+  "changesVerified": {
+    "shareLandingUnified": true,
+    "oldThreeLandingButtonsRemoved": true,
+    "fourShareScenariosInSharePanelOnly": [
+      "1. 未登录状态落地页（未登录首页，核验通过打开通知，无该校学生/非本校老师跳未匹配孩子页）",
+      "2. 已登录不在范围落地页（您不在通知范围内，无法查看当前通知）",
+      "3. 已登录在范围（直接打开对应角色当前通知，正常小程序返回按钮）",
+      "4. 站外链接落地页（请先登录微信智小徽小程序，核验身份通过后可查看该通知）"
+    ],
+    "prdsUpgraded": [
+      "联系客服功能产品需求文档.md",
+      "客户反馈功能产品需求文档.md",
+      "通知功能产品需求文档.md"
+    ]
+  },
+  "screenshotsInDocuments": false,
+  "mdCrossLinksInDocuments": false,
+  "jsSyntaxChecked": true,
+  "versionManifestVerified": true
+}

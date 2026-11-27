@@ -1,13 +1,13 @@
 {
-  "release": "v0.79",
-  "releaseId": "v0.79-20261126",
-  "path": "版本/v0.79",
+  "release": "v0.80",
+  "releaseId": "v0.80-20261126",
+  "path": "版本/v0.80",
   "entry": "index.html?page=school-feedback",
   "previewURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/index.html?page=school-feedback",
-  "versionURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/版本/v0.79/index.html?page=school-feedback",
+  "versionURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/版本/v0.80/index.html?page=school-feedback",
   "status": "最终版本",
   "maintenance": "后续学校端唯一维护目录为 hui-project/学校端；不关联功能项目",
-  "indexSHA256": "fc431dee2747cdf058e5c5d99e734a83adca62a603a7be1bde3fc5eeb0eb68b9",
-  "manifest": "版本/v0.79/资料/版本文件SHA256.json",
+  "indexSHA256": "1e2574ea12abf2075e39693be74df9b3221dc5ed03a30f46dc8d5540c2f9ce46",
+  "manifest": "版本/v0.80/资料/版本文件SHA256.json",
   "manifestSHA256": "282b9ac9c0ba5b376b669699ec450031909b8a8197c9e3d0938d2adddd683d2c"
 }

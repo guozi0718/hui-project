@@ -1,0 +1,29 @@
+.school-oplog{padding:16px 24px 24px;color:#1d2129;font-size:13px}
+.oplog-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.oplog-filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.oplog-filters input,.oplog-filters select{height:32px;padding:0 10px;border:1px solid #d9dce3;border-radius:4px;background:#fff;color:#1d2129;font-size:13px;outline:none}
+.oplog-filters input{width:210px}
+.oplog-filters select{min-width:120px}
+.oplog-btn{height:32px;padding:0 14px;border:1px solid #d9dce3;border-radius:4px;background:#fff;color:#1d2129;font-size:13px;cursor:pointer}
+.oplog-btn:hover{border-color:#00a846;color:#00a846}
+.oplog-export{height:32px;padding:0 12px;border:0;background:transparent;color:#1d2129;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.oplog-export:hover{color:#00a846}
+.oplog-table-wrap{width:100%;overflow-x:auto;border:1px solid #e5e6eb;border-radius:4px;background:#fff}
+.oplog-table-wrap table{width:100%;min-width:960px;border-collapse:collapse}
+.oplog-table-wrap thead th{height:40px;padding:8px 12px;background:#f2f3f5;color:#4e5969;font-weight:500;text-align:center;border-bottom:1px solid #e5e6eb;white-space:nowrap}
+.oplog-table-wrap tbody td{padding:10px 12px;border-bottom:1px solid #f0f1f4;color:#1d2129;vertical-align:middle}
+.oplog-table-wrap tbody tr:last-child td{border-bottom:0}
+.oplog-table-wrap td.c{text-align:center}
+.oplog-table-wrap td.l{text-align:left;line-height:1.5}
+.oplog-table-wrap td.nowrap{white-space:nowrap}
+.oplog-table-wrap td.obj{color:#00a846;font-weight:500}
+.oplog-table-wrap td.empty{text-align:center;padding:28px 12px;color:#86909c}
+.oplog-tag{display:inline-block;padding:1px 8px;border:1px solid #f6c27b;border-radius:3px;background:#fff8ec;color:#d97706;font-size:12px;white-space:nowrap}
+.oplog-tag.warn{border-color:#f5a3a3;background:#fff5f5;color:#d93025}
+.oplog-pager{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px;color:#4e5969;font-size:13px}
+.oplog-pager-r{display:flex;align-items:center;gap:6px}
+.oplog-pager-r select,.oplog-pager-r input{height:28px;border:1px solid #d9dce3;border-radius:4px;padding:0 6px;font-size:12px;background:#fff}
+.oplog-pager-r input{width:48px;text-align:center}
+.oplog-pager-r button{min-width:28px;height:28px;padding:0 6px;border:1px solid #d9dce3;border-radius:4px;background:#fff;color:#4e5969;cursor:pointer;font-size:12px}
+.oplog-pager-r button.active{background:#00a846;border-color:#00a846;color:#fff}
+.oplog-pager-r button:disabled{opacity:.45;cursor:not-allowed}

@@ -1,0 +1,204 @@
+/* 帮助与反馈专用样式，禁止改变其他 screen / 我的 Tab。 */
+.hf-screen{--hf-ink:#191744;--hf-muted:#777f95;--hf-soft:#96a0c5;--hf-green:#00ae45;--hf-line:#e3e5ec;color:var(--hf-ink);background:radial-gradient(ellipse 125% 60% at 100% 0,#80e8ce 0,transparent 72%),linear-gradient(180deg,#a3f5be 0,#eff2f5 48%);min-height:0}
+.hf-screen .statusbar{color:#080c11;font-size:15px;height:44px}
+.hf-screen .sub-hd{height:44px;padding:0 15px;color:#101a1b;gap:6px;background:transparent}
+.hf-screen .sub-hd b{font-size:18px;font-weight:700}
+.hf-screen .sub-hd .back{font-size:34px;font-weight:300;line-height:1;width:14px;padding:0 3px 4px 0;margin-right:0}
+.hf-screen .capsule{background:rgba(255,255,255,.58);border:0;color:#000}
+.hf-screen .hf-body{flex:1;min-height:0;overflow-y:auto;padding:20px 14px 28px;scrollbar-width:none}
+.hf-card{border-radius:18px;background:white;padding:16px 13px;margin-bottom:14px;overflow:hidden}
+.hf-card h3{font-size:15px;font-weight:700;margin:0;padding:0 0 16px;border-bottom:1px solid var(--hf-line);line-height:1.5}
+.hf-faq{border-bottom:1px solid var(--hf-line)}
+.hf-faq:last-child{border:0}
+.hf-question{display:flex;align-items:center;gap:8px;justify-content:space-between;width:100%;padding:16px 0;font-size:14px;line-height:1.45;text-align:left;color:var(--hf-ink)}
+.hf-question i{font-style:normal;color:#00ac42;font-size:27px;font-weight:800;line-height:18px;flex-shrink:0}
+.hf-answer{font-size:13px;line-height:1.55;color:var(--hf-muted);padding:0 0 16px}
+.hf-contacts{display:grid;grid-template-columns:1fr 1fr;padding:20px 0 6px;gap:7px}
+.hf-contacts>button{display:flex;align-items:center;flex-direction:column;min-width:0;color:#525a6f;font-size:13px;line-height:1.5;padding:0 0 0;min-height:105px}
+.hf-contacts img{height:44px;width:50px;object-fit:contain;margin:0 0 9px}
+.hf-contacts strong{font-weight:600;font-size:13px;color:#00ac42;margin:2px 0}
+.hf-contacts small{font-size:11px;color:var(--hf-soft);line-height:1.6;margin-top:3px;white-space:nowrap}
+.hf-legacy,#help-cs-btn{display:none!important}
+.sw-row[onclick="toggleCsEntry()"],.sw-row[onclick="toggleFbEntry()"]{display:none!important}
+#hf-overlay{position:absolute;inset:0;z-index:75;background:#0008;display:flex;align-items:flex-end;color:#191744}
+#hf-overlay[hidden],#hf-notice[hidden],.hf-screen [hidden],#hf-overlay [hidden]{display:none!important}
+#hf-dialog{background:#eff2f5;border-radius:18px 18px 0 0;padding:14px 14px 15px;width:100%;max-height:88%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;outline:0;font-size:14px}
+.hf-dialog-head{display:flex;align-items:center;justify-content:space-between;padding:0 0 16px;font-size:16px;font-weight:700}
+.hf-close{width:22px;height:22px;display:flex;align-items:center;justify-content:center;border:1.5px solid #929dc2;border-radius:50%;font-size:22px;font-weight:400;color:#929dc2;line-height:1;padding-bottom:2px}
+.hf-service-card{background:white;padding:14px;border-radius:17px;margin-bottom:14px}
+.hf-service-card:last-child{margin-bottom:0}
+.hf-service-card h4{font-size:15px;margin:0 0 0;padding:0 0 15px;border-bottom:1px solid #e3e5ec;display:flex;align-items:center;gap:9px}
+.hf-service-card h4:before{content:"";height:13px;width:4px;border-radius:3px;background:linear-gradient(#67efb1,#04bd4e)}
+.hf-agent{display:grid;grid-template-columns:minmax(0,1fr) 75px;align-items:start;gap:10px;padding:10px 0;border-bottom:1px solid #e3e5ec}
+.hf-agent-info{min-width:0}
+.hf-service-list .hf-agent:last-child{border:0;padding-bottom:0}
+.hf-agent-name{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:nowrap;min-width:0;line-height:1.5}
+.hf-agent-name b{flex:1;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.hf-agent-name span{white-space:nowrap;flex:none}
+.hf-agent small{margin-top:6px}
+.hf-dial{align-self:start;margin-top:0}
+.hf-agent:last-child{border:0;padding-bottom:0}
+.hf-agent-name{display:flex;gap:10px;align-items:baseline;line-height:1.5;flex-wrap:wrap}
+.hf-agent-name b{font-size:16px;white-space:nowrap}
+.hf-agent-name span{font-size:15px;color:#777f95}
+.hf-agent small{display:block;font-size:12px;color:#96a0c5;margin-top:6px;white-space:nowrap}
+.hf-primary,.hf-dial{border-radius:8px;background:linear-gradient(115deg,#70d04d,#00bd52);color:#fff;min-height:36px;font-size:14px;padding:8px 16px;text-align:center}
+.hf-dial{border-radius:7px;font-size:14px;padding:6px 14px;line-height:1.5}
+.hf-filters{display:flex;gap:6px;padding:16px 14px 0;overflow-x:auto;scrollbar-width:none}.hf-filters button{flex:0 0 auto}
+.hf-filters button,.hf-types button{border-radius:20px;background:white;padding:7px 15px;color:#777f95;font-size:13px}
+.hf-filters button.on,.hf-types button.on{background:#e0f8e7;color:#009e3d;font-weight:600}
+.hf-foot{padding:10px 14px 20px;background:#fff;flex-shrink:0;border-top:1px solid #e3e5ec}
+.hf-foot>button{width:100%}
+.hf-record{width:100%;display:block;text-align:left;color:#191744;border:0;font:inherit;cursor:pointer}
+.hf-record-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:15px;margin-bottom:10px}
+.hf-badge{font-size:11px;padding:3px 8px;border-radius:12px;background:#fff3df;color:#aa771c;white-space:nowrap}
+.hf-badge.replied{background:#dff6ef;color:#009e64}.hf-badge.withdrawn{background:#eef0f4;color:#788094}
+.hf-record-summary{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#777f95;font-size:13px}
+.hf-record-time{border-top:1px solid #e3e5ec;padding-top:10px;margin-top:12px;color:#96a0c5;font-size:12px;text-align:right}
+.hf-empty{text-align:center;color:#777f95;padding:70px 0}
+.hf-empty small{display:block;font-size:12px;margin-top:10px;color:#96a0c5}
+.hf-meta-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--hf-line);font-size:12px;color:var(--hf-muted)}.hf-meta-row b{font-weight:600;color:var(--hf-ink);text-align:right;overflow-wrap:anywhere}.hf-detail-text{font-size:14px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
+.hf-timeline{position:relative;border:0;padding-left:18px;margin:14px 0 0 8px}
+.hf-timeline{border-left:1px solid #e3e9ee}.hf-message{position:relative;border:0;padding:0 0 18px;margin:0;background:transparent}.hf-message:last-child{padding-bottom:0}.hf-message:before{content:"";position:absolute;left:-23px;top:5px;width:8px;height:8px;background:#b7c6d8;border:1px solid #fff;border-radius:50%}.hf-message-system:before{background:#01a239}.hf-message-header{display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-size:12px}.hf-message-header b{color:var(--hf-ink);font-weight:600}.hf-message-header span,.hf-message-header time{color:#86909c;font-size:11px}.hf-message-header time{margin-left:auto}.hf-message p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7;margin:7px 0 0;color:var(--hf-ink);font-size:13px}
+.hf-timeline small{display:block;color:#96a0c5;font-size:12px}.hf-timeline p span{display:block;color:var(--hf-ink)}
+.hf-types{display:flex;gap:10px;margin-bottom:12px}
+#hf-dialog textarea{display:block;width:100%;border:1px solid #e3e5ec;background:white;resize:vertical;min-height:110px;border-radius:10px;padding:12px;font-family:inherit;font-size:13px;line-height:1.6;color:#191744;box-sizing:border-box}
+.hf-form-label{font-size:12px;color:#777f95;margin:12px 0 8px}
+.hf-upload-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.hf-upload-item{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:#e1e6e8}
+.hf-upload-item img{width:100%;height:100%;object-fit:cover}
+.hf-upload-item button{position:absolute;right:4px;top:4px;border-radius:50%;width:23px;height:23px;background:#0009;color:#fff}
+.hf-upload-add{aspect-ratio:1;background:white;color:#96a0c5;font-size:28px;border-radius:8px}
+.hf-form-actions{display:flex;gap:10px;margin-top:14px}.hf-form-actions button{flex:1}
+.hf-secondary{background:white;border:1px solid #d9dedf;border-radius:8px;min-height:36px;color:#777f95;font-size:14px}
+#hf-notice{position:absolute;bottom:90px;left:50%;transform:translateX(-50%);z-index:90;max-width:85%;width:max-content;background:#152b23e8;color:white;font-size:13px;line-height:1.6;padding:10px 16px;border-radius:10px;text-align:center}
+.hf-images{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.hf-images img{width:60px;height:60px;object-fit:cover;border-radius:8px;cursor:pointer}
+.hf-image-large{width:100%;max-height:580px;object-fit:contain;background:#17201e}
+@media(max-width:420px){.phone:has(.hf-screen.show){width:100vw;height:100dvh;border-radius:0;box-shadow:none;zoom:1!important}}
+
+#hf-dialog{display:flex;flex-direction:column;overflow:hidden;min-height:0}.hf-dialog-head,.hf-form-actions{flex-shrink:0}.hf-dialog-body{overflow-y:auto;min-height:0;overscroll-behavior:contain}
+/* 反馈建议全屏页面式弹层：只覆盖本次表单，客服与图片预览继续使用原底部弹层 */
+#hf-overlay.hf-feedback-overlay{display:block;align-items:stretch;background:linear-gradient(180deg,#87efb7 0%,#c7f2dd 31%,#eff2f5 66%);}
+#hf-dialog.hf-feedback-page{position:relative;display:flex;width:100%;height:100%;max-height:none;min-height:0;padding:0;border-radius:0;background:transparent;overflow:hidden;}
+.hf-submit-page{display:flex;flex-direction:column;width:100%;height:100%;min-height:0;color:#191744;}
+.hf-submit-top{flex:none;padding:4px 16px 12px;background:linear-gradient(110deg,#8ef0bd 0%,#9af0c7 100%);}
+.hf-submit-status{height:31px;display:flex;align-items:center;justify-content:space-between;padding:0 5px;font-size:12px;font-weight:700;color:#071b15;}
+.hf-submit-status span:last-child{font-size:12px;letter-spacing:1px;}
+.hf-submit-head{height:42px;display:flex;align-items:center;gap:7px;}
+.hf-submit-head>button{width:22px;padding:0;border:0;background:transparent;color:#12221b;font-size:32px;line-height:1;text-align:left;}
+.hf-submit-head>b{font-size:15px;font-weight:700;color:#10251b;}
+.hf-submit-capsule{margin-left:auto;display:flex;align-items:center;height:31px;padding:0 10px;border-radius:18px;background:#ffffffb8;color:#111;font-size:13px;}
+.hf-submit-capsule i{font-style:normal;padding:0 5px;}
+.hf-submit-scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 14px 16px;scrollbar-width:none;}
+.hf-submit-scroll::-webkit-scrollbar{display:none;}
+.hf-submit-card{background:#fff;border-radius:17px;margin-bottom:14px;padding:15px;}
+.hf-submit-label{display:flex;align-items:center;gap:7px;margin-bottom:14px;font-size:14px;color:#151443;}
+.hf-submit-label>i{width:4px;height:13px;border-radius:4px;background:linear-gradient(#62e9aa,#08be55);}
+.hf-submit-label small{margin-left:auto;color:#99a3c5;font-size:11px;white-space:nowrap;}
+.hf-submit-types{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.hf-submit-types button{height:43px;border:1px solid #e0e3eb;border-radius:11px;background:#fff;color:#8b94b2;font-size:13px;display:flex;align-items:center;justify-content:center;gap:7px;}
+.hf-submit-types button.selected{border-color:#00ba4f;background:#f0fcf4;color:#009c43;}
+.hf-type-icon{width:14px;height:14px;border-radius:50%;background:#03bf50;color:#fff;font-size:10px;font-weight:700;line-height:14px;text-align:center;}
+.hf-submit-types button:nth-child(2) .hf-type-icon{background:transparent;color:#98a1bf;font-size:14px;}
+.hf-submit-text-wrap{position:relative;border-radius:11px;background:#f6f8fb;min-height:165px;}
+#hf-dialog.hf-feedback-page textarea{width:100%;min-height:165px;max-height:38vh;resize:none;border:0;border-radius:11px;background:transparent;padding:13px 12px 32px;box-sizing:border-box;font-family:inherit;font-size:13px;line-height:1.65;color:#191744;outline:none;}
+#hf-dialog.hf-feedback-page textarea::placeholder{color:#a2abc8;}
+.hf-submit-text-wrap>span{position:absolute;right:12px;bottom:10px;color:#98a2c4;font-size:11px;}
+.hf-submit-upload-grid{display:grid;grid-template-columns:repeat(3,minmax(0,74px));gap:9px;}
+.hf-submit-upload-grid .hf-upload-item,.hf-submit-upload-grid .hf-upload-add{width:74px;height:74px;aspect-ratio:auto;}
+.hf-submit-upload-grid .hf-upload-add{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:1px dashed #c8d2e3;background:#fbfcfe;color:#8d99bc;border-radius:8px;font-size:26px;line-height:1;}
+.hf-submit-upload-grid .hf-upload-add:after{content:'添加图片';font-size:11px;line-height:1.4;}
+.hf-submit-upload-grid .hf-upload-item{border-radius:8px;}
+.hf-submit-upload-grid .hf-upload-item img{object-fit:cover;}
+.hf-submit-footer{flex:none;display:flex;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e6e8ee;}
+.hf-submit-footer button{flex:1;height:46px;border-radius:26px;font-size:14px;}
+.hf-submit-footer .hf-secondary{border:1px solid #d7deea;background:#fff;color:#737c98;}
+.hf-submit-footer .hf-primary{border-radius:26px;background:linear-gradient(110deg,#76d54e,#0dbb53);color:#fff;}
+@media(max-height:620px){.hf-submit-card{padding:12px;margin-bottom:10px}.hf-submit-text-wrap,#hf-dialog.hf-feedback-page textarea{min-height:128px}.hf-submit-footer{padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom));}}
+
+.hf-record-time{display:flex;justify-content:space-between;align-items:center}.hf-view-hint{color:#00a84f;font-weight:600}.hf-detail-summary .hf-meta-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #edf0f4;font-size:13px;color:#777f95}.hf-detail-summary .hf-meta-row b{color:#191744;text-align:right;overflow-wrap:anywhere}.hf-detail-actions{display:flex;gap:10px;padding:0 0 18px}.hf-detail-action{flex:1;min-height:44px}.hf-action-note,.hf-detail-empty{padding:12px;color:#8891a9;font-size:13px;text-align:center}.hf-withdraw-copy{font-size:13px;line-height:1.7;color:#59627a}.hf-danger{background:#e95b5b;color:white;border:0;border-radius:10px;padding:10px 16px;font:inherit}.hf-followup-count{text-align:right;font-size:12px;color:#96a0c5;margin-top:5px}.hf-followup-add{margin:8px 0}.hf-followup-uploads{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.hf-followup-item{position:relative;width:62px;height:62px}.hf-followup-item img{width:100%;height:100%;object-fit:cover;border-radius:8px}.hf-followup-item button{position:absolute;right:-5px;top:-5px;border:0;border-radius:50%;background:#191744;color:white;width:20px;height:20px}.hf-withdrawn-event{margin-top:12px;padding:12px;border-radius:10px;background:#f3f5f8;color:#777f95;font-size:13px}.hf-withdrawn-event small,.hf-withdrawn-event span{display:block;margin-top:5px}.hf-withdrawn-event b{color:#191744}
+/* v0.11：详情、追问和撤回按学校Web反馈详情的结构收敛 */
+.hf-record-time{justify-content:flex-end;text-align:right}
+.hf-view-hint{display:none}
+.hf-feedback-number{display:flex;align-items:center;gap:8px;padding:0 0 9px;border-bottom:1px solid #edf0f4;font-size:12px;color:#777f95}
+.hf-feedback-number b{margin-left:auto;color:#191744;font-size:12px;overflow-wrap:anywhere;text-align:right}
+.hf-feedback-number .hf-badge{margin-left:2px;flex:none}
+.hf-feedback-type{padding:9px 0 4px;color:#191744;font-size:13px;font-weight:700}
+.hf-detail-summary>.hf-detail-text{padding:7px 0 2px;color:#30344f}
+.hf-detail-summary .hf-images{margin:8px 0 0}
+.hf-detail-actions{display:flex;gap:10px;padding:0 0 18px}
+.hf-detail-action{flex:1;min-width:0;height:44px;min-height:44px;border-radius:8px;font-size:14px}
+.hf-detail-actions button:disabled{background:#edf0f4!important;border:1px solid #e1e5eb!important;color:#a3aabd!important;cursor:not-allowed;opacity:1}
+#hf-dialog>.hf-form-actions{flex:none;margin:0 -14px -15px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #e6e8ee}
+#hf-dialog>.hf-form-actions button{flex:1;height:42px;border-radius:8px;font-size:14px}
+#hf-dialog>.hf-form-actions .hf-primary{background:linear-gradient(110deg,#76d54e,#0dbb53);color:#fff}
+.hf-dialog-body>.hf-followup-context{display:flex;flex-direction:column;gap:12px}
+.hf-followup-context .hf-card{margin:0}
+.hf-followup-form .hf-submit-text-wrap{min-height:140px}
+.hf-followup-form #hf-followup-content{min-height:140px;max-height:none}
+.hf-followup-attachments{min-height:112px}
+.hf-submit-upload-grid .hf-upload-item button{z-index:1}
+#hf-followup-submit:disabled{opacity:.55;cursor:wait}
+
+/* v0.12：反馈信息状态行、首条提交时间线及成对操作按钮统一 */
+.hf-feedback-type{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0 4px;color:#191744;font-size:13px;font-weight:700}
+.hf-feedback-type .hf-badge{margin-left:auto;flex:none}
+.hf-message-header{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.hf-message-meta{display:flex;align-items:center;gap:7px;min-width:0;overflow:hidden}
+.hf-message-meta b,.hf-message-meta span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hf-message-header time{margin-left:auto;flex:none;white-space:nowrap}
+.hf-detail-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 0 18px}
+.hf-detail-action{width:100%;min-width:0;height:46px;min-height:46px;box-sizing:border-box;border-radius:26px;font-size:14px;padding:0 12px}
+.hf-submit-footer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hf-submit-footer button{width:100%;min-width:0;height:46px;min-height:46px;flex:none;box-sizing:border-box;border-radius:26px;font-size:14px;padding:0 12px}
+#hf-dialog>.hf-form-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#hf-dialog>.hf-form-actions button{width:100%;min-width:0;height:46px;min-height:46px;flex:none;box-sizing:border-box;border-radius:26px;font-size:14px;padding:0 12px}
+.hf-message-withdrawn .hf-message-meta span{color:#788094}
+/* 反馈提交页角色基本信息卡 */
+.hf-submit-basic-info{padding-bottom:12px}
+.hf-basic-info-row{display:flex;justify-content:space-between;gap:12px;margin:0 -2px;padding:7px 0;border-top:1px solid #edf0f4;font-size:13px;color:#7e879e}
+.hf-basic-info-row b{color:#191744;font-weight:400;text-align:right;overflow-wrap:anywhere}
+.hf-basic-info-error{padding-top:8px;color:#c05a54;font-size:12px}
+
+
+/* 客户反馈字号对齐：参照家长端“我的—添加孩子”页面（标题16.5px、正文13px、字段标签12px） */
+#sc-fblist .sub-hd b,#sc-fbdetail .sub-hd b{font-size:16.5px}
+#sc-fblist .hf-record-head{font-size:13px}
+#sc-fblist .hf-record-summary{font-size:13px}
+#sc-fbdetail .hf-detail-text{font-size:13px}
+#sc-fbdetail .hf-meta-row{font-size:12px}
+#hf-dialog .hf-submit-head>b{font-size:16.5px}
+#hf-dialog .hf-submit-label{font-size:12px}
+#hf-dialog .hf-submit-types button{font-size:13px}
+
+/* 只收紧帮助与反馈页底部联系卡的多余留白。 */
+#sc-help .hf-contacts{padding-top:16px;padding-bottom:0;}
+#sc-help .hf-contacts>button{min-height:76px;}#sc-help .hf-contacts>#hf-feedback{align-self:start;min-height:76px;}#sc-help .hf-contacts>#hf-feedback img{margin-bottom:6px;}
+/* 未提交内容的离开确认固定在手机原型内，贴底显示。 */
+#hf-dialog.hf-feedback-page .hf-discard-overlay{position:absolute;inset:0;z-index:40;display:flex;align-items:flex-end;background:rgba(12,18,28,.48);}
+#hf-dialog.hf-feedback-page .hf-discard-sheet{width:100%;box-sizing:border-box;padding:16px 14px calc(14px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;background:#eff2f5;color:#191744;box-shadow:0 -8px 24px rgba(20,32,55,.12);}
+#hf-dialog.hf-feedback-page .hf-discard-sheet>b{display:block;font-size:16.5px;font-weight:700;line-height:1.45;}
+#hf-dialog.hf-feedback-page .hf-discard-sheet>p{margin:12px 0 18px;font-size:13px;line-height:1.6;color:#59627a;}
+#hf-dialog.hf-feedback-page .hf-discard-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+#hf-dialog.hf-feedback-page .hf-discard-actions button{width:100%;height:46px;min-height:46px;box-sizing:border-box;border-radius:26px;padding:0 12px;font-size:13px;}
+#hf-dialog.hf-feedback-page .hf-discard-cancel{border:1px solid #d7deea;background:#fff;color:#737c98;}
+#hf-dialog.hf-feedback-page .hf-discard-confirm{border:0;background:#e95b5b;color:#fff;}
+
+/* 客服展示字号、号码对齐与时间行布局（参考家长端「我的-添加孩子」） */
+.hf-screen .sub-hd b{font-size:16px}
+.hf-card h3{font-size:14.5px}
+.hf-question{font-size:13px}
+.hf-answer{font-size:12px}
+.hf-contacts>button{font-size:13.5px}
+.hf-contacts strong{font-size:13px;color:#525a6f}
+.hf-contacts small{font-size:12px}
+#hf-dialog{font-size:13px}
+.hf-dialog-head{font-size:16px}
+.hf-service-card h4{font-size:14.5px}
+.hf-agent{grid-template-columns:minmax(0,1fr) 75px;grid-template-rows:minmax(36px,auto) auto;align-items:start;column-gap:10px;row-gap:0}
+.hf-agent-name{grid-column:1;grid-row:1;display:flex;justify-content:flex-start;align-items:center;gap:12px;flex-wrap:wrap;min-width:0;min-height:36px;line-height:1.5;font-size:13px}
+.hf-agent-name b{flex:0 0 auto;min-width:0;white-space:nowrap;font-size:13px}
+.hf-agent-name span{flex:0 0 auto;white-space:nowrap;text-align:left;font-size:13px;color:#525a6f}
+.hf-agent small{grid-column:1/-1;grid-row:2;display:block;margin-top:4px;font-size:12px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+.hf-dial{grid-column:2;grid-row:1;align-self:start;justify-self:end;box-sizing:border-box;width:75px;height:36px;min-height:36px;margin-top:0;font-size:14px;padding:6px 10px}
+

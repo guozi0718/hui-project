@@ -1,1 +1,15 @@
-<!doctype html><meta charset="utf-8"><title>智小徽小程序</title><script>location.replace("版本/v1.5/index.html")</script>
+<!doctype html><meta charset="utf-8"><title>智小徽小程序 · 最新版本</title><script>
+(function(){
+  var q=new URLSearchParams(location.search),role=q.get("role"),page=q.get("page");
+  function go(dir){
+    var target=dir+"/index.html";
+    if(role==="teacher")target=dir+"/端-教师/"+(page||"home.html");
+    else if(role==="parent")target=dir+"/端-家长/"+(page||"home.html");
+    location.replace(target);
+  }
+  fetch("当前版本.json?t="+Date.now(),{cache:"no-store"})
+    .then(function(r){return r.ok?r.json():null})
+    .then(function(d){go((d&&d.directory)||"版本/v1.18")})
+    .catch(function(){go("版本/v1.18")});
+})();
+</script>

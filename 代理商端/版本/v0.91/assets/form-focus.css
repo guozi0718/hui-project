@@ -1,0 +1,3 @@
+/* Contract management baseline: #01a239 border and a single 2px #e2fbdc glow. */
+body input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=range]):not([type=color]):focus,
+body select:focus,body textarea:focus,body [contenteditable=true]:focus{border-color:#01a239!important;box-shadow:0 0 0 2px #e2fbdc!important;outline:none!important;outline-offset:0!important}

@@ -1,0 +1,15 @@
+{
+  "version": "v1.15",
+  "date": "2026-11-26T20:22:00-08:00",
+  "changesVerified": {
+    "readOnlyCardReadCountAdded": true,
+    "nonPublisherTeacherCompletedMoreActions": true,
+    "normalDraftExcludesAudienceWithToast": true,
+    "compactEditThumbnailsAndTwoLineCopyLink": true,
+    "prdToastCoverageTableAdded": true
+  },
+  "screenshotsInDocuments": false,
+  "mdCrossLinksInDocuments": false,
+  "jsSyntaxChecked": true,
+  "versionManifestVerified": true
+}

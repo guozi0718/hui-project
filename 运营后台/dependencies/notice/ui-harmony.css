@@ -256,3 +256,100 @@ input.switch:checked {
   padding: 12px 24px 18px !important;
   border-top: 1px solid #f0f2f5 !important;
 }
+
+
+/* 7. 编辑态媒体/链接/附件紧凑缩略样式 & 预览态链接固定两行+复制链接按钮 */
+.block img,
+.block video {
+  display: block !important;
+  width: auto !important;
+  max-width: 220px !important;
+  max-height: 112px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 6px !important;
+  border: 1px solid #e7e9ee !important;
+  background: #fafbfd !important;
+  margin: 6px 0 !important;
+}
+.block .media-empty {
+  min-height: 64px !important;
+  padding: 12px 16px !important;
+  max-width: 240px !important;
+  font-size: 12px !important;
+}
+.notice-attachments-field .attachment-row {
+  padding: 5px 10px !important;
+  margin-top: 6px !important;
+  border: 1px solid #e7e9ee !important;
+  border-radius: 4px !important;
+  background: #fafbfd !important;
+  font-size: 12px !important;
+}
+/* 预览态：图片/视频正常展示，PDF维持现状，链接固定两行+复制链接按钮 */
+.article .content-block img,
+.article .content-block video {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-inline: auto !important;
+}
+.article .link-card-preview {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  background: #fafbfd !important;
+}
+.article .link-card-preview .link-card-main {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.article .link-card-preview .link-card-body {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+.article .link-card-preview .link-card-body strong,
+.article .link-card-preview .link-card-body small {
+  display: block !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.45 !important;
+}
+.article .link-card-preview .link-card-body strong {
+  font-size: 13px !important;
+  color: #1f2329 !important;
+}
+.article .link-card-preview .link-card-body small {
+  font-size: 12px !important;
+  color: #86909c !important;
+  margin-top: 2px !important;
+}
+.article .link-card-preview .link-copy-btn {
+  flex: none !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  color: #01a239 !important;
+  border-color: #b6e6c3 !important;
+  background: #f2fbf3 !important;
+}
+.article .link-card-preview .link-copy-btn:hover {
+  background: #01a239 !important;
+  border-color: #01a239 !important;
+  color: #fff !important;
+}

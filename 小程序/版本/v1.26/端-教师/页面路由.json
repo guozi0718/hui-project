@@ -1,0 +1,317 @@
+{
+  "role": "teacher",
+  "version": "v1.26",
+  "routes": [
+    {
+      "screen": "sc-home",
+      "file": "home.html"
+    },
+    {
+      "screen": "sc-apply",
+      "file": "apply.html"
+    },
+    {
+      "screen": "sc-applydetail",
+      "file": "applydetail.html"
+    },
+    {
+      "screen": "sc-cf-edit",
+      "file": "cf-edit.html"
+    },
+    {
+      "screen": "sc-cf-view",
+      "file": "cf-view.html"
+    },
+    {
+      "screen": "sc-att",
+      "file": "att.html"
+    },
+    {
+      "screen": "sc-attclass",
+      "file": "attclass.html"
+    },
+    {
+      "screen": "sc-attcsign",
+      "file": "attcsign.html"
+    },
+    {
+      "screen": "sc-attstu",
+      "file": "attstu.html"
+    },
+    {
+      "screen": "sc-attsign",
+      "file": "attsign.html"
+    },
+    {
+      "screen": "sc-dismiss",
+      "file": "dismiss.html"
+    },
+    {
+      "screen": "sc-stumgr",
+      "file": "stumgr.html"
+    },
+    {
+      "screen": "sc-studetail",
+      "file": "studetail.html"
+    },
+    {
+      "screen": "sc-addstu",
+      "file": "addstu.html"
+    },
+    {
+      "screen": "sc-editstu",
+      "file": "editstu.html"
+    },
+    {
+      "screen": "sc-stuPend",
+      "file": "stuPend.html"
+    },
+    {
+      "screen": "sc-stuaudit",
+      "file": "stuaudit.html"
+    },
+    {
+      "screen": "sc-claimparents",
+      "file": "claimparents.html"
+    },
+    {
+      "screen": "sc-eval",
+      "file": "eval.html"
+    },
+    {
+      "screen": "sc-evalpick",
+      "file": "evalpick.html"
+    },
+    {
+      "screen": "sc-evalpub",
+      "file": "evalpub.html"
+    },
+    {
+      "screen": "sc-grpinfo",
+      "file": "grpinfo.html"
+    },
+    {
+      "screen": "sc-grpmgr",
+      "file": "grpmgr.html"
+    },
+    {
+      "screen": "sc-tevdt",
+      "file": "tevdt.html"
+    },
+    {
+      "screen": "sc-tevedit",
+      "file": "tevedit.html"
+    },
+    {
+      "screen": "sc-stuev",
+      "file": "stuev.html"
+    },
+    {
+      "screen": "sc-rank",
+      "file": "rank.html"
+    },
+    {
+      "screen": "sc-evalstu",
+      "file": "evalstu.html"
+    },
+    {
+      "screen": "sc-evalrep",
+      "file": "evalrep.html"
+    },
+    {
+      "screen": "sc-evaldl",
+      "file": "evaldl.html"
+    },
+    {
+      "screen": "sc-me",
+      "file": "me.html"
+    },
+    {
+      "screen": "sc-addchild",
+      "file": "addchild.html"
+    },
+    {
+      "screen": "sc-profile",
+      "file": "profile.html"
+    },
+    {
+      "screen": "sc-switch",
+      "file": "switch.html"
+    },
+    {
+      "screen": "sc-help",
+      "file": "help.html"
+    },
+    {
+      "screen": "sc-fbdetail",
+      "file": "fbdetail.html"
+    },
+    {
+      "screen": "sc-fblist",
+      "file": "fblist.html"
+    },
+    {
+      "screen": "sc-leave",
+      "file": "leave.html"
+    },
+    {
+      "screen": "sc-permission-denied",
+      "file": "permission-denied.html"
+    },
+    {
+      "screen": "sc-leavegen",
+      "file": "leavegen.html"
+    },
+    {
+      "screen": "sc-proxyleave",
+      "file": "proxyleave.html"
+    },
+    {
+      "screen": "sc-tatt",
+      "file": "tatt.html"
+    },
+    {
+      "screen": "sc-tattfix",
+      "file": "tattfix.html"
+    },
+    {
+      "screen": "sc-tattadmin",
+      "file": "tattadmin.html"
+    },
+    {
+      "screen": "sc-tattdetail",
+      "file": "tattdetail.html"
+    },
+    {
+      "screen": "sc-tchmgr",
+      "file": "tchmgr.html"
+    },
+    {
+      "screen": "sc-tchdetail",
+      "file": "tchdetail.html"
+    },
+    {
+      "screen": "sc-tchduty",
+      "file": "tchduty.html"
+    },
+    {
+      "screen": "sc-addtch",
+      "file": "addtch.html"
+    },
+    {
+      "screen": "sc-edittch",
+      "file": "edittch.html"
+    },
+    {
+      "screen": "sc-tchpend",
+      "file": "tchpend.html"
+    },
+    {
+      "screen": "sc-tchaudit",
+      "file": "tchaudit.html"
+    },
+    {
+      "screen": "sc-wxpush",
+      "file": "wxpush.html"
+    },
+    {
+      "screen": "sc-msgs",
+      "file": "msgs.html"
+    },
+    {
+      "screen": "sc-visitor",
+      "file": "visitor.html"
+    },
+    {
+      "screen": "sc-login",
+      "file": "login.html"
+    },
+    {
+      "screen": "sc-scan",
+      "file": "scan.html"
+    },
+    {
+      "screen": "sc-reg",
+      "file": "reg.html"
+    },
+    {
+      "screen": "sc-pending",
+      "file": "pending.html"
+    },
+    {
+      "screen": "sc-noauth",
+      "file": "noauth.html"
+    },
+    {
+      "screen": "sc-expired",
+      "file": "expired.html"
+    },
+    {
+      "screen": "sc-sms",
+      "file": "sms.html"
+    },
+    {
+      "screen": "sc-legal",
+      "file": "legal.html"
+    },
+    {
+      "screen": "sc-auth",
+      "file": "auth.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "list",
+      "file": "notification.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "kind",
+      "file": "notification-templates.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "tpl",
+      "file": "notification-template.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "edit",
+      "file": "notification-editor.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "beauty",
+      "file": "notification-beauty.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "preview",
+      "file": "notification-preview.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "settings",
+      "file": "notification-settings.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "detail",
+      "file": "notification-detail.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "stats",
+      "file": "notification-stats.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "landing",
+      "file": "notification-share.html"
+    },
+    {
+      "screen": "sc-notification",
+      "view": "route-error",
+      "file": "notification-error.html"
+    }
+  ]
+}

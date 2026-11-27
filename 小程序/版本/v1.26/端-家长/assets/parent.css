@@ -1,0 +1,861 @@
+:root{
+  /* 「晴空校园」配色：清爽蓝主色 + 青碧状态绿/珊瑚红/阳光橙语义色，家长端保留暖奶油底 */
+  --navy:#2E7CF0; --navy-deep:#1D63D8;
+  --teal:#10B5A2; --teal-bg:#DFF6F2;
+  --cinnabar:#EA4F4A; --cinnabar-bg:#FEEBE9;
+  --amber:#F79A2E; --amber-bg:#FFF3DF;
+  --gold1:#FFD98F; --gold2:#E8A93D;
+  --ink:#233047; --ink-2:#5C6A80; --ink-3:#9AA7BB;
+  --bg:#F0F3F7; --card:#fff; --line:#E2EAF4;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:linear-gradient(150deg,#DCEBFB 0%,#FDF3E4 100%);display:flex;justify-content:center;align-items:center;height:100vh;padding:0;overflow:hidden;color:var(--ink)}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.phone{width:390px;height:844px;background:var(--bg);border-radius:44px;box-shadow:0 24px 80px rgba(0,0,0,.5),0 0 0 10px #0D1420,0 0 0 12px #2A3548;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.statusbar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:14px;font-weight:600;flex-shrink:0;position:relative;z-index:5}
+.navbar{height:44px;display:flex;align-items:center;padding:0 16px;flex-shrink:0;position:relative;z-index:5}
+.navbar .title{font-size:16.5px;font-weight:600;flex:1}
+.capsule{display:flex;align-items:center;border:1px solid rgba(0,0,0,.1);background:rgba(255,255,255,.7);border-radius:16px;height:32px;width:88px;color:#0B0B0B}
+.capsule .half{flex:1;height:19px;display:flex;align-items:center;justify-content:center}
+.capsule .half:first-child{border-right:1px solid rgba(0,0,0,.12)}
+.cap-dots{display:flex;align-items:center;gap:3.5px}
+.cap-dots i{width:4px;height:4px;border-radius:50%;background:currentColor}
+.cap-dots i:nth-child(2){width:6.5px;height:6.5px}
+.cap-ring{width:14px;height:14px;border:2.5px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cap-ring::after{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.hero-wrap .statusbar,.hero-wrap .navbar,.me-hd .statusbar,.me-hd .navbar,.home-hd .statusbar,.home-hd .navbar{color:#fff}
+.hero-wrap .capsule,.me-hd .capsule,.home-hd .capsule{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff}
+.hero-wrap .capsule .half:first-child,.me-hd .capsule .half:first-child,.home-hd .capsule .half:first-child{border-right-color:rgba(255,255,255,.3)}
+/* 「我的」页绿色头部：与其余 Tab 页的 hero 风格统一 */
+.me-hd{background:linear-gradient(168deg,#6ABAFF 0%,#3D8BFC 60%,#1D63E8 100%);border-radius:0 0 22px 22px;padding-bottom:20px;flex-shrink:0}
+/* ============ 「我的」重构：天空蓝头部 + 悬浮数据卡 + 双列图标宫格 ============ */
+/* 蓝天背景图自带柔光气泡与右上云朵（替代原 CSS 渐变 + ::before 装饰），渐变兜底防图片缺失 */
+#sc-me{position:relative;background:linear-gradient(180deg,#4FA3F8 0%,#83BEFB 15%,#BEDDFD 30%,#E4F0FE 44%,#F0F5FB 58%,var(--bg) 100%);background:url(sky-me.jpg) center top/cover no-repeat,linear-gradient(180deg,#4FA3F8 0%,#83BEFB 15%,#BEDDFD 30%,#E4F0FE 44%,#F0F5FB 58%,var(--bg) 100%)}
+#sc-me .statusbar{color:#fff}
+#sc-me .navbar .title{font-size:17px;font-weight:700}
+.me-hd-lite{flex-shrink:0}
+.me-user{display:flex;align-items:center;gap:13px;padding:16px 16px 0;cursor:pointer;position:relative}
+.me-user .av{position:relative;width:64px;height:64px;border-radius:50%;background:url(avatar-woman.png) center/cover no-repeat #FFE9F0;color:transparent;flex-shrink:0;box-shadow:0 0 0 3px rgba(255,255,255,.9)}
+.me-user .av .kid{position:absolute;right:-4px;bottom:-2px;width:28px;height:28px;border-radius:50%;background:url(avatar-boy.png) center/cover no-repeat #EAF3FF;color:transparent;box-shadow:0 0 0 2px #fff}
+.me-user .nm{font-size:18px;font-weight:700}
+.me-user .sub{font-size:12px;color:var(--ink-2);margin-top:4px;white-space:nowrap}
+.me-user .arr{color:#fff;display:flex;align-items:center}
+.me-user .chip.amber{font-size:11px;padding:3px 8px;border-radius:14px}
+.me-user .chip.amber::before{clip-path:none;border-radius:50%;width:5px;height:5px}
+.me-stats{display:flex;text-align:center;position:relative;margin:22px 16px 0;background:var(--card);border-radius:16px;padding:17px 4px 15px;box-shadow:0 6px 20px rgba(46,124,240,.10)}
+.me-stats button{flex:1;color:var(--ink);position:relative}
+.me-stats button+button::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:34px;background:#EDF0F5}
+.me-stats b{display:block;font-size:21px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--navy)}
+.me-stats b i.u{font-size:11.5px;font-weight:500;color:var(--ink);margin-left:3px;font-style:normal}
+.me-stats>button>span{display:block;font-size:12px;color:var(--ink-2);margin-top:4px}
+#sc-me .section-t{font-size:14.5px;font-weight:700;color:var(--ink);margin:24px 2px 12px}
+.me-grid{display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border-radius:14px;padding:16px 0 13px;box-shadow:0 2px 10px rgba(30,70,130,.07);margin-bottom:12px}
+.me-grid button{display:flex;flex-direction:column;align-items:center;gap:7px;font-size:12.5px;color:var(--ink);font-weight:500}
+.me-grid .gi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff}
+/* 「我的」页宫格：双列大图标 + 中缝分隔线（帮助页三宫格沿用上方基础版式） */
+#sc-me .me-grid{grid-template-columns:repeat(2,1fr);border-radius:16px;padding:21px 0 18px;box-shadow:0 6px 20px rgba(46,124,240,.08);margin-bottom:14px;position:relative}
+#sc-me .me-grid::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-.5px,-50%);width:1px;height:52px;background:#EDF0F5}
+/* 三宫格卡片变体（g3）：等分三列，分隔线由中缝一条改为三等分两条（::after 移位 + ::before 补第二条） */
+#sc-me .me-grid.g3{grid-template-columns:repeat(3,1fr)}
+#sc-me .me-grid.g3::after{left:33.333%}
+#sc-me .me-grid.g3::before{content:"";position:absolute;left:66.667%;top:50%;transform:translate(-.5px,-50%);width:1px;height:52px;background:#EDF0F5}
+#sc-me .me-grid button{gap:10px;font-size:13.5px;font-weight:400}
+#sc-me .me-grid .gi{width:46px;height:46px;border-radius:14px}
+#sc-me .me-grid .gi svg{width:22px;height:22px}
+#sc-me .me-grid img.gi{object-fit:contain;border-radius:0}
+/* 设置行式资料页（孩子详情 / 个人资料）：label 左、值右 + 箭头 */
+.set-row{display:flex;align-items:center;gap:10px;padding:13px 2px;font-size:14px}
+.set-row+.set-row{border-top:1px solid #F0F2F6}
+.set-row .sk{color:var(--ink);flex-shrink:0}
+.set-row .sv{margin-left:auto;color:var(--ink-2);display:flex;align-items:center;gap:6px;text-align:right;min-width:0}
+.set-row .sarr{color:#C4CAD4;font-size:16px;line-height:1}
+.me-foot{text-align:center;font-size:12px;color:#8691A9;padding:16px 0 20px}
+/* ============ 账号切换整页：身份单选列表 + 退出登录悬浮按钮 ============ */
+.sw-item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #F0F2F6;cursor:pointer}
+.sw-item:last-child{border-bottom:none}
+.sw-ring{width:22px;height:22px;border-radius:50%;border:1.5px solid #C9D0DB;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff}
+.sw-item.on .sw-ring{background:var(--navy);border-color:var(--navy)}
+.sw-av{width:48px;height:48px;border-radius:50%;flex-shrink:0;color:transparent;display:flex;align-items:center;justify-content:center;font-weight:700}
+.sw-main{flex:1;min-width:0}
+.sw-main .nm{font-size:16.5px;font-weight:700}
+.sw-main .sub{font-size:12px;color:var(--ink-2);margin-top:3px}
+.sw-side{text-align:right;flex-shrink:0}
+.sw-side .sub{font-size:12px;color:var(--ink-2);margin-top:8px}
+.sw-logout{position:absolute;right:18px;bottom:34px;width:64px;height:64px;border-radius:50%;background:linear-gradient(160deg,#6AAEFF,#2E7CF0);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:10.5px;font-weight:600;box-shadow:0 6px 16px rgba(46,124,240,.4)}
+.body{flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+.body::-webkit-scrollbar{display:none}
+.tabbar{height:78px;background:#fff;border-top:1px solid var(--line);display:flex;flex-shrink:0;padding-bottom:16px;position:relative;z-index:5}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11.5px;color:var(--ink-3);position:relative}
+.tab .ti{font-style:normal;height:24px;display:flex;align-items:center}
+.tab .ti svg{display:block}
+.tab.on{color:var(--navy);font-weight:600}
+.tab.on .ti svg{stroke-width:2.2}
+/* tab 待办红点：仅「我的」tab 在存在待认领孩子时显示，随认领 / 锁定 / 反馈隐藏同步消失（不随访问清除） */
+.tab .tdot{display:none;position:absolute;top:7px;left:calc(50% + 9px);width:8px;height:8px;border-radius:50%;background:var(--cinnabar);border:1.5px solid #fff;pointer-events:none}
+.tab.has-dot .tdot{display:block}
+.screen{display:none;flex-direction:column;height:100%}
+.screen.show{display:flex}
+.sub-hd{display:flex;align-items:center;gap:4px;padding:0 16px;height:44px;flex-shrink:0}
+.sub-hd .back{font-size:22px;padding:4px 10px 4px 0}
+.sub-hd b{font-size:16.5px}
+.pad{padding:14px 16px 24px}
+.card{background:var(--card);border-radius:14px;padding:15px 16px;margin-bottom:12px;box-shadow:0 2px 10px rgba(30,70,130,.07)}
+.card h4{font-size:14.5px;font-weight:600}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;padding:2px 8px;border-radius:12px;white-space:nowrap;font-weight:500}
+.chip::before{content:"";width:5px;height:6px;clip-path:polygon(50% 0,100% 15%,100% 60%,50% 100%,0 60%,0 15%);background:currentColor}
+.chip.plain::before{display:none}
+.chip.red{background:var(--cinnabar-bg);color:var(--cinnabar)}
+.chip.amber{background:var(--amber-bg);color:#C97A12}
+/* 职务名 chip 省略截断（与教师端 .chip.dname 同款，2026-10-20）：身份面板 / 账号切换页教师行的职务按共用名册填充，学校自定义的长职务名不撑破行 */
+.chip.dname{display:inline-block;max-width:9.5em;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;line-height:1.5}
+.chip.teal{background:var(--teal-bg);color:var(--teal)}
+.chip.navy{background:#E3EEFD;color:var(--navy)}
+.chip.gray{background:#EEF0F4;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:10px;font-size:13.5px;font-weight:500;padding:9px 16px;transition:.15s}
+.btn.pri{background:var(--navy);color:#fff}
+.btn.teal{background:var(--teal);color:#fff}
+.btn.red{background:var(--cinnabar);color:#fff}
+.btn.ghost{border:1px solid #D5DAE2;color:var(--ink-2);background:#fff}
+.btn.blk{width:100%;padding:11px;font-size:14px;border-radius:22px} /* 整宽按钮与底部操作条、半屏按钮同规格（2026-10-26，与老师端一套）：胶囊 22px、内边距 11px、字号 14 */
+.btn.sm{padding:6px 13px;font-size:12.5px;border-radius:8px}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.5}
+.row{display:flex;align-items:center;gap:10px}
+.muted{font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.hr{height:1px;background:#F0F2F6;margin:11px 0}
+.section-t{font-size:13px;color:var(--ink-2);font-weight:600;margin:16px 2px 9px;display:flex;align-items:center}
+.section-t .more{margin-left:auto;font-weight:400;font-size:11.5px;color:var(--ink-3)}
+/* 消息未读：红点挂在条目图标右上角（数字只出现在入口汇总处，条目级不挂数字） */
+.unread-dot{position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--cinnabar);border:2px solid #fff}
+/* 消息页头：品牌蓝渐变底 + 白色标题与胶囊（对齐设计稿） */
+.msg-hd{background:linear-gradient(165deg,#58ACFF,#2472EE);flex-shrink:0}
+.msg-hd .statusbar,.msg-hd .navbar{color:#fff}
+.msg-hd .navbar .title{font-size:17px;font-weight:700}
+.msg-hd .capsule{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff}
+.msg-hd .capsule .half:first-child{border-right-color:rgba(255,255,255,.3)}
+/* 消息列表筛选：读态下划线 Tab（行右侧并列「全部已读」与「筛选」入口，与 Tab 同字号）+ 半屏筛选面板；保留期说明置于列表底部 */
+.msg-rtabs{display:flex;align-items:center;background:var(--card);padding:0 16px;flex-shrink:0;border-bottom:1px solid var(--line)}
+.msg-rtabs button{position:relative;font-size:14px;color:var(--ink-2);padding:12px 2px 11px;margin-right:24px;font-weight:400}
+.msg-rtabs button.on{color:var(--navy);font-weight:700}
+.msg-rtabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:2px;background:var(--navy)}
+.msg-rtabs .markall{margin-left:auto;margin-right:0}
+.msg-rtabs .mfbtn{display:inline-flex;align-items:center;gap:5px;margin:0 0 0 14px}
+.msg-rtabs .mfbtn::before{content:"";width:1px;height:14px;background:#EDEFF4;margin-right:9px}
+.msg-rtabs .mfbtn.act{color:var(--navy);font-weight:600}
+.msg-rtabs .mfbtn .fdot{display:none;width:5px;height:5px;border-radius:50%;background:var(--navy)}
+.msg-rtabs .mfbtn.act .fdot{display:inline-block}
+#sc-msgs .section-t{font-size:14.5px;color:var(--ink);margin:18px 2px 10px}
+/* 筛选面板：类别 × 时间范围两组 chip，点选即生效 */
+.ev-rec{cursor:pointer}
+/* 点评记录附带的图片缩略图（教师端图文点评发出、随记录同步家长）：点击进全屏大图，与教师端同款 56px 网格 */
+.ev-imgs{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ev-imgs img{width:56px;height:56px;border-radius:8px;object-fit:cover;cursor:pointer;display:block}
+/* 评价报告页：分区标题 / 分布双环图（外环=五维加分占比 conic，内环=表扬·待改进占比）/ 图例 / 统计表 / 明细折叠组 / 下载浮钮 */
+.rep-sec{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:7px;margin:2px 0 12px}
+.rep-sec::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--navy)}
+.rep-donut{position:relative;width:186px;height:186px;margin:4px auto 14px}
+.rep-ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(#F45E9E 0 27.8%,#7C66F2 27.8% 50%,#2E7CF0 50% 66.7%,#1FB6D9 66.7% 83.4%,#F79A2E 83.4% 100%)}
+.rep-core{position:absolute;inset:26px;border-radius:50%;background:conic-gradient(#F0655A 0 25%,#58BE6F 25% 100%);box-shadow:0 0 0 6px #fff}
+.rep-core b{position:absolute;left:50%;transform:translateX(-50%);color:#fff;font-size:12.5px;font-weight:600;text-shadow:0 1px 3px rgba(20,60,30,.25)}
+.rep-legend{display:flex;flex-wrap:wrap;gap:7px 16px;justify-content:center}
+.rep-legend span{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:500}
+.rep-legend i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.rep-tbl{width:100%;border-collapse:collapse;font-size:13px}
+.rep-tbl th{font-weight:500;color:var(--ink-3);background:#F5F7FA;padding:9px 4px;font-size:12.5px}
+.rep-tbl td{padding:11px 4px;text-align:center;border-bottom:1px solid #F0F3F7;font-weight:600}
+.rep-tbl tr:last-child td{border-bottom:none}
+.repd{border-bottom:1px solid #F0F3F7}
+.repd:last-child{border-bottom:none}
+.repd-hd{display:flex;align-items:center;gap:8px;padding:13px 2px;cursor:pointer;font-size:13.5px}
+.repd-hd .net{margin-left:auto;font-weight:700}
+.repd-hd i{font-style:normal;color:var(--ink-3);transition:transform .2s}
+.repd.open .repd-hd i{transform:rotate(180deg)}
+.repd-bd{padding:0 2px 10px}
+.repd-row{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--ink-2);padding:6px 0}
+.repd-row b{margin-left:auto;flex-shrink:0}
+.repd-row em{font-style:normal;color:var(--ink-3);font-size:11.5px;width:88px;text-align:right;flex-shrink:0}
+.rep-fab{position:absolute;right:16px;bottom:92px;width:54px;height:54px;border-radius:50%;background:linear-gradient(160deg,#3D8BFC,var(--navy-deep));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;gap:1px;box-shadow:0 6px 16px rgba(29,99,216,.4);z-index:4}
+/* 素质评价「筛选」入口：与消息页筛选入口同款高亮 + 点标（存在非默认筛选条件时） */
+.section-t #ev-fbtn{display:inline-flex;align-items:center;gap:4px;cursor:pointer}
+.section-t #ev-fbtn.act{color:var(--navy);font-weight:600}
+.section-t #ev-fbtn .fdot{display:none;width:5px;height:5px;border-radius:50%;background:var(--navy)}
+.section-t #ev-fbtn.act .fdot{display:inline-block}
+.fs-sec{font-size:12.5px;color:var(--ink-2);font-weight:600;margin:15px 0 9px}
+.fs-chips{display:flex;flex-wrap:wrap;gap:9px}
+.fs-chips button{background:#F2F4F7;border-radius:17px;padding:7px 15px;font-size:12.5px;color:var(--ink)}
+.fs-chips button.on{background:#E3EEFD;color:var(--navy);font-weight:600;box-shadow:inset 0 0 0 1px #BFD6F9}
+.msg-keep{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;color:var(--ink-3);padding:18px 0 6px}
+.msg-cnt{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 5px;border-radius:8px;background:var(--cinnabar);color:#fff;font-size:10.5px;font-weight:600;margin-left:6px;line-height:1}
+.kv{display:flex;font-size:12.5px;padding:6px 0}
+.kv .k{width:86px;color:var(--ink-3);flex-shrink:0}
+.kv .v{color:var(--ink);flex:1}
+/* 列表记录卡的老师评语最多 3 行截断（点卡片进点评详情看全文）；详情页信息框不在 .ev-rec 内，不受影响 */
+.ev-rec .ev-note .v{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.note{background:#F5F7FB;border-left:3px solid var(--navy);border-radius:0 8px 8px 0;padding:9px 12px;font-size:11.5px;color:var(--ink-2);line-height:1.65;margin:10px 0}
+.note.warn{border-left-color:var(--amber);background:var(--amber-bg)}
+.note.danger{border-left-color:var(--cinnabar);background:var(--cinnabar-bg)}
+.cell{display:flex;align-items:center;gap:11px;padding:13px 0;border-bottom:1px solid #F0F2F6;font-size:14px}
+.cell:last-child{border-bottom:none}
+.cell .ci{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.cell .arr{margin-left:auto;color:#C6CCD6}
+/* ============ 首页 hero ============ */
+.hero-wrap{position:relative;flex-shrink:0}
+/* 蓝色区独立成层：水平收边 + 底部圆角，与老师端 hero 收边一致；“今日在校”卡片仍骑跨边界 */
+.hero-wrap::before{content:"";position:absolute;left:0;right:0;top:0;height:78%;background:linear-gradient(168deg,#6ABAFF 0%,#3D8BFC 45%,#1D63E8 100%);border-radius:0 0 22px 22px}
+.child-bar{display:flex;align-items:center;gap:10px;padding:4px 16px 0;color:#fff;position:relative;z-index:1}
+.child-bar .cavat{width:44px;height:44px;border-radius:50%;background:url(avatar-boy.png) center/cover no-repeat #EAF3FF;color:transparent;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px}
+.child-bar b{font-size:17px}
+.child-bar .cls{font-size:11.5px;color:rgba(255,255,255,.6)}
+.child-bar .sw{margin-left:auto;font-size:11.5px;border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:4px 11px;color:rgba(255,255,255,.85)}
+.today{margin:14px 16px 0;background:#fff;border-radius:16px;padding:15px 16px;box-shadow:0 6px 20px rgba(46,124,240,.16);position:relative;z-index:2}
+/* 时间轴 */
+.tl{position:relative;padding-left:18px}
+.tl::before{content:"";position:absolute;left:4px;top:8px;bottom:8px;width:2px;background:#EDF0F4}
+.tl-item{position:relative;padding:7px 0}
+.tl-item::before{content:"";position:absolute;left:-17px;top:13px;width:8px;height:9px;clip-path:polygon(50% 0,100% 15%,100% 60%,50% 100%,0 60%,0 15%);background:var(--teal)}
+.tl-item.pending::before{background:#C6CCD6}
+.tl-item.amber::before{background:var(--amber)}
+.tl-item .t1{font-size:13.5px;font-weight:600}
+.tl-item .t1 small{font-weight:400;color:var(--ink-3);margin-left:6px;font-size:11px}
+.tl-item .t2{font-size:11.5px;color:var(--ink-3);margin-top:1px}
+/* ============ 智慧放学：主版本（孩子卡 × 班级班次段）与旧版存档页共用白色头部，随品牌晴空蓝配色 ============ */
+#sc-dismiss .dis-hd,#sc-dismiss-old .dis-hd{background:#fff;flex-shrink:0}
+#sc-dismiss .sub-hd,#sc-dismiss-old .sub-hd{position:relative}
+#sc-dismiss .sub-hd b,#sc-dismiss-old .sub-hd b{position:absolute;left:50%;transform:translateX(-50%)}
+/* 主版本孩子卡：卡头（头像 + 姓名班级）+ 主行（当前最相关段，字号承载视觉权重）+ 已结束段灰字摘要行；
+   状态 chip 与时间相邻成短语（已放学 16:44 / 延迟放学 预计 17:20），自解释、页顶无需提示条 */
+.dn-kid-hd{display:flex;align-items:center;gap:11px;padding:13px 14px;border-bottom:1px solid #F3F5F8}
+.dn-kid-hd .kav{width:44px;height:44px;border-radius:50%;background:#EAF3FF center/cover no-repeat;flex-shrink:0}
+.dn-kid-hd b{font-size:15.5px}
+.dn-kid-hd small{color:var(--ink-2);font-size:12.5px}
+.dn-main{display:flex;align-items:center;gap:8px;margin:12px 14px 0;padding:14px;border-radius:10px;background:#FAFBFC;border:1px solid #F3F5F8}
+.dn-main:last-child{margin-bottom:13px}
+.dn-main .al{flex:1;font-size:16.5px;font-weight:700}
+.dn-main .tm{font-size:15px;font-weight:700;margin-left:2px}
+/* 未放学段的计划放学时间：灰字常规字重，与事实播报时间（加粗深色）区分——计划参考非承诺 */
+.dn-main .tm.plan{font-weight:400;font-size:14px;color:var(--ink-2)}
+.dn-main .none{font-size:14.5px;color:var(--ink-2)}
+.dn-rest{font-size:12.5px;color:var(--ink-3);margin:9px 15px 13px}
+.dis-date{text-align:center;font-size:16.5px;font-weight:700;padding:10px 0 15px}
+.dis-seg{display:flex;align-items:center;gap:10px;padding:0 16px 14px}
+.dis-seg .seg{font-size:13.5px;padding:7px 19px;border-radius:19px;background:#F2F4F7;color:var(--ink)}
+.dis-seg .seg.on{background:var(--navy);color:#fff;font-weight:600}
+.dis-seg .flt{margin-left:auto;font-size:13.5px;color:var(--ink);display:flex;align-items:center;gap:5px}
+.dis-tip{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--navy);padding:12px 16px 0}
+.dis-tip svg{flex-shrink:0}
+.dis-card{background:var(--card);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.dis-card .dt{display:flex;align-items:center;gap:8px;font-size:15.5px;font-weight:700;padding:14px 14px 12px;border-bottom:1px solid #F3F5F8}
+.dis-card .dt::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--navy)}
+.dis-kid{display:flex;align-items:center;gap:12px;background:#FAFBFC;border:1px solid #F3F5F8;border-radius:10px;padding:11px 13px;margin:12px 14px 0}
+.dis-kid .kav{width:48px;height:48px;border-radius:50%;background:#FFE9F0 center/cover no-repeat;flex-shrink:0}
+.dis-kid b{display:block;font-size:15.5px}
+.dis-kid small{display:block;font-size:12.5px;color:var(--ink-2);margin-top:3px}
+.dis-st{font-size:13px;font-weight:600;padding:6px 12px;border-radius:8px;flex-shrink:0}
+.dis-st.ing{background:var(--amber-bg);color:#C97A12}
+.dis-st.done{background:var(--teal-bg);color:var(--teal)}
+.dis-st.wait{background:#F2F4F7;color:var(--ink-2)}
+.dis-st.delay{background:var(--cinnabar-bg);color:var(--cinnabar)}
+.dis-sum{display:flex;gap:26px;font-size:12.5px;color:var(--ink-2);padding:13px 14px 0}
+.dis-sum span{display:flex;align-items:center;gap:6px}
+.dis-sum i{width:6px;height:6px;border-radius:50%;font-style:normal}
+.dis-sum i.wait{background:#98A2B3}
+.dis-sum i.ing{background:var(--amber)}
+.dis-sum i.done{background:var(--teal)}
+.dis-cls{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:13px 14px 14px}
+.dis-cls .cl{background:#F5F6F8;border-radius:10px;min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:14px;font-weight:600;line-height:1.4}
+.dis-cls .cl.ing{background:var(--amber-bg);color:#C97A12}
+.dis-cls .cl.done{background:var(--teal-bg);color:var(--teal)}
+.dis-cls .cl.delay{background:var(--cinnabar-bg);color:var(--cinnabar)}
+.dis-cls .cl small{font-size:12px;font-weight:600}
+/* ============ 校徽卡（按实体校徽 1:1 布局：横版白卡 · 左照片 · 校名+校标 · 姓名班级 · 右二维码 · 底部斜纹条） ============ */
+.badge-wrap{display:flex;flex-direction:column;gap:16px;padding:4px 2px 10px}
+.badge-card{width:100%}
+.id-badge{background:#fff;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(36,65,126,.12);overflow:hidden;position:relative;transition:.2s}
+.id-badge .id-main{display:flex;gap:12px;padding:13px 14px 11px;align-items:center}
+.id-badge .ph{width:58px;height:74px;border-radius:8px;background:linear-gradient(160deg,#9DBCE8,#6E90C4);color:#fff;font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.id-badge .mid{flex:1;min-width:0}
+.id-badge .sch-row{display:flex;gap:6px;align-items:center;padding-bottom:5px;border-bottom:2px solid #24417E;margin-bottom:7px}
+.id-badge .crest{width:22px;height:22px;border-radius:50%;border:1.5px solid #24417E;color:#B0392F;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#fff}
+.id-badge .sch-cn{display:block;font-size:13px;font-weight:800;color:#24417E;letter-spacing:1.5px;line-height:1.2}
+.id-badge .sch-en{display:block;font-size:7.5px;color:#24417E;opacity:.7;letter-spacing:0;transform:scale(.72);transform-origin:left;white-space:nowrap}
+.id-badge .nm{font-size:17px;font-weight:700;color:#1E2A3E;letter-spacing:3px}
+.id-badge .cls{font-size:11px;color:#44506A;font-weight:600;letter-spacing:1px;margin-top:2px}
+.id-badge .epc{font-size:8px;color:var(--ink-3);margin-top:4px;font-family:Menlo,monospace;letter-spacing:.3px}
+.id-badge .qr{width:56px;height:56px;flex-shrink:0}
+.id-badge .qr svg{display:block;width:100%;height:100%}
+.id-badge .strip{height:12px;background:#24417E;position:relative;overflow:hidden}
+.id-badge .strip::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.16) 14px 20px)}
+.id-badge .strip::after{content:"";position:absolute;top:0;bottom:0;right:17%;width:36px;background:#B0392F;transform:skewX(-24deg)}
+.id-badge.lost{filter:grayscale(.85) brightness(.97)}
+.id-badge.lost::after{content:"挂失中";position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-12deg);border:2px solid #E05A50;color:#E05A50;font-size:14px;font-weight:700;padding:3px 10px 3px 13px;border-radius:6px;letter-spacing:3px;background:rgba(255,255,255,.6);white-space:nowrap}
+.badge-meta{text-align:center;margin-top:9px}
+.badge-meta .st{font-size:12px;font-weight:600}
+.badge-meta .rd{font-size:10.5px;color:var(--ink-3);margin-top:2px}
+.badge-acts{display:flex;gap:7px;justify-content:center;margin-top:9px}
+.badge-acts button{font-size:11.5px;padding:5px 12px;border-radius:8px;border:1px solid #D5DAE2;color:var(--ink-2);background:#fff;min-width:70px}
+.badge-acts button.warn{color:var(--cinnabar);border-color:#F6C0B8}
+.badge-acts button.rec{color:#fff;background:var(--teal);border-color:var(--teal)}
+/* 「我的校徽」管理列表：紧凑行卡（徽面缩略 + 编号 + 状态 chip + 行尾操作），待办置顶 */
+.bcell{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid #F0F2F6;cursor:pointer}
+.bcell:last-child{border-bottom:none}
+.bcell .bno{flex:1;min-width:0}
+.bcell .bno b{display:block;font-size:13.5px}
+.bcell .bno .sub{display:block;font-size:10.5px;color:var(--ink-3);letter-spacing:.4px;margin-top:2px}
+.bcell .btn.sm{padding:5px 0;font-size:11.5px;border-radius:8px;flex-shrink:0;min-width:70px}
+.bitem+.bitem{border-top:1px solid #F0F2F6}
+/* 首页快捷入口图标：浅色圆角底 + 品牌色线性图标 */
+.qi{width:40px;height:40px;border-radius:13px;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.qi svg{display:block}
+.qi.navy{background:#E3EEFD;color:var(--navy)}
+.qi.teal{background:var(--teal-bg);color:var(--teal)}
+.qi.amber{background:var(--amber-bg);color:#C97A12}
+/* ============ 宫格式首页（头部身份区 + 消息提醒条 + 校徽活动横幅 + 宫格入口），与教师端同款 ============ */
+/* 蓝天白云背景：垂直定位 6% 使云层带（位于图片 20%~36% 处）落在头部底缘、避开右上「扫一扫」，纯色兜底防图片缺失 */
+.home-hd{position:relative;overflow:hidden;background:#54A8F2 url(sky-clouds.jpg) center 6%/cover no-repeat;border-radius:0 0 22px 22px;padding-bottom:30px;flex-shrink:0}
+.home-user{display:flex;align-items:center;gap:13px;padding:24px 16px 0;color:#fff;position:relative;z-index:1}
+.home-user .av{position:relative;width:56px;height:56px;border-radius:50%;background:url(avatar-boy.png) center/cover no-repeat #EAF3FF;color:transparent;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0;box-shadow:0 0 0 2px rgba(255,255,255,.9)}
+.home-user .av .rl{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:9.5px;font-weight:600;padding:2px 8px;border-radius:9px;white-space:nowrap;box-shadow:0 0 0 1.5px rgba(255,255,255,.85)}
+.home-user .nm{font-size:18.5px;font-weight:700;display:flex;align-items:center;gap:4px}
+.home-user .sub{font-size:12px;color:rgba(255,255,255,.92);margin-top:3px}
+.home-user .scan{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:3px;color:#fff;font-size:10px}
+.notice{display:flex;align-items:center;gap:6px;background:#FEF0E7;border-radius:12px;padding:8px 8px 8px 10px;margin-bottom:12px;font-size:11.5px;color:#E8632E;font-weight:500;white-space:nowrap}
+.notice svg{flex-shrink:0}
+.notice .go-set{margin-left:auto;background:#F2622A;color:#fff;border-radius:14px;padding:5px 13px;font-size:11.5px;font-weight:600;flex-shrink:0}
+/* 接收消息提醒设置：居中弹窗（首页提醒条「去设置」触发） */
+.cmask{position:absolute;inset:0;background:rgba(14,20,32,.55);z-index:60;display:none;align-items:center;justify-content:center;padding:0 30px}
+.cmask.show{display:flex}
+.cdlg{position:relative;background:#fff;border-radius:18px;padding:26px 20px 20px;width:100%;animation:fadein .18s ease}
+.cdlg .cx{position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:50%;border:1.5px solid #C6CCD6;color:#9AA7BB;font-size:11px;display:flex;align-items:center;justify-content:center}
+.cdlg h3{font-size:16.5px;text-align:center;margin-bottom:13px}
+.cdlg .txt{font-size:13.5px;line-height:1.85;color:var(--ink);margin-bottom:16px;text-align:justify}
+.cdlg .txt em{color:var(--cinnabar);font-style:normal;font-weight:600}
+.cdlg .ckrow{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:var(--ink-2);margin-top:14px;cursor:pointer;user-select:none}
+.cdlg .ckrow .ring{width:17px;height:17px;border-radius:50%;border:1.5px solid #C6CCD6;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px}
+.cdlg .ckrow .ring.on{background:var(--teal);border-color:var(--teal)}
+/* 微信原生弹窗式：正文居中 + 底部左右分栏按钮（左普通右主色，细线分隔） */
+.cdlg .dtxt{font-size:14.5px;line-height:1.8;color:var(--ink);text-align:center;padding:0 2px}
+.cdlg .dbtns{display:flex;border-top:1px solid var(--line);margin:18px -20px 0;border-radius:0 0 18px 18px;overflow:hidden}
+.cdlg .dbtns button{flex:1;padding:13px 0;font-size:15.5px;background:#fff;color:var(--ink-2);cursor:pointer}
+.cdlg .dbtns button+button{border-left:1px solid var(--line);color:var(--navy);font-weight:600}
+.mset-qr svg{display:block;width:100%;height:100%}
+/* 接收消息提醒设置页：步骤列表（品牌蓝数字节点 + 虚线连接） */
+.mset-step{display:flex;gap:14px;position:relative;padding-bottom:26px}
+.mset-step:last-child{padding-bottom:0}
+.mset-step:not(:last-child)::before{content:"";position:absolute;left:12.5px;top:26px;bottom:0;border-left:1.5px dashed #A9C7F5}
+.mset-step .no{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+.mset-step .tx{font-size:13.5px;color:var(--ink);line-height:1.55;padding-top:3px}
+.mset-step .lk{color:var(--navy);font-weight:600;cursor:pointer;white-space:nowrap}
+/* 公众号设置操作图：微信界面示意缩略卡 + 右侧步骤标注 */
+.wxg-row{display:flex;gap:12px;margin-bottom:20px;align-items:center}
+.wxshot{flex:0 0 60%;background:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(30,70,130,.10);overflow:hidden;color:#1B2431}
+.wxg-note{flex:1;font-size:12.5px;color:var(--ink);line-height:1.7}
+.wxg-note b{display:block;font-size:13px;margin-bottom:2px}
+.wxg-note .hl{color:var(--navy);font-weight:700}
+.wxm{text-align:center;padding:9px 0;font-size:11.5px;border-bottom:1px solid #F0F2F5}
+.wxm:last-child{border-bottom:none}
+.wxm .fr{display:inline-block;border:2px solid var(--cinnabar);border-radius:7px;padding:2px 20px}
+.wxsw{position:relative;width:34px;height:20px;border-radius:10px;background:#E5E7EB;flex-shrink:0}
+.wxsw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.wxsw.on{background:#07C160}
+.wxsw.on::after{left:16px}
+/* 班级注册码海报（扫码注册链路第一步）：方格纸蓝底 + 白卡海报，版式参照学校注册海报设计稿 */
+.rp-bg{background:#C9E4F8;background-image:linear-gradient(rgba(255,255,255,.65) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(255,255,255,.65) 1.5px,transparent 1.5px);background-size:13px 13px}
+.rp-card{background:#FDFCF7;border:3px solid #90C9F3;border-radius:8px;margin:16px 14px 24px;padding:30px 18px 22px;text-align:center}
+.rp-pills{display:flex;justify-content:center;gap:7px;margin:20px 0 18px}
+.rp-pills span{width:35px;height:35px;border-radius:50%;background:#4BA3F0;color:#fff;font-size:16.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.rp-qrwrap{position:relative;width:228px;margin:0 auto}
+.rp-qrwrap::before{content:"";position:absolute;left:0;right:0;top:52%;bottom:-8px;background:#DCEDFA;border-radius:50%}
+.rp-qrbox{background:#fff;border-radius:14px;padding:14px;width:172px;margin:0 auto;box-shadow:0 8px 22px rgba(30,70,130,.14);cursor:pointer;position:relative}
+.rp-flow{background:#E4F1FC;border-radius:8px;padding:0 10px 16px;margin-top:26px}
+.rp-ribbon{display:inline-block;background:#4BA3F0;color:#fff;font-size:14px;font-weight:700;letter-spacing:2px;padding:8px 30px;border-radius:4px;transform:translateY(-14px)}
+.rp-steps{display:flex;justify-content:space-between;gap:2px;margin-top:2px}
+.rp-st{flex:1;display:flex;flex-direction:column;align-items:center;gap:7px}
+.rp-st .no{width:17px;height:17px;border-radius:50%;background:#2E8FF2;color:#fff;font-size:10.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.rp-st .ic{width:30px;height:30px;color:#2E8FF2;display:flex;align-items:center;justify-content:center}
+.rp-st .tx{font-size:10.5px;color:#1B2431;white-space:nowrap}
+/* 注册办理码海报（对齐正式设计稿）：蓝色渐变底 + 智小徽品牌头 + 挂环白卡 + 家长注册主标题 + 长按扫码 + 注册付费流程四步 */
+.rp2-bg{background:linear-gradient(178deg,#6CC4F8,#38A0F4 45%,#2E8FF2)}
+.rp2-brand{display:flex;align-items:center;justify-content:center;gap:6px;padding:16px 0 12px;color:#fff;font-size:14px;font-weight:700;letter-spacing:1px}
+.rp2-brand img{width:24px;height:24px;object-fit:contain;background:#fff;border-radius:50%;padding:2px}
+.rp2-card{position:relative;background:linear-gradient(180deg,#FDFEFF,#F3F9FF);border-radius:22px;margin:8px 12px 26px;padding:20px 16px 0;box-shadow:0 14px 34px rgba(20,80,160,.28)}
+.rp2-ring{position:absolute;top:-11px;right:26px;width:24px;height:24px;border:5px solid #C4CDD8;border-radius:50%;box-shadow:0 1px 3px rgba(20,40,70,.25),inset 0 1px 2px rgba(20,40,70,.2)}
+.rp2-school{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:700;color:#1B2431;padding:2px 4px 14px;border-bottom:1px solid #E8EEF5}
+.rp2-school .lg{width:30px;height:30px;border-radius:50%;border:1.6px solid #2E8FF2;color:#2E8FF2;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rp2-title{text-align:center;font-size:33px;font-weight:900;letter-spacing:7px;margin:26px 0 24px;background:linear-gradient(180deg,#41A6F6,#1465D8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.rp2-qrpanel{background:#EAF3FB;border-radius:16px;padding:24px 0 18px;text-align:center;margin:0 6px}
+.rp2-qrbox{background:#fff;border-radius:14px;padding:13px;width:164px;margin:0 auto;box-shadow:0 8px 20px rgba(30,70,130,.12);cursor:pointer}
+.rp2-scan{display:inline-block;background:#CDEBFB;color:#1B62D9;font-size:12.5px;font-weight:600;border-radius:999px;padding:7px 24px;margin-top:15px}
+.rp2-flow{position:relative;background:#E3F2FD;border-radius:20px 20px 22px 22px;margin:30px -16px 0;padding:36px 14px 28px}
+.rp2-ribbon{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2E8FF2,#1B62D9);color:#fff;font-size:13.5px;font-weight:700;letter-spacing:1px;padding:8px 20px;border-radius:8px;white-space:nowrap;box-shadow:0 5px 12px rgba(20,80,170,.25)}
+.rp2-steps{display:flex;align-items:flex-start;justify-content:space-between;padding:6px 8px 0}
+.rp2-st{display:flex;flex-direction:column;align-items:center;gap:9px;flex-shrink:0}
+.rp2-st .ic{width:44px;height:44px;border-radius:50%;background:linear-gradient(160deg,#4FAFF5,#1B72E0);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 12px rgba(20,90,180,.3)}
+.rp2-st .tx{font-size:11.5px;color:#1B2431;font-weight:600;white-space:nowrap}
+.rp2-dash{flex:1;border-top:2px dashed #9CC9F2;margin-top:22px}
+/* 「智小徽」服务号会话示意（扫码注册链路第二步）：欢迎语气泡 + 注册小程序卡片 + 自定义菜单 */
+.wxrow{display:flex;gap:9px;align-items:flex-start;margin-bottom:14px}
+.wxrow .av{width:36px;height:36px;border-radius:6px;flex-shrink:0;background:#fff;object-fit:contain}
+.wxbub{background:#fff;border-radius:8px;padding:10px 13px;font-size:13px;line-height:1.9;max-width:80%;color:#1B2431;text-align:justify}
+.wxmp{background:#fff;border-radius:10px;width:76%;overflow:hidden;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.wxmp .hd{display:flex;align-items:center;gap:5px;padding:9px 12px 0;font-size:11px;color:#8A93A3}
+.wxmp .hd img{width:16px;height:16px;border-radius:3px}
+.wxmp .tt{padding:7px 12px 10px;font-size:13.5px;line-height:1.6;color:#1B2431}
+.wxmp .img{height:132px;background:#3D8BFC url(login-bg.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+.wxmp .img b{background:linear-gradient(135deg,#FFD34D,#FFB821);color:#7A4B00;font-size:15px;font-weight:800;letter-spacing:2px;padding:10px 26px;border-radius:12px;box-shadow:0 4px 12px rgba(120,70,0,.25)}
+.wxmp .ft{display:flex;align-items:center;gap:4px;padding:7px 12px 8px;border-top:1px solid #F0F2F5;font-size:10.5px;color:#8A93A3}
+.wxmenu{display:flex;align-items:center;background:#F7F7F7;border-top:1px solid #E2E2E2;padding:9px 8px;flex-shrink:0}
+.wxmenu .mi{flex:1;text-align:center;font-size:13.5px;color:#1B2431;display:flex;align-items:center;justify-content:center;gap:4px}
+.wxmenu .mi+.mi{border-left:1px solid #E2E2E2}
+.wxmenu .mi i{font-style:normal;font-size:9px;color:#8A93A3}
+.banner{border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 2px 10px rgba(30,70,130,.07);margin-bottom:12px}
+/* 活动横幅：蓝底 3D 盾牌实拍背景图（右侧留给盾牌，文字浮于左侧），纯色兜底防图片缺失 */
+.banner .bn-top{position:relative;overflow:hidden;background:#2E8FF2 url(banner-badge.jpg) center/cover no-repeat;color:#fff;padding:27px 16px 25px;display:flex;align-items:center;text-align:left}
+.banner .bn-txt{flex:1;min-width:0}
+.banner .bn-top h3{font-size:18.5px;font-weight:800;letter-spacing:1px;text-shadow:0 2px 6px rgba(10,50,120,.35)}
+.banner .bn-top p{font-size:11.5px;color:rgba(255,255,255,.9);margin-top:7px;letter-spacing:.3px}
+.banner .bn-foot{display:flex;align-items:center;justify-content:space-between;padding:12px 14px}
+.banner .bn-foot span{font-size:14.5px;font-weight:600}
+.banner .bn-foot button{background:linear-gradient(135deg,#4A97F5,#2262E0);color:#fff;border-radius:18px;padding:7px 16px;font-size:13px;font-weight:700;box-shadow:0 3px 9px rgba(46,124,240,.32)}
+/* 校徽办理「办理须知」上方媒体位：办理说明视频模拟播放器（与活动横幅二选一，演示说明开关切换） */
+.ap-video{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#10151D;margin-bottom:12px;cursor:pointer;box-shadow:0 2px 10px rgba(30,70,130,.07)}
+.ap-video .apv-frame{position:absolute;inset:0;background:#2E8FF2 url(banner-badge.jpg) center/cover no-repeat}
+.ap-video .apv-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,36,.30),rgba(8,18,36,.10) 42%,rgba(8,18,36,.62))}
+.ap-video .apv-title{position:absolute;top:24%;left:0;right:0;text-align:center;color:rgba(255,255,255,.94);font-size:19px;font-weight:800;letter-spacing:3px;text-shadow:0 2px 8px rgba(10,40,90,.5)}
+.ap-video .apv-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-40%);width:46px;height:46px;border-radius:50%;background:rgba(12,22,40,.42);border:1.5px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
+.ap-video .apv-play svg{margin-left:3px}
+.ap-video .apv-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:9px;padding:10px 12px 9px;background:linear-gradient(180deg,transparent,rgba(5,12,24,.55))}
+.ap-video .apv-time{font-size:10.5px;color:rgba(255,255,255,.92);font-variant-numeric:tabular-nums;line-height:1}
+.ap-video .apv-track{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.30);position:relative}
+.ap-video .apv-track i{position:absolute;left:0;top:0;bottom:0;width:2%;min-width:3px;background:#fff;border-radius:2px}
+.ap-video .apv-track i::after{content:'';position:absolute;right:-4.5px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+/* 一行四个（微信小程序宫格惯例）：入口增多后避免末行孤项，格宽变窄相应缩小图标与字号 */
+.gmenu{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gmenu button{background:var(--card);border-radius:15px;padding:15px 0 13px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:12.5px;color:var(--ink);font-weight:600;box-shadow:0 2px 10px rgba(30,70,130,.07)}
+.gmenu .gi{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff}
+.gmenu .gi svg{width:23px;height:23px;stroke-width:2.05}
+/* 设计稿切图图标：PNG 自带圆角底与配色，不再叠加背景与裁切 */
+.gmenu img.gi{border-radius:0;object-fit:contain}
+/* ============ 素质评价（德育评价 · 家长只读视图）：蓝色统计头部 + 点评记录流 ============ */
+.eval-hd{background:linear-gradient(160deg,#1F9BE8 0%,#4FC0F2 55%,#8ADCF9 100%);padding:6px 16px 18px;flex-shrink:0}
+.eval-stats{display:flex;background:rgba(255,255,255,.94);border-radius:14px;padding:14px 4px;text-align:center}
+.eval-stats .it{flex:1}
+.eval-stats b{display:block;font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.eval-stats span{font-size:11px;color:var(--ink-2)}
+.eval-menu{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--card);border-radius:14px;padding:13px 6px 11px;box-shadow:0 2px 10px rgba(30,70,130,.07);margin-bottom:4px}
+.eval-menu button{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--ink-2)}
+.eval-menu .gi{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+/* ============ 首页身份切换下拉（头部姓名 ▾ 触发，多孩切换 + 师长双身份） ============ */
+.id-mask{position:absolute;inset:0;background:rgba(14,20,32,.45);z-index:30;display:none}
+.id-mask.show{display:block}
+/* 面板上缘塞入头部圆角之下、头部提亮浮于遮罩上，形成「从头部滑出」的衔接 */
+.phone.id-open .home-hd{position:relative;z-index:32}
+.id-panel{position:absolute;left:0;right:0;background:#fff;border-radius:0 0 22px 22px;padding:26px 18px 13px;z-index:31;display:none;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.id-panel.show{display:block;animation:drop .22s ease}
+@keyframes drop{from{transform:translateY(-14px);opacity:.4}to{transform:none;opacity:1}}
+.id-row{display:flex;align-items:center;gap:11px;padding:12px 2px;border-bottom:1px solid #F4F6F8;cursor:pointer}
+.id-row .ring{width:20px;height:20px;border-radius:50%;border:1.5px solid #D5DAE2;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px}
+.id-row.on .ring{background:var(--navy);border-color:var(--navy)}
+.id-row .rt{margin-left:auto;text-align:right}
+.id-row .rt .muted{margin-top:3px}
+.id-row .iav{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+/* 毕业态首页（切换到已毕业孩子）：隐藏消息提醒条 / 活动横幅 / 智慧放学与素质评价入口（不再产生新数据），显示归档说明卡 */
+#sc-home.grad #home-notice,#sc-home.grad .banner,#sc-home.grad #gi-dismiss,#sc-home.grad #gi-eval{display:none!important}
+#sc-home.grad #home-grad-card{display:flex!important}
+/* 孩子详情毕业态：性别 / 出生日期 / 现住址收敛为只读（隐藏箭头，点击由 childGrad 守卫拦截），「我的关系」仍可改 */
+#sc-child.grad .set-row[data-g] .sarr{display:none}
+/* 我的校徽按孩子分组：组头 = 姓名 + 班级 + 枚数，毕业孩子组沉底带「毕业生」chip，组内仍按状态 + 活跃时间排序 */
+.bd-ghd{display:flex;align-items:center;gap:8px;padding:13px 2px 5px;font-size:13.5px;font-weight:700}
+.bd-ghd .sub{font-weight:400;font-size:11.5px;color:var(--ink-3)}
+.bd-ghd .cnt{margin-left:auto;font-weight:400;font-size:11.5px;color:var(--ink-3)}
+/* 筛选 chips（校园签到页周切换） */
+.fchips{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.fchip{padding:5px 13px;border-radius:16px;font-size:12px;background:#fff;color:var(--ink-2);border:1px solid var(--line)}
+.fchip.on{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:500}
+/* 校园签到：周/月日历筛选（收起为周条、展开为整月，支持左右滑动或箭头切换） */
+.cal-card{background:var(--card);border-radius:14px;padding:12px 12px 4px;margin-bottom:12px;box-shadow:0 2px 10px rgba(30,70,130,.06);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cal-hd{display:flex;align-items:center;margin-bottom:4px;padding:0 2px}
+.cal-hd b{font-size:15px;font-variant-numeric:tabular-nums}
+.cal-hd .cnav{font-size:17px;color:var(--ink-3);padding:2px 10px}
+.cal-hd .cnav.prev{margin-left:auto}
+.cal-wk{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-size:11px;color:var(--ink-3);padding:5px 0 3px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);row-gap:2px}
+.cd{position:relative;height:40px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink);font-variant-numeric:tabular-nums}
+.cd span{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cd.sel span{background:var(--navy);color:#fff;font-weight:700}
+.cd.tdy:not(.sel) span{color:var(--navy);font-weight:700;background:#EAF2FE} /* 类名避开全局 .today（智慧放学今日卡） */
+.cd .dt{position:absolute;bottom:1px;left:50%;margin-left:-2.5px;width:5px;height:5px;border-radius:50%}
+.cd.dim,.cd.off{color:#C3CBD7;pointer-events:none}
+.cal-lg{display:flex;justify-content:center;flex-wrap:wrap;gap:5px 13px;font-size:10.5px;color:var(--ink-3);padding:7px 0 2px;border-top:1px solid #F3F5F8;margin-top:4px}
+.cal-lg span{display:flex;align-items:center;gap:4px}
+.cal-lg i{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.cal-tog{display:block;margin:0 auto;padding:7px 34px;color:#C3CBD7}
+.cal-tog .bar{display:block;width:34px;height:4px;border-radius:2px;background:#DFE4EC}
+/* 校园签到（签到详情）：日期/月份导航 + 到离校时间轴 + 通行抓拍 + 出勤统计环形图（与教师端学生签到详情同款） */
+.att-nav{display:flex;align-items:center;gap:2px}
+.att-nav button{font-size:17px;color:var(--ink-3);padding:2px 9px}
+.att-nav b{font-size:13.5px;font-weight:600;min-width:96px;text-align:center;font-variant-numeric:tabular-nums}
+/* 年月选择器：点签到 Tab 月历标题 / 统计 Tab 月份标题呼出（mpOpen 半屏），超范围月份置灰 */
+.mp-tap{display:flex;align-items:center;gap:5px;color:inherit}
+.mp-tap .caret{font-size:10px;color:var(--ink-3)}
+/* min-width 由 b 挪到整个可点区域：文字与 ▾ 作为一组居中，避免 b 独占 96px 时 ▾ 被顶远 */
+.att-nav .mp-tap{padding:2px 0;font-size:inherit;color:inherit;min-width:96px;justify-content:center}
+.att-nav .mp-tap b{min-width:0}
+.mp-yr{display:flex;align-items:center;justify-content:center;gap:2px;margin:4px 0 14px}
+.mp-yr button{font-size:17px;color:var(--ink-3);padding:2px 12px}
+.mp-yr b{font-size:14.5px;min-width:88px;text-align:center;font-variant-numeric:tabular-nums}
+.mp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.mp-m{padding:11px 0;border-radius:11px;background:#F3F6FA;font-size:13.5px;text-align:center;font-variant-numeric:tabular-nums}
+.mp-m.on{background:var(--navy);color:#fff;font-weight:600}
+.mp-m.dis{color:#C3CBD7;background:#F8F9FB}
+.att-sec{font-size:14px;font-weight:600;display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.att-sec::before{content:"";width:3px;height:14px;border-radius:2px;background:var(--teal)}
+.donut{width:112px;height:112px;border-radius:50%;position:relative;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut::before{content:"";position:absolute;inset:15px;background:#fff;border-radius:50%}
+.donut b{position:relative;font-size:19px;font-weight:700;font-variant-numeric:tabular-nums}
+.donut span{position:relative;font-size:10.5px;color:var(--ink-3);margin-top:1px}
+.alg{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-2);padding:2px 0}
+.alg .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.alg b{margin-left:auto;font-size:13.5px;font-variant-numeric:tabular-nums}
+/* 统计指标行筛选：非 0 行可点，点亮后下方月历仅保留命中日期；0 值行保持纯展示。
+   可点标识：行尾雪佛龙箭头（0 值行无箭头即不可点），点亮后箭头随行高亮转主题色 */
+.alg.filt{cursor:pointer;margin:0 -8px;padding:2px 8px;border-radius:9px}
+.alg.filt::after{content:"";width:6px;height:6px;border-right:1.6px solid #B4BCC9;border-top:1.6px solid #B4BCC9;transform:rotate(45deg);flex-shrink:0;margin:0 2px 0 1px}
+.alg.filt:active{background:#F3F6FA}
+.alg.filt.on{background:#EFF3FA}
+.alg.filt.on b{color:var(--navy)}
+.alg.filt.on::after{border-color:var(--navy)}
+/* 可点行行尾箭头占 gap 7px + 盒 6px + 边距 3px，0 值行同宽占位保证数值列右对齐 */
+.alg:not(.filt) b{margin-right:16px}
+.cd.hit-teal span{background:#E1F2ED;font-weight:600}
+.cd.hit-navy span{background:#EAF2FE;font-weight:600}
+.cd.hit-red span{background:#FCEBE8;font-weight:600}
+.cd .dt.fade{opacity:.15}
+.stl{position:relative}
+.stl .nd{display:flex;gap:10px;position:relative;padding-bottom:18px}
+.stl .nd:last-child{padding-bottom:2px}
+.stl .nd::after{content:"";position:absolute;left:11px;top:27px;bottom:3px;width:1.5px;background:#E4E9F1}
+.stl .nd:last-child::after{display:none}
+.stl .bdg{width:23px;height:23px;border-radius:50%;background:var(--teal);color:#fff;font-size:11.5px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stl .bdg.out{background:var(--navy)}
+.stl .nd.pend .bdg{background:#C9D2DE}
+.stl .bd{flex:1;min-width:0}
+.stl .ev-t{font-size:15px;font-weight:600;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.stl .ev-t .tm{font-size:11.5px;font-weight:400;color:var(--ink-3)}
+.stl .ev-t .tog{margin-left:auto;font-size:11.5px;font-weight:400;color:var(--ink-3);padding:2px 0 2px 8px;display:inline-flex;align-items:center;gap:3px}
+.stl .mini{width:23px;height:23px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.stl .mini i{width:7px;height:7px;border-radius:50%;background:var(--teal);display:block}
+.shots{display:flex;gap:10px;margin-top:9px}
+.shots .sh{position:relative;width:98px;height:74px;border-radius:9px;overflow:hidden;cursor:pointer;flex-shrink:0}
+.shots .sh img{width:100%;height:100%;object-fit:cover;display:block}
+.shots .sh .ply{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,14,22,.28);color:#fff;font-size:19px}
+.shots .sh .lb{position:absolute;left:0;right:0;bottom:0;background:rgba(10,14,22,.55);color:#fff;font-size:10px;text-align:center;padding:2.5px 0}
+.shot-view{position:absolute;inset:0;background:rgba(10,14,22,.93);z-index:70;display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer}
+.shot-view.show{display:flex}
+.shot-view img{max-width:82%;border-radius:12px}
+.shot-view .cap{color:#fff;font-size:13px}
+.shot-view .nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px;cursor:pointer;user-select:none}
+.shot-view .tip{color:rgba(255,255,255,.55);font-size:11px}
+.stu-foot{flex-shrink:0;display:flex;background:#fff;border-top:1px solid var(--line);padding:7px 0 18px}
+.stu-foot button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--ink-3)}
+.stu-foot button.on{color:var(--navy);font-weight:600}
+/* 校徽办理：人工申请提交后生成的「待核实」孩子 chip（核实通过前琥珀色区分） */
+.fchip.pending{border-color:var(--amber);color:#C97A12;background:var(--amber-bg)}
+.fchip.pending.on{background:var(--amber);border-color:var(--amber);color:#fff}
+/* 办理记录状态筛选：「全部」左侧固定，其余状态横向滑动 */
+.schips-wrap{display:flex;gap:8px;align-items:center;padding:2px 0 10px}
+.schips{display:flex;gap:8px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.schips::-webkit-scrollbar{display:none}
+.schips-wrap .fchip{flex-shrink:0;white-space:nowrap;background:#fff;border:1px solid var(--line);padding:6px 14px;font-size:12.5px;box-shadow:0 1px 4px rgba(30,70,130,.05)}
+.schips-wrap .fchip.on{background:#E3EEFD;border-color:#BFD6F9;color:var(--navy);font-weight:600}
+/* ============ 校徽办理承接页（活动横幅进入）：药丸 Tab + 底部固定操作条 ============ */
+.pill-tabs{display:flex;align-items:center;gap:8px;padding:6px 16px 12px;flex-shrink:0}
+.pill-tabs button{flex:1;font-size:14.5px;color:var(--ink-2);padding:9px 0;border-radius:21px;font-weight:500}
+.pill-tabs button.on{background:var(--navy);color:#fff;font-weight:700;box-shadow:0 4px 12px rgba(46,124,240,.32)}
+.apply-foot{flex-shrink:0;display:flex;gap:10px;padding:10px 16px 24px;background:#fff;border-top:1px solid var(--line)}
+.apply-foot .btn{flex:1;padding:11px;font-size:14px;border-radius:22px}
+/* 校徽办理：错误示范缩略图 / 支付半屏的数量与款式选择 */
+.ap-bad{position:relative;border-radius:8px;overflow:hidden;background:#EDF0F5;margin-bottom:4px}
+.ap-bad img{display:block;width:100%;height:auto}
+.ap-bad i{position:absolute;right:3px;bottom:3px;width:15px;height:15px;border-radius:50%;background:var(--cinnabar);color:#fff;font-size:9px;font-style:normal;display:flex;align-items:center;justify-content:center}
+.stepbtn{width:30px;height:30px;border-radius:50%;font-size:17px;font-weight:700;color:var(--ink-2);display:flex;align-items:center;justify-content:center}
+.stepbtn:disabled{color:#D5DAE2;cursor:default}
+.stepval{min-width:58px;padding:6px 0;background:#F0F2F6;border-radius:9px;text-align:center;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+.stylecard{flex:1;min-width:0;border:1.5px solid var(--line);border-radius:12px;padding:10px 10px 9px;text-align:center;font-size:13px;font-weight:700;color:var(--ink-2);background:#fff;cursor:pointer}
+.stylecard.on{border-color:var(--navy);color:var(--navy);background:#E3EEFD}
+/* 校徽预览吸顶：折叠头（collapsing header）——sticky 外层高度锁定（布局零位移），
+   内部卡片随滚动由 JS 连续插值收缩（卡头淡出、徽面等比缩小），收缩速度与内容上移同步，无空隙无跳变 */
+#ap-pv-sticky{position:sticky;top:0;z-index:20;pointer-events:none;margin-bottom:12px}
+#ap-pv-sticky .card{margin-bottom:0;pointer-events:auto}
+/* 校徽缩略图：真实 id-badge 组件等比缩放（scale 由内联样式按容器指定） */
+.badge-thumb{overflow:hidden;border-radius:7px;flex-shrink:0}
+.badge-thumb .id-badge{width:320px;transform-origin:top left;box-shadow:none}
+/* 校级配置为无需证件照（body.nophoto，随 proto-nophoto 开关由 applyPhotoReq 切换）：每枚徽按制作当时有无照片显示，只有配置切换后办理的 NO.0008–0010（bd6–bd8，6月26日 3 枚单）去掉照片位，旧徽保留照片；版式与办理页预览 / 办理记录的无照片形态一致 */
+body.nophoto #ap-mine-list .bitem[data-k="bd6"] .id-badge .ph,body.nophoto #ap-mine-list .bitem[data-k="bd7"] .id-badge .ph,body.nophoto #ap-mine-list .bitem[data-k="bd8"] .id-badge .ph{display:none}
+/* 扫一扫盾形按钮 */
+.scan-fab{width:100%;background:linear-gradient(160deg,#3D8BFC,var(--navy-deep));border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;color:#fff;box-shadow:0 6px 18px rgba(29,99,216,.3)}
+.scan-fab .sic{width:40px;height:40px;border-radius:13px;background:var(--amber-bg);color:#C97A12;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.scan-fab .t1{font-size:14.5px;font-weight:600;text-align:left}
+.scan-fab .t2{font-size:11px;color:rgba(255,255,255,.6);text-align:left;margin-top:2px}
+/* 订单步骤 */
+.osteps{display:flex;flex-wrap:wrap;gap:0;margin:8px 0 4px}
+.ostep{display:flex;align-items:center;font-size:11px;color:var(--ink-3);margin-bottom:6px}
+.ostep .dot2{width:20px;height:20px;border-radius:50%;background:#EDF0F4;color:var(--ink-3);display:flex;align-items:center;justify-content:center;font-size:10px;margin-right:4px}
+.ostep.done .dot2{background:var(--teal);color:#fff}
+.ostep.on .dot2{background:var(--navy);color:#fff}
+.ostep.on{color:var(--navy);font-weight:600}
+.ostep .ln{width:14px;height:2px;background:#EDF0F4;margin:0 4px}
+/* 表单 */
+textarea,select,input[type=text],input[type=date]{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;font-family:inherit;background:#FAFBFC;color:var(--ink);resize:none}
+textarea:focus,input:focus,select:focus{outline:2px solid rgba(46,124,240,.3)}
+.frow{margin-bottom:13px}
+.frow label{display:block;font-size:12px;color:var(--ink-2);margin-bottom:5px}
+.frow label em{color:var(--cinnabar);font-style:normal}
+.ro{background:#F0F2F6!important;color:var(--ink-2)!important}
+.upload{border:1.5px dashed #C6CCD6;border-radius:12px;padding:20px;text-align:center;color:var(--ink-3);font-size:12px;line-height:1.7}
+.upload b{color:var(--navy);font-size:13px}
+.seg2{display:flex;gap:8px}
+.seg2 button{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px;font-size:13px;color:var(--ink-2);background:#fff}
+.seg2 button.on{border-color:var(--navy);color:var(--navy);background:#E3EEFD;font-weight:600}
+/* 请假记录卡片：标题+状态角标 / 类型与起止时间 kv 行 / 底部发起人与提交时间 */
+.lv-card{cursor:pointer}
+.lv-card .hd2{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.lv-card .hd2 b{font-size:15px}
+.lv-card .kv2{display:flex;font-size:12.5px;color:var(--ink);line-height:2.1}
+.lv-card .kv2 .k{width:86px;color:var(--ink-3);flex-shrink:0}
+.lv-card .ft{display:flex;align-items:center;gap:7px;margin-top:9px;padding-top:10px;border-top:1px solid #F0F2F6;font-size:12px;color:var(--ink-2)}
+.lv-card .ft img{width:22px;height:22px;border-radius:50%;object-fit:cover}
+.lv-card .ft .tm{margin-left:auto;color:var(--ink-3)}
+/* 帮助与客服：问题搜索框（放大镜 + 输入 + 搜索钮） */
+.help-search{display:flex;align-items:center;gap:8px;height:38px;padding:0 4px 0 12px;margin-bottom:10px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 1px 4px rgba(30,70,130,.05);color:var(--ink-3)}
+.help-search input{flex:1;min-width:0;height:100%;border:none;background:none;font-size:13px;padding:0;border-radius:0}
+.help-search input:focus{outline:none}
+.help-search:focus-within{border-color:var(--navy);box-shadow:0 0 0 2px rgba(46,124,240,.15)}
+.help-search button{flex-shrink:0;font-size:13px;font-weight:600;color:var(--navy);padding:4px 12px;border-left:1px solid var(--line);border-radius:0;line-height:1.3}
+/* 帮助与客服：FAQ 折叠列表 */
+.faq{border-bottom:1px solid #F0F2F6}
+.faq:last-child,.faq.nobd{border-bottom:none}
+.faq .q{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11.5px 0;font-size:13px;font-weight:500;cursor:pointer}
+.faq .q .fx{color:var(--ink-3);font-size:15px;flex-shrink:0}
+.faq .a{display:none;font-size:12px;color:var(--ink-2);line-height:1.7;padding:0 0 11px}
+.faq.on .a{display:block}
+/* 证明材料图片网格（发起请假）：缩略图 + 右上删除角标 + 末位「＋」添加块 */
+.up-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.up-grid .ph{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:#F0F2F6}
+.up-grid .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.up-grid .ph .rm{position:absolute;top:5px;right:5px;width:19px;height:19px;border-radius:50%;background:rgba(15,23,35,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer}
+.up-grid .add{aspect-ratio:1;border-radius:10px;background:#F0F2F6;border:none;display:flex;align-items:center;justify-content:center;color:#A6AEBD;font-size:28px;font-weight:300;cursor:pointer}
+/* 日期+时间（30 分钟粒度）双列滚轮选择器（发起请假，与教师端代录请假同构） */
+.wheelbox{position:relative;display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wheel{flex:1;height:180px;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.wheel::-webkit-scrollbar{display:none}
+.wheel .wi{height:36px;display:flex;align-items:center;justify-content:center;font-size:13.5px;color:var(--ink-3);scroll-snap-align:center;cursor:pointer;transition:color .15s}
+.wheel .wi.pad{pointer-events:none}
+.wheel .wi.on{color:var(--ink);font-weight:600;font-size:15px}
+.wheelbox::before,.wheelbox::after{content:'';position:absolute;left:0;right:0;height:1px;background:var(--line);pointer-events:none}
+.wheelbox::before{top:72px}.wheelbox::after{top:108px}
+/* 微信风格底部 Picker */
+.pick{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;background:#FAFBFC;color:var(--ink);display:flex;align-items:center;justify-content:space-between;font-family:inherit;text-align:left}
+.pick i{font-style:normal;color:var(--ink-3);font-size:12px}
+.pk-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.pk-hd b{font-size:15px}
+.pk-hd button{font-size:13.5px;color:var(--ink-3);padding:4px 6px}
+.pk-list{max-height:46vh;overflow-y:auto}
+.pk-opt{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 6px;font-size:14.5px;border-bottom:1px solid #F0F2F6;text-align:left}
+.pk-opt:last-child{border-bottom:none}
+.pk-opt.on{color:var(--navy);font-weight:600}
+/* 弹层 */
+.mask{position:absolute;inset:0;background:rgba(14,20,32,.55);z-index:40;display:none;align-items:flex-end}
+.mask.show{display:flex}
+.sheet{background:#fff;width:100%;border-radius:20px 20px 0 0;padding:22px 20px 32px;animation:up .25s ease;max-height:82%;overflow-y:auto}
+@keyframes up{from{transform:translateY(40%);opacity:.4}to{transform:none;opacity:1}}
+/* 模拟证件照上传：相册 / 相机 / 裁切 */
+.ovl{position:absolute;inset:0;z-index:78;background:#17191C;display:none;flex-direction:column}
+.ovl.show{display:flex}
+.ovl-hd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;color:#fff;flex-shrink:0;font-size:15px}
+.ovl-hd .x{font-size:20px;cursor:pointer;line-height:1}
+.alb-grid{flex:1;overflow-y:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;align-content:start}
+.alb-grid .it{position:relative;aspect-ratio:1;overflow:hidden;cursor:pointer}
+.alb-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.alb-grid .ck{position:absolute;top:5px;right:5px;width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;background:rgba(0,0,0,.15)}
+.alb-grid .it.on img{opacity:.75}
+.alb-grid .it.on .ck{background:var(--teal);border-color:var(--teal)}
+.ovl-ft{display:flex;justify-content:space-between;align-items:center;padding:13px 16px 26px;color:#fff;flex-shrink:0;font-size:14px}
+.ovl-ft .ok{background:var(--teal);color:#fff;border-radius:8px;padding:8px 18px;font-size:13.5px;font-weight:600;opacity:.45}
+.ovl-ft .ok.rdy{opacity:1}
+.up-opt{display:flex;align-items:center;gap:13px;background:#F6F8FA;border-radius:12px;padding:15px 14px;margin-bottom:11px;cursor:pointer}
+.up-opt b{display:block;font-size:14.5px}
+.up-opt .sub{font-size:11.5px;color:#C97A12;margin-top:3px}
+.up-opt .arr2{margin-left:auto;color:var(--ink-3)}
+/* 模拟微信支付：加载浮层 + 收银台 */
+.wxload{position:absolute;inset:0;z-index:80;display:none;align-items:center;justify-content:center}
+.wxload.show{display:flex}
+.wxload .box{width:148px;height:148px;background:rgba(43,45,51,.94);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;color:#fff;font-size:15px}
+.wxload .dots{display:flex;gap:5px}
+.wxload .dots i{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.4)}
+.wxload .dots i:nth-child(2){background:#fff}
+.wxpay{position:absolute;inset:0;z-index:81;background:rgba(14,20,32,.45);display:none;align-items:flex-end}
+.wxpay.show{display:flex}
+.wxpay .panel{background:#fff;width:100%;height:88%;border-radius:14px 14px 0 0;display:flex;flex-direction:column;animation:up .25s ease}
+.wx-hd{display:flex;justify-content:space-between;align-items:center;padding:15px 17px 6px}
+.wx-hd .x{font-size:19px;color:#333;cursor:pointer;line-height:1}
+.wx-hd .face{font-size:14px;color:#576B95;cursor:pointer}
+.wx-merch{text-align:center;font-size:14px;color:var(--ink);margin-top:14px}
+.wx-amt{text-align:center;font-size:36px;font-weight:700;color:#000;margin:4px 0 16px;font-family:-apple-system,'SF Pro Display',sans-serif}
+.wx-amt span{font-size:22px;margin-right:2px}
+.wx-body{padding:0 20px;border-top:1px solid #F0F0F0}
+.wx-way-t{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-3);margin:14px 0 9px}
+.wx-way-t b{color:var(--ink-3);font-weight:400;cursor:pointer}
+.wx-card{display:flex;align-items:center;gap:10px;background:#EAF3FE;border-radius:10px;padding:13px 14px;font-size:14px;color:var(--ink)}
+.wx-card .ck{margin-left:auto;color:#07C160;font-size:17px;font-weight:700}
+.wx-pwd{display:flex;gap:8px;justify-content:center;margin:24px 0 10px}
+.wx-pwd i{width:42px;height:46px;background:#F5F6F7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:20px}
+.wx-pwd i.f::before{content:"●";font-size:14px}
+.wx-keys{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E3E4E6;border-top:1px solid #E3E4E6;padding-bottom:14px}
+.wx-keys button{background:#fff;border:none;padding:16px 0;font-size:22px;font-weight:500;color:#111;cursor:pointer}
+.wx-keys button:active{background:#F1F1F1}
+.wx-keys button.fn{background:#F6F7F8;font-size:17px}
+.sheet h3{font-size:16px;margin-bottom:8px}
+/* 半屏内按钮同规格（2026-10-26）：脚本拼的半屏按钮带各种内联圆角 / 内边距，用 !important 统一压平，sm 小按钮除外；红底只留给破坏性操作的二次确认（确认解绑、仍要停用等） */
+.sheet .btn:not(.sm){padding:11px 20px!important;font-size:14px;border-radius:22px!important}
+.sheet .desc{font-size:12.5px;color:var(--ink-2);line-height:1.75;margin-bottom:14px}
+/* 销假申请半屏：学生行 + 分组行式表单（参考小程序销假页） */
+.cx-stu{display:flex;align-items:center;gap:10px;padding:2px 0 12px}
+.cx-stu img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.cx-stu b{font-size:15px}
+.cx-stu span{font-size:12.5px;color:var(--ink-3)}
+.cx-grp{background:#F6F7FA;border-radius:12px;padding:0 13px;margin-top:10px}
+.cx-row{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid #E9ECF1;font-size:13.5px}
+.cx-row:last-child{border-bottom:none}
+.cx-row>span{font-weight:500;color:var(--ink);white-space:nowrap}
+.cx-row>span em{color:var(--cinnabar);font-style:normal}
+.cx-row>span small{font-size:12px;font-weight:400;color:var(--ink-3)}
+.cx-row b{margin-left:auto;font-weight:400;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.cx-row b.ph{color:var(--ink-3)}
+.cx-row .arr{font-style:normal;color:#C6CCD6;margin-left:6px;font-size:16px;line-height:1}
+.cx-row.col{flex-direction:column;align-items:stretch}
+.cx-row.col textarea{margin-top:8px;background:#fff;border-color:#E9ECF1}
+/* 「修改出生日期」半屏内的年/月/日三列滚轮选择（scroll-snap 实现，中间行高亮、上下渐隐） */
+/* 自定义区间选择：起止两个日期胶囊（点选切换当前编辑端）+ 年 / 月 / 日三列滚轮，
+   与小程序原生 picker 形态一致（原 antd 风日历浮层为桌面端形态，已弃用） */
+.dr-row{display:flex;align-items:center;gap:10px;margin-top:13px}
+.dr-pill{flex:1;padding:10px 6px;border-radius:22px;border:1px solid var(--line);background:#F5F7FA;color:var(--ink-2);font-size:14px;font-variant-numeric:tabular-nums;text-align:center;cursor:pointer;transition:.15s}
+.dr-pill.on{border-color:var(--navy);background:#EEF5FF;color:var(--navy);font-weight:600}
+.dr-sep{color:var(--ink-3);font-size:12.5px;flex-shrink:0}
+.dp-wheel{display:flex;gap:4px;position:relative;margin:8px 0 2px}
+.dp-col{flex:1;height:180px;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-mask:linear-gradient(180deg,transparent 0,rgba(0,0,0,.2) 16%,#000 38%,#000 62%,rgba(0,0,0,.2) 84%,transparent 100%);mask:linear-gradient(180deg,transparent 0,rgba(0,0,0,.2) 16%,#000 38%,#000 62%,rgba(0,0,0,.2) 84%,transparent 100%)}
+.dp-col::-webkit-scrollbar{display:none}
+.dp-col div{height:36px;line-height:36px;text-align:center;font-size:15px;color:var(--ink-2);scroll-snap-align:center;cursor:pointer}
+.dp-col div:first-child{margin-top:72px}
+.dp-col div:last-child{margin-bottom:72px}
+.dp-col div.on{color:var(--ink);font-weight:600;font-size:16.5px}
+.dp-wheel::before,.dp-wheel::after{content:"";position:absolute;left:10px;right:10px;height:1px;background:#E4E8EF;pointer-events:none}
+.dp-wheel::before{top:72px}
+.dp-wheel::after{bottom:72px}
+/* 「修改现住址」半屏内的省/市/区县逐级选择列表 */
+.rgp-crumb{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--navy);margin:2px 0 4px}
+.rgp-crumb span{cursor:pointer}
+.rgp-crumb i{color:#C4CAD4;font-style:normal}
+.rgp-list{max-height:300px;overflow-y:auto}
+.rgp-item{display:flex;align-items:center;justify-content:space-between;padding:11px 4px;font-size:13.5px;border-bottom:1px solid #F0F2F6;cursor:pointer}
+.rgp-item .arr{color:#C4CAD4;font-size:15px}
+.rgp-item.on{color:var(--navy);font-weight:600}
+/* toast 屏幕垂直居中（微信小程序原生 wx.showToast 形态），不与各页头部打架；原固定 top:96px 会压住带日期行的页头 */
+.toast{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(14,20,32,.88);color:#fff;padding:9px 18px;border-radius:10px;font-size:12.5px;z-index:120;opacity:0;pointer-events:none;transition:.25s;max-width:90%;text-align:center;line-height:1.5}
+.toast.show{opacity:1}
+/* 演示提示（2026-10-26，demoToast 使用）：琥珀描边 + 「演示」角标，区别于产品 toast；左对齐可多行 */
+.toast.demo{background:rgba(44,32,6,.92);border:1px solid rgba(255,196,72,.7);text-align:left;max-width:86%;padding:9px 14px}
+.toast.demo .demo-tag{display:inline-block;font-style:normal;font-size:10px;line-height:16px;padding:0 5px;border-radius:4px;background:#FFC448;color:#2C2006;font-weight:700;margin-right:6px;vertical-align:1px}
+/* 演示提示交互（2026-10-27）：整块可点关闭、右上角 × 作视觉提示；超过一行的演示提示（.lo）贴在底栏上方，不遮住它在说明的内容 */
+.toast.demo{padding-right:30px}
+.toast.demo.show{pointer-events:auto;cursor:pointer}
+.toast.demo .demo-x{position:absolute;top:5px;right:8px;width:16px;height:16px;line-height:16px;text-align:center;font-style:normal;font-size:14px;color:rgba(255,255,255,.72)}
+.toast.demo.lo{top:auto;bottom:96px;transform:translateX(-50%)}
+
+/* 请假列表 */
+.lv-item{display:flex;gap:12px;padding:14px 0;align-items:flex-start}
+/* 分隔线只出现在两条可见消息之间（sep 类由 applyMsgFilter 按可见性维护），隐藏/过滤条目不残留线 */
+.lv-item.sep{border-top:1px solid #F0F2F6}
+.lv-ico{position:relative;width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;flex-shrink:0;color:#fff}
+/* 消息图标按类别固定扁平配色（对齐设计稿）：到离校=teal 请假=navy 校徽办理=amber 家人=violet 反馈与提醒=slate */
+.lv-ico.navy{background:#2E7CF0}
+.lv-ico.teal{background:#2BC48F}
+.lv-ico.amber{background:#F79E31}
+.lv-ico.red{background:var(--cinnabar)}
+.lv-ico.violet{background:#8B6CEC}
+.lv-ico.slate{background:#8A93A3}
+.lv-ico.cyan{background:#22B9D6}
+.lv-ico.pink{background:#F45E9E}
+.lv-item .t1{font-size:15px;font-weight:600;display:flex;align-items:center}
+.lv-item .t1 .tt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv-item .lv-time{margin-left:auto;padding-left:10px;font-size:12px;font-weight:400;color:var(--ink-3);flex-shrink:0}
+.lv-item .t2{font-size:12px;color:var(--ink-3);margin-top:4px;line-height:1.55;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv-item .arr{color:#C6CCD6;align-self:center}
+/* 版面预览 */
+.preview-stage{background:linear-gradient(150deg,#FBEEDC,#F0DCC0);border-radius:14px;padding:22px 0 18px;display:flex;flex-direction:column;align-items:center}
+.ck2{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--ink-2);line-height:1.6;margin-top:10px}
+.ck2 .box{width:18px;height:18px;border-radius:5px;border:1.5px solid #C6CCD6;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px}
+.ck2 .box.on{background:var(--navy);border-color:var(--navy)}
+/* 演示入口（浮动 chip + 按当前屏动态说明） */
+.demo-fab{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:300}
+.demo-chip{display:flex;align-items:center;gap:7px;background:rgba(15,23,35,.72);border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:18px;padding:7px 13px;font-size:12.5px;font-weight:600;backdrop-filter:blur(6px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.demo-chip .x{display:inline-flex;width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;font-size:10px;border:1px solid rgba(255,255,255,.45)}
+@keyframes fadein{from{opacity:0;transform:translateY(-5px)}to{opacity:1}}
+/* 隐藏手机壳：去掉圆角与外壳描边阴影，便于无边框截图 */
+body.no-shell .phone{border-radius:0;box-shadow:none}
+/* -------- 微信服务号推送示意页（sc-wxpush）：模拟微信会话内的服务号模板消息 -------- */
+.wx-tdiv{text-align:center;font-size:11.5px;color:#9A9A9A;margin:16px 0 10px}
+.wxp-card{background:#fff;border-radius:8px;padding:15px 16px 0;margin-bottom:12px;cursor:pointer}
+.wxp-card h5{font-size:16px;font-weight:500;color:#171717;display:flex;justify-content:space-between;align-items:flex-start;margin:0 0 11px}
+.wxp-card h5 i{color:#B8B8B8;font-style:normal;letter-spacing:1.5px;font-size:14px}
+.wx-kv{display:flex;font-size:13.5px;line-height:1.55;margin-bottom:6px}
+.wx-kv .k{width:88px;flex-shrink:0;color:#9A9A9A}
+.wx-kv .v{flex:1;color:#171717}
+.wx-cfoot{display:flex;align-items:center;gap:6px;border-top:1px solid #F0F0F0;margin-top:12px;padding:10px 0;font-size:12.5px}
+.wx-cfoot img{width:18px;height:18px;border-radius:4px}
+.wx-cfoot .nm{color:#171717}
+.wx-cfoot .mp{margin-left:auto;display:flex;align-items:center;gap:3px;color:#7A7A7A}
+.wx-cfoot .arr2{color:#C7C7C7;font-size:14px;margin-left:2px}
+.wx-menubar{display:flex;align-items:stretch;height:46px;background:#F7F7F7;border-top:1px solid #E3E3E3;flex-shrink:0}
+.wx-menubar .kb{width:44px;display:flex;align-items:center;justify-content:center;border-right:1px solid #E3E3E3;color:#4A4A4A}
+.wx-menubar .mi{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;font-size:13px;color:#171717;cursor:pointer}
+.wx-menubar .mi+.mi{border-left:1px solid #E3E3E3}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* -------- 协议阅读页（sc-legal）：用户协议 / 隐私政策 / 儿童信息保护规则共用排版 -------- */
+.legal-doc{font-size:13.5px;line-height:1.9;color:var(--ink);padding-bottom:36px}
+.legal-doc h1{font-size:17px;font-weight:700;margin:6px 0 8px}
+.legal-doc .meta{font-size:12px;color:var(--ink-2);margin-bottom:14px}
+.legal-doc h2{font-size:14.5px;font-weight:700;margin:18px 0 8px}
+.legal-doc h3{font-size:13.5px;font-weight:700;margin:14px 0 6px}
+.legal-doc p{margin:0 0 10px}
+.legal-doc ol,.legal-doc ul{padding-left:20px;margin:0 0 10px}
+.legal-doc li{margin-bottom:6px}
+.legal-doc table{width:100%;border-collapse:collapse;font-size:12px;margin:4px 0 12px}
+.legal-doc th,.legal-doc td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.legal-doc th{background:#F4F7FB;font-weight:600}
+/* ---- 扫一扫页：模拟微信扫码相机——全屏虚化取景 + 绿色扫描光带循环下扫 ---- */
+.scan-cam{flex:1;position:relative;overflow:hidden;background:#3F3B36}
+.scan-cam::before{content:'';position:absolute;inset:0;background:radial-gradient(140% 90% at 28% 16%,rgba(126,117,106,.85),transparent 62%),radial-gradient(120% 80% at 76% 42%,rgba(100,92,83,.7),transparent 58%),radial-gradient(130% 90% at 42% 78%,rgba(114,106,96,.75),transparent 60%),linear-gradient(180deg,#5A544C 0%,#4B453E 55%,#3A352F 100%)}
+.scan-cam::after{content:'';position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 45%,transparent 55%,rgba(0,0,0,.3) 100%)}
+.scan-back{position:absolute;top:56px;left:18px;z-index:6;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);color:#4A443D;font-size:21px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.scan-line{position:absolute;left:0;right:0;top:-14%;height:14%;z-index:4;background:linear-gradient(180deg,rgba(43,213,151,0) 0%,rgba(43,213,151,.12) 45%,rgba(43,213,151,.5) 86%,rgba(104,238,187,.85) 100%);animation:scanSweep 2.8s ease-in-out infinite}
+@keyframes scanSweep{0%{top:-14%;opacity:1}70%{top:92%;opacity:1}84%{top:92%;opacity:0}100%{top:92%;opacity:0}}
+.scan-tip{position:absolute;left:24px;right:24px;bottom:16%;z-index:5;text-align:center;color:rgba(255,255,255,.95);font-size:15px;font-weight:500;text-shadow:0 1px 5px rgba(0,0,0,.45);line-height:1.7}
+.scan-tip span{display:block;font-size:12px;color:rgba(255,255,255,.68);font-weight:400}
+
+/* 单按钮提示对话框（2026-10-26，与老师端同款；pAlert 使用） */
+.phone .modal-mask{position:absolute;inset:0;z-index:60;background:rgba(14,20,32,.5);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-mask.show{opacity:1;pointer-events:auto}
+.modal-box{background:#fff;border-radius:16px;width:280px;overflow:hidden;transform:scale(.9);transition:transform .22s cubic-bezier(.4,0,.2,1)}
+.modal-mask.show .modal-box{transform:scale(1)}
+.modal-box .m-title{font-size:16px;font-weight:600;text-align:center;padding:20px 20px 8px}
+.modal-box .m-body{font-size:14px;color:var(--ink-2);text-align:center;padding:0 20px 20px}
+.modal-box .m-body.m-left{text-align:left;line-height:1.6}
+.modal-box .m-btns{display:flex;border-top:1px solid #EEF0F4}
+.modal-box .m-btns button{flex:1;padding:13px 0;font-size:15px;font-family:inherit;border:none;background:none;cursor:pointer}
+.modal-box .m-btns .m-ok{color:var(--navy);font-weight:600}
+
+/* 通知模块嵌入基线小程序单页：保留外层状态栏/标题栏，内部路由不创建小程序原生页面栈。 */
+#sc-notification.show{display:flex;flex-direction:column;height:100%;overflow:hidden}
+#sc-notification>.notification-module-body{display:flex;flex:1;min-height:0;padding:0;overflow:hidden;background:var(--bg)}
+#notification-frame{display:block;flex:1;width:100%;height:100%;min-height:0;border:0;background:var(--bg)}

@@ -454,3 +454,25 @@ body.notice-embedded-web-print .school-notice-print-actions{flex:0 0 auto;positi
  body.printing-notice .school-notice-preview-stage{display:none!important}
  body.printing-notice .school-notice-print-sheet.print-only{display:block!important}
 }
+/* 签字照片缩略框改为竖版展示 */
+.receipt-detail-table .signature-photo-link{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:56px !important;
+  height:84px !important;
+  padding:4px !important;
+  border:1px solid #d9e2ec !important;
+  border-radius:6px !important;
+  background:#fff !important;
+  overflow:hidden !important;
+  vertical-align:middle !important;
+}
+.receipt-detail-table .signature-img{
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  display:block !important;
+}

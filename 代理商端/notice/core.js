@@ -51,7 +51,7 @@ function allowedSchool(a,id){const s=school(id),home=school(a.schoolId);if(!s)re
     if(n.blocks.filter(b=>b.type==='text').reduce((s,b)=>s+plainText(b.text).length,0)>5000)return fail('CONTENT','正文文本合计最多5000字');
     if(n.blocks.filter(b=>b.type==='image').length>60)return fail('CONTENT','图片最多60张');
     for(const b of n.blocks){if(b.type==='link'&&!/^https?:\/\//i.test(b.url||''))return fail('CONTENT','链接须以 https:// 或 http:// 开头');if(['image','video','audio'].includes(b.type)&&!b.src&&!b.asset)return fail('CONTENT','请为'+({image:'图片',video:'视频',audio:'录音'}[b.type])+'选择素材');}
-    if(n.attachments.length>9||n.attachments.some(f=>f.size>20*1024*1024))return fail('FILES','附件最多9份，每份不超过20MB');if(n.attachments.some(f=>!/\.(pdf|docx?|xlsx?|jpe?g|png)$/i.test(f.name||'')))return fail('FILES','附件仅支持PDF、Word、Excel及JPEG、JPG、PNG格式');
+    if(n.attachments.length>5||n.attachments.some(f=>f.size>20*1024*1024))return fail('FILES','PDF附件最多5份，每份不超过20MB');if(n.attachments.some(f=>!/\.pdf$/i.test(f.name||'')))return fail('FILES','附件仅支持PDF格式，每份不超过20MB');
     if((n.config.classes||[]).some(id=>!classes.some(c=>c.id===id))||(n.config.studentIds||[]).some(id=>!students.some(s=>s.id===id))||(n.config.teachers||[]).some(id=>!teachers.some(t=>t.id===id)))return fail('AUDIENCE','发布对象包含无效的班级或人员');
     if(!allowedAudience(a,n))return fail('PERMISSION','接收对象超出当前账号可管理范围，不能覆盖其他班级的内容');
     if(publish&&a.role==='agent'&&n.version===0){const allClassIds=classes.map(c=>c.id),chosenClasses=[...new Set(n.config.classes||[])],chosenStudents=n.config.studentIds||[],chosenTeachers=[...new Set(n.config.teachers||[])],wholeStudents=!chosenStudents.length&&(chosenClasses.length===0||(chosenClasses.length===allClassIds.length&&allClassIds.every(id=>chosenClasses.includes(id)))),wholeTeachers=chosenTeachers.length===0||(chosenTeachers.length===teachers.length&&teachers.every(t=>chosenTeachers.includes(t.id)));if(!wholeStudents||!wholeTeachers)return fail('AUDIENCE','代理商只能选择全体学生或全体教师');}
@@ -130,31 +130,55 @@ function allowedSchool(a,id){const s=school(id),home=school(a.schoolId);if(!s)re
   }
   function due(db,at=Date.now(),schoolId=null) {let changed=false;db.notices.forEach(n=>{if((!schoolId||n.schoolId===schoolId)&&n.status==='scheduled'&&Date.parse(n.config.scheduledAt)<=at){n.status='published';n.version++;n.publishedAt=at;n.rosterSnapshot=rosterSnapshot(n,at);n.deliveryWindow={startedAt:at,untilAt:Number.isFinite(Date.parse(n.config.deadlineAt||''))?Date.parse(n.config.deadlineAt):at+30*DAY_MS};writeLog(n,{name:'定时任务',role:'system'},'定时发布',at);changed=true;}});if(changed)db.revision++;return changed;}
   function seed(){
-    const at=Date.now(),db={schema:10,revision:1,notices:[],deletedArchive:[],templates:[]};
+    const at=Date.now(),db={schema:11,revision:1,notices:[],deletedArchive:[],templates:[]};
     for(const s of schools.filter(s=>s.authorized)){
       const proxyRole= s.mode==='agency'?'agent':'ops';
+      const allCls=classes.map(c=>c.id),allTch=teachers.map(t=>t.id);
       const examples=[
         ['家校携手，赴一场秋日之约','confirm','school',['c52','c32'],'published',false],
         ['秋季研学活动安全告知书','sign','teacher',['c52'],'published',true],
-        ['一分钟看懂校园安全','read',proxyRole,['c52','c32'],'published',false],
+        ['一分钟看懂校园安全','read',proxyRole,['c52','c32'],'published','partial-read'],
         ['明日美术课，请带好这些材料','read','teacher',['c52'],'published',false],
-        ['家庭教育公益课 · 在线学习入口','read',proxyRole,['c52'],'published',false],
+        ['家庭教育公益课 · 在线学习入口','read',proxyRole,['c52'],'published','all-read'],
         ['期中家长会时间提醒','confirm','teacher',['c52'],'scheduled',false],
         ['冬季校服订购通知','confirm','school',['c52'],'draft',false],
         ['教职工家校沟通培训','sign','school',[],'published',true],
-        ['已取消的社团活动安排','read','school',['c52'],'deleted',false]
+        ['已取消的社团活动安排','read','school',['c52'],'deleted',false],
+        ['秋季校园安全与防溺水告知书','confirm',proxyRole,allCls,'published','partial-confirm'],
+        ['冬季研学实践活动家长签字回执','sign',proxyRole,allCls,'published','partial-sign'],
+        ['校园食堂开放日邀请函','sign',proxyRole,allCls,'published','zero-unread'],
+        ['期末家长会时间预通知','confirm',proxyRole,allCls,'scheduled','none']
       ];
       examples.forEach((ex,i)=>{
-        const [title,ack,role,cls,status,withReceipt]=ex,a=actor(role,s.id),n=empty(a);n.id=s.id+'-n'+(i+1);n.noticeKind=[0,2,4].includes(i)?'beautiful':'ordinary';n.title=title;n.version=1;n.status=status;n.createdAt=at-(i+1)*3600000;n.updatedAt=n.createdAt;n.publishedAt=n.createdAt;n.config={classes:cls,studentIds:[],teachers:i===0?['t1','t2']:i===7?teachers.map(t=>t.id):[],ack,schoolName:role!=='teacher',scheduledAt:status==='scheduled'?new Date(at+86400000).toISOString():'',deadlineAt:''};
-        if(i===0){n.cover='assets/campus.svg';n.blocks=[textBlock('亲爱的家长：\n教育是一场温暖的同行。诚邀您参加本周的校园开放日，一起走进孩子的学习日常。'),{id:uid('b'),type:'image',src:'assets/campus.svg',caption:'秋日校园，期待与您相见'},textBlock('活动时间：本周五 14:30—16:30\n活动地点：学校报告厅及各班教室\n温馨提示：请提前10分钟到校，入校时出示预约信息。'),{id:uid('b'),type:'link',title:'查看校园开放日活动安排',url:'https://www.moe.gov.cn/'}];n.attachments=[{id:uid('f'),name:'校园开放日活动安排.pdf',size:690,src:'assets/活动安排.pdf'}];}
-        if(i===1)n.blocks=[textBlock('为保障研学活动顺利开展，请家长和孩子共同阅读安全须知：\n1. 按时集合，服从带队老师安排。\n2. 文明出行，不独自离队。\n3. 如有身体不适，请及时告知班主任。\n请阅读后签字确认。')];
-        if(i===2)n.blocks=[textBlock('用一分钟，和孩子一起学习课间与出行安全。'),{id:uid('b'),type:'video',src:'assets/安全课堂.mp4',poster:'assets/campus.svg',caption:'校园安全小课堂 · 演示视频'}];
-        if(i===3)n.blocks=[textBlock('各位家长，明日美术课请为孩子准备：\n• 一盒彩笔\n• 两个干净的废旧纸盒\n• 一把儿童安全剪刀\n材料装入收纳袋并写好姓名，谢谢配合。')];
+        const [title,ack,role,cls,status,receiptMode]=ex,a=actor(role,s.id),n=empty(a);n.id=s.id+'-n'+(i+1);n.noticeKind=[0,2,4,9,10,11,12].includes(i)?'beautiful':'ordinary';n.title=title;n.version=1;n.status=status;n.createdAt=at-(i+1)*3600000;n.updatedAt=n.createdAt;n.publishedAt=n.createdAt;n.config={classes:cls,studentIds:[],teachers:i===0?['t1','t2']:i===7?allTch:[2,4,9,10,11,12].includes(i)?allTch:[],ack,schoolName:role!=='teacher',scheduledAt:status==='scheduled'?new Date(at+86400000).toISOString():'',deadlineAt:''};
+        if(i===0){n.cover='assets/campus.svg';n.blocks=[textBlock('\u3000\u3000亲爱的家长：\n教育是一场温暖的同行。诚邀您参加本周的校园开放日，一起走进孩子的学习日常。'),{id:uid('b'),type:'image',src:'assets/campus.svg',caption:'秋日校园，期待与您相见'},textBlock('\u3000\u3000活动时间：本周五 14:30—16:30\n活动地点：学校报告厅及各班教室\n温馨提示：请提前10分钟到校，入校时出示预约信息。'),{id:uid('b'),type:'link',title:'查看校园开放日活动安排',url:'https://www.moe.gov.cn/'}];n.attachments=[{id:uid('f'),name:'校园开放日活动安排.pdf',size:690,src:'assets/活动安排.pdf'}];}
+        if(i===1)n.blocks=[textBlock('\u3000\u3000为保障研学活动顺利开展，请家长和孩子共同阅读安全须知：\n1. 按时集合，服从带队老师安排。\n2. 文明出行，不独自离队。\n3. 如有身体不适，请及时告知班主任。\n请阅读后签字确认。')];
+        if(i===2)n.blocks=[textBlock('\u3000\u3000用一分钟，和孩子一起学习课间与出行安全。'),{id:uid('b'),type:'video',src:'assets/安全课堂.mp4',poster:'assets/campus.svg',caption:'校园安全小课堂 · 演示视频'}];
+        if(i===3)n.blocks=[textBlock('\u3000\u3000各位家长，明日美术课请为孩子准备：\n• 一盒彩笔\n• 两个干净的废旧纸盒\n• 一把儿童安全剪刀\n材料装入收纳袋并写好姓名，谢谢配合。')];
         if(i===4)n.blocks=[{id:uid('b'),type:'link',title:'家庭教育公益课 · 点击查看',url:'https://www.moe.gov.cn/'}];
-        if(i>=5)n.blocks=[textBlock(i===5?'本周五召开期中家长会，请合理安排时间。具体教室安排以班主任后续通知为准。':i===7?'本周三16:30开展家校沟通专题培训，请各位教师阅读并签字确认。':'请各位家长查看本次安排，感谢您的支持与配合。')];
+        if(i>=5&&i<=8)n.blocks=[textBlock(i===5?'\u3000\u3000本周五召开期中家长会，请合理安排时间。具体教室安排以班主任后续通知为准。':i===7?'\u3000\u3000本周三16:30开展家校沟通专题培训，请各位教师阅读并签字确认。':'\u3000\u3000请各位家长查看本次安排，感谢您的支持与配合。')];
+        if(i===9){n.cover='assets/campus.svg';n.blocks=[textBlock('\u3000\u3000各位家长、老师：秋季气候转凉，请共同做好校园安全、上下学交通安全及防溺水教育提醒，阅读后请点击“确认收到”。'),{id:uid('b'),type:'image',src:'assets/campus.svg',caption:'校园安全宣传指引'}];n.attachments=[{id:uid('f'),name:'秋季校园安全告知书.pdf',size:245760,src:'assets/活动安排.pdf'}];}
+        if(i===10){n.cover='assets/campus.svg';n.blocks=[textBlock('\u3000\u3000各位家长：学校将于下周组织冬季研学实践活动，请仔细阅读行程安排与安全须知，并在本通知底部完成手写签字确认。'),{id:uid('b'),type:'link',title:'冬季研学实践行程安排详情',url:'https://www.moe.gov.cn/'}];n.attachments=[{id:uid('f'),name:'冬季研学行程与安全须知.pdf',size:512000,src:'assets/活动安排.pdf'}];}
+        if(i===11){n.blocks=[textBlock('\u3000\u3000各位家长、老师：本周四上午将举办校园食堂开放日活动，欢迎预约入校参观，请阅读并完成签字回执。')];}
+        if(i===12){n.blocks=[textBlock('\u3000\u3000各位家长、老师：期末家长会拟定于下周五下午召开，届时将同步各科学习情况与寒假安排，请留意查收。')];}
         if(['published','deleted'].includes(status)){n.rosterSnapshot=rosterSnapshot(n,n.publishedAt);n.deliveryWindow={startedAt:n.publishedAt,untilAt:n.publishedAt+30*DAY_MS};}
-        if(i<5&&i!==3){recipients(n).students.slice(0,4).forEach((id,j)=>{n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'other',guardian:j?'家长':'爸爸',readAt:at-1200000,signatures:withReceipt?[{at:at-900000,version:1,image:'assets/signature.svg'}]:[]};if(withReceipt){[['p-mom','妈妈',780000],['p-grandpa','爷爷',660000],['p-grandma','奶奶',540000]].forEach(([gid,gname,off])=>{n.receipts[id+':'+gid]={kind:'student',recipientId:id,guardianId:gid,guardian:gname,guardianSnapshot:{id:gid,name:gname},readAt:at-off-120000,signatures:[{at:at-off,version:1,image:'assets/signature.svg'}]};});}});}
-        if(i===7)n.receipts['t2:seed']={kind:'teacher',recipientId:'t2',guardianId:'t2',guardian:'李建国',readAt:at-600000,signatures:[{at:at-600000,version:1,image:'assets/signature.svg'}]};
+        const stuIds=recipients(n).students,tchIds=recipients(n).teachers;
+        if(receiptMode==='partial-read'){
+          stuIds.slice(0,12).forEach((id,j)=>{n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'g'+j,guardian:j%2?'妈妈':'爸爸',readAt:at-1800000+j*30000,signatures:[]};});
+          tchIds.slice(0,5).forEach((id,j)=>{const t=teachers.find(x=>x.id===id);n.receipts[id+':seed']={kind:'teacher',recipientId:id,guardianId:id,guardian:t?.name||'教师',readAt:at-1500000+j*20000,signatures:[]};});
+        }else if(receiptMode==='all-read'){
+          stuIds.forEach((id,j)=>{n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'g'+j,guardian:j%2?'爸爸':'妈妈',readAt:at-2400000+j*25000,signatures:[]};});
+          tchIds.forEach((id,j)=>{const t=teachers.find(x=>x.id===id);n.receipts[id+':seed']={kind:'teacher',recipientId:id,guardianId:id,guardian:t?.name||'教师',readAt:at-2200000+j*20000,signatures:[]};});
+        }else if(receiptMode==='partial-confirm'){
+          stuIds.slice(0,22).forEach((id,j)=>{const confirmed=j<14;n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'g'+j,guardian:j%2?'妈妈':'爸爸',readAt:at-2100000+j*20000,...(confirmed?{confirmAt:at-1800000+j*20000,confirmVersion:1}:{}),signatures:[]};});
+          tchIds.slice(0,6).forEach((id,j)=>{const t=teachers.find(x=>x.id===id),confirmed=j<4;n.receipts[id+':seed']={kind:'teacher',recipientId:id,guardianId:id,guardian:t?.name||'教师',readAt:at-1900000+j*20000,...(confirmed?{confirmAt:at-1600000+j*20000,confirmVersion:1}:{}),signatures:[]};});
+        }else if(receiptMode==='partial-sign'){
+          stuIds.slice(0,24).forEach((id,j)=>{const signed=j<12;n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'g'+j,guardian:j%2?'爸爸':'妈妈',readAt:at-2000000+j*20000,signatures:signed?[{at:at-1700000+j*20000,version:1,image:'assets/signature.svg'}]:[]};if(signed&&j<3){[['p-mom','妈妈',780000],['p-grandpa','爷爷',660000],['p-grandma','奶奶',540000]].forEach(([gid,gname,off])=>{n.receipts[id+':'+gid]={kind:'student',recipientId:id,guardianId:gid,guardian:gname,guardianSnapshot:{id:gid,name:gname},readAt:at-off-120000,signatures:[{at:at-off,version:1,image:'assets/signature.svg'}]};});}});
+          tchIds.slice(0,5).forEach((id,j)=>{const t=teachers.find(x=>x.id===id),signed=j<3;n.receipts[id+':seed']={kind:'teacher',recipientId:id,guardianId:id,guardian:t?.name||'教师',readAt:at-1700000+j*20000,signatures:signed?[{at:at-1400000+j*20000,version:1,image:'assets/signature.svg'}]:[]};});
+        }else if(receiptMode===true||receiptMode===false){
+          if(i<5&&i!==3){stuIds.slice(0,4).forEach((id,j)=>{n.receipts[id+':seed']={kind:'student',recipientId:id,guardianId:'other',guardian:j?'家长':'爸爸',readAt:at-1200000,signatures:receiptMode?[{at:at-900000,version:1,image:'assets/signature.svg'}]:[]};if(receiptMode){[['p-mom','妈妈',780000],['p-grandpa','爷爷',660000],['p-grandma','奶奶',540000]].forEach(([gid,gname,off])=>{n.receipts[id+':'+gid]={kind:'student',recipientId:id,guardianId:gid,guardian:gname,guardianSnapshot:{id:gid,name:gname},readAt:at-off-120000,signatures:[{at:at-off,version:1,image:'assets/signature.svg'}]};});}});}
+          if(i===7)n.receipts['t2:seed']={kind:'teacher',recipientId:'t2',guardianId:'t2',guardian:'李建国',readAt:at-600000,signatures:[{at:at-600000,version:1,image:'assets/signature.svg'}]};
+        }
         writeLog(n,a,status==='draft'?'保存草稿':'发布通知',n.createdAt,'原型示例数据');
         if(status==='deleted')db.deletedArchive.push({id:n.id,schoolId:n.schoolId,sourceStatus:'已删除示例记录',deletedAt:n.updatedAt,deletedBy:{id:'seed',name:'演示数据',role:'system'},snapshot:clone(n)});else db.notices.push(n);
       });

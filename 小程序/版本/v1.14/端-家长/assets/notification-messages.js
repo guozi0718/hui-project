@@ -1,0 +1,24 @@
+/* 通知投递的离线演示；复用消息Tab与服务号示例，不调用真实发送服务。 */
+(()=>{'use strict';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let painting=false,hooked=false,guide=false;
+function api(){return window.NotificationMini;}
+function label(m){return ({read:'请阅读通知',confirm:'请确认收到',sign:'请签字确认'})[m.ack]||'请查看通知';}
+function paint(){if(painting||!api())return;painting=true;try{
+ const list=api().messageItems(),screen=document.getElementById('sc-msgs');
+ let group=document.getElementById('notice-message-group');if(!group&&screen){group=document.createElement('div');group.id='notice-message-group';group.className='msg-grp';(screen.querySelector('.body .pad')||screen.querySelector('.body')).prepend(group);}
+ if(group){group.innerHTML=list.length?'<div class="section-t" style="margin-top:2px">通知消息</div><div class="card" style="padding-top:6px;padding-bottom:6px">'+list.map((m,i)=>'<div class="todo-item" data-cat="notice" data-ago="'+Math.max(0,Math.floor((Date.now()-m.createdAt)/86400000))+'" data-notice-key="'+esc(m.key)+'"><div class="t-ico amber">▤'+(!m.readAt?'<span class="unread-dot" data-m="notice-'+i+'"></span>':'')+'</div><div class="bd"><div class="t1">'+esc(m.title)+'</div><div class="t2">'+esc(m.childName?m.childName+' · ':'')+esc(m.source)+' · '+new Date(m.createdAt).toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})+' · '+label(m)+'</div></div><span class="arr">›</span></div>').join('')+'</div>':'';}
+ if(group&&!document.querySelector('#home-rl')){group.querySelectorAll('.todo-item').forEach(el=>{el.classList.replace('todo-item','lv-item');const icon=el.querySelector('.t-ico');icon.classList.replace('t-ico','lv-ico');el.querySelector('.bd').style.cssText='flex:1;min-width:0';});}
+ const push=document.querySelector('#sc-wxpush .body>div');if(push){let container=document.getElementById('notice-service-messages');if(!container){container=document.createElement('div');container.id='notice-service-messages';push.prepend(container);}container.innerHTML=list.filter(m=>m.channels.service!=='failed').map(m=>'<div class="wxp-card" data-notice-key="'+esc(m.key)+'"><h5>学校通知<i>⋯</i></h5><div class="wx-kv"><span class="k">通知标题</span><span class="v">'+esc(m.title)+'</span></div>'+(m.childName?'<div class="wx-kv"><span class="k">学生姓名</span><span class="v">'+esc(m.childName)+'</span></div>':'')+'<div class="wx-kv"><span class="k">发布来源</span><span class="v">'+esc(m.source)+'</span></div><div class="wx-kv"><span class="k">查收要求</span><span class="v">'+label(m)+'</span></div><div class="wxp-foot">查看详情 <span>›</span></div></div>').join('');}
+ window.applyMsgFilter?.();window.updateMsgCnt?.();
+ if(!guide){try{for(const id of ['sc-msgs','sc-wxpush']){const old=demoInfo[id]||{t:id==='sc-msgs'?'消息':'微信服务号推送',d:'',a:[]};demoInfo[id]={...old,d:old.d+'\n【通知消息】发布后按通知有效范围自动建立消息：教师按本人，家长按学生和账号分别生成；同一通知/学生/账号去重。消息Tab保留既有读态、类别、时间筛选。全部已读只清消息红点，不计通知正文阅读。点击核验当前身份与对象范围，打开正文才记已读；返回保留消息筛选。删除保留消息记录但正文不可打开。\n【服务号联动】复用服务号卡片演示。服务号发送失败、未关注或授权不足不影响发布及小程序消息，渠道分别记录结果。本地不进行真实微信发送。',a:[...(old.a||[]),['预览 · 通知消息',"NotificationMini.messageDemo('confirm')"],['预览 · 签字通知消息',"NotificationMini.messageDemo('sign')"],['预览 · 通知已删除',"NotificationMini.messageDemo('deleted')"],['预览 · 服务号发送失败',"NotificationMini.messageDemo('service-fail')"]]};}guide=true;}catch{}}
+ if(!hooked){hooked=true;const all=window.markAllRead;if(all)window.markAllRead=function(){api().markMessages();all();paint();};}
+ }finally{painting=false;}}
+document.addEventListener('click',e=>{const row=e.target.closest('[data-notice-key]');if(!row)return;api()?.openMessage(row.dataset.noticeKey,row.closest('#sc-wxpush')?'sc-wxpush':'sc-msgs');paint();});
+window.addEventListener('zxh-notice-ready',paint);window.addEventListener('zxh-notice-change',paint);window.addEventListener('storage',paint);
+const observer=new MutationObserver(records=>{if(!records.some(r=>r.type==='attributes'&&r.target.classList?.contains('screen')))return;const current=document.querySelector('.screen.show')?.id;if(current==='sc-home'&&api()?.pendingShare?.()){api().verifyShare();return;}if(['sc-msgs','sc-wxpush'].includes(current))paint();});
+document.querySelectorAll('.screen').forEach(el=>observer.observe(el,{attributes:true,attributeFilter:['class']}));
+// Parent share login stays on the established login screen; success resumes a pending notice.
+const ready=()=>{paint();};
+window.addEventListener('zxh-notice-ready',ready);ready();
+})();

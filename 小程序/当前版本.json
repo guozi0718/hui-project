@@ -1,18 +1,18 @@
 {
   "project": "智小徽小程序",
-  "version": "v1.13",
-  "status": "移除通知分享全部演示说明完整候选，页面待验收",
+  "version": "v1.14",
+  "status": "移除通知来源（我）后缀显示完整候选，页面待验收",
   "date": "2026-11-26",
-  "directory": "版本/v1.13",
-  "tag": "miniapp-v1.13-rc.1",
+  "directory": "版本/v1.14",
+  "tag": "miniapp-v1.14-rc.1",
   "entries": {
-    "parent": "版本/v1.13/端-家长/home.html",
-    "teacher": "版本/v1.13/端-教师/home.html"
+    "parent": "版本/v1.14/端-家长/home.html",
+    "teacher": "版本/v1.14/端-教师/home.html"
   },
   "documents": [
-    "版本/v1.13/文档/通知功能产品需求文档.md",
-    "版本/v1.13/文档/联系客服功能产品需求文档.md",
-    "版本/v1.13/文档/客户反馈功能产品需求文档.md"
+    "版本/v1.14/文档/通知功能产品需求文档.md",
+    "版本/v1.14/文档/联系客服功能产品需求文档.md",
+    "版本/v1.14/文档/客户反馈功能产品需求文档.md"
   ],
   "automaticPush": true
 }

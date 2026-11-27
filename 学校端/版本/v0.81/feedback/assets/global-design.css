@@ -1,0 +1,19 @@
+/* School public design contract. Dialog geometry and feature-specific layouts remain owned by features. */
+:root{--school-font:14px;--school-control-height:32px;--school-gap:16px;--school-radius:4px}
+body,input,select,textarea,button{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.sd a{text-decoration:none}.tab{flex-shrink:0}.tab:focus-visible,.mi:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
+#workspace>.shell-state{min-height:360px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px 24px;text-align:center}
+.shell-state h2{font-size:18px;font-weight:600}.shell-state p{color:var(--t2);max-width:560px;line-height:1.7}
+.shell-state button,.shell-frame-help button{height:32px;padding:0 16px;border-radius:4px;border:1px solid var(--brand);color:var(--brand);background:white;font-size:14px}
+.shell-state button:disabled{cursor:wait;opacity:.6}.shell-frame-help{padding:8px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;color:var(--t2);font-size:12px}
+.shell-link-host{display:flex;flex-direction:column;height:calc(100vh - 140px);min-height:480px}.shell-link-host iframe{flex:1;min-height:0;height:auto;width:100%;border:0;background:white}
+.shell-link-host iframe[hidden]{display:none}.shell-link-host>.shell-state{flex:1}.shell-frame-help[hidden]{display:none}
+/* Do not impose a universal dialog width, grid or height. Existing modal spacing stays intact. */
+.mask .dlg,.v5-mask .dlg{font-size:14px;line-height:1.5}
+
+/* Modal chrome is outside the only content scroller. Keep feature widths and body layouts. */
+body .mask:has(> .dlg){overflow:hidden;padding-top:8vh;padding-bottom:6vh}
+body .mask > .dlg{display:flex;flex-direction:column;min-height:0;max-height:86vh;overflow:hidden;margin-bottom:0}
+body .mask > .dlg > .dh,body .mask > .dlg > .df,body .drawer > .dh,body .drawer > .df{flex:0 0 auto;background:#fff}
+body .mask > .dlg > .db,body .drawer > .db{flex:1 1 auto;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain}
+@supports(height:100dvh){body .mask:has(> .dlg){padding-top:8dvh;padding-bottom:6dvh}body .mask > .dlg{max-height:86dvh}}

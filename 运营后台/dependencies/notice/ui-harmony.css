@@ -353,3 +353,61 @@ input.switch:checked {
   border-color: #01a239 !important;
   color: #fff !important;
 }
+
+
+/* 8. 附件按钮与列表对齐教师小程序 PDF 文件样式 */
+.notice-pdf-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  height: 32px !important;
+  padding: 0 12px !important;
+  border: 1px dashed #b6e6c3 !important;
+  border-radius: 6px !important;
+  background: #f2fbf3 !important;
+  color: #01a239 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+.notice-pdf-btn:hover:not(:disabled) {
+  border-style: solid !important;
+  border-color: #01a239 !important;
+  background: #e8f8ec !important;
+}
+.notice-pdf-btn:disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+}
+.notice-pdf-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex: none !important;
+}
+.notice-attachments-field .attachment-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 10px !important;
+  margin-top: 8px !important;
+  border: 1px solid #e7e9ee !important;
+  border-radius: 6px !important;
+  background: #fafbfd !important;
+  font-size: 12px !important;
+}
+.notice-attachments-field .attachment-row .grow {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+.notice-attachments-field .attachment-row .link {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  color: #1f2329 !important;
+  font-size: 12px !important;
+}
+.notice-attachments-field .attachment-row small {
+  color: #86909c !important;
+  flex: none !important;
+}

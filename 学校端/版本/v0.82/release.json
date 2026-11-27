@@ -1,0 +1,41 @@
+{
+  "release": "v0.68",
+  "endpoint": "school",
+  "repository": "guozi0718/hui-project",
+  "folder": "学校端/版本/v0.68",
+  "status": "最终版本；唯一维护源为 hui-project/学校端；运行包自包含，不关联功能项目",
+  "previewURL": "https://guozi0718.github.io/hui-project/%E5%AD%A6%E6%A0%A1%E7%AB%AF/index.html?page=school-feedback",
+  "routes": [
+    {
+      "loadMethod": "统一链接宿主",
+      "contentLink": "feedback/index.html",
+      "owner": "学校端",
+      "menu": "学校反馈",
+      "stableId": "school-feedback"
+    },
+    {
+      "loadMethod": "统一链接宿主",
+      "contentLink": "notice/index.html",
+      "owner": "学校端",
+      "menu": "校务管理 → 家校通知",
+      "stableId": "family-notice"
+    }
+  ],
+  "menuRoutes": {
+    "schoolFeedback": "school-feedback",
+    "familyNotice": "family-notice"
+  },
+  "scope": "学校反馈、家校通知、学校操作日志及学校端统一导航和公共页面样式。",
+  "verification": {
+    "javascript": "42个脚本语法检查通过",
+    "json": "页面包JSON解析通过",
+    "relativeResources": "页面资源路径完整，无父目录回退或localhost依赖",
+    "functionalDocuments": "三份独立说明，无截图、历史信息或跨文档引用",
+    "localBrowser": "反馈、通知、导航、弹窗与线索演示通过",
+    "githubPages": "发布后检查"
+  },
+  "limitations": [
+    "原型数据使用本地示例数据，不连接生产服务。",
+    "查看线索使用运营后台公开固定入口。"
+  ]
+}

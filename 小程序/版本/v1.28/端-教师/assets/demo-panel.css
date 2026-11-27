@@ -1,0 +1,76 @@
+/* 演示说明面板（老师端 / 家长端 / 学校端 / 运管端共用，脚本见 assets/demo-panel.js）
+   手机内浮层：宽度贴近手机屏（两侧各留 12px）；电脑上窗口够宽时为手机框右侧的侧栏（.side），字号与行距放大 */
+.demo-pop{display:none;position:absolute;top:42px;left:50%;margin-left:-183px;width:366px;background:#fff;border:1px solid #E2EAF4;border-radius:14px;padding:0 15px 14px;box-shadow:0 14px 40px rgba(29,99,216,.18);max-height:calc(844px - 42px - 10px - 24px);overflow-y:auto;overscroll-behavior:contain;text-align:left;color:#33415E}
+.demo-pop.show{display:block;animation:fadein .18s ease}
+.demo-pop.side{position:fixed;margin:0;z-index:1000;border-radius:16px;padding:0 20px 18px;box-shadow:0 18px 50px rgba(29,60,120,.16)}
+/* 标题与搜索框吸顶，滚动长说明时随时可搜、可收起 */
+.demo-pop .dp-hd{position:sticky;top:0;z-index:2;background:#fff;padding:14px 0 8px;margin-bottom:2px}
+.demo-pop .dp-tr{display:flex;align-items:flex-start;gap:8px}
+.demo-pop .dt{flex:1;font-size:12.5px;color:var(--navy);font-weight:600;line-height:1.5}
+.demo-pop.side .dt{font-size:15px}
+.demo-pop .dp-x{flex-shrink:0;cursor:pointer;color:#9AA6B8;font-size:12px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.demo-pop .dp-x:hover{background:#F0F4FA;color:#33415E}
+.demo-pop .dp-q{position:relative;margin-top:8px}
+.demo-pop .dp-q input{width:100%;box-sizing:border-box;height:30px;border:1px solid #E2EAF4;border-radius:8px;background:#F7F9FC;padding:0 64px 0 10px;font-size:12px;color:#33415E;outline:none;font-family:inherit}
+.demo-pop .dp-q input:focus{border-color:var(--navy);background:#fff}
+.demo-pop #dp-qn{position:absolute;right:10px;top:0;line-height:30px;font-size:11px;color:#9AA6B8;pointer-events:none}
+.demo-pop .dp-lb{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#9AA6B8;margin:8px 0 6px;letter-spacing:.5px}
+.demo-pop #dp-all{color:var(--navy);cursor:pointer;letter-spacing:0}
+/* 正文：概述段落 + 可折叠小节 */
+.demo-pop .dp-body p{margin:0 0 8px;font-size:11.5px;line-height:1.7;color:#5C6A80}
+.demo-pop.side .dp-body p{font-size:13px;line-height:1.8}
+.demo-pop .dp-sec{border-top:1px solid #EEF2F7}
+.demo-pop .dp-sh{display:flex;align-items:flex-start;gap:6px;padding:9px 0;font-size:12px;font-weight:600;color:#33415E;cursor:pointer;line-height:1.5;user-select:none}
+.demo-pop.side .dp-sh{font-size:13.5px}
+.demo-pop .dp-sh i{font-style:normal;color:#9AA6B8;transition:transform .15s;display:inline-block;width:10px;flex-shrink:0}
+.demo-pop .dp-sh:hover span{color:var(--navy)}
+.demo-pop .dp-sec.open .dp-sh i{transform:rotate(90deg)}
+.demo-pop .dp-sb{display:none;padding:0 0 4px 16px}
+.demo-pop .dp-sec.open .dp-sb{display:block}
+.demo-pop mark{background:#FFE58F;color:inherit;border-radius:2px;padding:0 1px}
+.demo-pop mark.cur{background:#FFB020}
+.demo-pop .dp-gen{border-top:1px dashed #E2EAF4;padding-top:10px;margin-top:8px}
+/* 演示操作：本页操作排成紧凑胶囊、可换行（开关仍占整行）；超过 8 个时其余收进「更多」；通用入口仍为整行按钮 */
+.demo-pop .dp-acts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.demo-pop .dp-acts button{display:inline-block;width:auto;margin:0;padding:5px 10px;border-radius:14px;font-size:11.5px;line-height:1.5}
+.demo-pop.side .dp-acts button{font-size:12px}
+.demo-pop .dp-acts .sw-row{flex-basis:100%;margin:0}
+.demo-pop .dp-acts.fold>:nth-child(n+9):not(.dp-more){display:none}
+.demo-pop .dp-more{display:inline-flex;align-items:center;padding:5px 10px;border-radius:14px;font-size:11.5px;color:var(--navy);cursor:pointer;border:1px dashed #BFD3F2;background:#fff}
+/* 演示操作按钮与开关 */
+.demo-pop button{display:block;width:100%;text-align:left;font-size:12px;color:#33415E;padding:8px 10px;border:1px solid #E2EAF4;border-radius:9px;margin-bottom:7px;background:#F5F9FE;font-family:inherit;cursor:pointer}
+.demo-pop button:hover{border-color:var(--navy);color:var(--navy)}
+.demo-pop .sw-row{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:#33415E;padding:8px 10px;border:1px solid #E2EAF4;border-radius:9px;margin-bottom:7px;background:#F5F9FE;cursor:pointer;user-select:none}
+.demo-pop .sw{position:relative;width:34px;height:19px;border-radius:10px;background:#C6CCD6;transition:background .18s;flex-shrink:0}
+.demo-pop .sw::after{content:"";position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#fff;transition:left .18s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.demo-pop .sw.on{background:var(--navy)}
+.demo-pop .sw.on::after{left:17px}
+/* Web 端：悬浮面板不占布局空间，层级低于业务遮罩（90）、抽屉与弹窗。 */
+.demo-pop.web{position:fixed;top:72px;right:16px;bottom:auto;left:auto;width:400px;max-width:calc(100vw - 24px);max-height:calc(100vh - 88px);box-sizing:border-box;margin:0;border-radius:14px;border:1px solid #ffe58f;background:#fffbf0;box-shadow:0 12px 36px rgba(173,104,0,.14);z-index:80;padding:0 18px 16px;color:#874d00;--navy:#ad6800;overflow-wrap:anywhere}
+.demo-pop.web .dp-hd{background:#fffbf0;padding-top:18px}
+.demo-pop.web .dp-tr{align-items:center;cursor:grab;touch-action:none;user-select:none}
+.demo-pop.web.dp-dragging .dp-tr{cursor:grabbing}
+.demo-pop.web .dp-tools{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.demo-pop.web .dp-tool{width:auto;min-width:28px;height:28px;padding:0 6px;margin:0;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;border-radius:6px;background:transparent;cursor:pointer}
+.demo-pop.web .dp-tool:focus-visible{outline:2px solid #ad6800;outline-offset:2px}
+.demo-pop.web .dp-notice{font-size:12px;line-height:1.6;color:#ad6800}
+.demo-pop.web .dp-notice:empty{display:none}
+.demo-pop.web.dp-mini{width:260px;padding-bottom:0;overflow:hidden}
+.demo-pop.web.dp-mini .dp-hd{padding:8px 0;margin:0}
+.demo-pop.web.dp-mini .dt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.demo-pop.web.dp-mini>.dp-hd~*,.demo-pop.web.dp-mini .dp-q,.demo-pop.web.dp-mini .dp-detach,.demo-pop.web.dp-mini .dp-notice{display:none}
+.demo-pop.web.dp-detached{display:none}
+.demo-pop.web.dp-window{display:block;position:relative;top:auto;right:auto;left:auto;width:100%;max-width:none;max-height:none;min-height:100vh;border:0;border-radius:0;box-shadow:none;overflow:visible;z-index:auto}
+.demo-pop.web.dp-window .dp-tr{cursor:default;touch-action:auto}
+.demo-pop.web.dp-window .dp-min{display:none}
+.demo-pop.web .dt{font-size:15px;color:#ad6800}
+.demo-pop.web .dp-q input{background:#fff;border-color:#ffe58f;color:#874d00}
+.demo-pop.web .dp-lb{color:#c79a4a}
+.demo-pop.web .dp-body p{font-size:13px;line-height:1.8;color:#6b4e16}
+.demo-pop.web .dp-sec{border-top-color:#fbe7b3}
+.demo-pop.web .dp-sh{font-size:13.5px;color:#874d00}
+.demo-pop.web .dp-sh i{color:#d4a64a}
+.demo-pop.web button,.demo-pop.web .sw-row,.demo-pop.web .dp-more{background:#fff;border-color:#ffe58f;color:#874d00}
+.demo-pop.web button:hover{background:#fff1c4;color:#ad6800;border-color:#ffd666}
+.demo-pop.web .dp-gen{border-top-color:#ffe58f}
+.demo-pop.web .dp-x:hover{background:#fff1c4;color:#ad6800}

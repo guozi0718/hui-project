@@ -1,2 +1,64 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学校 Web 原型</title><style>body{font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif;color:#344054;padding:48px}main{max-width:640px;margin:auto;padding:24px;border:1px solid #e4e7ec;border-radius:8px}a{color:#1677ff}</style></head><body><main><p id="status">正在打开学校端页面…</p><a id="entry" href="版本/v0.67/index.html">如果未自动跳转，请继续打开学校端。</a></main><script>(async()=>{const status=document.getElementById('status'),entry=document.getElementById('entry');try{const cfg=await fetch('当前版本.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('当前版本配置不可用');return r.json()});if(!/^版本\/v\d+(?:\.\d+)+$/.test(cfg.path||''))throw Error('版本路径无效');const target=new URL(cfg.path+'/index.html',location.href);target.search=location.search;entry.href=target.href;location.replace(target.href)}catch(e){status.textContent='学校端入口暂时无法载入，请使用版本入口。';const fallback=new URL('版本/v0.67/index.html',location.href);fallback.search=location.search;entry.href=fallback.href}})()</script></body></html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>智小徽学校后台</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#f2f5fa;font:14px/1.6 "PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:#1f2329}
+#app-frame{position:fixed;inset:0;width:100%;height:100%;border:0;display:block;background:#f2f5fa}
+#loading{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#f2f5fa;color:#4e5969;z-index:10}
+#loading[hidden]{display:none}
+#retry{height:32px;padding:0 16px;border:1px solid #01a239;border-radius:4px;background:#01a239;color:#fff;font:inherit;cursor:pointer}
+#retry[hidden]{display:none}
+</style>
+</head>
+<body>
+<div id="loading" role="status"><span id="status">正在加载学校端最新正式版本…</span><button id="retry" type="button" hidden>重新加载</button></div>
+<iframe id="app-frame" title="智小徽学校后台" referrerpolicy="no-referrer" hidden></iframe>
+<script>
+(()=>{
+  'use strict';
+  const frame=document.getElementById('app-frame');
+  const loading=document.getElementById('loading');
+  const status=document.getElementById('status');
+  const retry=document.getElementById('retry');
+
+  async function boot(){
+    retry.hidden=true;
+    loading.hidden=false;
+    status.textContent='正在加载学校端最新正式版本…';
+    try{
+      const res=await fetch('当前版本.json?t='+Date.now(),{cache:'no-store'});
+      if(!res.ok)throw new Error('当前版本配置不可用');
+      const cfg=await res.json();
+      const relPath=String(cfg.path||'').trim();
+      if(!/^版本\/v\d+(?:\.\d+)+$/.test(relPath))throw new Error('正式版本路径无效');
+      const target=new URL(relPath+'/index.html',location.href);
+      const q=new URLSearchParams(location.search);
+      if(!q.has('page'))q.set('page','school-feedback');
+      target.search=q.toString();
+      target.hash=location.hash;
+      frame.onload=()=>{
+        loading.hidden=true;
+        frame.hidden=false;
+        try{
+          const t=frame.contentDocument?.title;
+          if(t)document.title=t;
+        }catch{}
+      };
+      frame.src=target.href;
+    }catch(e){
+      status.textContent='最新正式版本加载失败，请点击重试或刷新页面。';
+      retry.hidden=false;
+    }
+  }
+  retry.addEventListener('click',boot);
+  boot();
+})();
+</script>
+</body>
+</html>

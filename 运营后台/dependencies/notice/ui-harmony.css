@@ -411,3 +411,52 @@ input.switch:checked {
   color: #86909c !important;
   flex: none !important;
 }
+
+
+/* 9. 附件三栏图标栏（添加图片 / 添加视频 / 添加链接，严格还原参考图） */
+.notice-att-bar {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 420px !important;
+  padding: 12px 0 !important;
+  border-top: 1px solid #e7e9ee !important;
+  border-bottom: 1px solid #f0f1f4 !important;
+  background: #fff !important;
+}
+.notice-att-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 4px 8px !important;
+  border: 0 !important;
+  border-right: 1px solid #e7e9ee !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #86909c !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+  transition: color .15s ease;
+}
+.notice-att-item:last-child {
+  border-right: 0 !important;
+}
+.notice-att-item svg {
+  width: 24px !important;
+  height: 24px !important;
+  color: #4e5969 !important;
+  stroke-width: 1.6 !important;
+}
+.notice-att-item:hover,
+.notice-att-item:hover svg {
+  color: #01a239 !important;
+}
+.notice-attachment-hint {
+  margin-top: 10px !important;
+  color: #86909c !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+}

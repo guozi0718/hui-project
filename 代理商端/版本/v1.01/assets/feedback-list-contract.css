@@ -1,0 +1,39 @@
+/* Feedback list presentation follows the enterprise contract list. Business forms are excluded. */
+body .v5 #v5-query{display:block;margin-bottom:20px;font-size:14px}
+body .v5 #v5-query .fgrid{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;width:100%}
+body .v5 #v5-query .fi,body .v5 #v5-query .fi:has(.feedback-region-fields){display:flex;flex:0 1 394px;width:394px;max-width:100%;min-width:0;gap:12px;grid-column:auto;align-items:center}
+body .v5 #v5-query .fi>label{width:112px;min-width:112px;flex:none;text-align:right;color:#4e5969;font-size:14px;line-height:20px}
+body .v5 #v5-query .fi>.ctl,body .v5 #v5-query .fi:has(.feedback-region-fields)>.ctl{display:flex;flex:1 1 270px;width:270px;min-width:0;max-width:270px;gap:8px}
+body .v5 #v5-query .ipt,body .v5 #v5-query .sel{box-sizing:border-box;width:100%;height:32px;padding:0 10px;font:inherit;color:#1f2329;background:#fff;border:1px solid #dcdfe6;border-radius:4px;outline:none}
+body .v5 #v5-query .ipt:focus,body .v5 #v5-query .sel:focus{border-color:#01a239}
+body .v5 #v5-query .feedback-region-fields{display:flex;width:100%;min-width:0;gap:6px}
+body .v5 #v5-query .feedback-region-fields>.sel{width:0;min-width:0;flex:1 1 0;padding:0 4px}
+body .v5 #v5-query .sel:disabled{background:#f6f8fb;color:#c9cdd4}
+body .v5 #v5-query .factions{display:flex;align-items:center;gap:10px;flex:none;margin-left:auto;min-height:32px}
+body .v5 #v5-query .btn,body .v5>.list-toolbar .btn{height:32px;padding:0 16px;font:inherit;border:1px solid #e7e9ee;border-radius:4px;background:#fff;color:#1f2329}
+body .v5 #v5-query .btn.pri,body .v5>.list-toolbar .btn.pri{background:#01a239;border-color:#01a239;color:#fff}
+body .v5>.list-toolbar{display:flex;align-items:center;justify-content:space-between;margin:0 0 16px;min-height:32px}
+body .v5>.list-toolbar .list-toolbar-left,body .v5>.list-toolbar .list-toolbar-right{display:flex;gap:10px;align-items:center}
+body .feedback-table{overflow:auto;border:1px solid #e7e9ee;border-radius:4px}
+body .feedback-table table{width:100%;min-width:1330px;border-collapse:collapse;table-layout:auto}
+body .feedback-table th,body .feedback-table td{font-size:13px;line-height:22px;padding:12px 14px;border-right:1px solid #e7e9ee;border-bottom:1px solid #e7e9ee;text-align:center}
+body .feedback-table th{background:#f2f5fa;color:#4e5969;font-weight:500}
+body .feedback-table td{color:#1f2329}
+body .feedback-table tr:last-child td{border-bottom:0}
+body .feedback-table td.l{text-align:left;min-width:220px;max-width:350px}
+body .feedback-table th.op,body .feedback-table td.op,body[data-end=agent] .feedback-table th.op,body[data-end=agent] .feedback-table td.op,body[data-end=school] .feedback-table th.op,body[data-end=school] .feedback-table td.op{width:1%;min-width:0;max-width:none;white-space:nowrap}
+body .feedback-table .v5-ops{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:14px;width:max-content;min-width:0;max-width:none;margin:0 auto}
+body .feedback-table .v7-action{flex:none;white-space:nowrap}
+body .v5>.pager{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:18px;font-size:13px;color:#4e5969}
+body .v5>.pager .sp{flex:1}
+body .v5>.pager .sel{width:72px;height:32px;border:1px solid #dcdfe6;border-radius:4px;background:#fff}
+body .v5>.pager .ipt{width:62px;height:32px;border:1px solid #dcdfe6;border-radius:4px;padding:0 8px;box-sizing:border-box}
+body .v5>.pager .btn,body .v5>.pager .pg{height:32px;min-width:32px;border:1px solid #e7e9ee;border-radius:4px;background:#fff;color:#1f2329;padding:0 10px;cursor:pointer;font:inherit}
+body .v5>.pager .pg.on{color:#01a239;border-color:#01a239;background:#f0fbf4}
+body .v5>.pager button:disabled{color:#c9cdd4;background:#f7f8fa;cursor:not-allowed}
+@media(max-width:650px){body .v5 #v5-query .fi{flex-basis:100%}body .v5 #v5-query .fi>label{width:84px;min-width:84px}body .v5 #v5-query .fi>.ctl{max-width:none}body .v5 #v5-query .factions{width:100%;justify-content:flex-end}}
+
+body .feedback-table td.op{position:sticky;right:0;z-index:2;background:#fff;box-shadow:-2px 0 4px rgba(0,0,0,.04)}
+body .feedback-table tr:nth-child(even) td{background:#f8faff}
+body .feedback-table tr:nth-child(even) td.op{background:#f8faff}
+body .feedback-table th.op{position:sticky;right:0;z-index:3;background:#f2f5fa;box-shadow:-2px 0 4px rgba(0,0,0,.04)}

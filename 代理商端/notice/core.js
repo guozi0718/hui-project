@@ -12,7 +12,7 @@
   ];
   const classes = [{id:'c52',name:'五年级2班',count:12},{id:'c51',name:'五年级1班',count:8},{id:'c32',name:'三年级2班',count:8},{id:'c11',name:'一年级1班',count:6}];
   const teachers = [{id:'t1',name:'王雅琴',dept:'五年级组'},{id:'t2',name:'李建国',dept:'五年级组'},{id:'t3',name:'孙丽华',dept:'德育处'},{id:'t4',name:'周敏',dept:'教务处'},{id:'t5',name:'陈晓峰',dept:'三年级组'},{id:'t6',name:'刘芳',dept:'三年级组'},{id:'t7',name:'赵明',dept:'一年级组'},{id:'t8',name:'马志远',dept:'校领导'}];
-  const students = classes.flatMap(c=>Array.from({length:c.count},(_,i)=>({id:c.id+'-'+(i+1),classId:c.id,hasGuardian:!(c.id==='c32'&&i===7),name:(c.id==='c52'&&i===0?'周子豪':c.id==='c32'&&i===0?'周子萱':c.id==='c52'&&i===1?'王子轩':c.id==='c52'&&i===2?'刘欣怡':c.id==='c52'&&i===3?'徐明轩':['陈','李','张','林','刘','吴','赵','徐'][i%8]+['思远','可欣','明轩','雨桐','梓涵','欣悦','沐阳','嘉宁'][Math.floor(i/2)%8])}))); 
+  const students = classes.flatMap(c=>Array.from({length:c.count},(_,i)=>({id:c.id+'-'+(i+1),classId:c.id,hasGuardian:!(c.id==='c32'&&i===7),studentStatus:c.id==='c52'&&i===10?'left':c.id==='c52'&&i===11?'graduated':'active',name:(c.id==='c52'&&i===0?'周子豪':c.id==='c32'&&i===0?'周子萱':c.id==='c52'&&i===1?'王子轩':c.id==='c52'&&i===2?'刘欣怡':c.id==='c52'&&i===3?'徐明轩':['陈','李','张','林','刘','吴','赵','徐'][i%8]+['思远','可欣','明轩','雨桐','梓涵','欣悦','沐阳','嘉宁'][Math.floor(i/2)%8])}))); 
   const children = [{id:'c52-1',name:'周子豪',classId:'c52'},{id:'c32-1',name:'周子萱',classId:'c32'}];
   const accounts = {school:{name:'陈老师',label:'学校管理员',id:'admin'},teacher:{name:'王雅琴',label:'任课老师',id:'t1'},agent:{name:'林悦',label:'代理商',id:'agent1'},ops:{name:'陈晨',label:'平台运营',id:'ops1'},parent:{name:'周女士',label:'学生家长',id:'p1'}};
   const ackNames={read:'只需阅读查看',confirm:'需确认收到',sign:'需签字确认'};
@@ -136,7 +136,7 @@ function allowedSchool(a,id){const s=school(id),home=school(a.schoolId);if(!s)re
     if(action==='sign'){if(n.config.ack!=='sign'||!signature)return fail('SIGN','请先手写签名');r.signatures.push({at,version:n.version,image:signature});}
     n.receipts[key]=r;db.revision++;return {ok:true,notice:clone(n)};
   }
-  function due(db,at=Date.now(),schoolId=null) {let changed=false;db.notices.forEach(n=>{if((!schoolId||n.schoolId===schoolId)&&n.status==='scheduled'&&Date.parse(n.config.scheduledAt)<=at){n.status='published';n.version++;n.publishedAt=at;n.rosterSnapshot=rosterSnapshot(n,at);n.deliveryWindow={startedAt:at,untilAt:Number.isFinite(Date.parse(n.config.deadlineAt||''))?Date.parse(n.config.deadlineAt):at+30*DAY_MS};writeLog(n,{name:'定时任务',role:'system'},'定时发布',at);changed=true;}});if(changed)db.revision++;return changed;}
+  function due(db,at=Date.now(),schoolId=null) {let changed=false;db.notices.forEach(n=>{if((!schoolId||n.schoolId===schoolId)&&n.status==='scheduled'&&Date.parse(n.config.scheduledAt)<=at){const r=recipients(n,at);if(!r.students.length&&!r.teachers.length)return;n.status='published';n.version++;n.publishedAt=at;n.rosterSnapshot=rosterSnapshot(n,at);n.deliveryWindow={startedAt:at,untilAt:Number.POSITIVE_INFINITY};writeLog(n,{name:'定时任务',role:'system'},'定时发布',at);changed=true;}});if(changed)db.revision++;return changed;}
   function seed(){
     const at=Date.now(),db={schema:11,revision:1,notices:[],deletedArchive:[],templates:[]};
     for(const s of schools.filter(s=>s.authorized)){

@@ -253,3 +253,82 @@
 .sr-log-table td:nth-child(4) { max-width: 260px !important; }
 .sr-log-table td:nth-child(5) { max-width: 420px !important; text-align: left !important; }
 .sr-log-table td:nth-child(5) > span { display: block !important; max-width: 420px !important; }
+
+/* 反馈回复顶部 Tab（全部反馈不带计数 / 我的待办带计数） */
+.v5-top-tabs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid #e7e9ee !important;
+}
+.v5-top-tab {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 0 2px 10px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #4e5969 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+}
+.v5-top-tab:hover {
+  color: #01a239 !important;
+}
+.v5-top-tab.is-active {
+  color: #01a239 !important;
+  font-weight: 600 !important;
+}
+.v5-top-tab.is-active::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: -1px !important;
+  height: 2px !important;
+  background: #01a239 !important;
+}
+.v5-tab-count {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 6px !important;
+  border-radius: 999px !important;
+  background: #fff3e8 !important;
+  color: #d97706 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* 客服关联学校表格列对齐（替代分组 Tab） */
+.cs-school-grid-head,
+.cs-school-grid-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr) 76px !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.cs-school-name-col {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+.cs-school-org-col {
+  color: #4e5969 !important;
+  font-size: 12px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.cs-school-state-col {
+  text-align: right !important;
+}
+.cs-school-org-sel {
+  min-width: 136px !important;
+}

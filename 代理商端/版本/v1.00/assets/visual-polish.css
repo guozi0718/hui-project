@@ -1,0 +1,434 @@
+/* ==========================================================================
+   代理商端 · 视觉美化临时副本主题（对标运营后台-客户管理已上线生产样式）
+   仅用于视觉美化预览副本，不改动任何业务逻辑、字段或交互结构。
+   ========================================================================== */
+
+:root {
+  --vp-brand: #01a239;
+  --vp-brand-hover: #008a2e;
+  --vp-brand-soft: #f2fbf3;
+  --vp-brand-tint: #e2fbdc;
+  --vp-brand-border: #b8eab5;
+  --vp-bg: #f2f5fa;
+  --vp-card: #ffffff;
+  --vp-th: #f2f5fa;
+  --vp-zebra: #fafbfd;
+  --vp-line: #e7e9ee;
+  --vp-line-soft: #f0f1f4;
+  --vp-input-border: #dcdfe6;
+  --vp-t1: #1f2329;
+  --vp-t2: #4e5969;
+  --vp-t3: #86909c;
+  --vp-danger: #e34d59;
+  --vp-warn: #ed7b2f;
+  --vp-radius-sm: 4px;
+  --vp-radius-md: 6px;
+  --vp-radius-lg: 8px;
+  --vp-shadow-card: 0 1px 4px rgba(31, 35, 41, 0.04);
+  --vp-shadow-dlg: 0 12px 36px rgba(15, 23, 42, 0.14);
+}
+
+/* 1. 全局字体与滚动条精致化 */
+body,
+body.unified-outer,
+body .cs-root,
+body .cs-mask {
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  color: var(--vp-t1);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.unified-outer {
+  background: var(--vp-bg) !important;
+}
+
+/* 2. 顶部栏、左侧导航、多页签（对齐运营后台生产壳层） */
+.unified-header {
+  height: 64px !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--vp-line) !important;
+  box-shadow: 0 1px 2px rgba(31, 35, 41, 0.03);
+  padding: 0 24px !important;
+}
+
+.unified-header b {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  color: var(--vp-t1) !important;
+}
+
+.unified-header b span {
+  display: inline-grid !important;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #f6a523 0%, #01a239 100%) !important;
+  font-size: 16px !important;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(1, 162, 57, 0.22);
+}
+
+.unified-header div {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px !important;
+  color: var(--vp-t2);
+}
+
+.unified-nav {
+  top: 64px !important;
+  width: 228px !important;
+  background: #ffffff !important;
+  border-right: 1px solid var(--vp-line) !important;
+  padding: 10px 8px 40px !important;
+}
+
+.unified-group,
+.unified-menu {
+  min-height: 40px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  padding-right: 14px !important;
+  border-radius: var(--vp-radius-md);
+  color: var(--vp-t1) !important;
+  font-size: 14px;
+  transition: background-color 0.16s ease, color 0.16s ease;
+  margin-bottom: 2px;
+}
+
+.unified-group {
+  font-weight: 600;
+  color: var(--vp-t2) !important;
+}
+
+.unified-group:hover,
+.unified-menu:hover {
+  background: #f6f8fb !important;
+  color: var(--vp-t1) !important;
+}
+
+.unified-menu.active {
+  position: relative;
+  color: var(--vp-brand) !important;
+  background: var(--vp-brand-soft) !important;
+  font-weight: 600;
+}
+
+.unified-menu.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--vp-brand);
+}
+
+.unified-main {
+  margin-left: 228px !important;
+}
+
+.unified-tabs {
+  height: 48px !important;
+  padding: 0 18px !important;
+  gap: 8px !important;
+  background: var(--vp-bg);
+}
+
+.unified-tab {
+  height: 32px;
+  padding: 0 12px !important;
+  border: 1px solid var(--vp-line) !important;
+  border-radius: var(--vp-radius-md) !important;
+  background: #ffffff !important;
+  color: var(--vp-t2) !important;
+  font-size: 13px !important;
+  transition: all 0.15s ease;
+}
+
+.unified-tab:hover {
+  border-color: #cfd6e0 !important;
+  color: var(--vp-t1) !important;
+}
+
+.unified-tab.active {
+  color: var(--vp-brand-hover) !important;
+  background: var(--vp-brand-tint) !important;
+  border-color: var(--vp-brand-border) !important;
+  font-weight: 600;
+}
+
+.unified-tab.active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--vp-brand);
+  flex: none;
+}
+
+.unified-workspace {
+  margin: 0 18px 18px !important;
+  border-radius: var(--vp-radius-lg) !important;
+  background: var(--vp-card) !important;
+  box-shadow: var(--vp-shadow-card);
+  border: 1px solid rgba(231, 233, 238, 0.7);
+}
+
+/* 3. 内容卡片与页面标题节奏统一 */
+body.unified-content #workspace,
+body.unified-content .card {
+  padding: 24px 26px !important;
+}
+
+body .cs-root h2,
+body .ph h2 {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: var(--vp-t1) !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.2px;
+}
+
+/* 4. 表单控件与按钮（对齐运营后台-客户管理 32px / 4px 标准） */
+body .ipt,
+body .sel,
+body .cs-root input,
+body .cs-root select,
+body .v5 #v5-query .ipt,
+body .v5 #v5-query .sel {
+  height: 32px !important;
+  border: 1px solid var(--vp-input-border) !important;
+  border-radius: var(--vp-radius-sm) !important;
+  color: var(--vp-t1) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+body .ipt:hover,
+body .sel:hover,
+body .cs-root input:hover,
+body .cs-root select:hover,
+body .v5 #v5-query .ipt:hover,
+body .v5 #v5-query .sel:hover {
+  border-color: #b9c2cf !important;
+}
+
+body .ipt:focus,
+body .sel:focus,
+body textarea:focus,
+body .cs-root input:focus,
+body .cs-root select:focus,
+body .v5 #v5-query .ipt:focus,
+body .v5 #v5-query .sel:focus {
+  border-color: var(--vp-brand) !important;
+  box-shadow: 0 0 0 2px rgba(1, 162, 57, 0.14) !important;
+}
+
+body .btn,
+body .cs-btn,
+body .v5 #v5-query .btn,
+body .v5 > .list-toolbar .btn {
+  height: 32px !important;
+  border-radius: var(--vp-radius-sm) !important;
+  border: 1px solid var(--vp-input-border) !important;
+  font-size: 13px !important;
+  font-weight: 400;
+  transition: all 0.15s ease;
+}
+
+body .btn:hover:not(:disabled),
+body .cs-btn:hover:not(:disabled),
+body .v5 #v5-query .btn:hover:not(:disabled),
+body .v5 > .list-toolbar .btn:hover:not(:disabled) {
+  border-color: var(--vp-brand) !important;
+  color: var(--vp-brand) !important;
+  background: #f9fef9 !important;
+}
+
+body .btn.pri,
+body .cs-btn.pri,
+body .v5 #v5-query .btn.pri,
+body .v5 > .list-toolbar .btn.pri {
+  background: var(--vp-brand) !important;
+  border-color: var(--vp-brand) !important;
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+body .btn.pri:hover:not(:disabled),
+body .cs-btn.pri:hover:not(:disabled),
+body .v5 #v5-query .btn.pri:hover:not(:disabled),
+body .v5 > .list-toolbar .btn.pri:hover:not(:disabled) {
+  background: var(--vp-brand-hover) !important;
+  border-color: var(--vp-brand-hover) !important;
+  color: #ffffff !important;
+}
+
+body .cs-btn.link,
+body .v7-action,
+body .lk {
+  font-size: 13px !important;
+  color: var(--vp-brand);
+  transition: color 0.14s ease;
+}
+
+body .cs-btn.link:hover:not(:disabled),
+body .v7-action:hover:not(:disabled),
+body .lk:hover {
+  color: var(--vp-brand-hover) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  text-decoration: underline;
+}
+
+body .cs-btn.danger,
+body .lk.red {
+  color: var(--vp-danger) !important;
+}
+
+/* 5. 筛选区：统一轻盈排版，去掉厚重分割线 */
+body .cs-root .cs-filter {
+  border-bottom: 1px solid var(--vp-line-soft) !important;
+  padding-bottom: 18px !important;
+  margin-bottom: 18px !important;
+  gap: 14px 20px !important;
+}
+
+body .v5 #v5-query {
+  padding-bottom: 16px;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid var(--vp-line-soft);
+}
+
+body .v5 #v5-query .fgrid {
+  gap: 14px 20px !important;
+}
+
+/* 6. 表格：彻底对齐运营后台-客户管理视觉标准 */
+body .tw,
+body .cs-table-wrap,
+body .feedback-table {
+  border: 1px solid var(--vp-line) !important;
+  border-radius: var(--vp-radius-md) !important;
+  background: #ffffff;
+}
+
+body .tw th,
+body .cs-table th,
+body .feedback-table th {
+  background: var(--vp-th) !important;
+  color: var(--vp-t2) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 11px 14px !important;
+  border-bottom: 1px solid var(--vp-line) !important;
+  border-right: 1px solid var(--vp-line) !important;
+}
+
+body .tw td,
+body .cs-table td,
+body .feedback-table td {
+  color: var(--vp-t1) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  padding: 11px 14px !important;
+  border-bottom: 1px solid var(--vp-line) !important;
+  border-right: 1px solid var(--vp-line-soft) !important;
+  transition: background-color 0.12s ease;
+}
+
+body .tw tr:nth-child(even) td,
+body .cs-table tr:nth-child(even) td,
+body .feedback-table tr:nth-child(even) td,
+body .feedback-table tr:nth-child(even) td.op {
+  background: var(--vp-zebra) !important;
+}
+
+body .tw tbody tr:hover td,
+body .cs-table tbody tr:hover td,
+body .feedback-table tbody tr:hover td,
+body .feedback-table tbody tr:hover td.op {
+  background: var(--vp-brand-soft) !important;
+}
+
+body .tw th.op,
+body .tw td.op,
+body .cs-table th.cs-ops,
+body .cs-table td.cs-ops,
+body .feedback-table th.op,
+body .feedback-table td.op {
+  box-shadow: -4px 0 8px -4px rgba(31, 35, 41, 0.08) !important;
+}
+
+/* 学校徽章与默认标识更柔和精致 */
+body .cs-school-names > span,
+body .cs-temp-badge {
+  background: #f5f7fa !important;
+  border: 1px solid #e4e8ef !important;
+  color: var(--vp-t2) !important;
+  border-radius: 3px !important;
+  padding: 1px 8px !important;
+  font-size: 12px !important;
+}
+
+/* 7. 分页条统一 */
+body .pager,
+body .cs-pager,
+body .v5 > .pager {
+  margin-top: 18px !important;
+  font-size: 13px !important;
+  color: var(--vp-t2) !important;
+}
+
+body .pager .pg,
+body .v5 > .pager .pg {
+  min-width: 30px !important;
+  height: 30px !important;
+  border-radius: var(--vp-radius-sm) !important;
+  border: 1px solid var(--vp-line) !important;
+  transition: all 0.14s ease;
+}
+
+body .pager .pg.on,
+body .v5 > .pager .pg.on {
+  background: var(--vp-brand) !important;
+  border-color: var(--vp-brand) !important;
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* 8. 弹窗统一精致度 */
+body .dlg,
+body .cs-dialog {
+  border-radius: var(--vp-radius-lg) !important;
+  box-shadow: var(--vp-shadow-dlg) !important;
+  border: 1px solid rgba(231, 233, 238, 0.8);
+}
+
+body .dh,
+body .cs-dh {
+  color: var(--vp-t1) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* 9. 反馈详情时间线气泡柔化 */
+body .v7-bubble {
+  background: #f7f9fc !important;
+  border: 1px solid #edf0f5;
+  border-radius: var(--vp-radius-md) !important;
+  padding: 12px 16px !important;
+}
+
+body .v7-answer .v7-bubble {
+  background: var(--vp-brand-soft) !important;
+  border-color: #d6f3d9;
+}

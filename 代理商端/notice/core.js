@@ -54,29 +54,37 @@ function allowedSchool(a,id){const s=school(id),home=school(a.schoolId);if(!s)re
     if(n.attachments.length>9)return fail('FILES','附件合计最多9份');if(n.attachments.some(f=>{const k=f.kind||((f.type||'').startsWith('image/')?'image':(f.type||'').startsWith('video/')?'video':f.url?'link':'file');if(k==='link')return !/^https?:\/\//i.test(f.url||'');if(k==='image')return f.size>10*1024*1024||(!/\.(jpe?g|png)$/i.test(f.name||'')&&!['image/jpeg','image/png'].includes(f.type||''));if(k==='video')return f.size>100*1024*1024||(!/\.mp4$/i.test(f.name||'')&&f.type!=='video/mp4');return f.size>20*1024*1024;}))return fail('FILES','附件支持JPEG、JPG、PNG图片（最大10M）、MP4视频（最大100M）及链接，合计最多9份');
     if((n.config.classes||[]).some(id=>!classes.some(c=>c.id===id))||(n.config.studentIds||[]).some(id=>!students.some(s=>s.id===id))||(n.config.teachers||[]).some(id=>!teachers.some(t=>t.id===id)))return fail('AUDIENCE','发布对象包含无效的班级或人员');
     if(!allowedAudience(a,n))return fail('PERMISSION','接收对象超出当前账号可管理范围，不能覆盖其他班级的内容');
-    if(publish&&a.role==='agent'&&n.version===0){const allClassIds=classes.map(c=>c.id),chosenClasses=[...new Set(n.config.classes||[])],chosenStudents=n.config.studentIds||[],chosenTeachers=[...new Set(n.config.teachers||[])],wholeStudents=!chosenStudents.length&&(chosenClasses.length===0||(chosenClasses.length===allClassIds.length&&allClassIds.every(id=>chosenClasses.includes(id)))),wholeTeachers=chosenTeachers.length===0||(chosenTeachers.length===teachers.length&&teachers.every(t=>chosenTeachers.includes(t.id)));if(!wholeStudents||!wholeTeachers)return fail('AUDIENCE','代理商只能选择全体学生或全体教师');}
+    if(publish&&a.role==='agent'){const allClassIds=classes.map(c=>c.id),chosenClasses=[...new Set(n.config.classes||[])],chosenStudents=n.config.studentIds||[],chosenTeachers=[...new Set(n.config.teachers||[])],wholeStudents=!chosenStudents.length&&(chosenClasses.length===0||(chosenClasses.length===allClassIds.length&&allClassIds.every(id=>chosenClasses.includes(id)))),wholeTeachers=chosenTeachers.length===0||(chosenTeachers.length===teachers.length&&teachers.every(t=>chosenTeachers.includes(t.id)));if(!wholeStudents||!wholeTeachers)return fail('AUDIENCE','代理商只能选择全体学生或全体教师');}
     if(!['read','confirm','sign'].includes(n.config.ack))return fail('CONFIG','请选择有效的查收方式');
     if(n.config.schoolName&&!a.schoolNameAllowed)return fail('PERMISSION','当前老师未获学校名义发布权限，请使用老师名义');
-    if(['agent','ops'].includes(a.role)&&!n.config.schoolName)return fail('PERMISSION','代发必须使用学校名义');
-    if(publish){const r=recipients(n);if(!r.students.length&&!r.teachers.length)return fail('AUDIENCE','请选择发布对象');const scheduleOn=n.config.scheduleEnabled===undefined?!!n.config.scheduledAt:!!n.config.scheduleEnabled,schedule=Date.parse(n.config.scheduledAt||'');if(scheduleOn&&(!Number.isFinite(schedule)||schedule<=at))return fail('SCHEDULE','请填写有效的定时发送时间，格式为 YYYY-MM-DD HH:mm:ss');if(n.config.scheduledAt&&!Number.isFinite(schedule))return fail('SCHEDULE','定时发送时间格式为 YYYY-MM-DD HH:mm:ss');}
+    if(['agent','ops'].includes(a.role)&&!n.version&&!n.config.schoolName)return fail('PERMISSION','代发必须使用学校名义');
+    if(publish){const r=recipients(n);if(!r.students.length&&!r.teachers.length)return fail('AUDIENCE','请选择发布对象');const scheduleOn=n.config.scheduleEnabled===undefined?!!n.config.scheduledAt:!!n.config.scheduleEnabled,schedule=Date.parse(n.config.scheduledAt||'');if(scheduleOn&&(!Number.isFinite(schedule)||Math.floor(schedule/60000)<Math.floor(at/60000)))return fail('SCHEDULE','定时发送时间必须大于等于当前时间（精确到分钟）');if(n.config.scheduledAt&&!Number.isFinite(schedule))return fail('SCHEDULE','定时发送时间格式为 YYYY-MM-DD HH:mm:ss');}
     return {ok:true};
   }
   function save(db,draft,a,baseVersion,intent='save',at=Date.now()){
     const old=db.notices.find(x=>x.id===draft.id);
     if(!allowedSchool(a,draft.schoolId)||a.role==='parent')return fail('PERMISSION','当前账号无权操作这所学校');
     if(old&&(!canEdit(a,old)||old.schoolId!==draft.schoolId))return fail('PERMISSION','当前通知不在可编辑范围内');
-    if(old&&old.version!==baseVersion)return fail('CONFLICT','其他端已更新此通知，你的输入已保留。请先查看最新版本。',{current:clone(old)});
-    if(old&&old.status==='published'&&locked(old))return fail('LOCKED','已有接收人阅读、确认或签字，通知不可编辑。');
+    if(old&&old.version!==baseVersion)return fail('CONFLICT','已被修改，本次修改无法提交',{current:clone(old)});
+    if(old&&old.status==='published'&&locked(old))return fail('LOCKED','已有人阅读，通知无法修改');
     const n=clone(draft);
-    if(['agent','ops'].includes(a.role))n.config.schoolName=true;
-    const sameLockedSettings=(next,prev)=>{const a=clone(next),b=clone(prev);a.schoolName=b.schoolName;return JSON.stringify(a)===JSON.stringify(b);};
-    if(old&&['published','scheduled'].includes(old.status)&&!sameLockedSettings(n.config,old.config))return fail('CONFIG_LOCKED','发布对象、查收方式和发布时间不能修改');
+    if(old){n.config.schoolName=old.config.schoolName;}else if(['agent','ops'].includes(a.role)){n.config.schoolName=true;}
     if(old&&old.status==='published'){
+      const prevOn=old.config.scheduleEnabled===undefined?!!old.config.scheduledAt:!!old.config.scheduleEnabled;
+      const nextOn=n.config.scheduleEnabled===undefined?!!n.config.scheduledAt:!!n.config.scheduleEnabled;
+      if(n.config.ack!==old.config.ack||nextOn!==prevOn||(n.config.scheduledAt||'')!==(old.config.scheduledAt||''))return fail('CONFIG_LOCKED','已发布通知不可修改查收方式或定时发送设置');
       n.status='published';n.receipts=clone(old.receipts);n.supplements=clone(old.supplements);n.publishedAt=old.publishedAt;
-      n.rosterSnapshot=clone(old.rosterSnapshot||rosterSnapshot(old,old.publishedAt||old.createdAt));
+      n.rosterSnapshot=rosterSnapshot(n,at);
       n.config.deadlineAt=old.config.deadlineAt||'';n.deliveryWindow={startedAt:at,untilAt:Number.isFinite(Date.parse(n.config.deadlineAt))?Date.parse(n.config.deadlineAt):at+30*DAY_MS};
     }else if(old&&old.status==='scheduled'){
-      n.status='scheduled';n.rosterSnapshot=clone(old.rosterSnapshot||{studentIds:[],capturedAt:null});n.deliveryWindow=clone(old.deliveryWindow||null);
+      if(n.config.ack!==old.config.ack)return fail('CONFIG_LOCKED','查收方式不能修改');
+      const nextOn=n.config.scheduleEnabled===undefined?!!n.config.scheduledAt:!!n.config.scheduleEnabled;
+      if(!nextOn||!n.config.scheduledAt){
+        n.config.scheduleEnabled=false;n.config.scheduledAt='';n.status='published';n.publishedAt=at;
+        n.rosterSnapshot=rosterSnapshot(n,at);n.deliveryWindow={startedAt:at,untilAt:Number.isFinite(Date.parse(n.config.deadlineAt||''))?Date.parse(n.config.deadlineAt):at+30*DAY_MS};
+      }else{
+        n.status='scheduled';n.rosterSnapshot=clone(old.rosterSnapshot||{studentIds:[],capturedAt:null});n.deliveryWindow=clone(old.deliveryWindow||null);
+      }
     }else if(intent==='draft'){n.status='draft';n.config={classes:[],studentIds:[],teachers:[],ack:'read',schoolName:['school','agent','ops'].includes(a.role),scheduleEnabled:false,scheduledAt:'',deadlineAt:''};n.rosterSnapshot={studentIds:[],capturedAt:null};n.deliveryWindow=null;}else if(intent==='publish'||old?.status==='scheduled'){
       n.status=n.config.scheduledAt?'scheduled':'published';
       if(n.status==='published'){n.publishedAt=at;n.rosterSnapshot=rosterSnapshot(n,at);n.deliveryWindow={startedAt:at,untilAt:Number.isFinite(Date.parse(n.config.deadlineAt||''))?Date.parse(n.config.deadlineAt):at+30*DAY_MS};}
@@ -89,7 +97,7 @@ function allowedSchool(a,id){const s=school(id),home=school(a.schoolId);if(!s)re
     if(old)db.notices[db.notices.indexOf(old)]=n;else db.notices.unshift(n);db.revision++;return {ok:true,notice:clone(n)};
   }
   function manage(db,id,a,version,action,payload={},at=Date.now()){
-    const n=db.notices.find(x=>x.id===id);if(!n||!canManage(a,n))return fail('PERMISSION','无权执行此操作');if(n.version!==version)return fail('CONFLICT','通知已变化，请刷新后重试',{current:clone(n)});
+    const n=db.notices.find(x=>x.id===id);if(!n||!canManage(a,n))return fail('PERMISSION','无权执行此操作');if(n.version!==version)return fail('CONFLICT','已被修改，本次修改无法提交',{current:clone(n)});
     if(action==='supplement') {if(n.status!=='published')return fail('STATE','仅已发布通知可补充说明');if(!payload.text?.trim())return fail('CONTENT','请填写补充说明');n.supplements.push({id:uid('sup'),text:payload.text.trim(),at,by:a.name,role:a.role});}
     else if(action==='delete'){
       const index=db.notices.indexOf(n),snapshot=clone(n);

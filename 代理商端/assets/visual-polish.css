@@ -432,3 +432,34 @@ body .v7-answer .v7-bubble {
   background: var(--vp-brand-soft) !important;
   border-color: #d6f3d9;
 }
+
+/* 10. 客服管理操作列按钮对齐运营后台：纯文字无边框、默认客服删除按钮保持置灰不可点 */
+body .cs-btn.link,
+body .cs-btn.icon {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  height: 28px !important;
+  padding: 0 6px !important;
+}
+
+body .cs-btn.link:hover:not(:disabled) {
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--vp-brand-hover) !important;
+  text-decoration: underline;
+}
+
+body .cs-btn.link.danger:hover:not(:disabled) {
+  color: var(--vp-danger) !important;
+}
+
+body .cs-btn.link:disabled,
+body .cs-btn.link.danger:disabled {
+  border: 0 !important;
+  background: transparent !important;
+  color: #a8abb2 !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+  text-decoration: none !important;
+}

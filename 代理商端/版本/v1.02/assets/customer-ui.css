@@ -1,0 +1,109 @@
+body .cs-root,body .cs-mask{font:14px/1.5 "Microsoft YaHei",sans-serif;color:#1f2329;text-align:left}body .cs-root *,body .cs-mask *{box-sizing:border-box}body .cs-root h2{margin:0 0 24px;font-size:18px}body .cs-root input,body .cs-root select,body .cs-mask input:not([type=checkbox]),body .cs-mask select{height:32px;border:1px solid #dcdfe6;border-radius:4px;background:#fff;padding:0 12px;font:inherit;color:#1f2329;outline:none;min-width:0}body .cs-root input:focus,body .cs-mask input:focus{border-color:#01a239}body .cs-filter{display:grid;grid-template-columns:296px 296px minmax(128px,1fr);gap:24px;margin:0 0 24px;padding-bottom:24px;border-bottom:1px solid #e7e9ee;align-items:center}body .cs-filter label{display:grid;grid-template-columns:84px 200px;gap:12px;align-items:center}body .cs-filter label>span{text-align:right;color:#4e5969}body .cs-filter input{width:200px;height:32px}body .cs-query-actions{display:flex;justify-content:flex-end;gap:12px}body .cs-btn{font:inherit;height:32px;display:inline-flex;align-items:center;justify-content:center;padding:0 16px;border-radius:4px;border:1px solid #e7e9ee;background:#fff;color:#1f2329;white-space:nowrap;cursor:pointer}body .cs-btn:hover{border-color:#01a239;color:#01a239}body .cs-btn.pri{background:#01a239;color:#fff;border-color:#01a239}body .cs-btn.pri:hover{background:#008a2e}body .cs-btn.link{padding:0 6px;border:0;background:transparent;color:#01a239;height:28px}body .cs-btn.danger{color:#e34d59}body .cs-btn:disabled{opacity:.45;cursor:not-allowed}body .cs-toolbar{display:flex;gap:12px;align-items:center;margin-bottom:16px}body .cs-toolbar .push{margin-left:auto;color:#86909c;font-size:13px}body .cs-table-wrap{border:1px solid #e7e9ee;border-radius:6px;overflow:auto}body .cs-table{width:100%;border-collapse:separate;border-spacing:0}body .cs-table th,body .cs-table td{text-align:left;padding:14px 16px;border-right:1px solid #f0f1f4;border-bottom:1px solid #e7e9ee;font-size:13px;vertical-align:top;white-space:normal;max-width:none;overflow:visible;line-height:1.8}body .cs-table th{background:#f2f5fa;font-weight:500;color:#4e5969;white-space:nowrap}body .cs-table tr:nth-child(even) td{background:#fafbfd}body .cs-table tbody tr:hover td{background:#f2fbf3}body .cs-table tr:last-child td{border-bottom:0}body .cs-table th:first-child{width:140px}body .cs-table th:nth-child(2){width:170px}body .cs-table th:nth-child(3){width:250px}body .cs-table .cs-ops{width:225px;min-width:225px;position:sticky;right:0;background:#fff;white-space:nowrap}body .cs-table th.cs-ops{background:#f2f5fa}body .cs-school-cell{min-width:240px}body .cs-school-names{display:flex;gap:4px 10px;flex-wrap:wrap;margin-bottom:3px}body .cs-school-names>span{padding:1px 7px;border-radius:3px;background:#f2f5fa;color:#4e5969}body .cs-muted{font-size:12px;color:#86909c}body .cs-workline{line-height:1.8}body .cs-workline>span{display:inline-block}body .cs-pager{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:20px}body .cs-empty{padding:40px;color:#86909c;text-align:center}body .cs-mask{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.38);display:flex;align-items:center;justify-content:center;padding:24px}body .cs-dialog{display:flex;flex-direction:column;width:680px;max-width:95vw;max-height:90vh;border-radius:8px;background:#fff;box-shadow:0 12px 40px #0002}body .cs-dh{display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:600;padding:18px 24px;border-bottom:1px solid #e7e9ee}body .cs-btn.icon{padding:0;width:24px;height:24px;color:#86909c;border:0;font-size:20px}body .cs-db{padding:24px;overflow:auto;min-height:0}body .cs-df{display:flex;gap:12px;justify-content:flex-end;padding:16px 24px;border-top:1px solid #e7e9ee}body .cs-field{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}body .cs-field:last-child{margin-bottom:0}body .cs-field>span{width:92px;text-align:right;flex:none;line-height:36px;color:#4e5969}body .cs-field em{font-style:normal;color:#e34d59;margin-right:4px}body .cs-value{flex:1;min-width:0}body .cs-value>input{width:100%;height:36px!important}body .cs-week{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:0 0 14px}body .cs-week>span{color:#4e5969;margin-right:4px;line-height:34px}body .cs-week label{position:relative;cursor:pointer;display:flex;align-items:center;gap:0}body .cs-week input{position:absolute;opacity:0;width:1px;height:1px}body .cs-week label>span{display:block;padding:6px 9px;border:1px solid #dcdfe6;border-radius:4px;line-height:20px;font-size:13px}body .cs-week input:checked+span{border-color:#01a239;color:#008a2e;background:#e2fbdc}body .cs-week input:focus-visible+span{outline:2px solid #01a239;outline-offset:2px}body .cs-time-range{display:flex;align-items:center;gap:12px;margin-bottom:10px}body .cs-time-range input{width:140px;height:36px!important;text-align:center;font-variant-numeric:tabular-nums}body .cs-legacy-note{padding:10px;background:#fff8e6;border-radius:4px;margin-bottom:12px;color:#ad6800;line-height:1.8;font-size:12px}body .cs-legacy-note select{width:100%;margin-top:8px}body .cs-error{color:#e34d59;background:#fff2f2;padding:10px 12px;border-radius:4px;margin-bottom:16px}body .cs-error:empty{display:none}body .cs-dialog.cs-confirm-dialog,body .cs-dialog.customer-delete-dialog{width:432px;max-width:calc(100vw - 32px)}body .customer-delete-dialog .cs-db{padding-top:22px;padding-bottom:20px}body .customer-delete-body{text-align:center}body .delete-alert-icon{width:70px;height:70px;line-height:70px;border-radius:50%;background:#ffb02e;color:#fff;font-size:60px;font-weight:700;margin:0 auto 16px;font-family:Arial,sans-serif}body .customer-delete-body p{color:#86909c;margin:0;line-height:24px}body .customer-delete-body small{display:block;color:#86909c;margin-top:8px;font-size:12px}body .customer-delete-dialog .cs-df{padding-top:10px}body .school-dialog{width:760px}body .cs-school-search{display:flex;align-items:center;gap:12px;margin-bottom:20px}body .cs-school-search label{color:#4e5969;margin-right:0}body .cs-school-search input{width:240px}body .cs-school-tools{display:flex;align-items:center;justify-content:space-between;color:#4e5969;font-size:13px;margin-bottom:12px}body .cs-school-tools label{display:flex;align-items:center;gap:8px;cursor:pointer}body #cs-school-list{border:1px solid #e7e9ee;border-radius:5px;max-height:380px;overflow:auto}body .cs-school-row{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #e7e9ee;cursor:pointer}body .cs-school-row:last-child{border-bottom:0}body .cs-school-row:hover{background:#f2fbf3}body .cs-school-row>span{flex:1}body .cs-mask input[type=checkbox]{accent-color:#01a239}body .cs-bound{color:#86909c;font-size:12px}body .confirm-association{width:520px}body .cs-change-summary{margin-top:16px;border:1px solid #e7e9ee;border-radius:5px;padding:12px 16px}body .cs-change-summary>div+div{margin-top:14px}body .cs-change-summary span{color:#4e5969;font-size:13px}body .cs-change-summary p{margin-top:4px;line-height:1.8}body .log-dialog{width:960px}body .cs-log{background:#f7f9fc;padding:12px 16px;margin-bottom:12px;border-radius:4px}body .cs-log summary{display:flex;justify-content:space-between;gap:16px;cursor:pointer}body .cs-log summary>span{color:#86909c;font-size:12px}body .cs-logdiff{display:grid;grid-template-columns:100px 1fr 1fr;gap:12px;border-bottom:1px solid #e7e9ee;padding:8px 0;overflow-wrap:anywhere;font-size:13px}body .cs-toast{position:fixed;top:85px;left:50%;transform:translateX(-50%);z-index:500;background:#fff;border:1px solid #b8eab5;border-radius:5px;padding:10px 20px;box-shadow:0 4px 18px #0002}body .cs-mask :focus-visible,body .cs-root :focus-visible{outline:2px solid #01a239;outline-offset:2px}
+
+body .cs-default-card{display:flex;align-items:center;gap:12px;border:1px solid #e7e9ee;background:#f7f9fc;padding:14px 16px;border-radius:6px;margin-bottom:20px}body .cs-default-card>div{flex:1}body .cs-default-card p{margin:6px 0}body .cs-default-card small{font-size:12px;color:#86909c}body .cs-phone{display:flex;gap:10px;width:100%}body .cs-phone>select{width:90px;flex:none;height:36px}body .cs-phone>div{display:flex;gap:8px;align-items:center;flex:1;min-width:0}body .cs-phone>div[hidden]{display:none}body .cs-phone input{width:100%;height:36px!important}body .cs-phone [name=areaCode]{width:120px;flex:none}body .cs-time-range input{cursor:pointer;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2386909c'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M8 4v4l3 2'/%3E%3C/svg%3E") no-repeat right 10px center;padding-right:30px!important}body .cs-time-pop{position:fixed;z-index:3100;background:#fff;border:1px solid #dcdfe6;border-radius:6px;width:200px;box-shadow:0 6px 24px #0002;padding:12px}body .cs-time-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:center}body .cs-time-cols label{font-size:12px;color:#86909c}body .cs-time-cols select{display:block;width:100%;height:160px;border:0;margin-top:6px;font:14px 'Microsoft YaHei';text-align:center;background:#f7f9fc}body .cs-time-cols option{padding:5px}body .cs-time-cols option:checked{background:#e2fbdc;color:#01a239}body .cs-time-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}body .cs-time-footer button{font:inherit;border:1px solid #e7e9ee;border-radius:3px;padding:3px 10px;background:#fff;cursor:pointer}body .cs-time-footer [data-time-ok]{background:#01a239;color:#fff;border-color:#01a239}body .cs-ops{min-width:270px!important;width:270px!important;white-space:normal!important}body .cs-filter>label:nth-of-type(3){grid-column:1;grid-row:2}body .cs-filter>label:nth-of-type(4){grid-column:2;grid-row:2}body .cs-query-actions{grid-column:3;grid-row:1;align-self:start}body .cs-log-table th:nth-child(1){width:180px}body .cs-log-table th:nth-child(2){width:220px}body .cs-log-table th:nth-child(3){width:auto}body .cs-log-table td{white-space:normal;overflow-wrap:anywhere}body .cs-contact-selector{display:flex;align-items:center;gap:12px}body .cs-contact-selector select{width:260px}body .cs-value>select{width:100%}body #cs-work-preview{display:none}
+
+body .cs-default-scope-label{display:inline-flex;align-items:center;gap:12px;margin-right:16px}body #cs-default-scope{width:210px}
+body[data-end="enterprise"] .cs-root .cs-table{min-width:1240px;table-layout:fixed}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(1){width:140px}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(2){width:150px}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(3){width:100px}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(4){width:160px}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(5){width:200px}body[data-end="enterprise"] .cs-root .cs-table th:nth-child(6){width:210px}body[data-end="enterprise"] .cs-root .cs-table .cs-ops{width:280px!important;min-width:280px!important}
+
+/* T-20261106-02: one 36px first row baseline for labels, controls and static values. */
+body .cs-field>span{line-height:20px;min-height:36px;padding-top:8px;padding-bottom:8px;white-space:nowrap}
+body .cs-value{line-height:20px}
+body .cs-value>input,body .cs-value>select{height:36px!important}
+body .cs-static-value{min-height:36px;display:flex;align-items:center;line-height:20px;overflow-wrap:anywhere}
+body .cs-default-hint{margin:8px 0 0 108px;line-height:20px}
+body .cs-week{min-height:36px;align-items:center}
+body .cs-time-cols .cs-time-list{height:160px;overflow-y:auto;scrollbar-width:thin;margin-top:6px;background:#f7f9fc;outline:none;border:0;border-radius:4px;padding:4px 0;scroll-behavior:auto}
+body .cs-time-list [role=option]{display:block;width:100%;height:28px;border:0;border-radius:0;background:transparent;color:#1f2329;font:14px 'Microsoft YaHei';padding:0;box-shadow:none;outline:none;cursor:pointer}
+body .cs-time-list [role=option]:hover,body .cs-time-list [role=option]:focus-visible{background:#edf7ed;outline:none;box-shadow:none}
+body .cs-time-list [aria-selected=true],body .cs-time-list [aria-selected=true]:focus-visible{background:#e2fbdc;color:#008a2e;outline:none;box-shadow:none}
+
+/* School geography is independent of future responsible-area permissions. */
+body .cs-dialog.school-dialog{width:860px}
+body .cs-school-search{display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px 12px;align-items:center;margin-bottom:20px}
+body .cs-school-search>label{text-align:right;line-height:32px;color:#4e5969;white-space:nowrap}
+body .cs-school-search .feedback-region-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+body .cs-school-search .feedback-region-fields select{width:100%;height:32px}
+body .cs-school-query-row{display:flex;gap:12px;align-items:center;min-width:0}
+body .cs-school-query-row>input{width:200px;max-width:100%;height:32px}
+body .cs-school-query-actions{display:flex;gap:12px;margin-left:auto}
+
+/* Shared 24px row rhythm; wrapper children must not collapse form spacing. */
+body .cs-mask #cs-edit{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+body .cs-mask #cs-edit .cs-field{margin:0}
+body .cs-mask #cs-owner-field[hidden]{display:none}
+body .cs-root .cs-filter{row-gap:24px}
+body .cs-school-search{row-gap:24px}
+
+/* Customer audit: actor snapshot is the final independent column. */
+body .cs-dialog.log-dialog{width:1120px}
+body .cs-log-table{table-layout:fixed;width:100%}
+body .cs-log-table th:nth-child(1){width:180px}
+body .cs-log-table th:nth-child(2){width:300px}
+body .cs-log-table th:nth-child(3){width:auto}
+body .cs-log-table th:nth-child(4){width:140px}
+body .cs-log-table td:nth-child(4){color:#4e5969}
+
+/* Customer dialogs share contract header/footer alignment. Never use generic compact layout. */
+body .cs-mask>.cs-dialog{align-items:stretch;gap:0;margin:0}
+body .cs-mask>.cs-dialog>.cs-dh{width:100%;flex:0 0 auto;justify-content:space-between;text-align:left}
+body .cs-mask>.cs-dialog>.cs-db{width:100%;flex:0 1 auto;text-align:left}
+body .cs-mask>.cs-dialog>.cs-df{width:100%;flex:0 0 auto;justify-content:flex-end;text-align:right}
+
+body .cs-school-scope-filter{display:flex;align-items:flex-start;gap:12px;margin:0 0 16px}body .cs-school-scope-filter>span{flex:none;color:#4e5969;line-height:28px}body .cs-school-scope-filter .cs-school-scopes{min-width:0;gap:8px 16px}body .cs-school-tools{gap:16px;flex-wrap:wrap;align-items:center}body .cs-school-tools>span{margin-left:auto;white-space:nowrap}body .cs-school-toggle{height:30px;padding:0 12px}
+
+body .cs-view-dialog{width:760px}body .cs-detail-info{margin:0}body .cs-detail-row{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:start;margin-bottom:20px}body .cs-detail-row:last-child{margin-bottom:0}body .cs-detail-row dt{margin:0;font-weight:400;color:#4e5969;line-height:26px}body .cs-detail-row dd{margin:0;min-width:0;line-height:26px;overflow-wrap:anywhere;white-space:normal;border:0;background:transparent;padding:0}body .cs-detail-row dd .cs-workline{line-height:26px}body .cs-btn.link:disabled{color:#a8abb2;opacity:1;cursor:not-allowed}body .cs-btn.link:disabled:hover{border:0;color:#a8abb2}
+
+/* V1.6 关联学校分页：标题固定、列表内滚动、每页十所。 */
+body .cs-school-table{height:380px;max-height:42vh;min-height:180px;display:flex;flex-direction:column;border:1px solid #e7e9ee;border-radius:5px;overflow:hidden}body .cs-school-table-head{flex:0 0 auto;padding:12px 16px;background:#f2f3f5;border-bottom:1px solid #e7e9ee;color:#4e5969;font-size:13px}body #cs-school-list.cs-school-list{flex:1;min-height:0;max-height:none;overflow-y:auto;border:0;border-radius:0}body .cs-school-pager{margin-top:12px}body .cs-school-pager span:first-child{margin-right:auto}
+body .cs-name-cell{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}body .cs-temp-badge{display:inline-flex;align-items:center;padding:1px 7px;border:1px solid #e7e9ee;border-radius:3px;background:#f2f5fa;color:#4e5969;font-size:12px;line-height:20px;white-space:nowrap}
+/* Inline default-customer switch for the customer list. */
+body .cs-table td.cs-default-cell{width:110px;min-width:110px;vertical-align:middle!important;white-space:nowrap}
+body .cs-default-switch{position:relative;display:inline-flex;align-items:center;width:40px;height:22px;padding:2px;border:0;border-radius:12px;background:#c9cdd4;cursor:pointer;vertical-align:middle;transition:background .15s ease}
+body .cs-default-switch>span{display:block;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform .15s ease}
+body .cs-default-switch.is-on{background:#01a239}
+body .cs-default-switch.is-on>span{transform:translateX(18px)}
+body .cs-default-switch:disabled{opacity:1;cursor:default}
+body .cs-default-switch:focus-visible{outline:2px solid #01a239;outline-offset:2px}
+/* T-20261123-03: customer list columns use intrinsic sizing and centered row alignment on all Web ends. */
+body .cs-table.cs-customer-list{width:max-content;min-width:100%;table-layout:auto}
+body .cs-table.cs-customer-list th,
+body .cs-table.cs-customer-list td{width:auto!important;min-width:0!important;max-width:none;text-align:center;vertical-align:middle}
+body .cs-table.cs-customer-list .cs-ops{width:auto!important;min-width:max-content!important;text-align:center;white-space:normal}
+body .cs-table.cs-customer-list .cs-school-cell{min-width:0!important}
+body .cs-table.cs-customer-list .cs-default-cell{text-align:center;vertical-align:middle}
+body .cs-table.cs-customer-list .cs-ops .cs-btn{margin:2px 4px}/* Customer list: center fields, fit widths to content, and wrap long values. */
+body .cs-root .cs-table.cs-customer-list{width:max-content!important;min-width:100%!important;table-layout:auto!important}
+body[data-end="enterprise"] .cs-root .cs-table.cs-customer-list{width:max-content!important;min-width:100%!important;table-layout:auto!important}
+body .cs-root .cs-table.cs-customer-list th,body .cs-root .cs-table.cs-customer-list td{width:auto!important;min-width:0!important;max-width:none!important;text-align:center!important;vertical-align:middle!important;white-space:normal;overflow-wrap:anywhere}
+body .cs-root .cs-table.cs-customer-list .cs-ops{width:auto!important;min-width:max-content!important;text-align:center!important;white-space:normal}
+body .cs-root.cs-org-summary .cs-table.cs-org-table{width:max-content!important;min-width:100%!important;table-layout:auto!important}
+body .cs-root.cs-org-summary .cs-table.cs-org-table th,body .cs-root.cs-org-summary .cs-table.cs-org-table td{width:auto!important;min-width:0!important;max-width:none!important;text-align:center!important;vertical-align:middle!important;white-space:normal;overflow-wrap:anywhere}
+body .cs-root.cs-org-summary .cs-table.cs-org-table .cs-org-phone{display:block;margin-top:4px}
+
+/* Keep customer tables at their intrinsic content width. */
+body .cs-root .cs-table.cs-customer-list{width:max-content!important;min-width:0!important;max-width:100%!important}
+body .cs-root.cs-org-summary .cs-table.cs-org-table{width:max-content!important;min-width:0!important;max-width:100%!important}
+
+
+/* Fit service table containers to their content while keeping horizontal scroll on narrow views. */
+body .cs-root .cs-customer-wrap,body .cs-root .cs-org-wrap{width:fit-content!important;max-width:100%!important}
+
+
+
+/* Keep service tables aligned to the full content area while columns size from content. */
+body .cs-root .cs-customer-wrap,
+body .cs-root .cs-org-wrap{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important}
+body .cs-root .cs-customer-wrap .cs-table.cs-customer-list,
+body .cs-root .cs-org-wrap .cs-table.cs-org-table{width:100%!important;min-width:100%!important;max-width:none!important;table-layout:auto!important}
+
+/* v0.86 CS single-line ops & compact global confirm dialog matching reference */
+body .cs-root .cs-table.cs-customer-list th.cs-ops,
+body .cs-root .cs-table.cs-customer-list td.cs-ops{white-space:nowrap!important;width:244px!important;min-width:244px!important}
+body .cs-root .cs-table.cs-customer-list td.cs-ops .cs-btn.link{display:inline-flex;align-items:center;white-space:nowrap;margin:0 5px!important;padding:2px 2px}
+body .cs-mask .cs-dialog.customer-delete-dialog{width:432px!important;max-width:calc(100vw - 32px)!important;border-radius:8px!important;overflow:hidden}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-dh{border-bottom:0!important;padding:18px 22px 6px!important;font-size:17px!important;font-weight:700!important;color:#1b2838!important}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-db{padding:16px 28px 22px!important;text-align:center}
+body .cs-mask .cs-dialog.customer-delete-dialog .delete-alert-icon{width:68px;height:68px;line-height:68px;border-radius:50%;background:#f5a623;color:#fff;font-size:44px;font-weight:700;margin:0 auto 18px;font-family:Arial,sans-serif}
+body .cs-mask .cs-dialog.customer-delete-dialog .customer-delete-body p{color:#667085;font-size:14px;line-height:1.7;margin:0;text-align:center}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-df{border-top:0!important;padding:8px 22px 20px!important;justify-content:flex-end;gap:10px}
+body .cs-mask .cs-dialog.customer-delete-dialog .cs-df .cs-btn{min-width:72px;height:36px;border-radius:4px;font-size:14px}

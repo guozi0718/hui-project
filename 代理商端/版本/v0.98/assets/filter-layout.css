@@ -1,0 +1,15 @@
+/* A compound filter occupies one ordinary filter slot, including its gaps. */
+body .v5 #v5-query .fi:has(.feedback-region-fields),body .filters .fi:has(.combo-region){grid-column:auto}
+body .v5 #v5-query .fi:has(.feedback-region-fields) .ctl{width:auto;max-width:none}
+body .filters .fi:has(.combo-region)>.ctl{width:270px;min-width:270px;max-width:270px}
+body .filters .feedback-region-fields{display:flex;gap:6px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+body .filters .feedback-region-fields>.sel,body .filters .fi>.ctl>.combo-region{flex:1 1 0!important;width:0!important;min-width:0!important;max-width:none!important;box-sizing:border-box}
+body .filters .feedback-region-fields>.sel{padding-left:5px;padding-right:2px}
+body .filters .combo-region>.combo-input{width:100%!important;min-width:0!important;max-width:100%!important;padding-left:6px;padding-right:22px}
+body .filters .combo-region>.combo-arrow{width:20px}
+body .cs-school-search .feedback-region-fields{display:flex;width:200px;max-width:100%;gap:6px;box-sizing:border-box}
+body .cs-school-search .feedback-region-fields>.sel{flex:1 1 0;width:0;min-width:0;padding-left:5px;padding-right:2px}
+
+/* CS school association needs readable province/city/district labels. */
+body .school-dialog .cs-school-search #cs-school-region .feedback-region-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:564px;max-width:100%;gap:12px}
+body .school-dialog .cs-school-search #cs-school-region .feedback-region-fields>.sel{width:100%;min-width:0;padding-left:12px;padding-right:28px}

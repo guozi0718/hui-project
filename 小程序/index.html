@@ -9,7 +9,7 @@
   }
   fetch("当前版本.json?t="+Date.now(),{cache:"no-store"})
     .then(function(r){return r.ok?r.json():null})
-    .then(function(d){go((d&&d.directory)||"版本/v1.30")})
-    .catch(function(){go("版本/v1.30")});
+    .then(function(d){go((d&&d.directory)||"版本/v1.31")})
+    .catch(function(){go("版本/v1.31")});
 })();
 </script>
